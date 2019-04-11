@@ -1,0 +1,72 @@
+Gestor/Menu: 
+
+
+
+Coordenada:
+-> int x
+-> int y
+
+
+
+
+Posicao:
+-> Coordenada coordenada
+-> bool corFundo //0-> branca e 1-> preta
+
+Vazia: (Herança de Posicao)
+
+Invalida: (Herança de Posicao)
+
+//PROBLEMA: no anterior, havia peças comidas que tinham na mesma o atributo coordenada
+//RESOLUÇÃO: Deixam de existir pecas comidas associadas a um tabulieiro e passa a estar apenas associado a cada jogador, o numero de peças comidas e que tem fora do tabuliero
+Peca: (Herança de Posicao)
+-> bool corPeca //0-> branca ou 1 ->preta. 
+-> bool estado //0-> simples ou 1-> dama)
+-> list<Coordenada> historico
+-> int jogadasSucessivas
+
+
+Tabuleiro:
+->Posicao tabCasa[8,8];
+
+
+
+
+
+
+Jogo:
+-> int id
+-> Jogador jogadorUm
+-> Jogador jogadorDois
+-> Tabuleiro tabuleiro
+
+Online: (herança de Jogo)//Cliente
+-> string nomeServidor
+-> bool autenticacao
+
+Normal: (Herança de jogo) //Local
+
+Jogador: 
+-> int id
+-> bool corPecas //0-> branca e 1-> preta (qual do conjunto de pecas é que controla (pretas ou brancas). Tem que ter a mesma informação que o atributo cor da classe peca)
+-> int numeroPecasForaJogo
+-> int numeroPecasComidas
+-> List<Peca> pecasEmJogo //Representa as coordenadas do tabuleiro onde o jogador tem as suas pecas
+
+
+
+
+
+
+Humano: (herança de Jogador)
+-> string username
+-> string nomeAbreviado
+-> string password
+-> string email
+-> string fotografia //diretoria da foto
+-> string país
+
+
+Robot: (herança de Jogador)//standalone
+
+Onde inicializar (fazer o new)???????
