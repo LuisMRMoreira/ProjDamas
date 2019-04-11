@@ -69,6 +69,18 @@
     <Compile Include="Simples.cs" />
     <Compile Include="Tabuleiro.cs" />
     <Compile Include="Vazia.cs" />
+    <Compile Include="ViewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLogin.Designer.cs">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRegister.Designer.cs">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +90,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewLogin.resx">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRegister.resx">
+      <DependentUpon>ViewRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
