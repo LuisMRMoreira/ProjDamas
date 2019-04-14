@@ -26,11 +26,39 @@ namespace Damas
 
             InicializarMatrizPB(PictureBoxDoPanel);
             GerarPecasNoTabuleiro(false);
+
+            pB00.MouseDown += PB00_MouseDown;
+            pB10.DragEnter += PB10_DragEnter;
+            pB10.DragDrop += PB10_DragDrop;
+            
             //pB00.Image = Properties.Resources.PecaBranca;
             
             //InicializarMatrizPB(PictureBoxDoPanel);
             //GerarPecasNoTabuleiro(false);
 
+        }
+
+        private void PB10_DragDrop(object sender, DragEventArgs e)
+        {
+            AllowDrop = true;
+            var bmp = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            pB10.Image = bmp;
+        }
+
+        private void PB10_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Bitmap))
+                e.Effect = DragDropEffects.Move;
+        }
+
+        private void PB00_MouseDown(object sender, MouseEventArgs e)
+        {
+            var img = pB00.Image;
+            if (img == null) return;
+            if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
+            {
+                pB00.Image = null;
+            }
         }
 
         private void InicializarMatrizPB(PictureBox[][] pb)
@@ -114,6 +142,8 @@ namespace Damas
                 }
             }
         }
+
+
 
     }
 }

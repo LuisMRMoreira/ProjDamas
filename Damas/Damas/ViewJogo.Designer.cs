@@ -162,6 +162,7 @@
             // 
             // tLPTabuleiro
             // 
+            this.tLPTabuleiro.AllowDrop = true;
             this.tLPTabuleiro.ColumnCount = 8;
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -319,6 +320,7 @@
             this.pB00.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pB00.TabIndex = 0;
             this.pB00.TabStop = false;
+            this.pB00.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB00_MouseDown);
             // 
             // pB10
             // 
@@ -329,6 +331,8 @@
             this.pB10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pB10.TabIndex = 1;
             this.pB10.TabStop = false;
+            this.pB10.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB10_DragDrop);
+            this.pB10.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB10_DragEnter);
             // 
             // pB77
             // 
@@ -892,6 +896,7 @@
             // 
             // ViewJogo
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 477);
