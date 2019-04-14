@@ -30,7 +30,8 @@ namespace Damas
 
         private void ViewJogo_Load(object sender, EventArgs e)
         {
-            tLPTabuleiro.
+            //1
+            //tLPTabuleiro.
         }
 
         private void GenerateTable(int columnCount, int rowCount)
@@ -60,10 +61,13 @@ namespace Damas
                     //}
 
                     //Create the control, in this case we will add a button
-                    Button cmd = new Button();
-                    Imagens
-                    cmd.Text = string.Format("({0}, {1})", x, y);         //Finally, add the control to the correct location in the table
-                    tableLayoutPanel1.Controls.Add(cmd, x, y);
+
+
+                    //2
+                    //Button cmd = new Button();
+                    //Imagens
+                    //cmd.Text = string.Format("({0}, {1})", x, y);         //Finally, add the control to the correct location in the table
+                    //tableLayoutPanel1.Controls.Add(cmd, x, y);
                 }
             }
         }
