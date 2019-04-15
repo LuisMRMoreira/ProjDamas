@@ -145,7 +145,7 @@ namespace Damas
         private void PictureBox_Paint(object sender, PaintEventArgs e)
         {
             var pb = (PictureBox)sender;
-            pb.BackColor = Color.White;
+            pb.BackColor = Color.Transparent;
             if (selected == pb)
             {
                 ControlPaint.DrawBorder(e.Graphics, pb.ClientRectangle,
@@ -187,7 +187,7 @@ namespace Damas
                 return;
             }
 
-            var temp = target.BackgroundImage;
+            var temp = target.Image; //<---
             target.Image = source.Image;//<----
             source.Image = temp;//<---
         }
@@ -254,24 +254,12 @@ namespace Damas
 
         private void tLPTabuleiro_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
         {
-
+            if ((e.Column + e.Row) % 2 == 1)
+                e.Graphics.FillRectangle(Brushes.White, e.CellBounds);
+            else
+                e.Graphics.FillRectangle(Brushes.Black, e.CellBounds);
         }
 
-        //private void tLPTabuleiro_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
-        //{
-        //    if ((e.Column + e.Row) % 2 == 1)
-        //        e.Graphics.FillRectangle(Brushes.White, e.CellBounds);
-        //    else
-        //        e.Graphics.FillRectangle(Brushes.Black, e.CellBounds);
-        //}
-
-
-        private void ViewJogo_Load(object sender, EventArgs e)
-        {
-            //pB00.Image = Image.FromFile(@"C: \Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\Damas\Damas\bin\Debug\" + "PecaBranca.png");
-            
-
-        }
 
         private void GerarPecasNoTabuleiro(bool corCima)
         {
@@ -287,22 +275,22 @@ namespace Damas
                     {
                         if ((x + y) % 2 == 0 && y < 3)
                         {
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaPreta.png");
-                            PictureBoxDoPanel[x,y].BringToFront();
+                            PictureBoxDoPanel[y,x].Image = Image.FromFile("PecaPreta.png");
+                            PictureBoxDoPanel[y,x].BringToFront();
                         }
                         else if ((x + y) % 2 == 0 && y >= 5)
                         {
                             //meter a outra côr
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaBranca.png");
-                            PictureBoxDoPanel[x,y].BringToFront();
+                            PictureBoxDoPanel[y,x].Image = Image.FromFile("PecaBranca.png");
+                            PictureBoxDoPanel[y,x].BringToFront();
                         }
                     }
                     else
                     {
                         if ((x + y) % 2 == 0 && y < 3)
                         {
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaBranca.png");
-                            PictureBoxDoPanel[x,y].BringToFront();
+                            PictureBoxDoPanel[y,x].Image = Image.FromFile("PecaBranca.png");
+                            PictureBoxDoPanel[y,x].BringToFront();
                             //pbBranco.BackColor = Color.Transparent;
                             //pbBranco.Image = imagens.Branca;
 
@@ -311,17 +299,10 @@ namespace Damas
                         else if ((x + y) % 2 == 0 && y >= 5)
                         {
                             //meter a outra côr
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaPreta.png");
-                            PictureBoxDoPanel[x,y].BringToFront();
+                            PictureBoxDoPanel[y,x].Image = Image.FromFile("PecaPreta.png");
+                            PictureBoxDoPanel[y,x].BringToFront();
                         }
                     }
-
-
-                    //Button cmd = new Button();
-                    //Imagens
-                    //cmd.Text = string.Format("({0}, {1})", x, y);         //Finally, add the control to the correct location in the table
-                    //tableLayoutPanel1.Controls.Add(cmd, x, y);
-                    //tLPTabuleiro.SetCellPosition 
 
                 }
             }

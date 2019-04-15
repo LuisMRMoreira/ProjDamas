@@ -168,6 +168,7 @@
     <Content Include="obj\Debug\Damas.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Damas.exe" />
     <Content Include="obj\Debug\Damas.pdb" />
+    <None Include="Resources\56848132_364577307485203_6237255780467212288_n.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

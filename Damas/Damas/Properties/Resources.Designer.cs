@@ -63,6 +63,16 @@ namespace Damas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _56848132_364577307485203_6237255780467212288_n {
+            get {
+                object obj = ResourceManager.GetObject("56848132_364577307485203_6237255780467212288_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DamaBranca {
             get {
                 object obj = ResourceManager.GetObject("DamaBranca", resourceCulture);
