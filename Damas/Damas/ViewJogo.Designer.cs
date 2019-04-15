@@ -93,6 +93,8 @@
             this.pB21 = new System.Windows.Forms.PictureBox();
             this.pB11 = new System.Windows.Forms.PictureBox();
             this.pB01 = new System.Windows.Forms.PictureBox();
+            this.pb1 = new System.Windows.Forms.PictureBox();
+            this.pb2 = new System.Windows.Forms.PictureBox();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB70)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
@@ -158,6 +160,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.SuspendLayout();
             // 
             // tLPTabuleiro
@@ -249,7 +253,6 @@
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tLPTabuleiro.Size = new System.Drawing.Size(450, 450);
             this.tLPTabuleiro.TabIndex = 0;
-            this.tLPTabuleiro.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tLPTabuleiro_CellPaint);
             // 
             // pB70
             // 
@@ -320,7 +323,7 @@
             this.pB00.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pB00.TabIndex = 0;
             this.pB00.TabStop = false;
-            this.pB00.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB00_MouseDown);
+            //this.pB00.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB00_MouseDown);
             // 
             // pB10
             // 
@@ -331,8 +334,8 @@
             this.pB10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pB10.TabIndex = 1;
             this.pB10.TabStop = false;
-            this.pB10.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB10_DragDrop);
-            this.pB10.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB10_DragEnter);
+            //this.pB10.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB10_DragDrop);
+            //this.pB10.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB10_DragEnter);
             // 
             // pB77
             // 
@@ -894,12 +897,30 @@
             this.pB01.TabIndex = 8;
             this.pB01.TabStop = false;
             // 
+            // pb1
+            // 
+            this.pb1.Location = new System.Drawing.Point(610, 72);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(100, 50);
+            this.pb1.TabIndex = 1;
+            this.pb1.TabStop = false;
+            // 
+            // pb2
+            // 
+            this.pb2.Location = new System.Drawing.Point(610, 156);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(100, 50);
+            this.pb2.TabIndex = 2;
+            this.pb2.TabStop = false;
+            // 
             // ViewJogo
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 477);
+            this.Controls.Add(this.pb2);
+            this.Controls.Add(this.pb1);
             this.Controls.Add(this.tLPTabuleiro);
             this.Name = "ViewJogo";
             this.Text = "Form1";
@@ -969,6 +990,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1040,5 +1063,7 @@
         private System.Windows.Forms.PictureBox pB30;
         private System.Windows.Forms.PictureBox pB40;
         private System.Windows.Forms.PictureBox pB50;
+        private System.Windows.Forms.PictureBox pb1;
+        private System.Windows.Forms.PictureBox pb2;
     }
 }
