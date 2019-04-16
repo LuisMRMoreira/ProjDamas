@@ -166,13 +166,13 @@ namespace Damas
                     {
                         if (x < 3)
                         {
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaPreta.png");
+                            PictureBoxDoPanel[x,y].Image = Properties.Resources.PecaPreta;
                             PictureBoxDoPanel[x,y].BringToFront();
                         }
                         else if (x >= 5)
                         {
                             //meter a outra côr
-                            PictureBoxDoPanel[x,y].Image = Image.FromFile("PecaBranca.png");
+                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;// Image.FromFile("PecaBranca.png");
                             PictureBoxDoPanel[x,y].BringToFront();
                         }
                     }
@@ -181,13 +181,13 @@ namespace Damas
 
                         if (x < 3)
                         {
-                            PictureBoxDoPanel[x, y].Image = Image.FromFile("PecaBranca.png");
+                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;//Image.FromFile("PecaBranca.png");
                             PictureBoxDoPanel[x, y].BringToFront();
                         }
                         else if (x >= 5)
                         {
                             //meter a outra côr
-                            PictureBoxDoPanel[x, y].Image = Image.FromFile("PecaPreta.png");
+                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaPreta;// Image.FromFile("PecaPreta.png");
                             PictureBoxDoPanel[x, y].BringToFront();
                         }
                     }
