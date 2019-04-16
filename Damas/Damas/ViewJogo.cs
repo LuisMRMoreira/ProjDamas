@@ -35,7 +35,7 @@ namespace Damas
                 box.DragEnter += PictureBox_DragEnter;
                 box.MouseClick += PictureBox_MouseClick;
                 box.MouseMove += PictureBox_MouseMove;
-                box.Paint += PictureBox_Paint;
+                //box.Paint += PictureBox_Paint;
             }
 
             GerarPecasNoTabuleiro(false);
@@ -49,11 +49,13 @@ namespace Damas
         private void PictureBox_DragDrop(object sender, DragEventArgs e)
         {
             var target = (PictureBox)sender;
-            if (target.Image == null)
+            var source = (PictureBox)e.Data.GetData(typeof(PictureBox));
+            
+            if (target.Image == null && MoveLengthVality(PictureBoxDoPanel, source, target))
             {
                 if (e.Data.GetDataPresent(typeof(PictureBox)))
                 {
-                    var source = (PictureBox)e.Data.GetData(typeof(PictureBox));
+                    
                     if (source != target)
                     {
                         Console.WriteLine("Do DragDrop from " + source.Name + " to " + target.Name);
@@ -193,6 +195,43 @@ namespace Damas
                 }
             }
         }
+
+
+        private bool MoveLengthVality(PictureBox[,] matrix, PictureBox source, PictureBox target)
+        {
+
+            Point indexSource = new Point();
+            Point indexTarget = new Point(); ;
+
+            for (int y = 0; y < 8; y++)
+            {
+                for (int x = 0; x < 4; x++)
+                {
+                    if (matrix[y, x] == source)
+                    {
+                        indexSource.X = x;
+                        indexSource.Y = y;
+                    }
+                    else if(matrix[y, x] == target)
+                    {
+                        indexTarget.X = x;
+                        indexTarget.Y = y;
+                    }
+                }
+            }
+
+
+            if (!(Math.Abs(indexSource.X - indexTarget.X) <=1 && Math.Abs(indexSource.Y - indexTarget.Y) == 1))
+            {
+                return false;
+            }
+
+            return true;
+
+        }
+
+
+
 
         //private Point firstPoint = new Point();
         //public void MovingPiece(PictureBox im)
