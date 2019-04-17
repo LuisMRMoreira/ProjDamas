@@ -79,6 +79,12 @@
     <Compile Include="Models\Simples.cs" />
     <Compile Include="Models\Tabuleiro.cs" />
     <Compile Include="Models\Vazia.cs" />
+    <Compile Include="ViewConfirmacaoSair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewConfirmacaoSair.Designer.cs">
+      <DependentUpon>ViewConfirmacaoSair.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <EmbeddedResource Include="Regras.resx">
       <DependentUpon>Regras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewConfirmacaoSair.resx">
+      <DependentUpon>ViewConfirmacaoSair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewJogo.resx">
       <DependentUpon>ViewJogo.cs</DependentUpon>

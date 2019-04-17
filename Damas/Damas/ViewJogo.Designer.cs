@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tLPTabuleiro = new System.Windows.Forms.TableLayoutPanel();
             this.pB60 = new System.Windows.Forms.PictureBox();
             this.pB40 = new System.Windows.Forms.PictureBox();
@@ -62,7 +61,14 @@
             this.pB51 = new System.Windows.Forms.PictureBox();
             this.pB31 = new System.Windows.Forms.PictureBox();
             this.pB11 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.jogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.definiçõesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).BeginInit();
@@ -96,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tLPTabuleiro
@@ -142,7 +149,7 @@
             this.tLPTabuleiro.Controls.Add(this.pB51, 5, 1);
             this.tLPTabuleiro.Controls.Add(this.pB31, 3, 1);
             this.tLPTabuleiro.Controls.Add(this.pB11, 1, 1);
-            this.tLPTabuleiro.Location = new System.Drawing.Point(192, 12);
+            this.tLPTabuleiro.Location = new System.Drawing.Point(192, 36);
             this.tLPTabuleiro.Name = "tLPTabuleiro";
             this.tLPTabuleiro.RowCount = 8;
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -477,6 +484,65 @@
             this.pB11.TabIndex = 9;
             this.pB11.TabStop = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jogoToolStripMenuItem,
+            this.opçõesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(838, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // jogoToolStripMenuItem
+            // 
+            this.jogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.guardarToolStripMenuItem,
+            this.regrasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.sairToolStripMenuItem});
+            this.jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
+            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.jogoToolStripMenuItem.Text = "&Jogo";
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Text = "&Guardar";
+            // 
+            // regrasToolStripMenuItem
+            // 
+            this.regrasToolStripMenuItem.Name = "regrasToolStripMenuItem";
+            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regrasToolStripMenuItem.Text = "&Regras";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Text = "&Sair";
+            // 
+            // opçõesToolStripMenuItem
+            // 
+            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.definiçõesToolStripMenuItem1});
+            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.opçõesToolStripMenuItem.Text = "&Opções";
+            // 
+            // definiçõesToolStripMenuItem1
+            // 
+            this.definiçõesToolStripMenuItem1.Name = "definiçõesToolStripMenuItem1";
+            this.definiçõesToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.definiçõesToolStripMenuItem1.Text = "&Definições";
+            // 
             // ViewJogo
             // 
             this.AllowDrop = true;
@@ -486,9 +552,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 498);
             this.Controls.Add(this.tLPTabuleiro);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ViewJogo";
-            this.Text = "Form1";
+            this.Text = "Damas";
             this.tLPTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).EndInit();
@@ -522,7 +590,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -561,6 +632,13 @@
         private System.Windows.Forms.PictureBox pB60;
         private System.Windows.Forms.PictureBox pB20;
         private System.Windows.Forms.PictureBox pB40;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem jogoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regrasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem definiçõesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
