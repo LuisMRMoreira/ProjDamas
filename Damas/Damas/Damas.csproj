@@ -97,6 +97,12 @@
     <Compile Include="Viewmodojogo.Designer.cs">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRank.Designer.cs">
+      <DependentUpon>ViewRank.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Viewmodojogo.resx">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRank.resx">
+      <DependentUpon>ViewRank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
