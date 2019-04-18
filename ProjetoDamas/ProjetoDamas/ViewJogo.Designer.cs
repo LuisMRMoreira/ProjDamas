@@ -1,4 +1,4 @@
-﻿namespace Damas
+﻿namespace ProjetoDamas
 {
     partial class ViewJogo
     {
@@ -548,7 +548,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Damas.Properties.Resources._56848132_364577307485203_6237255780467212288_n;
+            this.BackgroundImage = global::ProjetoDamas.Properties.Resources.imagemDeFundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 498);
             this.Controls.Add(this.tLPTabuleiro);

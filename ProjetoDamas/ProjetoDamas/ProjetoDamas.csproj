@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28215F7D-4292-4378-939A-1A6C07FA4FC0}</ProjectGuid>
+    <ProjectGuid>{57600114-2221-4417-BDFC-67DBFF8B0D32}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Damas</RootNamespace>
-    <AssemblyName>Damas</AssemblyName>
+    <RootNamespace>ProjetoDamas</RootNamespace>
+    <AssemblyName>ProjetoDamas</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Imagens.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Coordenada.cs" />
     <Compile Include="Models\Dama.cs" />
@@ -55,15 +66,13 @@
     <Compile Include="Models\Jogador.cs" />
     <Compile Include="Models\Jogo.cs" />
     <Compile Include="Models\Local.cs" />
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Peca.cs" />
+    <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Posicao.cs" />
+    <Compile Include="Models\Robot.cs" />
+    <Compile Include="Models\Simples.cs" />
+    <Compile Include="Models\Tabuleiro.cs" />
+    <Compile Include="Models\Vazia.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -75,10 +84,6 @@
     <Compile Include="Regras.Designer.cs">
       <DependentUpon>Regras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Robot.cs" />
-    <Compile Include="Models\Simples.cs" />
-    <Compile Include="Models\Tabuleiro.cs" />
-    <Compile Include="Models\Vazia.cs" />
     <Compile Include="ViewConfirmacaoSair.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +108,6 @@
     <Compile Include="Viewmodojogo.Designer.cs">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewRank.Designer.cs">
-      <DependentUpon>ViewRank.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,13 +117,6 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\Damas.Properties.Resources.resources" />
-    <EmbeddedResource Include="obj\Debug\Damas.ViewJogo.resources" />
-    <EmbeddedResource Include="obj\Debug\Login.ViewLogin.resources" />
-    <EmbeddedResource Include="obj\Debug\Login.ViewRegister.resources" />
-    <EmbeddedResource Include="obj\Debug\Menu.Menu.resources" />
-    <EmbeddedResource Include="obj\Debug\Menu.Rules.resources" />
-    <EmbeddedResource Include="obj\Debug\Menu.Viewmodojogo.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -150,19 +142,13 @@
     <EmbeddedResource Include="Viewmodojogo.resx">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRank.resx">
-      <DependentUpon>ViewRank.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\Damas.exe.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="obj\Debug\Damas.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\Damas.csproj.GenerateResource.cache" />
-    <None Include="obj\Debug\Damas.csprojAssemblyReference.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ProjetoDamas.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\ProjetoDamas.csprojAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,19 +163,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\DamaBranca.png" />
-    <Content Include="bin\Debug\DamaPreta.png" />
-    <Content Include="bin\Debug\Damas.exe" />
-    <Content Include="bin\Debug\Damas.pdb" />
-    <Content Include="bin\Debug\PecaBranca.png" />
-    <Content Include="bin\Debug\PecaPreta.png" />
-    <Content Include="obj\Debug\Damas.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Damas.exe" />
-    <Content Include="obj\Debug\Damas.pdb" />
-    <None Include="Resources\56848132_364577307485203_6237255780467212288_n.png" />
+    <Content Include="Resources\imagemDeFundo.png" />
+    <Content Include="Resources\DamaBranca.png" />
+    <Content Include="Resources\DamaPreta.png" />
+    <Content Include="Resources\PecaBranca.png" />
+    <Content Include="Resources\PecaPreta.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Release\" />
+    <Folder Include="bin\Debug\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
