@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegister));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
@@ -39,15 +39,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxCountry = new System.Windows.Forms.TextBox();
             this.buttonProceed = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNickname = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,21 +57,23 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightYellow;
-            this.label1.Location = new System.Drawing.Point(47, 26);
+            this.label1.Location = new System.Drawing.Point(35, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 24);
+            this.label1.Size = new System.Drawing.Size(180, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Please regist to proceed...";
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(642, 256);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 136);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox.Location = new System.Drawing.Point(482, 208);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 2;
+            this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -79,9 +81,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightYellow;
-            this.label2.Location = new System.Drawing.Point(486, 287);
+            this.label2.Location = new System.Drawing.Point(364, 233);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 24);
+            this.label2.Size = new System.Drawing.Size(112, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Insert an avatar:";
             // 
@@ -89,19 +92,21 @@
             // 
             this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxUsername.ForeColor = System.Drawing.Color.Black;
-            this.textBoxUsername.Location = new System.Drawing.Point(265, 81);
+            this.textBoxUsername.Location = new System.Drawing.Point(199, 66);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(215, 22);
+            this.textBoxUsername.Size = new System.Drawing.Size(162, 20);
             this.textBoxUsername.TabIndex = 4;
             // 
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPassword.Location = new System.Drawing.Point(265, 120);
+            this.textBoxPassword.Location = new System.Drawing.Point(199, 98);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(215, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(162, 20);
             this.textBoxPassword.TabIndex = 6;
             // 
             // label3
@@ -110,9 +115,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightYellow;
-            this.label3.Location = new System.Drawing.Point(42, 81);
+            this.label3.Location = new System.Drawing.Point(32, 66);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 18);
+            this.label3.Size = new System.Drawing.Size(169, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Insert your desired username ";
             // 
@@ -122,9 +128,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightYellow;
-            this.label4.Location = new System.Drawing.Point(47, 120);
+            this.label4.Location = new System.Drawing.Point(35, 98);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 18);
+            this.label4.Size = new System.Drawing.Size(163, 15);
             this.label4.TabIndex = 7;
             this.label4.Text = "Insert your desired password";
             // 
@@ -134,9 +141,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightYellow;
-            this.label5.Location = new System.Drawing.Point(48, 201);
+            this.label5.Location = new System.Drawing.Point(36, 163);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(197, 18);
+            this.label5.Size = new System.Drawing.Size(164, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "Insert your desired nickname";
             // 
@@ -146,9 +154,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightYellow;
-            this.label6.Location = new System.Drawing.Point(185, 287);
+            this.label6.Location = new System.Drawing.Point(139, 233);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 18);
+            this.label6.Size = new System.Drawing.Size(48, 15);
             this.label6.TabIndex = 9;
             this.label6.Text = "Country";
             // 
@@ -158,29 +167,32 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.LightYellow;
-            this.label7.Location = new System.Drawing.Point(200, 244);
+            this.label7.Location = new System.Drawing.Point(150, 198);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 18);
+            this.label7.Size = new System.Drawing.Size(39, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "Email";
             // 
-            // textBox2
+            // textBoxEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(265, 243);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 22);
-            this.textBox2.TabIndex = 12;
+            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
+            this.textBoxEmail.Location = new System.Drawing.Point(199, 197);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(162, 20);
+            this.textBoxEmail.TabIndex = 12;
             // 
-            // textBox3
+            // textBoxCountry
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(265, 289);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 22);
-            this.textBox3.TabIndex = 13;
+            this.textBoxCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxCountry.ForeColor = System.Drawing.Color.Black;
+            this.textBoxCountry.Location = new System.Drawing.Point(199, 235);
+            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCountry.Name = "textBoxCountry";
+            this.textBoxCountry.Size = new System.Drawing.Size(162, 20);
+            this.textBoxCountry.TabIndex = 13;
             // 
             // buttonProceed
             // 
@@ -188,22 +200,24 @@
             this.buttonProceed.FlatAppearance.BorderSize = 2;
             this.buttonProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProceed.Location = new System.Drawing.Point(285, 363);
+            this.buttonProceed.Location = new System.Drawing.Point(214, 295);
+            this.buttonProceed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonProceed.Name = "buttonProceed";
-            this.buttonProceed.Size = new System.Drawing.Size(166, 75);
+            this.buttonProceed.Size = new System.Drawing.Size(124, 61);
             this.buttonProceed.TabIndex = 14;
             this.buttonProceed.Text = "Register!";
             this.buttonProceed.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // textBoxConfirmPassword
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(265, 163);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(215, 22);
-            this.textBox4.TabIndex = 15;
+            this.textBoxConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxConfirmPassword.ForeColor = System.Drawing.Color.Black;
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(199, 132);
+            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
+            this.textBoxConfirmPassword.PasswordChar = '*';
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(162, 20);
+            this.textBoxConfirmPassword.TabIndex = 15;
             // 
             // label8
             // 
@@ -211,21 +225,23 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.LightYellow;
-            this.label8.Location = new System.Drawing.Point(82, 163);
+            this.label8.Location = new System.Drawing.Point(62, 132);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 18);
+            this.label8.Size = new System.Drawing.Size(132, 15);
             this.label8.TabIndex = 16;
             this.label8.Text = "Confirm your password";
             // 
-            // textBox1
+            // textBoxNickname
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(265, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(215, 22);
-            this.textBox1.TabIndex = 17;
+            this.textBoxNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxNickname.ForeColor = System.Drawing.Color.Black;
+            this.textBoxNickname.Location = new System.Drawing.Point(199, 163);
+            this.textBoxNickname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNickname.Name = "textBoxNickname";
+            this.textBoxNickname.PasswordChar = '*';
+            this.textBoxNickname.Size = new System.Drawing.Size(162, 20);
+            this.textBoxNickname.TabIndex = 17;
             // 
             // openFileDialog1
             // 
@@ -237,27 +253,28 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(564, 68);
+            this.pictureBox2.Location = new System.Drawing.Point(423, 55);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(162, 151);
+            this.pictureBox2.Size = new System.Drawing.Size(122, 123);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
             // ViewRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxNickname);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxConfirmPassword);
             this.Controls.Add(this.buttonProceed);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxCountry);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -266,12 +283,14 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ViewRegister";
             this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,7 +300,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
@@ -290,12 +309,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.TextBox textBoxCountry;
         private System.Windows.Forms.Button buttonProceed;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxConfirmPassword;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNickname;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

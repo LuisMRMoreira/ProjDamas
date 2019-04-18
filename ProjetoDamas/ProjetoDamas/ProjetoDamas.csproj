@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ViewMakeProfileChanges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ViewMakeProfileChanges.Designer.cs">
+      <DependentUpon>ViewMakeProfileChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProfile.Designer.cs">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -108,11 +114,29 @@
     <Compile Include="Viewmodojogo.Designer.cs">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewProfileChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProfileChanges.Designer.cs">
+      <DependentUpon>ViewProfileChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewRegister.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewRegister.Designer.cs">
       <DependentUpon>ViewRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewShowInfo.Designer.cs">
+      <DependentUpon>ViewShowInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewShowProfileInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewShowProfileInfo.Designer.cs">
+      <DependentUpon>ViewShowProfileInfo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -139,11 +163,26 @@
     <EmbeddedResource Include="ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewMakeProfileChanges.resx">
+      <DependentUpon>ViewMakeProfileChanges.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Viewmodojogo.resx">
       <DependentUpon>Viewmodojogo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewProfile.resx">
+      <DependentUpon>ViewProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProfileChanges.resx">
+      <DependentUpon>ViewProfileChanges.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewShowInfo.resx">
+      <DependentUpon>ViewShowInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewShowProfileInfo.resx">
+      <DependentUpon>ViewShowProfileInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

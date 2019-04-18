@@ -58,5 +58,11 @@ namespace ProjetoDamas
         {
             //instanciar login
         }
+
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            ViewProfile prof = new ViewProfile();
+            prof.Show();
+        }
     }
 }
