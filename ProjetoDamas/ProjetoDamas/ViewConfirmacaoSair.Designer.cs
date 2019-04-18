@@ -46,7 +46,7 @@
             // bSim
             // 
             this.bSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSim.Location = new System.Drawing.Point(59, 92);
+            this.bSim.Location = new System.Drawing.Point(84, 92);
             this.bSim.Name = "bSim";
             this.bSim.Size = new System.Drawing.Size(75, 23);
             this.bSim.TabIndex = 1;
