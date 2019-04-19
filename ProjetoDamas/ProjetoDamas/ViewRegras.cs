@@ -32,12 +32,9 @@ namespace ProjetoDamas
 
         }
 
-        private void bLeave_Click(object sender, EventArgs e)
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            this.Hide();
-            ViewMenu menu = new ViewMenu();
-            menu.Closed += (s, args) => this.Close();
-            menu.Show();
+
         }
     }
 }
