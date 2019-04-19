@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewJogosInacabados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewJogosInacabados.Designer.cs">
+      <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewMakeProfileChanges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,11 @@
     <Compile Include="ViewProfile.Designer.cs">
       <DependentUpon>ViewProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="ViewMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="ViewMenu.Designer.cs">
+      <DependentUpon>ViewMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Coordenada.cs" />
@@ -84,11 +90,11 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regras.cs">
+    <Compile Include="ViewRegras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Regras.Designer.cs">
-      <DependentUpon>Regras.cs</DependentUpon>
+    <Compile Include="ViewRegras.Designer.cs">
+      <DependentUpon>ViewRegras.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewConfirmacaoSair.cs">
       <SubType>Form</SubType>
@@ -108,11 +114,11 @@
     <Compile Include="ViewLogin.Designer.cs">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viewmodojogo.cs">
+    <Compile Include="ViewModoJogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Viewmodojogo.Designer.cs">
-      <DependentUpon>Viewmodojogo.cs</DependentUpon>
+    <Compile Include="ViewModoJogo.Designer.cs">
+      <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewProfileChanges.cs">
       <SubType>Form</SubType>
@@ -144,8 +150,11 @@
     <Compile Include="ViewShowProfileInfo.Designer.cs">
       <DependentUpon>ViewShowProfileInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="ViewJogosInacabados.resx">
+      <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMenu.resx">
+      <DependentUpon>ViewMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,8 +166,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Regras.resx">
-      <DependentUpon>Regras.cs</DependentUpon>
+    <EmbeddedResource Include="ViewRegras.resx">
+      <DependentUpon>ViewRegras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewConfirmacaoSair.resx">
       <DependentUpon>ViewConfirmacaoSair.cs</DependentUpon>
@@ -172,8 +181,8 @@
     <EmbeddedResource Include="ViewMakeProfileChanges.resx">
       <DependentUpon>ViewMakeProfileChanges.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Viewmodojogo.resx">
-      <DependentUpon>Viewmodojogo.cs</DependentUpon>
+    <EmbeddedResource Include="ViewModoJogo.resx">
+      <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewProfile.resx">
       <DependentUpon>ViewProfile.cs</DependentUpon>

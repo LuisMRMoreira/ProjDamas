@@ -47,6 +47,7 @@
             this.textBoxNickname = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@
             // pictureBox
             // 
             this.pictureBox.Location = new System.Drawing.Point(482, 208);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(110, 110);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +94,7 @@
             this.textBoxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxUsername.ForeColor = System.Drawing.Color.Black;
             this.textBoxUsername.Location = new System.Drawing.Point(199, 66);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(162, 20);
             this.textBoxUsername.TabIndex = 4;
@@ -103,7 +104,7 @@
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
             this.textBoxPassword.Location = new System.Drawing.Point(199, 98);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(162, 20);
@@ -179,7 +180,7 @@
             this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxEmail.ForeColor = System.Drawing.Color.Black;
             this.textBoxEmail.Location = new System.Drawing.Point(199, 197);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(162, 20);
             this.textBoxEmail.TabIndex = 12;
@@ -189,7 +190,7 @@
             this.textBoxCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxCountry.ForeColor = System.Drawing.Color.Black;
             this.textBoxCountry.Location = new System.Drawing.Point(199, 235);
-            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(162, 20);
             this.textBoxCountry.TabIndex = 13;
@@ -201,19 +202,20 @@
             this.buttonProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProceed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonProceed.Location = new System.Drawing.Point(214, 295);
-            this.buttonProceed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonProceed.Margin = new System.Windows.Forms.Padding(2);
             this.buttonProceed.Name = "buttonProceed";
             this.buttonProceed.Size = new System.Drawing.Size(124, 61);
             this.buttonProceed.TabIndex = 14;
             this.buttonProceed.Text = "Register!";
             this.buttonProceed.UseVisualStyleBackColor = true;
+            this.buttonProceed.Click += new System.EventHandler(this.buttonProceed_Click);
             // 
             // textBoxConfirmPassword
             // 
             this.textBoxConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxConfirmPassword.ForeColor = System.Drawing.Color.Black;
             this.textBoxConfirmPassword.Location = new System.Drawing.Point(199, 132);
-            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
             this.textBoxConfirmPassword.PasswordChar = '*';
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(162, 20);
@@ -237,7 +239,7 @@
             this.textBoxNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBoxNickname.ForeColor = System.Drawing.Color.Black;
             this.textBoxNickname.Location = new System.Drawing.Point(199, 163);
-            this.textBoxNickname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNickname.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNickname.Name = "textBoxNickname";
             this.textBoxNickname.PasswordChar = '*';
             this.textBoxNickname.Size = new System.Drawing.Size(162, 20);
@@ -254,12 +256,22 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(423, 55);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(122, 123);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            // 
+            // bMenu
+            // 
+            this.bMenu.Location = new System.Drawing.Point(13, 328);
+            this.bMenu.Name = "bMenu";
+            this.bMenu.Size = new System.Drawing.Size(75, 23);
+            this.bMenu.TabIndex = 19;
+            this.bMenu.Text = "Menu";
+            this.bMenu.UseVisualStyleBackColor = true;
+            this.bMenu.Click += new System.EventHandler(this.bMenu_Click);
             // 
             // ViewRegister
             // 
@@ -268,6 +280,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.bMenu);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBoxNickname);
             this.Controls.Add(this.label8);
@@ -287,7 +300,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewRegister";
             this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
@@ -317,5 +330,6 @@
         private System.Windows.Forms.TextBox textBoxNickname;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button bMenu;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoDamas
 {
-    public partial class Viewmodojogo : Form
+    public partial class ViewModoJogo : Form
     {
-        public Viewmodojogo()
+        public ViewModoJogo()
         {
             InitializeComponent();
         }
@@ -22,28 +22,53 @@ namespace ProjetoDamas
             //instanciar login
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja encerrar a aplicação ?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void buttoncliente_Click(object sender, EventArgs e)
-        {
-            //instanciar login
-        }
 
         private void buttonregras_Click(object sender, EventArgs e)
         {
             Rules option_rules = new Rules();
             option_rules.Show();
+        }
+
+        private void bMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenu Menu = new ViewMenu();
+            Menu.Closed += (s, args) => this.Close();
+            Menu.Show();
+        }
+
+
+
+        private void cBJogador_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cBJogador.SelectedIndex == 1)//robot
+            {
+                cBJogo.SelectedIndex = 0;
+                cBJogo.Enabled = false;
+            }
+            else
+            {
+                cBJogo.Enabled = true;
+            }
+        }
+
+        private void bPlay_Click(object sender, EventArgs e)
+        {
+            if (cBJogador.SelectedIndex == 1)//robot
+            {
+
+            }
+            else
+            {
+                if (cBJogo.SelectedIndex == 1)//Online
+                {
+
+                }
+                else//local
+                {
+
+                }
+            }
         }
     }
 }

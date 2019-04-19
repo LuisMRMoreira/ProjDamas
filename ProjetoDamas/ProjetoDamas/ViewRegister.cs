@@ -27,5 +27,21 @@ namespace ProjetoDamas
                     PedidoAbrirPic(openFileDialog1.FileName);*/
             }
         }
+
+        private void buttonProceed_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewLogin login = new ViewLogin();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
+        }
+
+        private void bMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenu Menu = new ViewMenu();
+            Menu.Closed += (s, args) => this.Close();
+            Menu.Show();
+        }
     }
 }

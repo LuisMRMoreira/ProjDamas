@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDamas
 {
-    partial class Menu
+    partial class ViewMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMenu));
             this.titulo = new System.Windows.Forms.Label();
             this.buttonjogar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonregras = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bRegras = new System.Windows.Forms.Button();
+            this.bContinueGame = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -76,30 +76,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // buttonregras
+            // bRegras
             // 
-            this.buttonregras.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonregras.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonregras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonregras.ForeColor = System.Drawing.Color.Black;
-            this.buttonregras.Location = new System.Drawing.Point(26, 196);
-            this.buttonregras.Name = "buttonregras";
-            this.buttonregras.Size = new System.Drawing.Size(115, 37);
-            this.buttonregras.TabIndex = 3;
-            this.buttonregras.Text = "Rules";
-            this.buttonregras.UseVisualStyleBackColor = false;
-            this.buttonregras.Click += new System.EventHandler(this.buttonregras_Click);
+            this.bRegras.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bRegras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.bRegras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRegras.ForeColor = System.Drawing.Color.Black;
+            this.bRegras.Location = new System.Drawing.Point(26, 196);
+            this.bRegras.Name = "bRegras";
+            this.bRegras.Size = new System.Drawing.Size(115, 37);
+            this.bRegras.TabIndex = 3;
+            this.bRegras.Text = "Rules";
+            this.bRegras.UseVisualStyleBackColor = false;
+            this.bRegras.Click += new System.EventHandler(this.buttonregras_Click);
             // 
-            // button2
+            // bContinueGame
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(25, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 36);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Continue Game";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bContinueGame.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.bContinueGame.Location = new System.Drawing.Point(25, 111);
+            this.bContinueGame.Name = "bContinueGame";
+            this.bContinueGame.Size = new System.Drawing.Size(116, 36);
+            this.bContinueGame.TabIndex = 4;
+            this.bContinueGame.Text = "Continue Game";
+            this.bContinueGame.UseVisualStyleBackColor = true;
+            this.bContinueGame.Click += new System.EventHandler(this.bContinueGame_Click);
             // 
             // buttonProfile
             // 
@@ -112,7 +112,7 @@
             this.buttonProfile.UseVisualStyleBackColor = true;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
             // 
-            // Menu
+            // ViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,14 +120,14 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(480, 300);
             this.Controls.Add(this.buttonProfile);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonregras);
+            this.Controls.Add(this.bContinueGame);
+            this.Controls.Add(this.bRegras);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonjogar);
             this.Controls.Add(this.titulo);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Olive;
-            this.Name = "Menu";
+            this.Name = "ViewMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -140,8 +140,8 @@
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Button buttonjogar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonregras;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bRegras;
+        private System.Windows.Forms.Button bContinueGame;
         private System.Windows.Forms.Button buttonProfile;
     }
 }

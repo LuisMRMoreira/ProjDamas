@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.textBoxrules = new System.Windows.Forms.TextBox();
+            this.bLeave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxrules
@@ -40,11 +41,22 @@
             this.textBoxrules.TabIndex = 0;
             this.textBoxrules.TextChanged += new System.EventHandler(this.textBoxrules_TextChanged);
             // 
+            // bLeave
+            // 
+            this.bLeave.Location = new System.Drawing.Point(197, 227);
+            this.bLeave.Name = "bLeave";
+            this.bLeave.Size = new System.Drawing.Size(75, 23);
+            this.bLeave.TabIndex = 1;
+            this.bLeave.Text = "Leave";
+            this.bLeave.UseVisualStyleBackColor = true;
+            this.bLeave.Click += new System.EventHandler(this.bLeave_Click);
+            // 
             // Rules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.bLeave);
             this.Controls.Add(this.textBoxrules);
             this.Name = "Rules";
             this.Text = "Regras";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxrules;
+        private System.Windows.Forms.Button bLeave;
     }
 }

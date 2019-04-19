@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoDamas
 {
-    public partial class Menu : Form
+    public partial class ViewMenu : Form
     {
-        public Menu()
+        public ViewMenu()
         {
             InitializeComponent();
         }
@@ -35,9 +35,13 @@ namespace ProjetoDamas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Viewmodojogo option_gamemode = new Viewmodojogo(); 
+            //ViewMoDoJogo option_gamemode = new ViewMoDoJogo(); 
+            //option_gamemode.Show();
+            this.Hide();
+            ViewModoJogo option_gamemode = new ViewModoJogo();
+            option_gamemode.Closed += (s, args) => this.Close();
             option_gamemode.Show();
-            
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -50,7 +54,9 @@ namespace ProjetoDamas
 
         private void buttonregras_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Rules option_regras = new Rules();
+            option_regras.Closed += (s, args) => this.Close();
             option_regras.Show();
         }
 
@@ -61,8 +67,18 @@ namespace ProjetoDamas
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ViewProfile prof = new ViewProfile();
+            prof.Closed += (s, args) => this.Close();
             prof.Show();
+        }
+
+        private void bContinueGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewJogosInacabados jogos_inacabados = new ViewJogosInacabados();
+            jogos_inacabados.Closed += (s, args) => this.Close();
+            jogos_inacabados.Show();
         }
     }
 }

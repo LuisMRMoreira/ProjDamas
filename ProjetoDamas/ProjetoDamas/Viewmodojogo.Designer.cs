@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDamas
 {
-    partial class Viewmodojogo
+    partial class ViewModoJogo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Viewmodojogo));
-            this.buttonstandalone = new System.Windows.Forms.Button();
-            this.buttoncliente = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewModoJogo));
             this.label1 = new System.Windows.Forms.Label();
             this.buttonsair = new System.Windows.Forms.Button();
             this.buttonregras = new System.Windows.Forms.Button();
+            this.bMenu = new System.Windows.Forms.Button();
+            this.cBJogador = new System.Windows.Forms.ComboBox();
+            this.cBJogo = new System.Windows.Forms.ComboBox();
+            this.bPlay = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // buttonstandalone
-            // 
-            this.buttonstandalone.Location = new System.Drawing.Point(50, 95);
-            this.buttonstandalone.Name = "buttonstandalone";
-            this.buttonstandalone.Size = new System.Drawing.Size(75, 23);
-            this.buttonstandalone.TabIndex = 0;
-            this.buttonstandalone.Text = "Standalone";
-            this.buttonstandalone.UseVisualStyleBackColor = true;
-            this.buttonstandalone.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // buttoncliente
-            // 
-            this.buttoncliente.Location = new System.Drawing.Point(142, 95);
-            this.buttoncliente.Name = "buttoncliente";
-            this.buttoncliente.Size = new System.Drawing.Size(75, 23);
-            this.buttoncliente.TabIndex = 1;
-            this.buttoncliente.Text = "Client";
-            this.buttoncliente.UseVisualStyleBackColor = true;
-            this.buttoncliente.Click += new System.EventHandler(this.buttoncliente_Click);
             // 
             // label1
             // 
@@ -67,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "GAME MODE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonsair
             // 
@@ -80,7 +61,6 @@
             this.buttonsair.TabIndex = 3;
             this.buttonsair.Text = "Exit";
             this.buttonsair.UseVisualStyleBackColor = true;
-            this.buttonsair.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // buttonregras
             // 
@@ -95,20 +75,65 @@
             this.buttonregras.UseVisualStyleBackColor = true;
             this.buttonregras.Click += new System.EventHandler(this.buttonregras_Click);
             // 
-            // Viewmodojogo
+            // bMenu
+            // 
+            this.bMenu.Location = new System.Drawing.Point(35, 212);
+            this.bMenu.Name = "bMenu";
+            this.bMenu.Size = new System.Drawing.Size(75, 22);
+            this.bMenu.TabIndex = 5;
+            this.bMenu.Text = "Menu";
+            this.bMenu.UseVisualStyleBackColor = true;
+            this.bMenu.Click += new System.EventHandler(this.bMenu_Click);
+            // 
+            // cBJogador
+            // 
+            this.cBJogador.FormattingEnabled = true;
+            this.cBJogador.Items.AddRange(new object[] {
+            "Multiplayer",
+            "Robot"});
+            this.cBJogador.Location = new System.Drawing.Point(90, 78);
+            this.cBJogador.Name = "cBJogador";
+            this.cBJogador.Size = new System.Drawing.Size(121, 21);
+            this.cBJogador.TabIndex = 6;
+            this.cBJogador.SelectionChangeCommitted += new System.EventHandler(this.cBJogador_SelectionChangeCommitted);
+            // 
+            // cBJogo
+            // 
+            this.cBJogo.FormattingEnabled = true;
+            this.cBJogo.Items.AddRange(new object[] {
+            "Local",
+            "Online"});
+            this.cBJogo.Location = new System.Drawing.Point(90, 123);
+            this.cBJogo.Name = "cBJogo";
+            this.cBJogo.Size = new System.Drawing.Size(121, 21);
+            this.cBJogo.TabIndex = 7;
+            // 
+            // bPlay
+            // 
+            this.bPlay.Location = new System.Drawing.Point(116, 163);
+            this.bPlay.Name = "bPlay";
+            this.bPlay.Size = new System.Drawing.Size(75, 23);
+            this.bPlay.TabIndex = 8;
+            this.bPlay.Text = "Play";
+            this.bPlay.UseVisualStyleBackColor = true;
+            this.bPlay.Click += new System.EventHandler(this.bPlay_Click);
+            // 
+            // ViewModoJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(312, 262);
+            this.Controls.Add(this.bPlay);
+            this.Controls.Add(this.cBJogo);
+            this.Controls.Add(this.cBJogador);
+            this.Controls.Add(this.bMenu);
             this.Controls.Add(this.buttonregras);
             this.Controls.Add(this.buttonsair);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttoncliente);
-            this.Controls.Add(this.buttonstandalone);
             this.DoubleBuffered = true;
-            this.Name = "Viewmodojogo";
+            this.Name = "ViewModoJogo";
             this.Text = "Viewmodojogo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,11 +141,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonstandalone;
-        private System.Windows.Forms.Button buttoncliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonsair;
         private System.Windows.Forms.Button buttonregras;
+        private System.Windows.Forms.Button bMenu;
+        private System.Windows.Forms.ComboBox cBJogador;
+        private System.Windows.Forms.ComboBox cBJogo;
+        private System.Windows.Forms.Button bPlay;
     }
 }

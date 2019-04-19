@@ -31,5 +31,13 @@ namespace ProjetoDamas
         {
 
         }
+
+        private void bLeave_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenu menu = new ViewMenu();
+            menu.Closed += (s, args) => this.Close();
+            menu.Show();
+        }
     }
 }
