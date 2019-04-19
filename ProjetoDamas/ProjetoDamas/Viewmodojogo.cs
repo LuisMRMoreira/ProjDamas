@@ -25,7 +25,7 @@ namespace ProjetoDamas
 
         private void buttonregras_Click(object sender, EventArgs e)
         {
-            Rules option_rules = new Rules();
+            ViewRegras option_rules = new ViewRegras();
             option_rules.Show();
         }
 

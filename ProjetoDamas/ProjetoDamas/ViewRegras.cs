@@ -10,31 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoDamas
 {
-    public partial class Rules : Form
+    public partial class ViewRegras : Form
     {
-        public Rules()
+        public ViewRegras()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxrules_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
         }
     }
 }

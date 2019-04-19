@@ -55,7 +55,7 @@ namespace ProjetoDamas
         private void buttonregras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rules option_regras = new Rules();
+            ViewRegras option_regras = new ViewRegras();
             option_regras.Closed += (s, args) => this.Close();
             option_regras.Show();
         }

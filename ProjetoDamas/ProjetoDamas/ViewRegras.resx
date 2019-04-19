@@ -117,10 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBoxrules.Text" xml:space="preserve">
-    <value>Checkers game is played between two opponents who are aiming to win
-
-Conditions to win:
+  <data name="label1.Text" xml:space="preserve">
+    <value>Conditions to win:
 a) The player captures all the pieces of the opponent;
 
 b) The opponent keeps the pieces "prisoners" at the time of play and can not make
@@ -157,13 +155,11 @@ b) There is an "agreement" between the players - provided that it is made in the
 
 In the stock capture there are three laws, regardless of the
 piece that takes to be pawn or checker:
-
 a) Compulsory Law - Removal is mandatory;
 b) Sample Law - In simultaneous cases of capture, it is
 take as many parts as possible;
 c) Quality Law - In the event of simultaneous capture of "a
 same number of pieces is required to take the parts with greater
-value, being the value of the checker superior to the pawn.
-</value>
+value, being the value of the checker superior to the pawn.</value>
   </data>
 </root>
