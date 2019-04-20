@@ -66,7 +66,10 @@ namespace ProjetoDamas
                 }
                 else//local
                 {
-
+                    this.Hide();
+                    ViewJogo local = new ViewJogo();
+                    local.Closed += (s, args) => this.Close();
+                    local.Show();
                 }
             }
         }

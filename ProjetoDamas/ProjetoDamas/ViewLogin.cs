@@ -40,9 +40,11 @@ namespace ProjetoDamas
             //Menu menu = new Menu
             this.Hide();
             ViewMenu Menu = new ViewMenu();
+            Menu.Size = this.Size;
+            Menu.Location = this.Location;// new Point(this.Left, this.Top);            
+            Menu.Show();            
             Menu.Closed += (s, args) => this.Close();
-            Menu.Show();
-
+            
         }
 
         private void buttonLeave_Click(object sender, EventArgs e)
