@@ -230,6 +230,62 @@ namespace ProjetoDamas
 
         }
 
+        private void pbJogador1_MouseHover(object sender, EventArgs e)
+        {
+            lNome.Visible = true;
+            lNomeN.Visible = true;
+
+            lCountry.Visible = true;
+            lCountryN.Visible = true;
+
+            lVitorias.Visible = true;
+            lVitoriasN.Visible = true;
+        }
+
+        private void pbJogador1_MouseLeave(object sender, EventArgs e)
+        {
+            lNome.Visible = false;
+            lNomeN.Visible = false;
+
+            lCountry.Visible = false;
+            lCountryN.Visible = false;
+
+            lVitorias.Visible = false;
+            lVitoriasN.Visible = false;
+        }
+
+        private void definiçõesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewSettings set = new ViewSettings();
+            set.Closed += (s, args) => this.Close();
+            set.Show();
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void regrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewRegras reg = new ViewRegras();
+            reg.Closed += (s, args) => this.Close();
+            reg.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you wanna leave without save?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+            }
+
+            this.Close();//?????????
+        }
+
+
 
 
 

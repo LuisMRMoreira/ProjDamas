@@ -59,7 +59,7 @@ namespace ProjetoDamas
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("You sure you wanna leave the regist?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("You sure you wanna leave the regist?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
                 ViewLogin login = new ViewLogin();

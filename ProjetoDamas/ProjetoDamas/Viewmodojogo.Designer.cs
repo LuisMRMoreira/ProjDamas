@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewModoJogo));
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonsair = new System.Windows.Forms.Button();
-            this.buttonregras = new System.Windows.Forms.Button();
             this.cBJogador = new System.Windows.Forms.ComboBox();
             this.cBJogo = new System.Windows.Forms.ComboBox();
             this.bPlay = new System.Windows.Forms.Button();
@@ -52,31 +50,6 @@
             this.label1.Size = new System.Drawing.Size(93, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "GAME MODE";
-            // 
-            // buttonsair
-            // 
-            this.buttonsair.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonsair.FlatAppearance.BorderSize = 2;
-            this.buttonsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonsair.Location = new System.Drawing.Point(235, 238);
-            this.buttonsair.Name = "buttonsair";
-            this.buttonsair.Size = new System.Drawing.Size(75, 23);
-            this.buttonsair.TabIndex = 3;
-            this.buttonsair.Text = "Exit";
-            this.buttonsair.UseVisualStyleBackColor = true;
-            // 
-            // buttonregras
-            // 
-            this.buttonregras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonregras.FlatAppearance.BorderSize = 2;
-            this.buttonregras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonregras.Location = new System.Drawing.Point(154, 238);
-            this.buttonregras.Name = "buttonregras";
-            this.buttonregras.Size = new System.Drawing.Size(75, 23);
-            this.buttonregras.TabIndex = 4;
-            this.buttonregras.Text = "Rules";
-            this.buttonregras.UseVisualStyleBackColor = true;
-            this.buttonregras.Click += new System.EventHandler(this.buttonregras_Click);
             // 
             // cBJogador
             // 
@@ -160,8 +133,6 @@
             this.Controls.Add(this.bPlay);
             this.Controls.Add(this.cBJogo);
             this.Controls.Add(this.cBJogador);
-            this.Controls.Add(this.buttonregras);
-            this.Controls.Add(this.buttonsair);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -175,8 +146,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonsair;
-        private System.Windows.Forms.Button buttonregras;
         private System.Windows.Forms.ComboBox cBJogador;
         private System.Windows.Forms.ComboBox cBJogo;
         private System.Windows.Forms.Button bPlay;

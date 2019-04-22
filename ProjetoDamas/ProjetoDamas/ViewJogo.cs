@@ -230,6 +230,82 @@ namespace ProjetoDamas
 
         }
 
+        private void pbJogador1_MouseHover(object sender, EventArgs e)
+        {
+            lNome.Visible = true;
+            lNomeN.Visible = true;
+
+            lCountry.Visible = true;
+            lCountryN.Visible = true;
+
+            lVitorias.Visible = true;
+            lVitoriasN.Visible = true;
+        }
+
+        private void pbJogador1_MouseLeave(object sender, EventArgs e)
+        {
+            lNome.Visible = false;
+            lNomeN.Visible = false;
+
+            lCountry.Visible = false;
+            lCountryN.Visible = false;
+
+            lVitorias.Visible = false;
+            lVitoriasN.Visible = false;
+        }
+
+        private void pbJogador2_MouseHover(object sender, EventArgs e)
+        {
+            lNome2.Visible = true;
+            lNomeN2.Visible = true;
+
+            lCountry2.Visible = true;
+            lCountryN2.Visible = true;
+
+            lVitorias2.Visible = true;
+            lVitoriasN2.Visible = true;
+        }
+
+        private void pbJogador2_MouseLeave(object sender, EventArgs e)
+        {
+            lNome2.Visible = false;
+            lNomeN2.Visible = false;
+
+            lCountry2.Visible = false;
+            lCountryN2.Visible = false;
+
+            lVitorias2.Visible = false;
+            lVitoriasN2.Visible = false;
+        }
+
+        private void definiçõesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewSettings set = new ViewSettings();
+            set.Closed += (s, args) => this.Close();
+            set.Show();
+        }
+
+        private void regrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewRegras reg = new ViewRegras();
+            reg.Closed += (s, args) => this.Close();
+            reg.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you wanna leave without save?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+            }
+
+            this.Close();//?????????
+        }
+
+
+
 
 
 

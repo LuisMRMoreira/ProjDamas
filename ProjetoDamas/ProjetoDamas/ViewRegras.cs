@@ -20,9 +20,39 @@ namespace ProjetoDamas
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewMenu Menu = new ViewMenu();
+            ViewMenuMoreInfo Menu = new ViewMenuMoreInfo();
             Menu.Closed += (s, args) => this.Close();
             Menu.Show();
+        }
+
+        private void lCondicoesGanhar_MouseHover(object sender, EventArgs e)
+        {
+            lCondicoesGanhar2.Visible = true;
+        }
+
+        private void lCondicoesPerder_MouseHover(object sender, EventArgs e)
+        {
+            lCondicoesPerder2.Visible = true;
+        }
+
+        private void llaws_MouseHover(object sender, EventArgs e)
+        {
+            llaws2.Visible = true;
+        }
+
+        private void llaws_MouseLeave(object sender, EventArgs e)
+        {
+            llaws2.Visible = false;
+        }
+
+        private void lCondicoesPerder_MouseLeave(object sender, EventArgs e)
+        {
+            lCondicoesPerder2.Visible = false;
+        }
+
+        private void lCondicoesGanhar_MouseLeave(object sender, EventArgs e)
+        {
+            lCondicoesGanhar2.Visible = false;
         }
     }
 }

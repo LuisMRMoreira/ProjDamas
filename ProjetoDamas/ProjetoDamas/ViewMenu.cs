@@ -68,7 +68,7 @@ namespace ProjetoDamas
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewProfile prof = new ViewProfile();
+            ViewProfileInfo prof = new ViewProfileInfo();
             prof.Closed += (s, args) => this.Close();
             prof.Show();
         }
@@ -79,6 +79,14 @@ namespace ProjetoDamas
             ViewJogosInacabados jogos_inacabados = new ViewJogosInacabados();
             jogos_inacabados.Closed += (s, args) => this.Close();
             jogos_inacabados.Show();
+        }
+
+        private void bGameInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
+            menu.Closed += (s, args) => this.Close();
+            menu.Show();
         }
     }
 }

@@ -19,14 +19,19 @@ namespace ProjetoDamas
 
         private void buttonChangeProfile_Click(object sender, EventArgs e)
         {
-            ViewProfileChanges pfc = new ViewProfileChanges();
+            ViewProfileValidation pfc = new ViewProfileValidation();
             pfc.Show();
         }
 
         private void buttonCheckProfile_Click(object sender, EventArgs e)
         {
-            ViewShowProfileInfo pfi = new ViewShowProfileInfo();
-            pfi.Show();
+            this.Hide();
+            ViewProfileInfo profile = new ViewProfileInfo();  
+            profile.Show();
+            profile.Closed += (s, args) => this.Close();
+
+            //ViewShowProfileInfo pfi = new ViewShowProfileInfo();
+            //pfi.Show();
         }
     }
 }

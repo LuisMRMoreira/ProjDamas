@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewJogoRobot));
             this.tLPTabuleiro = new System.Windows.Forms.TableLayoutPanel();
             this.pB60 = new System.Windows.Forms.PictureBox();
             this.pB40 = new System.Windows.Forms.PictureBox();
@@ -69,6 +70,13 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.definiçõesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbJogador1 = new System.Windows.Forms.PictureBox();
+            this.lNome = new System.Windows.Forms.Label();
+            this.lNomeN = new System.Windows.Forms.Label();
+            this.lCountryN = new System.Windows.Forms.Label();
+            this.lCountry = new System.Windows.Forms.Label();
+            this.lVitoriasN = new System.Windows.Forms.Label();
+            this.lVitorias = new System.Windows.Forms.Label();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).BeginInit();
@@ -103,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).BeginInit();
             this.SuspendLayout();
             // 
             // tLPTabuleiro
@@ -503,20 +512,22 @@
             this.toolStripSeparator1,
             this.sairToolStripMenuItem});
             this.jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
-            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.jogoToolStripMenuItem.Text = "&Jogo";
+            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.jogoToolStripMenuItem.Text = "&Game";
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
             this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.guardarToolStripMenuItem.Text = "&Guardar";
+            this.guardarToolStripMenuItem.Text = "&Save";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // regrasToolStripMenuItem
             // 
             this.regrasToolStripMenuItem.Name = "regrasToolStripMenuItem";
             this.regrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.regrasToolStripMenuItem.Text = "&Regras";
+            this.regrasToolStripMenuItem.Text = "&Rules";
+            this.regrasToolStripMenuItem.Click += new System.EventHandler(this.regrasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -527,23 +538,115 @@
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Text = "&Leave";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // opçõesToolStripMenuItem
             // 
             this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.definiçõesToolStripMenuItem1});
             this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.opçõesToolStripMenuItem.Text = "&Opções";
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.opçõesToolStripMenuItem.Text = "&Options";
             // 
             // definiçõesToolStripMenuItem1
             // 
             this.definiçõesToolStripMenuItem1.Name = "definiçõesToolStripMenuItem1";
-            this.definiçõesToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
-            this.definiçõesToolStripMenuItem1.Text = "&Definições";
+            this.definiçõesToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.definiçõesToolStripMenuItem1.Text = "&Settings";
+            this.definiçõesToolStripMenuItem1.Click += new System.EventHandler(this.definiçõesToolStripMenuItem1_Click);
             // 
-            // ViewJogo
+            // pbJogador1
+            // 
+            this.pbJogador1.BackColor = System.Drawing.Color.Transparent;
+            this.pbJogador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbJogador1.Image = ((System.Drawing.Image)(resources.GetObject("pbJogador1.Image")));
+            this.pbJogador1.Location = new System.Drawing.Point(27, 67);
+            this.pbJogador1.Margin = new System.Windows.Forms.Padding(2);
+            this.pbJogador1.Name = "pbJogador1";
+            this.pbJogador1.Size = new System.Drawing.Size(127, 119);
+            this.pbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJogador1.TabIndex = 10;
+            this.pbJogador1.TabStop = false;
+            this.pbJogador1.MouseLeave += new System.EventHandler(this.pbJogador1_MouseLeave);
+            this.pbJogador1.MouseHover += new System.EventHandler(this.pbJogador1_MouseHover);
+            // 
+            // lNome
+            // 
+            this.lNome.AutoSize = true;
+            this.lNome.BackColor = System.Drawing.Color.Transparent;
+            this.lNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNome.ForeColor = System.Drawing.Color.White;
+            this.lNome.Location = new System.Drawing.Point(33, 207);
+            this.lNome.Name = "lNome";
+            this.lNome.Size = new System.Drawing.Size(47, 13);
+            this.lNome.TabIndex = 12;
+            this.lNome.Text = "Name: ";
+            this.lNome.Visible = false;
+            // 
+            // lNomeN
+            // 
+            this.lNomeN.AutoSize = true;
+            this.lNomeN.BackColor = System.Drawing.Color.Transparent;
+            this.lNomeN.ForeColor = System.Drawing.Color.White;
+            this.lNomeN.Location = new System.Drawing.Point(95, 207);
+            this.lNomeN.Name = "lNomeN";
+            this.lNomeN.Size = new System.Drawing.Size(16, 13);
+            this.lNomeN.TabIndex = 13;
+            this.lNomeN.Text = "...";
+            this.lNomeN.Visible = false;
+            // 
+            // lCountryN
+            // 
+            this.lCountryN.AutoSize = true;
+            this.lCountryN.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryN.ForeColor = System.Drawing.Color.White;
+            this.lCountryN.Location = new System.Drawing.Point(95, 233);
+            this.lCountryN.Name = "lCountryN";
+            this.lCountryN.Size = new System.Drawing.Size(16, 13);
+            this.lCountryN.TabIndex = 15;
+            this.lCountryN.Text = "...";
+            this.lCountryN.Visible = false;
+            // 
+            // lCountry
+            // 
+            this.lCountry.AutoSize = true;
+            this.lCountry.BackColor = System.Drawing.Color.Transparent;
+            this.lCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCountry.ForeColor = System.Drawing.Color.White;
+            this.lCountry.Location = new System.Drawing.Point(33, 233);
+            this.lCountry.Name = "lCountry";
+            this.lCountry.Size = new System.Drawing.Size(58, 13);
+            this.lCountry.TabIndex = 14;
+            this.lCountry.Text = "Country: ";
+            this.lCountry.Visible = false;
+            // 
+            // lVitoriasN
+            // 
+            this.lVitoriasN.AutoSize = true;
+            this.lVitoriasN.BackColor = System.Drawing.Color.Transparent;
+            this.lVitoriasN.ForeColor = System.Drawing.Color.White;
+            this.lVitoriasN.Location = new System.Drawing.Point(95, 263);
+            this.lVitoriasN.Name = "lVitoriasN";
+            this.lVitoriasN.Size = new System.Drawing.Size(16, 13);
+            this.lVitoriasN.TabIndex = 17;
+            this.lVitoriasN.Text = "...";
+            this.lVitoriasN.Visible = false;
+            // 
+            // lVitorias
+            // 
+            this.lVitorias.AutoSize = true;
+            this.lVitorias.BackColor = System.Drawing.Color.Transparent;
+            this.lVitorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lVitorias.ForeColor = System.Drawing.Color.White;
+            this.lVitorias.Location = new System.Drawing.Point(33, 263);
+            this.lVitorias.Name = "lVitorias";
+            this.lVitorias.Size = new System.Drawing.Size(43, 13);
+            this.lVitorias.TabIndex = 16;
+            this.lVitorias.Text = "Wins: ";
+            this.lVitorias.Visible = false;
+            // 
+            // ViewJogoRobot
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,12 +654,20 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.imagemDeFundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 498);
+            this.Controls.Add(this.lVitoriasN);
+            this.Controls.Add(this.lVitorias);
+            this.Controls.Add(this.lCountryN);
+            this.Controls.Add(this.lCountry);
+            this.Controls.Add(this.lNomeN);
+            this.Controls.Add(this.lNome);
+            this.Controls.Add(this.pbJogador1);
             this.Controls.Add(this.tLPTabuleiro);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "ViewJogo";
-            this.Text = "Damas";
+            this.Name = "ViewJogoRobot";
+            this.Text = "Checkers";
             this.tLPTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).EndInit();
@@ -592,6 +703,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,5 +752,12 @@
         private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem definiçõesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.PictureBox pbJogador1;
+        private System.Windows.Forms.Label lNome;
+        private System.Windows.Forms.Label lNomeN;
+        private System.Windows.Forms.Label lCountryN;
+        private System.Windows.Forms.Label lCountry;
+        private System.Windows.Forms.Label lVitoriasN;
+        private System.Windows.Forms.Label lVitorias;
     }
 }

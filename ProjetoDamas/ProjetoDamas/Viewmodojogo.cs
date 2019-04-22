@@ -82,6 +82,8 @@ namespace ProjetoDamas
 
         private void pbReturn_Click(object sender, EventArgs e)
         {
+
+
             this.Hide();
             ViewMenu Menu = new ViewMenu();
             Menu.Closed += (s, args) => this.Close();

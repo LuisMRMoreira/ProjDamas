@@ -30,6 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRank));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.defeat5 = new System.Windows.Forms.Label();
+            this.defeat4 = new System.Windows.Forms.Label();
+            this.defeat3 = new System.Windows.Forms.Label();
+            this.defeat1 = new System.Windows.Forms.Label();
+            this.defeat2 = new System.Windows.Forms.Label();
+            this.win5 = new System.Windows.Forms.Label();
+            this.win4 = new System.Windows.Forms.Label();
+            this.win3 = new System.Windows.Forms.Label();
+            this.win2 = new System.Windows.Forms.Label();
+            this.win1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -44,17 +54,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.defeat5 = new System.Windows.Forms.Label();
-            this.win5 = new System.Windows.Forms.Label();
-            this.win4 = new System.Windows.Forms.Label();
-            this.defeat4 = new System.Windows.Forms.Label();
-            this.win3 = new System.Windows.Forms.Label();
-            this.defeat3 = new System.Windows.Forms.Label();
-            this.defeat2 = new System.Windows.Forms.Label();
-            this.defeat1 = new System.Windows.Forms.Label();
-            this.win2 = new System.Windows.Forms.Label();
-            this.win1 = new System.Windows.Forms.Label();
+            this.pBReturn = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -90,6 +92,96 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TOP 5";
+            // 
+            // defeat5
+            // 
+            this.defeat5.AutoSize = true;
+            this.defeat5.Location = new System.Drawing.Point(208, 218);
+            this.defeat5.Name = "defeat5";
+            this.defeat5.Size = new System.Drawing.Size(16, 13);
+            this.defeat5.TabIndex = 23;
+            this.defeat5.Text = "---";
+            // 
+            // defeat4
+            // 
+            this.defeat4.AutoSize = true;
+            this.defeat4.Location = new System.Drawing.Point(208, 183);
+            this.defeat4.Name = "defeat4";
+            this.defeat4.Size = new System.Drawing.Size(16, 13);
+            this.defeat4.TabIndex = 22;
+            this.defeat4.Text = "---";
+            // 
+            // defeat3
+            // 
+            this.defeat3.AutoSize = true;
+            this.defeat3.Location = new System.Drawing.Point(208, 147);
+            this.defeat3.Name = "defeat3";
+            this.defeat3.Size = new System.Drawing.Size(16, 13);
+            this.defeat3.TabIndex = 21;
+            this.defeat3.Text = "---";
+            // 
+            // defeat1
+            // 
+            this.defeat1.AutoSize = true;
+            this.defeat1.Location = new System.Drawing.Point(208, 77);
+            this.defeat1.Name = "defeat1";
+            this.defeat1.Size = new System.Drawing.Size(16, 13);
+            this.defeat1.TabIndex = 20;
+            this.defeat1.Text = "---";
+            // 
+            // defeat2
+            // 
+            this.defeat2.AutoSize = true;
+            this.defeat2.Location = new System.Drawing.Point(208, 110);
+            this.defeat2.Name = "defeat2";
+            this.defeat2.Size = new System.Drawing.Size(16, 13);
+            this.defeat2.TabIndex = 19;
+            this.defeat2.Text = "---";
+            // 
+            // win5
+            // 
+            this.win5.AutoSize = true;
+            this.win5.Location = new System.Drawing.Point(148, 218);
+            this.win5.Name = "win5";
+            this.win5.Size = new System.Drawing.Size(16, 13);
+            this.win5.TabIndex = 18;
+            this.win5.Text = "---";
+            // 
+            // win4
+            // 
+            this.win4.AutoSize = true;
+            this.win4.Location = new System.Drawing.Point(148, 183);
+            this.win4.Name = "win4";
+            this.win4.Size = new System.Drawing.Size(16, 13);
+            this.win4.TabIndex = 17;
+            this.win4.Text = "---";
+            // 
+            // win3
+            // 
+            this.win3.AutoSize = true;
+            this.win3.Location = new System.Drawing.Point(148, 147);
+            this.win3.Name = "win3";
+            this.win3.Size = new System.Drawing.Size(16, 13);
+            this.win3.TabIndex = 16;
+            this.win3.Text = "---";
+            // 
+            // win2
+            // 
+            this.win2.AutoSize = true;
+            this.win2.Location = new System.Drawing.Point(148, 110);
+            this.win2.Name = "win2";
+            this.win2.Size = new System.Drawing.Size(16, 13);
+            this.win2.TabIndex = 15;
+            this.win2.Text = "---";
+            // 
+            // win1
+            // 
+            this.win1.AutoSize = true;
+            this.win1.Location = new System.Drawing.Point(148, 77);
+            this.win1.Name = "win1";
+            this.win1.Size = new System.Drawing.Size(16, 13);
+            this.win1.TabIndex = 14;
+            this.win1.Text = "---";
             // 
             // label13
             // 
@@ -221,95 +313,17 @@
             this.label25.Text = "RANKING";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // defeat5
+            // pBReturn
             // 
-            this.defeat5.AutoSize = true;
-            this.defeat5.Location = new System.Drawing.Point(208, 218);
-            this.defeat5.Name = "defeat5";
-            this.defeat5.Size = new System.Drawing.Size(16, 13);
-            this.defeat5.TabIndex = 23;
-            this.defeat5.Text = "---";
-            // 
-            // win5
-            // 
-            this.win5.AutoSize = true;
-            this.win5.Location = new System.Drawing.Point(148, 218);
-            this.win5.Name = "win5";
-            this.win5.Size = new System.Drawing.Size(16, 13);
-            this.win5.TabIndex = 18;
-            this.win5.Text = "---";
-            // 
-            // win4
-            // 
-            this.win4.AutoSize = true;
-            this.win4.Location = new System.Drawing.Point(148, 183);
-            this.win4.Name = "win4";
-            this.win4.Size = new System.Drawing.Size(16, 13);
-            this.win4.TabIndex = 17;
-            this.win4.Text = "---";
-            // 
-            // defeat4
-            // 
-            this.defeat4.AutoSize = true;
-            this.defeat4.Location = new System.Drawing.Point(208, 183);
-            this.defeat4.Name = "defeat4";
-            this.defeat4.Size = new System.Drawing.Size(16, 13);
-            this.defeat4.TabIndex = 22;
-            this.defeat4.Text = "---";
-            // 
-            // win3
-            // 
-            this.win3.AutoSize = true;
-            this.win3.Location = new System.Drawing.Point(148, 147);
-            this.win3.Name = "win3";
-            this.win3.Size = new System.Drawing.Size(16, 13);
-            this.win3.TabIndex = 16;
-            this.win3.Text = "---";
-            // 
-            // defeat3
-            // 
-            this.defeat3.AutoSize = true;
-            this.defeat3.Location = new System.Drawing.Point(208, 147);
-            this.defeat3.Name = "defeat3";
-            this.defeat3.Size = new System.Drawing.Size(16, 13);
-            this.defeat3.TabIndex = 21;
-            this.defeat3.Text = "---";
-            // 
-            // defeat2
-            // 
-            this.defeat2.AutoSize = true;
-            this.defeat2.Location = new System.Drawing.Point(208, 110);
-            this.defeat2.Name = "defeat2";
-            this.defeat2.Size = new System.Drawing.Size(16, 13);
-            this.defeat2.TabIndex = 19;
-            this.defeat2.Text = "---";
-            // 
-            // defeat1
-            // 
-            this.defeat1.AutoSize = true;
-            this.defeat1.Location = new System.Drawing.Point(208, 77);
-            this.defeat1.Name = "defeat1";
-            this.defeat1.Size = new System.Drawing.Size(16, 13);
-            this.defeat1.TabIndex = 20;
-            this.defeat1.Text = "---";
-            // 
-            // win2
-            // 
-            this.win2.AutoSize = true;
-            this.win2.Location = new System.Drawing.Point(148, 110);
-            this.win2.Name = "win2";
-            this.win2.Size = new System.Drawing.Size(16, 13);
-            this.win2.TabIndex = 15;
-            this.win2.Text = "---";
-            // 
-            // win1
-            // 
-            this.win1.AutoSize = true;
-            this.win1.Location = new System.Drawing.Point(148, 77);
-            this.win1.Name = "win1";
-            this.win1.Size = new System.Drawing.Size(16, 13);
-            this.win1.TabIndex = 14;
-            this.win1.Text = "---";
+            this.pBReturn.BackColor = System.Drawing.Color.Transparent;
+            this.pBReturn.Image = global::ProjetoDamas.Properties.Resources.a429924cb33912470dd40d51a2f760ec_go_back_icon_clip_art_at_clkercom_vector_clip_art_online__300_300;
+            this.pBReturn.Location = new System.Drawing.Point(12, 9);
+            this.pBReturn.Name = "pBReturn";
+            this.pBReturn.Size = new System.Drawing.Size(29, 28);
+            this.pBReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBReturn.TabIndex = 26;
+            this.pBReturn.TabStop = false;
+            this.pBReturn.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ViewRank
             // 
@@ -317,13 +331,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(320, 349);
+            this.Controls.Add(this.pBReturn);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewRank";
-            this.Text = "ViewRank";
-            this.Load += new System.EventHandler(this.ViewRank_Load);
+            this.Text = "Checkers";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +372,6 @@
         private System.Windows.Forms.Label win3;
         private System.Windows.Forms.Label win2;
         private System.Windows.Forms.Label win1;
+        private System.Windows.Forms.PictureBox pBReturn;
     }
 }

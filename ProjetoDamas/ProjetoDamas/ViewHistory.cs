@@ -10,25 +10,17 @@ using System.Windows.Forms;
 
 namespace ProjetoDamas
 {
-    public partial class ViewJogosInacabados : Form
+    public partial class ViewHistory : Form
     {
-        public ViewJogosInacabados()
+        public ViewHistory()
         {
             InitializeComponent();
         }
 
-        private void bLeave_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewMenu menu = new ViewMenu();
-            menu.Closed += (s, args) => this.Close();
-            menu.Show();
-        }
-
-        private void pbReturn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewMenu menu = new ViewMenu();
+            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
             menu.Closed += (s, args) => this.Close();
             menu.Show();
         }
