@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMenu));
             this.titulo = new System.Windows.Forms.Label();
             this.buttonjogar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.bRegras = new System.Windows.Forms.Button();
             this.bContinueGame = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
+            this.lInfo = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // titulo
@@ -61,20 +63,6 @@
             this.buttonjogar.Text = "New Game";
             this.buttonjogar.UseVisualStyleBackColor = true;
             this.buttonjogar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(393, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // bRegras
             // 
@@ -112,6 +100,24 @@
             this.buttonProfile.UseVisualStyleBackColor = true;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
             // 
+            // lInfo
+            // 
+            this.lInfo.AutoSize = true;
+            this.lInfo.Location = new System.Drawing.Point(172, 71);
+            this.lInfo.Name = "lInfo";
+            this.lInfo.Size = new System.Drawing.Size(495, 13);
+            this.lInfo.TabIndex = 6;
+            this.lInfo.Text = "Informações de jogos. Quem ganhou o último jogo, entre quem foi jogado. Ranking. " +
+    "E histotico de jogos";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(210, 98);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 7;
+            // 
             // ViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,17 +125,20 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(480, 300);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lInfo);
             this.Controls.Add(this.buttonProfile);
             this.Controls.Add(this.bContinueGame);
             this.Controls.Add(this.bRegras);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonjogar);
             this.Controls.Add(this.titulo);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Olive;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewMenu";
-            this.Text = "Menu";
+            this.Text = "Checkers";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,10 +148,11 @@
 
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Button buttonjogar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bRegras;
         private System.Windows.Forms.Button bContinueGame;
         private System.Windows.Forms.Button buttonProfile;
+        private System.Windows.Forms.Label lInfo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

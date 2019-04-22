@@ -63,6 +63,17 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a429924cb33912470dd40d51a2f760ec_go_back_icon_clip_art_at_clkercom_vector_clip_art_online__300_300 {
+            get {
+                object obj = ResourceManager.GetObject("a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-ar" +
+                        "t-online-_300-300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DamaBranca {
             get {
                 object obj = ResourceManager.GetObject("DamaBranca", resourceCulture);
@@ -76,6 +87,16 @@ namespace ProjetoDamas.Properties {
         internal static System.Drawing.Bitmap DamaPreta {
             get {
                 object obj = ResourceManager.GetObject("DamaPreta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_return {
+            get {
+                object obj = ResourceManager.GetObject("Icon return", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

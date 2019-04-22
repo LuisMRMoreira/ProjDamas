@@ -56,13 +56,19 @@ namespace ProjetoDamas
         {
             if (cBJogador.SelectedIndex == 1)//robot
             {
-
+                this.Hide();
+                ViewJogoRobot robot = new ViewJogoRobot();
+                robot.Closed += (s, args) => this.Close();
+                robot.Show();
             }
             else
             {
                 if (cBJogo.SelectedIndex == 1)//Online
                 {
-
+                    this.Hide();
+                    ViewJogoOnline online = new ViewJogoOnline();
+                    online.Closed += (s, args) => this.Close();
+                    online.Show();
                 }
                 else//local
                 {
@@ -72,6 +78,14 @@ namespace ProjetoDamas
                     local.Show();
                 }
             }
+        }
+
+        private void pbReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenu Menu = new ViewMenu();
+            Menu.Closed += (s, args) => this.Close();
+            Menu.Show();
         }
     }
 }

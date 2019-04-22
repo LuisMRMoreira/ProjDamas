@@ -148,4 +148,15 @@ c) Quality Law - In the event of simultaneous capture of "a
 same number of pieces is required to take the parts with greater
 value, being the value of the checker superior to the pawn.</value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>a) the two partners agree to the tie;
+b) from any point in the match, there are 20 successive of checkers,
+without taking or moving stones;
+c) the same position is produced for the third time,
+same player the bid, should the interested claim the tie,
+before the position changes (this rule only applies if the starting
+is being annotated in a worksheet);
+d) in the struggle of three ladies against one, the bigger side can not get
+win in twenty bids.</value>
+  </data>
 </root>

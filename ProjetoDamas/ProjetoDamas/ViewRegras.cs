@@ -16,5 +16,13 @@ namespace ProjetoDamas
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenu Menu = new ViewMenu();
+            Menu.Closed += (s, args) => this.Close();
+            Menu.Show();
+        }
     }
 }
