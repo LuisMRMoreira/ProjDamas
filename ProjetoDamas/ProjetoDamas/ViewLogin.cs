@@ -15,8 +15,6 @@ namespace ProjetoDamas
         public ViewLogin()
         {
             InitializeComponent();
-            textBoxUsername.Text = "username";
-            textBoxPassword.Text = "password";
 
         }
 
@@ -73,6 +71,18 @@ namespace ProjetoDamas
             MessageBox.Show("Application designed by Carlos Nunes, Diogo Fidalgo, Luis Moreira. \nAll rights reserved.",
                                "About the application: ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            cTBPassword.PasswordChar = '\0';
+            ((PictureBox)(sender)).BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            cTBPassword.PasswordChar = '*';
+            ((PictureBox)(sender)).BorderStyle = BorderStyle.None;
         }
     }
 

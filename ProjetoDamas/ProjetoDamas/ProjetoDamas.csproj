@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CueTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Regras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -274,13 +277,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
-    <None Include="Resources\Icon return.png" />
     <None Include="Resources\Check.jpg" />
+    <None Include="Resources\Icon return.png" />
     <None Include="Resources\Check.png" />
+    <None Include="Resources\back image.jpg" />
     <Content Include="Resources\imagemDeFundo.png" />
     <Content Include="Resources\DamaBranca.png" />
     <Content Include="Resources\DamaPreta.png" />
+    <None Include="Resources\Login icon.png" />
+    <Content Include="Resources\Lock transparente.png" />
+    <None Include="Resources\Olho icon.png" />
     <Content Include="Resources\PecaBranca.png" />
     <Content Include="Resources\PecaPreta.png" />
   </ItemGroup>

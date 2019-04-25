@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace ProjetoDamas
 {
@@ -81,12 +82,70 @@ namespace ProjetoDamas
             jogos_inacabados.Show();
         }
 
-        private void bGameInfo_Click(object sender, EventArgs e)
+
+        private void ViewMenu_Load(object sender, EventArgs e)
+        {
+            pPainelOpcoes.BackColor = Color.FromArgb(80, 0, 0, 0);
+        }
+
+        private void bGameInfo_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
             menu.Closed += (s, args) => this.Close();
             menu.Show();
         }
+
+        private void bGameInfo_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
+            menu.Closed += (s, args) => this.Close();
+            menu.Show();
+        }
+
+
+
+        /*
+         
+         
+                     //Graphics graphics = e.Graphics;
+
+            ////the rectangle, the same size as our Form
+            //Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
+
+            ////define gradient's properties
+            //Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(227,128, 57), 100f);
+
+            ////apply gradient         
+            //graphics.FillRectangle(b, gradient_rectangle);
+
+            LinearGradientBrush linearGradientBrush =
+   new LinearGradientBrush(pPainelOpcoes.ClientRectangle, Color.Red, Color.Yellow, 45);
+
+            ColorBlend cblend = new ColorBlend(3);
+            cblend.Colors = new Color[3] { Color.Red, Color.Yellow, Color.Green };
+            cblend.Positions = new float[3] { 0f, 0.5f, 1f };
+
+            linearGradientBrush.InterpolationColors = cblend;
+
+            e.Graphics.FillRectangle(linearGradientBrush, pPainelOpcoes.ClientRectangle);
+         
+         
+         
+         
+         
+         
+         */
+
+
+
+
+
+
+
     }
+
+
+
 }
