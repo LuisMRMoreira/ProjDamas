@@ -20,9 +20,7 @@ namespace ProjetoDamas
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewMenuMoreInfo Menu = new ViewMenuMoreInfo();
-            Menu.Closed += (s, args) => this.Close();
-            Menu.Show();
+            Program.V_Menu.Show();
         }
 
         private void lCondicoesGanhar_MouseHover(object sender, EventArgs e)
@@ -59,6 +57,16 @@ namespace ProjetoDamas
         {
             pUp.BackColor = Color.FromArgb(170, 0, 0, 0);
             pDown.BackColor = Color.FromArgb(170, 0, 0, 0);
+        }
+
+        private void lDrawConditions_MouseHover(object sender, EventArgs e)
+        {
+            lDrawConditions2.Visible = true;
+        }
+
+        private void lDrawConditions_MouseLeave(object sender, EventArgs e)
+        {
+            lDrawConditions2.Visible = false;
         }
     }
 }

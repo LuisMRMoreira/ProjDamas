@@ -138,6 +138,8 @@
             this.lDrawConditions.Size = new System.Drawing.Size(181, 28);
             this.lDrawConditions.TabIndex = 13;
             this.lDrawConditions.Text = "Draw conditions:";
+            this.lDrawConditions.MouseLeave += new System.EventHandler(this.lDrawConditions_MouseLeave);
+            this.lDrawConditions.MouseHover += new System.EventHandler(this.lDrawConditions_MouseHover);
             // 
             // lDefeatConditions
             // 
