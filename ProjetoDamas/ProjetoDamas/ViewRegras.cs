@@ -54,5 +54,11 @@ namespace ProjetoDamas
         {
             lCondicoesGanhar2.Visible = false;
         }
+
+        private void ViewRegras_Load(object sender, EventArgs e)
+        {
+            pUp.BackColor = Color.FromArgb(170, 0, 0, 0);
+            pDown.BackColor = Color.FromArgb(170, 0, 0, 0);
+        }
     }
 }

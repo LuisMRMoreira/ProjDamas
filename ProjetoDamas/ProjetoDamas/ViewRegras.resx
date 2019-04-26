@@ -138,6 +138,11 @@ c) Quality Law - In the event of simultaneous capture of "a
 same number of pieces is required to take the parts with greater
 value, being the value of the checker superior to the pawn.</value>
   </data>
+  <data name="lDrawConditions2.Text" xml:space="preserve">
+    <value>a) The play esults in a position in which neither player has the possibility to
+capture or hold the opponent's pieces.
+b) There is an "agreement" between the players - provided that it is made in the course of the game;</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

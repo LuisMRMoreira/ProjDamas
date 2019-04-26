@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerGestor.cs" />
+    <Compile Include="ControllerJogador.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -55,12 +56,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Regras.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewHistory.Designer.cs">
-      <DependentUpon>ViewHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewJogoRobot.cs">
       <SubType>Form</SubType>
@@ -194,9 +189,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Regras.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewHistory.resx">
-      <DependentUpon>ViewHistory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewJogoRobot.resx">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,8 +271,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Window size.png" />
+    <None Include="Resources\Volume icon.png" />
     <None Include="Resources\Save icon.png" />
-    <None Include="Resources\user-interface-login-icon--12[1].png" />
+    <Content Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
     <None Include="Resources\Check.jpg" />
     <None Include="Resources\Icon return.png" />

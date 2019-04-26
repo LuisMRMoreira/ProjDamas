@@ -57,17 +57,35 @@
             this.pBCountry = new System.Windows.Forms.PictureBox();
             this.pBGuardar = new System.Windows.Forms.PictureBox();
             this.tTLogout = new System.Windows.Forms.ToolTip(this.components);
+            this.pBLogout = new System.Windows.Forms.PictureBox();
             this.tTGuardar = new System.Windows.Forms.ToolTip(this.components);
             this.pBCheckGuardado = new System.Windows.Forms.PictureBox();
             this.tTGuardado = new System.Windows.Forms.ToolTip(this.components);
             this.tTMaisInfo = new System.Windows.Forms.ToolTip(this.components);
-            this.pMoreInfo = new System.Windows.Forms.Panel();
             this.pBMoreInfo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pMoreInfo = new System.Windows.Forms.Panel();
+            this.lDataDeCriacaoValor = new System.Windows.Forms.Label();
+            this.lFormaValor = new System.Windows.Forms.Label();
+            this.lTotalDeJogosValor = new System.Windows.Forms.Label();
+            this.lNumDerrotasValor = new System.Windows.Forms.Label();
+            this.lNumEmpatesValor = new System.Windows.Forms.Label();
+            this.lNumVitoriasValor = new System.Windows.Forms.Label();
+            this.lForma = new System.Windows.Forms.Label();
+            this.lDataDeCriacao = new System.Windows.Forms.Label();
+            this.lTotalJogos = new System.Windows.Forms.Label();
+            this.lNumDerrotas = new System.Windows.Forms.Label();
+            this.lNumEmpates = new System.Windows.Forms.Label();
+            this.lNumVitorias = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.tTReturn = new System.Windows.Forms.ToolTip(this.components);
             this.tTSelect = new System.Windows.Forms.ToolTip(this.components);
             this.tTEdit = new System.Windows.Forms.ToolTip(this.components);
             this.tTSeePass = new System.Windows.Forms.ToolTip(this.components);
+            this.tTUsername = new System.Windows.Forms.ToolTip(this.components);
+            this.tTPassword = new System.Windows.Forms.ToolTip(this.components);
+            this.tTNickname = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEmail = new System.Windows.Forms.ToolTip(this.components);
+            this.tTPais = new System.Windows.Forms.ToolTip(this.components);
             this.cTBEmail = new ProjetoDamas.CueTextBox();
             this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.cTBPassword = new ProjetoDamas.CueTextBox();
@@ -96,9 +114,10 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pMoreInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pBUser
@@ -136,9 +155,9 @@
             this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 14F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(43, 0);
+            this.cBCountries.Location = new System.Drawing.Point(41, 0);
             this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(221, 33);
+            this.cBCountries.Size = new System.Drawing.Size(233, 33);
             this.cBCountries.TabIndex = 50;
             // 
             // pUsername
@@ -171,6 +190,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.tTUsername.SetToolTip(this.pictureBox2, "Username");
             // 
             // pBUserEditar
             // 
@@ -239,6 +259,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
+            this.tTPassword.SetToolTip(this.pictureBox6, "Password");
             // 
             // pBNickEdit
             // 
@@ -282,6 +303,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
+            this.tTNickname.SetToolTip(this.pictureBox4, "Nickname");
             // 
             // oFDImagemPerfil
             // 
@@ -329,11 +351,12 @@
             this.pBEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBEmail.TabIndex = 9;
             this.pBEmail.TabStop = false;
+            this.tTEmail.SetToolTip(this.pBEmail, "Email");
             // 
             // pBCountryEditar
             // 
             this.pBCountryEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBCountryEditar.Location = new System.Drawing.Point(460, 226);
+            this.pBCountryEditar.Location = new System.Drawing.Point(460, 225);
             this.pBCountryEditar.Name = "pBCountryEditar";
             this.pBCountryEditar.Size = new System.Drawing.Size(28, 29);
             this.pBCountryEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,6 +395,7 @@
             this.pBCountry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBCountry.TabIndex = 9;
             this.pBCountry.TabStop = false;
+            this.tTPais.SetToolTip(this.pBCountry, "Country");
             // 
             // pBGuardar
             // 
@@ -390,6 +414,20 @@
             // 
             this.tTLogout.Tag = "";
             // 
+            // pBLogout
+            // 
+            this.pBLogout.BackColor = System.Drawing.Color.Transparent;
+            this.pBLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBLogout.Image = global::ProjetoDamas.Properties.Resources.user_interface_login_icon__12_1_;
+            this.pBLogout.Location = new System.Drawing.Point(454, 10);
+            this.pBLogout.Name = "pBLogout";
+            this.pBLogout.Size = new System.Drawing.Size(37, 30);
+            this.pBLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBLogout.TabIndex = 71;
+            this.pBLogout.TabStop = false;
+            this.tTLogout.SetToolTip(this.pBLogout, "Logout");
+            this.pBLogout.Click += new System.EventHandler(this.pBLogout_Click);
+            // 
             // tTGuardar
             // 
             this.tTGuardar.Tag = "";
@@ -405,18 +443,6 @@
             this.pBCheckGuardado.TabIndex = 67;
             this.pBCheckGuardado.TabStop = false;
             this.tTGuardado.SetToolTip(this.pBCheckGuardado, "Saved");
-            this.tTGuardar.SetToolTip(this.pBCheckGuardado, "Save");
-            this.pBCheckGuardado.Visible = false;
-            // 
-            // pMoreInfo
-            // 
-            this.pMoreInfo.BackColor = System.Drawing.Color.White;
-            this.pMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pMoreInfo.Location = new System.Drawing.Point(0, 262);
-            this.pMoreInfo.Name = "pMoreInfo";
-            this.pMoreInfo.Size = new System.Drawing.Size(548, 111);
-            this.pMoreInfo.TabIndex = 69;
-            this.pMoreInfo.Visible = false;
             // 
             // pBMoreInfo
             // 
@@ -431,18 +457,197 @@
             this.tTMaisInfo.SetToolTip(this.pBMoreInfo, "More Info");
             this.pBMoreInfo.Click += new System.EventHandler(this.pBMoreInfo_Click);
             // 
-            // pictureBox1
+            // pMoreInfo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.user_interface_login_icon__12_1_;
-            this.pictureBox1.Location = new System.Drawing.Point(454, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            this.tTLogout.SetToolTip(this.pictureBox1, "Logout");
+            this.pMoreInfo.BackColor = System.Drawing.Color.White;
+            this.pMoreInfo.Controls.Add(this.lDataDeCriacaoValor);
+            this.pMoreInfo.Controls.Add(this.lFormaValor);
+            this.pMoreInfo.Controls.Add(this.lTotalDeJogosValor);
+            this.pMoreInfo.Controls.Add(this.lNumDerrotasValor);
+            this.pMoreInfo.Controls.Add(this.lNumEmpatesValor);
+            this.pMoreInfo.Controls.Add(this.lNumVitoriasValor);
+            this.pMoreInfo.Controls.Add(this.lForma);
+            this.pMoreInfo.Controls.Add(this.lDataDeCriacao);
+            this.pMoreInfo.Controls.Add(this.lTotalJogos);
+            this.pMoreInfo.Controls.Add(this.lNumDerrotas);
+            this.pMoreInfo.Controls.Add(this.lNumEmpates);
+            this.pMoreInfo.Controls.Add(this.lNumVitorias);
+            this.pMoreInfo.Controls.Add(this.labelPassword);
+            this.pMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pMoreInfo.Location = new System.Drawing.Point(0, 262);
+            this.pMoreInfo.Name = "pMoreInfo";
+            this.pMoreInfo.Size = new System.Drawing.Size(548, 111);
+            this.pMoreInfo.TabIndex = 69;
+            this.pMoreInfo.Visible = false;
+            // 
+            // lDataDeCriacaoValor
+            // 
+            this.lDataDeCriacaoValor.AutoSize = true;
+            this.lDataDeCriacaoValor.BackColor = System.Drawing.Color.Transparent;
+            this.lDataDeCriacaoValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lDataDeCriacaoValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lDataDeCriacaoValor.Location = new System.Drawing.Point(457, 79);
+            this.lDataDeCriacaoValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lDataDeCriacaoValor.Name = "lDataDeCriacaoValor";
+            this.lDataDeCriacaoValor.Size = new System.Drawing.Size(74, 19);
+            this.lDataDeCriacaoValor.TabIndex = 28;
+            this.lDataDeCriacaoValor.Text = "15/01/2019";
+            // 
+            // lFormaValor
+            // 
+            this.lFormaValor.AutoSize = true;
+            this.lFormaValor.BackColor = System.Drawing.Color.Transparent;
+            this.lFormaValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lFormaValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lFormaValor.Location = new System.Drawing.Point(457, 47);
+            this.lFormaValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lFormaValor.Name = "lFormaValor";
+            this.lFormaValor.Size = new System.Drawing.Size(59, 19);
+            this.lFormaValor.TabIndex = 27;
+            this.lFormaValor.Text = "wdwwa";
+            // 
+            // lTotalDeJogosValor
+            // 
+            this.lTotalDeJogosValor.AutoSize = true;
+            this.lTotalDeJogosValor.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalDeJogosValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lTotalDeJogosValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lTotalDeJogosValor.Location = new System.Drawing.Point(457, 11);
+            this.lTotalDeJogosValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lTotalDeJogosValor.Name = "lTotalDeJogosValor";
+            this.lTotalDeJogosValor.Size = new System.Drawing.Size(21, 19);
+            this.lTotalDeJogosValor.TabIndex = 26;
+            this.lTotalDeJogosValor.Text = "11";
+            // 
+            // lNumDerrotasValor
+            // 
+            this.lNumDerrotasValor.AutoSize = true;
+            this.lNumDerrotasValor.BackColor = System.Drawing.Color.Transparent;
+            this.lNumDerrotasValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumDerrotasValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumDerrotasValor.Location = new System.Drawing.Point(152, 56);
+            this.lNumDerrotasValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumDerrotasValor.Name = "lNumDerrotasValor";
+            this.lNumDerrotasValor.Size = new System.Drawing.Size(16, 19);
+            this.lNumDerrotasValor.TabIndex = 25;
+            this.lNumDerrotasValor.Text = "2";
+            // 
+            // lNumEmpatesValor
+            // 
+            this.lNumEmpatesValor.AutoSize = true;
+            this.lNumEmpatesValor.BackColor = System.Drawing.Color.Transparent;
+            this.lNumEmpatesValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumEmpatesValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumEmpatesValor.Location = new System.Drawing.Point(152, 79);
+            this.lNumEmpatesValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumEmpatesValor.Name = "lNumEmpatesValor";
+            this.lNumEmpatesValor.Size = new System.Drawing.Size(15, 19);
+            this.lNumEmpatesValor.TabIndex = 24;
+            this.lNumEmpatesValor.Text = "1";
+            // 
+            // lNumVitoriasValor
+            // 
+            this.lNumVitoriasValor.AutoSize = true;
+            this.lNumVitoriasValor.BackColor = System.Drawing.Color.Transparent;
+            this.lNumVitoriasValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumVitoriasValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumVitoriasValor.Location = new System.Drawing.Point(152, 34);
+            this.lNumVitoriasValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumVitoriasValor.Name = "lNumVitoriasValor";
+            this.lNumVitoriasValor.Size = new System.Drawing.Size(16, 19);
+            this.lNumVitoriasValor.TabIndex = 23;
+            this.lNumVitoriasValor.Text = "8";
+            // 
+            // lForma
+            // 
+            this.lForma.AutoSize = true;
+            this.lForma.BackColor = System.Drawing.Color.Transparent;
+            this.lForma.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
+            this.lForma.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lForma.Location = new System.Drawing.Point(231, 47);
+            this.lForma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lForma.Name = "lForma";
+            this.lForma.Size = new System.Drawing.Size(77, 23);
+            this.lForma.TabIndex = 22;
+            this.lForma.Text = "Former:";
+            // 
+            // lDataDeCriacao
+            // 
+            this.lDataDeCriacao.AutoSize = true;
+            this.lDataDeCriacao.BackColor = System.Drawing.Color.Transparent;
+            this.lDataDeCriacao.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
+            this.lDataDeCriacao.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lDataDeCriacao.Location = new System.Drawing.Point(231, 79);
+            this.lDataDeCriacao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lDataDeCriacao.Name = "lDataDeCriacao";
+            this.lDataDeCriacao.Size = new System.Drawing.Size(217, 23);
+            this.lDataDeCriacao.TabIndex = 21;
+            this.lDataDeCriacao.Text = "Account criation date:";
+            // 
+            // lTotalJogos
+            // 
+            this.lTotalJogos.AutoSize = true;
+            this.lTotalJogos.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalJogos.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
+            this.lTotalJogos.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lTotalJogos.Location = new System.Drawing.Point(231, 11);
+            this.lTotalJogos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lTotalJogos.Name = "lTotalJogos";
+            this.lTotalJogos.Size = new System.Drawing.Size(121, 23);
+            this.lTotalJogos.TabIndex = 20;
+            this.lTotalJogos.Text = "Total games:";
+            // 
+            // lNumDerrotas
+            // 
+            this.lNumDerrotas.AutoSize = true;
+            this.lNumDerrotas.BackColor = System.Drawing.Color.Transparent;
+            this.lNumDerrotas.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumDerrotas.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumDerrotas.Location = new System.Drawing.Point(47, 57);
+            this.lNumDerrotas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumDerrotas.Name = "lNumDerrotas";
+            this.lNumDerrotas.Size = new System.Drawing.Size(91, 19);
+            this.lNumDerrotas.TabIndex = 19;
+            this.lNumDerrotas.Text = "Defeats (d):";
+            // 
+            // lNumEmpates
+            // 
+            this.lNumEmpates.AutoSize = true;
+            this.lNumEmpates.BackColor = System.Drawing.Color.Transparent;
+            this.lNumEmpates.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumEmpates.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumEmpates.Location = new System.Drawing.Point(47, 79);
+            this.lNumEmpates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumEmpates.Name = "lNumEmpates";
+            this.lNumEmpates.Size = new System.Drawing.Size(81, 19);
+            this.lNumEmpates.TabIndex = 18;
+            this.lNumEmpates.Text = "Draws (a): ";
+            // 
+            // lNumVitorias
+            // 
+            this.lNumVitorias.AutoSize = true;
+            this.lNumVitorias.BackColor = System.Drawing.Color.Transparent;
+            this.lNumVitorias.Font = new System.Drawing.Font("Kristen ITC", 10F);
+            this.lNumVitorias.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNumVitorias.Location = new System.Drawing.Point(47, 34);
+            this.lNumVitorias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lNumVitorias.Name = "lNumVitorias";
+            this.lNumVitorias.Size = new System.Drawing.Size(67, 19);
+            this.lNumVitorias.TabIndex = 17;
+            this.lNumVitorias.Text = "Wins (w):";
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
+            this.labelPassword.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
+            this.labelPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.labelPassword.Location = new System.Drawing.Point(21, 11);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(80, 23);
+            this.labelPassword.TabIndex = 16;
+            this.labelPassword.Text = "Results:";
             // 
             // cTBEmail
             // 
@@ -508,7 +713,7 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(548, 373);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBLogout);
             this.Controls.Add(this.pBMoreInfo);
             this.Controls.Add(this.pMoreInfo);
             this.Controls.Add(this.pBCheckGuardado);
@@ -558,9 +763,11 @@
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pMoreInfo.ResumeLayout(false);
+            this.pMoreInfo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -605,9 +812,27 @@
         private System.Windows.Forms.Panel pMoreInfo;
         private System.Windows.Forms.PictureBox pBMoreInfo;
         private System.Windows.Forms.ToolTip tTReturn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBLogout;
         private System.Windows.Forms.ToolTip tTSelect;
         private System.Windows.Forms.ToolTip tTEdit;
         private System.Windows.Forms.ToolTip tTSeePass;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label lForma;
+        private System.Windows.Forms.Label lDataDeCriacao;
+        private System.Windows.Forms.Label lTotalJogos;
+        private System.Windows.Forms.Label lNumDerrotas;
+        private System.Windows.Forms.Label lNumEmpates;
+        private System.Windows.Forms.Label lNumVitorias;
+        private System.Windows.Forms.Label lDataDeCriacaoValor;
+        private System.Windows.Forms.Label lFormaValor;
+        private System.Windows.Forms.Label lTotalDeJogosValor;
+        private System.Windows.Forms.Label lNumDerrotasValor;
+        private System.Windows.Forms.Label lNumEmpatesValor;
+        private System.Windows.Forms.Label lNumVitoriasValor;
+        private System.Windows.Forms.ToolTip tTUsername;
+        private System.Windows.Forms.ToolTip tTPassword;
+        private System.Windows.Forms.ToolTip tTNickname;
+        private System.Windows.Forms.ToolTip tTEmail;
+        private System.Windows.Forms.ToolTip tTPais;
     }
 }

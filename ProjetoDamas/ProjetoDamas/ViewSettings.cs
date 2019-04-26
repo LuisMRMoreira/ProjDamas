@@ -12,17 +12,54 @@ namespace ProjetoDamas
 {
     public partial class ViewSettings : Form
     {
+
+        bool valoresAlterados = false;
+
+        public event MetodosComDoisParametros PedidoGuardarDados;
+
+
         public ViewSettings()
         {
             InitializeComponent();
+            Program.M_Gestor.RespostaDadosGuardados += M_Gestor_RespostaDadosGuardados;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void M_Gestor_RespostaDadosGuardados()
         {
             this.Hide();
-            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
-            menu.Closed += (s, args) => this.Close();
-            menu.Show();
+            Program.V_Menu.Show();
+        }
+
+
+
+
+        private void nUDVolumeLevel_ValueChanged(object sender, EventArgs e)
+        {
+            valoresAlterados = true;
+        }
+
+        private void cBWindowSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            valoresAlterados = true;
+        }
+
+        private void pBReturn_Click(object sender, EventArgs e)
+        {
+            if (valoresAlterados)//Se algum valor tiver mudado
+            {
+                if (MessageBox.Show("Do you want to save the changes?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (PedidoGuardarDados != null)
+                    {
+                        PedidoGuardarDados(Convert.ToInt32(nUDVolumeLevel.Value), cBWindowSize.SelectedText);
+                    }
+                }
+            }
+
+            this.Hide();
+            Program.V_Menu.Show();
+            
+
         }
     }
 }

@@ -18,7 +18,13 @@ namespace ProjetoDamas
         {
             InitializeComponent();
             Program.M_Gestor.PedidoMostrarLogin += M_Gestor_PedidoMostrarLogin;
+            Program.M_Jogador.ContaCriada += M_Jogador_ContaCriada;
 
+        }
+
+        private void M_Jogador_ContaCriada()
+        {
+            this.Show();
         }
 
         private void M_Gestor_PedidoMostrarLogin()
@@ -29,14 +35,7 @@ namespace ProjetoDamas
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewRegister registar = new ViewRegister();
-            registar.Closed += (s, args) => this.Close();
-            registar.Show();
-
-            ////this.Hide();
-            ////var form2 = new Form2();
-            ////form2.Closed += (s, args) => this.Close();
-            ////form2.Show();
+            Program.V_Register.Show();
 
 
         }

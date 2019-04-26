@@ -20,17 +20,26 @@ namespace ProjetoDamas
         public ViewMenu()
         {
             InitializeComponent();
-            Program.M_Gestor.PedidoAlterarVMenuLogin += M_Gestor_PedidoAlterarVMenuLogin;
+            Program.M_Gestor.PedidoAlterarLogin += M_Gestor_PedidoAlterarLogin;
+            Program.M_Gestor.PedidoTerminarSessaoNaView += M_Gestor_PedidoTerminarSessaoNaView;
         }
 
-        private void M_Gestor_PedidoAlterarVMenuLogin(string imagem, string nome)
+        private void M_Gestor_PedidoTerminarSessaoNaView()
+        {
+            lLogin.Text = "Login";
+            pBLogin.Image = Properties.Resources.user_interface_login_icon__12_1_;
+            //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
+            this.Show();
+        }
+
+        private void M_Gestor_PedidoAlterarLogin(string imagem, string nome)
         {
             lLogin.Text = "Luis";
             pBLogin.Image = Properties.Resources.DamaBranca;
             //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
             this.Show();
         }
-     
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -63,9 +72,7 @@ namespace ProjetoDamas
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ViewProfileInfo prof = new ViewProfileInfo();
-            prof.Closed += (s, args) => this.Close();
-            prof.Show();
+            Program.V_Settings.Show();
         }
 
         private void bContinueGame_Click(object sender, EventArgs e)
@@ -80,6 +87,8 @@ namespace ProjetoDamas
         private void ViewMenu_Load(object sender, EventArgs e)
         {
             pPainelOpcoes.BackColor = Color.FromArgb(80, 0, 0, 0);
+
+
                        
         }
 
@@ -119,6 +128,12 @@ namespace ProjetoDamas
             //login.Closed += (s, args) => this.Close();
             //login.Show();
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_Rules.Show();
         }
 
 

@@ -14,10 +14,9 @@ namespace ProjetoDamas
 {
     public partial class ViewProfileInfo : Form
     {
+        public event MetodosSemParametros PedidoTerminarSessao;
 
-        public event MetodosComUmInteiro PedidoModoEditar;
-
-        bool saveChanges = false, change = false;
+        bool saveChanges = false;
 
         public ViewProfileInfo()
         {
@@ -31,8 +30,6 @@ namespace ProjetoDamas
             this.Show();
         }
 
-
-
         private void ViewProfileInfo_Load(object sender, EventArgs e)
         {
             var list = CultureInfo.GetCultures(CultureTypes.SpecificCultures).
@@ -41,28 +38,24 @@ namespace ProjetoDamas
             cBCountries.DataSource = list;
             cBCountries.SelectedIndex = 177;
 
-            pMoreInfo.BackColor = Color.FromArgb(200, 0, 0, 0);
+            pMoreInfo.BackColor = Color.FromArgb(170, 0, 0, 0);
         }
 
 
 
         private void pbReturn_Click(object sender, EventArgs e)
         {
-            if (!saveChanges) // se for false -> Esta guardado
+            if (saveChanges) // se for false -> Esta guardado. Se for true é porque tem alguma coisa para guardar
             {
-                if (MessageBox.Show("Are you sure you want to leave without saving?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to save the changes?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    saveChanges = true;
+                    saveChanges = false;
                 }
-            }
 
+            }
 
             this.Hide();
             Program.V_Menu.Show();
-            //ViewMenu Menu = new ViewMenu();
-            //Menu.Closed += (s, args) => this.Close();
-            //Menu.Show();
-
         }
 
 
@@ -125,9 +118,28 @@ namespace ProjetoDamas
         }
 
         private void pBGuardar_Click(object sender, EventArgs e)
-        {
-            saveChanges = true;
+        {//vai ser de ser um metodo que vai criar um jogador (metodo da classe model jogador)
+
+
+            saveChanges = false;
             pBCheckGuardado.Visible = true;
+
+
+
+            pBUserEditar.BorderStyle = BorderStyle.None;
+            ctBUsername.Enabled = false;
+
+            pBPasswordEditar.BorderStyle = BorderStyle.None;
+            cTBPassword.Enabled = false;
+
+            pBNickEdit.BorderStyle = BorderStyle.None;
+            cTBNickname.Enabled = false;
+
+            pBEmailEditar.BorderStyle = BorderStyle.None;
+            cTBEmail.Enabled = false;
+
+            pBCountryEditar.BorderStyle = BorderStyle.None;
+            cBCountries.Enabled = false;
         }
 
         private void pBUser_Click(object sender, EventArgs e)
@@ -177,59 +189,17 @@ namespace ProjetoDamas
             pMoreInfo.Visible = !pMoreInfo.Visible;
         }
 
-        private void bConfirm_Click(object sender, EventArgs e)
+        private void pBLogout_Click(object sender, EventArgs e)
         {
-            ////TextBoxes: Edit
-            //tBUsername.Visible = false;
-            //tBPassword.Visible = false;
-            //tbNickname.Visible = false;
-            //tbEmail.Visible = false;
-            ////Button Confirm: Confirmation
-            //bConfirm.Visible = false;
-            ////Labels: Information
-            //lUsernameN.Visible = true;
-            //lNicknameN.Visible = true;
-            //lEmailN.Visible = true;
-            ////depois da confirmação da alteração, o texto da lable passa a ser outro.
-            //if (changedUser)
-            //{
-            //    lUsernameN.Text = tBUsername.Text;
-            //    pBCheck1.Visible = true;
-            //}
+            this.Hide();
 
-            //if (changedPassword)
-            //{
-            //    pBCheck2.Visible = true;
-            //}
-
-            //if (changedNickname)
-            //{
-            //    lNicknameN.Text = tbNickname.Text;
-            //    pBCheck3.Visible = true;
-            //}
-
-            //if (changedEmail)
-            //{
-            //    lEmailN.Text = tbEmail.Text;
-            //    pBCheck4.Visible = true;
-            //}
-
-            //if (changedCountry)
-            //{
-            //    pBCheck5.Visible = true;
-            //    cBCountries.Enabled = false;
-            //}
-
-
-            //changedUser = false;
-            //changedNickname = false;
-            //changedPassword = false;
-            //changedEmail = false;
-            //changedCountry = false;
-
-            ////Nickename alterado
-            ////PictureBox Alterado (Check)
+            if (PedidoTerminarSessao != null)
+            {
+                PedidoTerminarSessao();
+            }
         }
+
+
 
 
     }

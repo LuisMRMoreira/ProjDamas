@@ -13,11 +13,20 @@ namespace ProjetoDamas
         {
             Program.V_Login.PedidoAlterarLableVmenu += V_Login_PedidoAlterarLableVmenu;
             Program.V_Menu.PedidoLogin += V_Menu_PedidoLogin;
+            Program.V_Profile.PedidoTerminarSessao += V_Profile_PedidoTerminarSessao;
+            Program.V_Settings.PedidoGuardarDados += V_Settings_PedidoGuardarDados;
 
         }
 
+        private void V_Settings_PedidoGuardarDados(int volume, string tamanho)
+        {
+            Program.M_Gestor.GuardarDados(volume, tamanho);
+        }
 
-
+        private void V_Profile_PedidoTerminarSessao()
+        {
+            Program.M_Gestor.AlterarLogin();
+        }
 
         private void V_Menu_PedidoLogin()
         {
@@ -26,7 +35,7 @@ namespace ProjetoDamas
 
         private void V_Login_PedidoAlterarLableVmenu()
         {
-            Program.M_Gestor.AlterarVMenuEAbir();
+            Program.M_Gestor.AlterarLogin();
         }
     }
 }

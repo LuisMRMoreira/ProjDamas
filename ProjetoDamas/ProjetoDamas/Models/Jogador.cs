@@ -8,6 +8,10 @@ namespace ProjetoDamas
 {
     public class Jogador
     {//Classe representativa de cada jogador que intervem no jogo
+
+        public event MetodosSemParametros ErroPassDiferente;
+        public event MetodosSemParametros ContaCriada;
+
         private int id;
         private bool corPecas; //0-> branca ou 1 -> preta. Informa qual das peças é que o jogador está a controlar
         private List<Peca> pecasEmJogo;
@@ -17,12 +21,35 @@ namespace ProjetoDamas
         private int numeroPecasEmJogo;
         private int numeroDePecasComidas = 0;//começa a zero
 
-        public Peca Peca
+        
+
+        public void RegistarJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imagem)
         {
-            get => default(Peca);
-            set
+            //Criar Jogador
+            //Inserir na base de dados
+
+
+            //Verificar se as passwords são iguais
+            if (pass != confirmPass)
             {
+                if (ErroPassDiferente != null)
+                {
+                    ErroPassDiferente();
+                }
             }
+            else
+            {
+                if (ContaCriada != null)
+                {
+                    ContaCriada();
+                }
+                //Program.V_Register.Hide();
+                //Program.V_Login.Show();
+            }
+
+            //eviar evento a imformar que já foi inserido
         }
+
+
     }
 }

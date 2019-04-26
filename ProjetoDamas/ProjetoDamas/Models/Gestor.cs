@@ -8,12 +8,14 @@ namespace ProjetoDamas
 {
     public class Gestor
     {
-        public event MetodosComDuasStrings PedidoAlterarVMenuLogin;
+        public event MetodosComDuasStrings PedidoAlterarLogin;
         public event MetodosSemParametros PedidoMostrarPerfil;
         public event MetodosSemParametros PedidoMostrarLogin;
+        public event MetodosSemParametros PedidoTerminarSessaoNaView;
+        public event MetodosSemParametros RespostaDadosGuardados;
 
 
-        public bool Login = false; 
+        public bool Login = false;
 
         //classe responsavel pela gestão do jogo
         //Vai fornecer o menu e os modos de jogo
@@ -28,15 +30,42 @@ namespace ProjetoDamas
         //Poderiamos ter utilizado enums ou apenas identificação por inteiros, no entanto optamos por esta opção por parecer a mais intuitiva.
 
 
-        public void AlterarVMenuEAbir()
-        {//altera a lable e a imagem que do login. Aqui vamos ter de ir buscar à base de dados 
 
-            if (PedidoAlterarVMenuLogin != null)
+
+
+        public void GuardarDados(int volume, string tamanho)
+        {
+            //Guardar dados ---------------------------------------------------------------------------------------------------------------------------------
+
+            if (RespostaDadosGuardados != null)
             {
-                PedidoAlterarVMenuLogin(@"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources\" + "DamaBranca", "nomezito");
+                RespostaDadosGuardados();
             }
+            
 
-            Login = true;
+        }
+        
+
+        public void AlterarLogin()
+        {//altera a lable e a imagem que do login. Aqui vamos ter de ir buscar à base de dados ---------------------------------------------------------------------------------------------------------------------------------
+
+            if (Login)
+            {
+                if (PedidoTerminarSessaoNaView != null)
+                {
+                    PedidoTerminarSessaoNaView();
+                    Login = false;
+                }
+            }
+            else
+            {
+                if (PedidoAlterarLogin != null)
+                {
+                    PedidoAlterarLogin(@"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources\" + "DamaBranca", "nomezito");
+                    Login = true;
+                }
+            }
+            
 
         }
 

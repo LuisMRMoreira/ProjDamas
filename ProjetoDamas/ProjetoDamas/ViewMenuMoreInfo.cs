@@ -44,13 +44,7 @@ namespace ProjetoDamas
            //}
         }
 
-        private void bHistory_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewHistory hist = new ViewHistory();
-            hist.Closed += (s, args) => this.Close();
-            hist.Show();
-        }
+
 
         private void bSettings_Click(object sender, EventArgs e)
         {
