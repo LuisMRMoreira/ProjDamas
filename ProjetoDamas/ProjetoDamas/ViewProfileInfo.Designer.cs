@@ -28,33 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewProfileInfo));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pBUser = new System.Windows.Forms.PictureBox();
             this.pbReturn = new System.Windows.Forms.PictureBox();
-            this.lUsername = new System.Windows.Forms.Label();
-            this.lUsernameN = new System.Windows.Forms.Label();
-            this.tBUsername = new System.Windows.Forms.TextBox();
-            this.lLEditUnsername = new System.Windows.Forms.LinkLabel();
-            this.bConfirm = new System.Windows.Forms.Button();
-            this.lLPassword = new System.Windows.Forms.LinkLabel();
-            this.tBPassword = new System.Windows.Forms.TextBox();
-            this.lPassword = new System.Windows.Forms.Label();
-            this.pBCheck1 = new System.Windows.Forms.PictureBox();
-            this.pBCheck2 = new System.Windows.Forms.PictureBox();
-            this.pBCheck3 = new System.Windows.Forms.PictureBox();
-            this.lLNickname = new System.Windows.Forms.LinkLabel();
-            this.tbNickname = new System.Windows.Forms.TextBox();
-            this.lNicknameN = new System.Windows.Forms.Label();
-            this.lNickname = new System.Windows.Forms.Label();
-            this.pBCheck4 = new System.Windows.Forms.PictureBox();
-            this.lLEmail = new System.Windows.Forms.LinkLabel();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.lEmailN = new System.Windows.Forms.Label();
-            this.pBCheck5 = new System.Windows.Forms.PictureBox();
-            this.lLCountry = new System.Windows.Forms.LinkLabel();
-            this.lCountry = new System.Windows.Forms.Label();
             this.cBCountries = new System.Windows.Forms.ComboBox();
-            this.bEndSession = new System.Windows.Forms.Button();
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -68,17 +46,34 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.oFDImagemPerfil = new System.Windows.Forms.OpenFileDialog();
+            this.pBEmailEditar = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pBEmail = new System.Windows.Forms.PictureBox();
+            this.pBCountryEditar = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pBCountry = new System.Windows.Forms.PictureBox();
+            this.pBGuardar = new System.Windows.Forms.PictureBox();
+            this.tTLogout = new System.Windows.Forms.ToolTip(this.components);
+            this.tTGuardar = new System.Windows.Forms.ToolTip(this.components);
+            this.pBCheckGuardado = new System.Windows.Forms.PictureBox();
+            this.tTGuardado = new System.Windows.Forms.ToolTip(this.components);
+            this.tTMaisInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.pMoreInfo = new System.Windows.Forms.Panel();
+            this.pBMoreInfo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tTReturn = new System.Windows.Forms.ToolTip(this.components);
+            this.tTSelect = new System.Windows.Forms.ToolTip(this.components);
+            this.tTEdit = new System.Windows.Forms.ToolTip(this.components);
+            this.tTSeePass = new System.Windows.Forms.ToolTip(this.components);
+            this.cTBEmail = new ProjetoDamas.CueTextBox();
             this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.cTBPassword = new ProjetoDamas.CueTextBox();
             this.ctBUsername = new ProjetoDamas.CueTextBox();
-            this.oFDImagemPerfil = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck5)).BeginInit();
             this.pUsername.SuspendLayout();
             this.pUsernameImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,20 +87,33 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmailEditar)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCountryEditar)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pBUser
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 58);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pBUser.BackColor = System.Drawing.Color.Transparent;
+            this.pBUser.Image = ((System.Drawing.Image)(resources.GetObject("pBUser.Image")));
+            this.pBUser.Location = new System.Drawing.Point(26, 58);
+            this.pBUser.Margin = new System.Windows.Forms.Padding(2);
+            this.pBUser.Name = "pBUser";
+            this.pBUser.Size = new System.Drawing.Size(127, 119);
+            this.pBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBUser.TabIndex = 10;
+            this.pBUser.TabStop = false;
+            this.tTSelect.SetToolTip(this.pBUser, "Select image");
+            this.pBUser.Click += new System.EventHandler(this.pBUser_Click);
             // 
             // pbReturn
             // 
@@ -114,285 +122,24 @@
             this.pbReturn.Location = new System.Drawing.Point(12, 12);
             this.pbReturn.Name = "pbReturn";
             this.pbReturn.Size = new System.Drawing.Size(29, 28);
-            this.pbReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbReturn.TabIndex = 23;
             this.pbReturn.TabStop = false;
+            this.tTReturn.SetToolTip(this.pbReturn, "Return");
             this.pbReturn.Click += new System.EventHandler(this.pbReturn_Click);
-            // 
-            // lUsername
-            // 
-            this.lUsername.AutoSize = true;
-            this.lUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUsername.ForeColor = System.Drawing.Color.White;
-            this.lUsername.Location = new System.Drawing.Point(45, 318);
-            this.lUsername.Name = "lUsername";
-            this.lUsername.Size = new System.Drawing.Size(97, 22);
-            this.lUsername.TabIndex = 24;
-            this.lUsername.Text = "Username:";
-            // 
-            // lUsernameN
-            // 
-            this.lUsernameN.AutoSize = true;
-            this.lUsernameN.BackColor = System.Drawing.Color.Transparent;
-            this.lUsernameN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUsernameN.ForeColor = System.Drawing.Color.White;
-            this.lUsernameN.Location = new System.Drawing.Point(148, 321);
-            this.lUsernameN.Name = "lUsernameN";
-            this.lUsernameN.Size = new System.Drawing.Size(106, 17);
-            this.lUsernameN.TabIndex = 25;
-            this.lUsernameN.Text = "António Manuel";
-            // 
-            // tBUsername
-            // 
-            this.tBUsername.Location = new System.Drawing.Point(148, 323);
-            this.tBUsername.Name = "tBUsername";
-            this.tBUsername.Size = new System.Drawing.Size(163, 20);
-            this.tBUsername.TabIndex = 26;
-            this.tBUsername.Visible = false;
-            // 
-            // lLEditUnsername
-            // 
-            this.lLEditUnsername.AutoSize = true;
-            this.lLEditUnsername.BackColor = System.Drawing.Color.Transparent;
-            this.lLEditUnsername.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lLEditUnsername.Location = new System.Drawing.Point(14, 323);
-            this.lLEditUnsername.Name = "lLEditUnsername";
-            this.lLEditUnsername.Size = new System.Drawing.Size(25, 13);
-            this.lLEditUnsername.TabIndex = 27;
-            this.lLEditUnsername.TabStop = true;
-            this.lLEditUnsername.Text = "Edit";
-            this.lLEditUnsername.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLEditUnsername_LinkClicked);
-            // 
-            // bConfirm
-            // 
-            this.bConfirm.Location = new System.Drawing.Point(26, 216);
-            this.bConfirm.Name = "bConfirm";
-            this.bConfirm.Size = new System.Drawing.Size(135, 38);
-            this.bConfirm.TabIndex = 28;
-            this.bConfirm.Text = "Confirm";
-            this.bConfirm.UseVisualStyleBackColor = true;
-            this.bConfirm.Visible = false;
-            this.bConfirm.Click += new System.EventHandler(this.bConfirm_Click);
-            // 
-            // lLPassword
-            // 
-            this.lLPassword.AutoSize = true;
-            this.lLPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lLPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lLPassword.Location = new System.Drawing.Point(17, 344);
-            this.lLPassword.Name = "lLPassword";
-            this.lLPassword.Size = new System.Drawing.Size(25, 13);
-            this.lLPassword.TabIndex = 32;
-            this.lLPassword.TabStop = true;
-            this.lLPassword.Text = "Edit";
-            this.lLPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLPassword_LinkClicked);
-            // 
-            // tBPassword
-            // 
-            this.tBPassword.Location = new System.Drawing.Point(151, 341);
-            this.tBPassword.Name = "tBPassword";
-            this.tBPassword.Size = new System.Drawing.Size(163, 20);
-            this.tBPassword.TabIndex = 31;
-            this.tBPassword.Visible = false;
-            // 
-            // lPassword
-            // 
-            this.lPassword.AutoSize = true;
-            this.lPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPassword.ForeColor = System.Drawing.Color.White;
-            this.lPassword.Location = new System.Drawing.Point(48, 339);
-            this.lPassword.Name = "lPassword";
-            this.lPassword.Size = new System.Drawing.Size(94, 22);
-            this.lPassword.TabIndex = 29;
-            this.lPassword.Text = "Password:";
-            // 
-            // pBCheck1
-            // 
-            this.pBCheck1.BackColor = System.Drawing.Color.Transparent;
-            this.pBCheck1.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheck1.Location = new System.Drawing.Point(499, 58);
-            this.pBCheck1.Name = "pBCheck1";
-            this.pBCheck1.Size = new System.Drawing.Size(28, 28);
-            this.pBCheck1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCheck1.TabIndex = 33;
-            this.pBCheck1.TabStop = false;
-            this.pBCheck1.Visible = false;
-            // 
-            // pBCheck2
-            // 
-            this.pBCheck2.BackColor = System.Drawing.Color.Transparent;
-            this.pBCheck2.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheck2.Location = new System.Drawing.Point(500, 103);
-            this.pBCheck2.Name = "pBCheck2";
-            this.pBCheck2.Size = new System.Drawing.Size(28, 28);
-            this.pBCheck2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCheck2.TabIndex = 34;
-            this.pBCheck2.TabStop = false;
-            this.pBCheck2.Visible = false;
-            // 
-            // pBCheck3
-            // 
-            this.pBCheck3.BackColor = System.Drawing.Color.Transparent;
-            this.pBCheck3.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheck3.Location = new System.Drawing.Point(499, 141);
-            this.pBCheck3.Name = "pBCheck3";
-            this.pBCheck3.Size = new System.Drawing.Size(28, 28);
-            this.pBCheck3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCheck3.TabIndex = 39;
-            this.pBCheck3.TabStop = false;
-            this.pBCheck3.Visible = false;
-            // 
-            // lLNickname
-            // 
-            this.lLNickname.AutoSize = true;
-            this.lLNickname.BackColor = System.Drawing.Color.Transparent;
-            this.lLNickname.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lLNickname.Location = new System.Drawing.Point(17, 271);
-            this.lLNickname.Name = "lLNickname";
-            this.lLNickname.Size = new System.Drawing.Size(25, 13);
-            this.lLNickname.TabIndex = 38;
-            this.lLNickname.TabStop = true;
-            this.lLNickname.Text = "Edit";
-            this.lLNickname.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLNickname_LinkClicked);
-            // 
-            // tbNickname
-            // 
-            this.tbNickname.Location = new System.Drawing.Point(151, 271);
-            this.tbNickname.Name = "tbNickname";
-            this.tbNickname.Size = new System.Drawing.Size(163, 20);
-            this.tbNickname.TabIndex = 37;
-            this.tbNickname.Visible = false;
-            // 
-            // lNicknameN
-            // 
-            this.lNicknameN.AutoSize = true;
-            this.lNicknameN.BackColor = System.Drawing.Color.Transparent;
-            this.lNicknameN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNicknameN.ForeColor = System.Drawing.Color.White;
-            this.lNicknameN.Location = new System.Drawing.Point(151, 269);
-            this.lNicknameN.Name = "lNicknameN";
-            this.lNicknameN.Size = new System.Drawing.Size(51, 17);
-            this.lNicknameN.TabIndex = 36;
-            this.lNicknameN.Text = "aaa_m";
-            // 
-            // lNickname
-            // 
-            this.lNickname.AutoSize = true;
-            this.lNickname.BackColor = System.Drawing.Color.Transparent;
-            this.lNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNickname.ForeColor = System.Drawing.Color.White;
-            this.lNickname.Location = new System.Drawing.Point(48, 266);
-            this.lNickname.Name = "lNickname";
-            this.lNickname.Size = new System.Drawing.Size(94, 22);
-            this.lNickname.TabIndex = 35;
-            this.lNickname.Text = "Nickname:";
-            // 
-            // pBCheck4
-            // 
-            this.pBCheck4.BackColor = System.Drawing.Color.Transparent;
-            this.pBCheck4.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheck4.Location = new System.Drawing.Point(490, 184);
-            this.pBCheck4.Name = "pBCheck4";
-            this.pBCheck4.Size = new System.Drawing.Size(28, 28);
-            this.pBCheck4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCheck4.TabIndex = 44;
-            this.pBCheck4.TabStop = false;
-            this.pBCheck4.Visible = false;
-            // 
-            // lLEmail
-            // 
-            this.lLEmail.AutoSize = true;
-            this.lLEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lLEmail.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lLEmail.Location = new System.Drawing.Point(176, 245);
-            this.lLEmail.Name = "lLEmail";
-            this.lLEmail.Size = new System.Drawing.Size(25, 13);
-            this.lLEmail.TabIndex = 43;
-            this.lLEmail.TabStop = true;
-            this.lLEmail.Text = "Edit";
-            this.lLEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLEmail_LinkClicked);
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(310, 245);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(163, 20);
-            this.tbEmail.TabIndex = 42;
-            this.tbEmail.Visible = false;
-            // 
-            // lEmailN
-            // 
-            this.lEmailN.AutoSize = true;
-            this.lEmailN.BackColor = System.Drawing.Color.Transparent;
-            this.lEmailN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEmailN.ForeColor = System.Drawing.Color.White;
-            this.lEmailN.Location = new System.Drawing.Point(310, 246);
-            this.lEmailN.Name = "lEmailN";
-            this.lEmailN.Size = new System.Drawing.Size(163, 17);
-            this.lEmailN.TabIndex = 41;
-            this.lEmailN.Text = "nome_nome@gmail.com";
-            // 
-            // pBCheck5
-            // 
-            this.pBCheck5.BackColor = System.Drawing.Color.Transparent;
-            this.pBCheck5.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheck5.Location = new System.Drawing.Point(490, 226);
-            this.pBCheck5.Name = "pBCheck5";
-            this.pBCheck5.Size = new System.Drawing.Size(28, 28);
-            this.pBCheck5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCheck5.TabIndex = 49;
-            this.pBCheck5.TabStop = false;
-            this.pBCheck5.Visible = false;
-            // 
-            // lLCountry
-            // 
-            this.lLCountry.AutoSize = true;
-            this.lLCountry.BackColor = System.Drawing.Color.Transparent;
-            this.lLCountry.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lLCountry.Location = new System.Drawing.Point(14, 297);
-            this.lLCountry.Name = "lLCountry";
-            this.lLCountry.Size = new System.Drawing.Size(25, 13);
-            this.lLCountry.TabIndex = 48;
-            this.lLCountry.TabStop = true;
-            this.lLCountry.Text = "Edit";
-            this.lLCountry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lLCountry_LinkClicked);
-            // 
-            // lCountry
-            // 
-            this.lCountry.AutoSize = true;
-            this.lCountry.BackColor = System.Drawing.Color.Transparent;
-            this.lCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCountry.ForeColor = System.Drawing.Color.White;
-            this.lCountry.Location = new System.Drawing.Point(45, 292);
-            this.lCountry.Name = "lCountry";
-            this.lCountry.Size = new System.Drawing.Size(78, 22);
-            this.lCountry.TabIndex = 45;
-            this.lCountry.Text = "Country:";
             // 
             // cBCountries
             // 
+            this.cBCountries.BackColor = System.Drawing.SystemColors.Control;
             this.cBCountries.Enabled = false;
+            this.cBCountries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 14F);
+            this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(148, 297);
+            this.cBCountries.Location = new System.Drawing.Point(43, 0);
             this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(162, 21);
+            this.cBCountries.Size = new System.Drawing.Size(221, 33);
             this.cBCountries.TabIndex = 50;
-            // 
-            // bEndSession
-            // 
-            this.bEndSession.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bEndSession.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.bEndSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bEndSession.ForeColor = System.Drawing.Color.Black;
-            this.bEndSession.Location = new System.Drawing.Point(403, 314);
-            this.bEndSession.Name = "bEndSession";
-            this.bEndSession.Size = new System.Drawing.Size(115, 37);
-            this.bEndSession.TabIndex = 51;
-            this.bEndSession.Text = "End session";
-            this.bEndSession.UseVisualStyleBackColor = false;
-            this.bEndSession.Click += new System.EventHandler(this.bChangeLogin_Click);
             // 
             // pUsername
             // 
@@ -434,6 +181,7 @@
             this.pBUserEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBUserEditar.TabIndex = 53;
             this.pBUserEditar.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBUserEditar, "Edit");
             this.pBUserEditar.Click += new System.EventHandler(this.pBUserEditar_Click);
             // 
             // pBPasswordEditar
@@ -445,6 +193,7 @@
             this.pBPasswordEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBPasswordEditar.TabIndex = 57;
             this.pBPasswordEditar.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBPasswordEditar, "Edit");
             this.pBPasswordEditar.Click += new System.EventHandler(this.pBPasswordEditar_Click);
             // 
             // panel3
@@ -466,6 +215,7 @@
             this.pBVerPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBVerPass.TabIndex = 58;
             this.pBVerPass.TabStop = false;
+            this.tTSeePass.SetToolTip(this.pBVerPass, "See password");
             this.pBVerPass.Click += new System.EventHandler(this.pBVerPass_Click);
             // 
             // panel4
@@ -499,6 +249,7 @@
             this.pBNickEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBNickEdit.TabIndex = 59;
             this.pBNickEdit.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBNickEdit, "Edit");
             this.pBNickEdit.Click += new System.EventHandler(this.pBNickEdit_Click);
             // 
             // panel1
@@ -531,6 +282,181 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
+            // 
+            // oFDImagemPerfil
+            // 
+            this.oFDImagemPerfil.FileName = "openFileDialog1";
+            // 
+            // pBEmailEditar
+            // 
+            this.pBEmailEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
+            this.pBEmailEditar.Location = new System.Drawing.Point(461, 183);
+            this.pBEmailEditar.Name = "pBEmailEditar";
+            this.pBEmailEditar.Size = new System.Drawing.Size(28, 29);
+            this.pBEmailEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmailEditar.TabIndex = 61;
+            this.pBEmailEditar.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBEmailEditar, "Edit");
+            this.pBEmailEditar.Click += new System.EventHandler(this.pBEmailEditar_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.cTBEmail);
+            this.panel5.Location = new System.Drawing.Point(190, 180);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(302, 32);
+            this.panel5.TabIndex = 60;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Orange;
+            this.panel6.Controls.Add(this.pBEmail);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(42, 32);
+            this.panel6.TabIndex = 10;
+            // 
+            // pBEmail
+            // 
+            this.pBEmail.BackColor = System.Drawing.Color.Transparent;
+            this.pBEmail.Image = global::ProjetoDamas.Properties.Resources.Arroba_icon;
+            this.pBEmail.Location = new System.Drawing.Point(2, 2);
+            this.pBEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.pBEmail.Name = "pBEmail";
+            this.pBEmail.Size = new System.Drawing.Size(38, 28);
+            this.pBEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBEmail.TabIndex = 9;
+            this.pBEmail.TabStop = false;
+            // 
+            // pBCountryEditar
+            // 
+            this.pBCountryEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
+            this.pBCountryEditar.Location = new System.Drawing.Point(460, 226);
+            this.pBCountryEditar.Name = "pBCountryEditar";
+            this.pBCountryEditar.Size = new System.Drawing.Size(28, 29);
+            this.pBCountryEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBCountryEditar.TabIndex = 63;
+            this.pBCountryEditar.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBCountryEditar, "Edit");
+            this.pBCountryEditar.Click += new System.EventHandler(this.pBCountryEditar_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.cBCountries);
+            this.panel7.Location = new System.Drawing.Point(189, 223);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(302, 32);
+            this.panel7.TabIndex = 62;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel8.Controls.Add(this.pBCountry);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(42, 32);
+            this.panel8.TabIndex = 10;
+            // 
+            // pBCountry
+            // 
+            this.pBCountry.BackColor = System.Drawing.Color.Transparent;
+            this.pBCountry.Image = global::ProjetoDamas.Properties.Resources.country_icon;
+            this.pBCountry.Location = new System.Drawing.Point(2, 2);
+            this.pBCountry.Margin = new System.Windows.Forms.Padding(2);
+            this.pBCountry.Name = "pBCountry";
+            this.pBCountry.Size = new System.Drawing.Size(38, 28);
+            this.pBCountry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBCountry.TabIndex = 9;
+            this.pBCountry.TabStop = false;
+            // 
+            // pBGuardar
+            // 
+            this.pBGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.pBGuardar.Image = global::ProjetoDamas.Properties.Resources.Save_icon;
+            this.pBGuardar.Location = new System.Drawing.Point(421, 11);
+            this.pBGuardar.Name = "pBGuardar";
+            this.pBGuardar.Size = new System.Drawing.Size(31, 29);
+            this.pBGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBGuardar.TabIndex = 66;
+            this.pBGuardar.TabStop = false;
+            this.tTGuardar.SetToolTip(this.pBGuardar, "Save");
+            this.pBGuardar.Click += new System.EventHandler(this.pBGuardar_Click);
+            // 
+            // tTLogout
+            // 
+            this.tTLogout.Tag = "";
+            // 
+            // tTGuardar
+            // 
+            this.tTGuardar.Tag = "";
+            // 
+            // pBCheckGuardado
+            // 
+            this.pBCheckGuardado.BackColor = System.Drawing.Color.Transparent;
+            this.pBCheckGuardado.Image = global::ProjetoDamas.Properties.Resources.Check1;
+            this.pBCheckGuardado.Location = new System.Drawing.Point(348, 12);
+            this.pBCheckGuardado.Name = "pBCheckGuardado";
+            this.pBCheckGuardado.Size = new System.Drawing.Size(31, 29);
+            this.pBCheckGuardado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBCheckGuardado.TabIndex = 67;
+            this.pBCheckGuardado.TabStop = false;
+            this.tTGuardado.SetToolTip(this.pBCheckGuardado, "Saved");
+            this.tTGuardar.SetToolTip(this.pBCheckGuardado, "Save");
+            this.pBCheckGuardado.Visible = false;
+            // 
+            // pMoreInfo
+            // 
+            this.pMoreInfo.BackColor = System.Drawing.Color.White;
+            this.pMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pMoreInfo.Location = new System.Drawing.Point(0, 262);
+            this.pMoreInfo.Name = "pMoreInfo";
+            this.pMoreInfo.Size = new System.Drawing.Size(548, 111);
+            this.pMoreInfo.TabIndex = 69;
+            this.pMoreInfo.Visible = false;
+            // 
+            // pBMoreInfo
+            // 
+            this.pBMoreInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pBMoreInfo.Image = global::ProjetoDamas.Properties.Resources.More_info_icon;
+            this.pBMoreInfo.Location = new System.Drawing.Point(385, 12);
+            this.pBMoreInfo.Name = "pBMoreInfo";
+            this.pBMoreInfo.Size = new System.Drawing.Size(30, 29);
+            this.pBMoreInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBMoreInfo.TabIndex = 70;
+            this.pBMoreInfo.TabStop = false;
+            this.tTMaisInfo.SetToolTip(this.pBMoreInfo, "More Info");
+            this.pBMoreInfo.Click += new System.EventHandler(this.pBMoreInfo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.user_interface_login_icon__12_1_;
+            this.pictureBox1.Location = new System.Drawing.Point(454, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            this.tTLogout.SetToolTip(this.pictureBox1, "Logout");
+            // 
+            // cTBEmail
+            // 
+            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBEmail.Cue = "Email";
+            this.cTBEmail.Enabled = false;
+            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
+            this.cTBEmail.MaxLength = 20;
+            this.cTBEmail.Name = "cTBEmail";
+            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
+            this.cTBEmail.TabIndex = 16;
             // 
             // cTBNickname
             // 
@@ -575,61 +501,37 @@
             this.ctBUsername.Size = new System.Drawing.Size(219, 22);
             this.ctBUsername.TabIndex = 16;
             // 
-            // oFDImagemPerfil
-            // 
-            this.oFDImagemPerfil.FileName = "openFileDialog1";
-            // 
             // ViewProfileInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(566, 373);
+            this.ClientSize = new System.Drawing.Size(548, 373);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBMoreInfo);
+            this.Controls.Add(this.pMoreInfo);
+            this.Controls.Add(this.pBCheckGuardado);
+            this.Controls.Add(this.pBGuardar);
+            this.Controls.Add(this.pBCountryEditar);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pBEmailEditar);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pBNickEdit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pBPasswordEditar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pBUserEditar);
             this.Controls.Add(this.pUsername);
-            this.Controls.Add(this.bEndSession);
-            this.Controls.Add(this.cBCountries);
-            this.Controls.Add(this.pBCheck5);
-            this.Controls.Add(this.lLCountry);
-            this.Controls.Add(this.lCountry);
-            this.Controls.Add(this.pBCheck4);
-            this.Controls.Add(this.lLEmail);
-            this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.lEmailN);
-            this.Controls.Add(this.pBCheck3);
-            this.Controls.Add(this.lLNickname);
-            this.Controls.Add(this.tbNickname);
-            this.Controls.Add(this.lNicknameN);
-            this.Controls.Add(this.lNickname);
-            this.Controls.Add(this.pBCheck2);
-            this.Controls.Add(this.pBCheck1);
-            this.Controls.Add(this.lLPassword);
-            this.Controls.Add(this.tBPassword);
-            this.Controls.Add(this.lPassword);
-            this.Controls.Add(this.bConfirm);
-            this.Controls.Add(this.lLEditUnsername);
-            this.Controls.Add(this.tBUsername);
-            this.Controls.Add(this.lUsernameN);
-            this.Controls.Add(this.lUsername);
             this.Controls.Add(this.pbReturn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBUser);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewProfileInfo";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewProfileInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCheck5)).EndInit();
             this.pUsername.ResumeLayout(false);
             this.pUsername.PerformLayout();
             this.pUsernameImage.ResumeLayout(false);
@@ -646,39 +548,28 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmailEditar)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCountryEditar)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBUser;
         private System.Windows.Forms.PictureBox pbReturn;
-        private System.Windows.Forms.Label lUsername;
-        private System.Windows.Forms.Label lUsernameN;
-        private System.Windows.Forms.TextBox tBUsername;
-        private System.Windows.Forms.LinkLabel lLEditUnsername;
-        private System.Windows.Forms.Button bConfirm;
-        private System.Windows.Forms.LinkLabel lLPassword;
-        private System.Windows.Forms.TextBox tBPassword;
-        private System.Windows.Forms.Label lPassword;
-        private System.Windows.Forms.PictureBox pBCheck1;
-        private System.Windows.Forms.PictureBox pBCheck2;
-        private System.Windows.Forms.PictureBox pBCheck3;
-        private System.Windows.Forms.LinkLabel lLNickname;
-        private System.Windows.Forms.TextBox tbNickname;
-        private System.Windows.Forms.Label lNicknameN;
-        private System.Windows.Forms.Label lNickname;
-        private System.Windows.Forms.PictureBox pBCheck4;
-        private System.Windows.Forms.LinkLabel lLEmail;
-        private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.Label lEmailN;
-        private System.Windows.Forms.PictureBox pBCheck5;
-        private System.Windows.Forms.LinkLabel lLCountry;
-        private System.Windows.Forms.Label lCountry;
         private System.Windows.Forms.ComboBox cBCountries;
-        private System.Windows.Forms.Button bEndSession;
         private System.Windows.Forms.Panel pUsername;
         private System.Windows.Forms.Panel pUsernameImage;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -696,5 +587,27 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private CueTextBox cTBNickname;
         private System.Windows.Forms.OpenFileDialog oFDImagemPerfil;
+        private System.Windows.Forms.PictureBox pBEmailEditar;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pBEmail;
+        private CueTextBox cTBEmail;
+        private System.Windows.Forms.PictureBox pBCountryEditar;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pBCountry;
+        private System.Windows.Forms.PictureBox pBGuardar;
+        private System.Windows.Forms.ToolTip tTLogout;
+        private System.Windows.Forms.ToolTip tTGuardar;
+        private System.Windows.Forms.PictureBox pBCheckGuardado;
+        private System.Windows.Forms.ToolTip tTGuardado;
+        private System.Windows.Forms.ToolTip tTMaisInfo;
+        private System.Windows.Forms.Panel pMoreInfo;
+        private System.Windows.Forms.PictureBox pBMoreInfo;
+        private System.Windows.Forms.ToolTip tTReturn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip tTSelect;
+        private System.Windows.Forms.ToolTip tTEdit;
+        private System.Windows.Forms.ToolTip tTSeePass;
     }
 }

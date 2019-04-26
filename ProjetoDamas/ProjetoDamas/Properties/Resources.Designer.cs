@@ -74,6 +74,16 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arroba_icon {
+            get {
+                object obj = ResourceManager.GetObject("Arroba icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_image {
             get {
                 object obj = ResourceManager.GetObject("back image", resourceCulture);
@@ -104,6 +114,16 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap country_icon {
+            get {
+                object obj = ResourceManager.GetObject("country icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DamaBranca {
             get {
                 object obj = ResourceManager.GetObject("DamaBranca", resourceCulture);
@@ -124,9 +144,29 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Guardar_icon {
+            get {
+                object obj = ResourceManager.GetObject("Guardar icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_editar {
             get {
                 object obj = ResourceManager.GetObject("Icon editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_More_info {
+            get {
+                object obj = ResourceManager.GetObject("Icon More info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -174,6 +214,16 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap More_info_icon {
+            get {
+                object obj = ResourceManager.GetObject("More info icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Olho_icon {
             get {
                 object obj = ResourceManager.GetObject("Olho icon", resourceCulture);
@@ -197,6 +247,16 @@ namespace ProjetoDamas.Properties {
         internal static System.Drawing.Bitmap PecaPreta {
             get {
                 object obj = ResourceManager.GetObject("PecaPreta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_icon {
+            get {
+                object obj = ResourceManager.GetObject("Save icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
