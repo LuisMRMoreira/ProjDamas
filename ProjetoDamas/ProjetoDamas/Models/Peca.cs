@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
+namespace ProjetoDamas
 {
     public class Peca : Posicao
     {//Classe que representa cada peca que está no tabuleiro. Recebe as coordenadas por herança de Posicao

@@ -13,26 +13,24 @@ namespace ProjetoDamas
 {
     public partial class ViewMenu : Form
     {
+
+        public event MetodosSemParametros PedidoLogin;
+
+
         public ViewMenu()
         {
             InitializeComponent();
+            Program.M_Gestor.PedidoAlterarVMenuLogin += M_Gestor_PedidoAlterarVMenuLogin;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void M_Gestor_PedidoAlterarVMenuLogin(string imagem, string nome)
         {
-
+            lLogin.Text = "Luis";
+            pBLogin.Image = Properties.Resources.DamaBranca;
+            //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
+            this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,11 +59,7 @@ namespace ProjetoDamas
             option_regras.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //instanciar login
-        }
-
+ 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -86,6 +80,7 @@ namespace ProjetoDamas
         private void ViewMenu_Load(object sender, EventArgs e)
         {
             pPainelOpcoes.BackColor = Color.FromArgb(80, 0, 0, 0);
+                       
         }
 
         private void bGameInfo_Click_1(object sender, EventArgs e)
@@ -103,6 +98,31 @@ namespace ProjetoDamas
             menu.Closed += (s, args) => this.Close();
             menu.Show();
         }
+
+
+
+        private void pLoginOrUsername_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //Program.V_Login.Show();
+
+            if (PedidoLogin != null)
+            {
+                PedidoLogin();
+            }
+
+
+            //Program.M_Gestor.Login
+
+            //this.Hide();
+            //ViewLogin login = new ViewLogin();
+            //login.Closed += (s, args) => this.Close();
+            //login.Show();
+
+        }
+
+
+
 
 
 

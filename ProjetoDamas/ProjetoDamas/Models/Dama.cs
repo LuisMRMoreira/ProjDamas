@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
-{
+namespace ProjetoDamas
+{ 
     public class Dama : Peca
     {
         //Classe representativa da peça de jogo dama

@@ -35,21 +35,21 @@
             this.lUsername = new System.Windows.Forms.Label();
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
+            this.ctBUsername = new ProjetoDamas.CueTextBox();
             this.lMemberLogin = new System.Windows.Forms.Label();
             this.pPassword = new System.Windows.Forms.Panel();
+            this.cTBPassword = new ProjetoDamas.CueTextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pPasswordImage = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.ctBUsername = new ProjetoDamas.CueTextBox();
-            this.cTBPassword = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pUsername.SuspendLayout();
             this.pUsernameImage.SuspendLayout();
             this.pPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pPasswordImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -129,6 +129,19 @@
             this.pUsernameImage.Size = new System.Drawing.Size(42, 32);
             this.pUsernameImage.TabIndex = 10;
             // 
+            // ctBUsername
+            // 
+            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctBUsername.Cue = "Username";
+            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
+            this.ctBUsername.MaxLength = 20;
+            this.ctBUsername.Name = "ctBUsername";
+            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
+            this.ctBUsername.TabIndex = 16;
+            // 
             // lMemberLogin
             // 
             this.lMemberLogin.AutoSize = true;
@@ -152,6 +165,32 @@
             this.pPassword.Size = new System.Drawing.Size(267, 32);
             this.pPassword.TabIndex = 13;
             // 
+            // cTBPassword
+            // 
+            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBPassword.Cue = "Password";
+            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
+            this.cTBPassword.MaxLength = 20;
+            this.cTBPassword.Name = "cTBPassword";
+            this.cTBPassword.PasswordChar = '*';
+            this.cTBPassword.Size = new System.Drawing.Size(185, 22);
+            this.cTBPassword.TabIndex = 17;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjetoDamas.Properties.Resources.Olho_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(236, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
             // pPasswordImage
             // 
             this.pPasswordImage.BackColor = System.Drawing.Color.NavajoWhite;
@@ -174,18 +213,6 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjetoDamas.Properties.Resources.Olho_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(236, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
-            // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
@@ -198,33 +225,6 @@
             this.labelPassword.Size = new System.Drawing.Size(111, 28);
             this.labelPassword.TabIndex = 15;
             this.labelPassword.Text = "Password:";
-            // 
-            // ctBUsername
-            // 
-            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
-            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ctBUsername.Cue = "Username";
-            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
-            this.ctBUsername.MaxLength = 20;
-            this.ctBUsername.Name = "ctBUsername";
-            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
-            this.ctBUsername.TabIndex = 16;
-            // 
-            // cTBPassword
-            // 
-            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBPassword.Cue = "Password";
-            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
-            this.cTBPassword.MaxLength = 20;
-            this.cTBPassword.Name = "cTBPassword";
-            this.cTBPassword.PasswordChar = '*';
-            this.cTBPassword.Size = new System.Drawing.Size(185, 22);
-            this.cTBPassword.TabIndex = 17;
             // 
             // ViewLogin
             // 
@@ -252,9 +252,9 @@
             this.pUsernameImage.ResumeLayout(false);
             this.pPassword.ResumeLayout(false);
             this.pPassword.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pPasswordImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

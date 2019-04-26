@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
+namespace ProjetoDamas
 {
     public class Jogo
     {//Classe que representa um jogo. Dois jogadores e um tabuleiro

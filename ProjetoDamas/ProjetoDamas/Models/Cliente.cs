@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
+namespace ProjetoDamas
 {
     public class Cliente : Jogo
     {//classe representativa de um jogo online (cliente-servidor)

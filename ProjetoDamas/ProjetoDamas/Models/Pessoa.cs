@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
+namespace ProjetoDamas
 {
     public class Pessoa : Jogador
     {//A classe Pessoa é derivada de jogar e serve como distinção entre robot, uma vez que caso não seja robot, necessita de introduzir toda esta informação

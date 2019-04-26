@@ -9,13 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoDamas
-{
+{    
     public partial class ViewLogin : Form
     {
+        public event MetodosSemParametros PedidoAlterarLableVmenu;
+
         public ViewLogin()
         {
             InitializeComponent();
+            Program.M_Gestor.PedidoMostrarLogin += M_Gestor_PedidoMostrarLogin;
 
+        }
+
+        private void M_Gestor_PedidoMostrarLogin()
+        {
+            this.Show();
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -35,13 +43,25 @@ namespace ProjetoDamas
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            //Menu menu = new Menu
             this.Hide();
-            ViewMenu Menu = new ViewMenu();
-            Menu.Size = this.Size;
-            Menu.Location = this.Location;// new Point(this.Left, this.Top);            
-            Menu.Show();            
-            Menu.Closed += (s, args) => this.Close();
+
+            if (PedidoAlterarLableVmenu != null)
+            {
+                PedidoAlterarLableVmenu();
+            }
+
+            //evia evento para 
+            
+            
+            //Menu menu = new Menu
+            //this.Hide();
+            //iewMenu Menu = new ViewMenu();
+            //Menu.Size = this.Size;
+            //Menu.Location = this.Location;// new Point(this.Left, this.Top);            
+            //Menu.Show();            
+            //Menu.Closed += (s, args) => this.Close();
+
+            
             
         }
 
@@ -84,6 +104,8 @@ namespace ProjetoDamas
             cTBPassword.PasswordChar = '*';
             ((PictureBox)(sender)).BorderStyle = BorderStyle.None;
         }
+
+
     }
 
 }

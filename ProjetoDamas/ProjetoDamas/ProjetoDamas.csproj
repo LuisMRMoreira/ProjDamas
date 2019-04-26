@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllerGestor.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Delegates.cs" />
     <Compile Include="Regras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -283,6 +285,7 @@
     <None Include="Resources\Icon return.png" />
     <None Include="Resources\Check.png" />
     <None Include="Resources\back image.jpg" />
+    <Content Include="Resources\Icon editar.png" />
     <Content Include="Resources\imagemDeFundo.png" />
     <Content Include="Resources\DamaBranca.png" />
     <Content Include="Resources\DamaPreta.png" />

@@ -14,15 +14,34 @@ namespace ProjetoDamas
 {
     public partial class ViewProfileInfo : Form
     {
+
+        public event MetodosComUmInteiro PedidoModoEditar;
+
         bool changedUser = false, changedPassword = false, changedNickname = false, changedEmail = false, changedCountry = false;
 
         public ViewProfileInfo()
         {
             InitializeComponent();
+            Program.M_Gestor.PedidoMostrarPerfil += M_Gestor_PedidoMostrarPerfil;
+
+        }
+
+        private void M_Gestor_PedidoMostrarPerfil()
+        {
+            this.Show();
         }
 
         private void lLEditUnsername_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {//Butão editar Username
+
+            if (PedidoModoEditar != null)
+            {
+                PedidoModoEditar(1); // 1-> username
+            }
+
+            
+            /*            
+            
             //TextBox: aparece
             tBUsername.Visible = true;
             //A label desaparece
@@ -32,7 +51,11 @@ namespace ProjetoDamas
             //O texto da textBox é igual ao que estava na lable.
             tBUsername.Text = lUsernameN.Text;
 
+            */
+
             changedUser = true;
+
+            
         }
 
         private void ViewProfileInfo_Load(object sender, EventArgs e)
@@ -59,10 +82,12 @@ namespace ProjetoDamas
             {
                 
             }
+
             this.Hide();
-            ViewMenu Menu = new ViewMenu();
-            Menu.Closed += (s, args) => this.Close();
-            Menu.Show();
+            Program.V_Menu.Show();
+            //ViewMenu Menu = new ViewMenu();
+            //Menu.Closed += (s, args) => this.Close();
+            //Menu.Show();
 
         }
 
@@ -74,6 +99,66 @@ namespace ProjetoDamas
                 ViewLogin login = new ViewLogin();
                 login.Closed += (s, args) => this.Close();
                 login.Show();
+            }
+        }
+
+
+
+        private void pBUserEditar_Click(object sender, EventArgs e)
+        {
+            if (ctBUsername.Enabled)
+                ((PictureBox)sender).BorderStyle = BorderStyle.None;
+            else
+                ((PictureBox)sender).BorderStyle = BorderStyle.Fixed3D;
+
+            ctBUsername.Enabled = !ctBUsername.Enabled;
+        }
+
+  
+
+        private void pBPasswordEditar_Click(object sender, EventArgs e)
+        {
+            if (cTBPassword.Enabled)
+                ((PictureBox)sender).BorderStyle = BorderStyle.None;
+            else
+                ((PictureBox)sender).BorderStyle = BorderStyle.Fixed3D;
+
+            cTBPassword.Enabled = !cTBPassword.Enabled;
+        }
+
+        private void pBVerPass_Click(object sender, EventArgs e)
+        {
+            //cTBPassword.PasswordChar = '\0';
+            //((PictureBox)(sender)).BorderStyle = BorderStyle.Fixed3D;
+
+
+
+            if (cTBPassword.PasswordChar == '*') {
+                ((PictureBox)sender).BorderStyle = BorderStyle.Fixed3D;
+                cTBPassword.PasswordChar = '\0';
+            }
+            else {
+                ((PictureBox)sender).BorderStyle = BorderStyle.None;
+                cTBPassword.PasswordChar = '*';
+            }
+
+        }
+
+        private void pBNickEdit_Click(object sender, EventArgs e)
+        {
+            if (cTBNickname.Enabled)
+                ((PictureBox)sender).BorderStyle = BorderStyle.None;
+            else
+                ((PictureBox)sender).BorderStyle = BorderStyle.Fixed3D;
+
+            cTBNickname.Enabled = !cTBNickname.Enabled;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (oFDImagemPerfil.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
 

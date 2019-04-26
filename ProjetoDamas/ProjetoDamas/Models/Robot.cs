@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Damas
+namespace ProjetoDamas
 {
     public class Robot : Jogador
     {//Classe derivada de JOgador que representa um jogador standalone. 
