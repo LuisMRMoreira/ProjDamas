@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Regras.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEnd.Designer.cs">
+      <DependentUpon>ViewEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewJogoRobot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Regras.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewEnd.resx">
+      <DependentUpon>ViewEnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewJogoRobot.resx">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +284,8 @@
     <None Include="Resources\Volume icon.png" />
     <None Include="Resources\Save icon.png" />
     <None Include="Resources\Icon Level icon.png" />
+    <None Include="Resources\Confetis.png" />
+    <None Include="Resources\confets.png" />
     <Content Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
     <None Include="Resources\Check.jpg" />
@@ -299,6 +310,25 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

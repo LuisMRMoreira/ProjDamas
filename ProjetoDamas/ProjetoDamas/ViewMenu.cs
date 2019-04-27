@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using WMPLib;
 
 namespace ProjetoDamas
 {
@@ -15,13 +16,16 @@ namespace ProjetoDamas
     {
 
         public event MetodosSemParametros PedidoLogin;
-
+        public WindowsMediaPlayer wplayer;
+        
 
         public ViewMenu()
         {
             InitializeComponent();
             Program.M_Gestor.PedidoAlterarLogin += M_Gestor_PedidoAlterarLogin;
             Program.M_Gestor.PedidoTerminarSessaoNaView += M_Gestor_PedidoTerminarSessaoNaView;
+            wplayer = new WindowsMediaPlayer();
+            wplayer.URL = "Minecraft-Theme Song {Extended for 30 Minutes}.mp3";
         }
 
         private void M_Gestor_PedidoTerminarSessaoNaView()
@@ -30,6 +34,7 @@ namespace ProjetoDamas
             pBLogin.Image = Properties.Resources.user_interface_login_icon__12_1_;
             //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
             this.Show();
+            
         }
 
         private void M_Gestor_PedidoAlterarLogin(string imagem, string nome)
@@ -77,9 +82,7 @@ namespace ProjetoDamas
         private void ViewMenu_Load(object sender, EventArgs e)
         {
             pPainelOpcoes.BackColor = Color.FromArgb(80, 0, 0, 0);
-
-
-                       
+            wplayer.controls.play();
         }
 
         private void bGameInfo_Click_1(object sender, EventArgs e)
@@ -133,6 +136,8 @@ namespace ProjetoDamas
             this.Hide();
             Program.V_Rules.Show();
         }
+
+        
 
 
 

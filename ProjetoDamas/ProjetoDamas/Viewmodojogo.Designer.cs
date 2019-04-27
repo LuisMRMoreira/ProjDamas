@@ -34,14 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pJogo = new System.Windows.Forms.Panel();
+            this.lOnlineInfo = new System.Windows.Forms.Label();
+            this.lLocalInfo = new System.Windows.Forms.Label();
+            this.lRobotInfo = new System.Windows.Forms.Label();
+            this.lMultiplayerInfo = new System.Windows.Forms.Label();
             this.lRobot = new System.Windows.Forms.Label();
             this.lMultiplayer = new System.Windows.Forms.Label();
             this.lLocal = new System.Windows.Forms.Label();
             this.lOnline = new System.Windows.Forms.Label();
-            this.lMultiplayerInfo = new System.Windows.Forms.Label();
-            this.lRobotInfo = new System.Windows.Forms.Label();
-            this.lLocalInfo = new System.Windows.Forms.Label();
-            this.lOnlineInfo = new System.Windows.Forms.Label();
             this.lPlayGame = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pJogo.SuspendLayout();
@@ -111,6 +111,55 @@
             this.pJogo.Size = new System.Drawing.Size(512, 53);
             this.pJogo.TabIndex = 32;
             // 
+            // lOnlineInfo
+            // 
+            this.lOnlineInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lOnlineInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lOnlineInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lOnlineInfo.Location = new System.Drawing.Point(13, 6);
+            this.lOnlineInfo.Name = "lOnlineInfo";
+            this.lOnlineInfo.Size = new System.Drawing.Size(487, 38);
+            this.lOnlineInfo.TabIndex = 40;
+            this.lOnlineInfo.Text = "If you dont have local friends, you can always search for players online!";
+            this.lOnlineInfo.Visible = false;
+            // 
+            // lLocalInfo
+            // 
+            this.lLocalInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lLocalInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lLocalInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lLocalInfo.Location = new System.Drawing.Point(22, 15);
+            this.lLocalInfo.Name = "lLocalInfo";
+            this.lLocalInfo.Size = new System.Drawing.Size(478, 29);
+            this.lLocalInfo.TabIndex = 39;
+            this.lLocalInfo.Text = "You can play with your actual friends if you select \"Local\"";
+            this.lLocalInfo.Visible = false;
+            // 
+            // lRobotInfo
+            // 
+            this.lRobotInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lRobotInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lRobotInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lRobotInfo.Location = new System.Drawing.Point(22, 6);
+            this.lRobotInfo.Name = "lRobotInfo";
+            this.lRobotInfo.Size = new System.Drawing.Size(478, 47);
+            this.lRobotInfo.TabIndex = 38;
+            this.lRobotInfo.Text = "If you feel like playing agaisnt a bot. Play with our Robot \"Joaquim\"";
+            this.lRobotInfo.Visible = false;
+            // 
+            // lMultiplayerInfo
+            // 
+            this.lMultiplayerInfo.AutoSize = true;
+            this.lMultiplayerInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lMultiplayerInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lMultiplayerInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lMultiplayerInfo.Location = new System.Drawing.Point(22, 16);
+            this.lMultiplayerInfo.Name = "lMultiplayerInfo";
+            this.lMultiplayerInfo.Size = new System.Drawing.Size(185, 19);
+            this.lMultiplayerInfo.TabIndex = 37;
+            this.lMultiplayerInfo.Text = "Play with your friends!";
+            this.lMultiplayerInfo.Visible = false;
+            // 
             // lRobot
             // 
             this.lRobot.AutoSize = true;
@@ -176,55 +225,6 @@
             this.lOnline.Click += new System.EventHandler(this.lOnline_Click);
             this.lOnline.MouseLeave += new System.EventHandler(this.lOnline_MouseLeave);
             this.lOnline.MouseHover += new System.EventHandler(this.lOnline_MouseHover);
-            // 
-            // lMultiplayerInfo
-            // 
-            this.lMultiplayerInfo.AutoSize = true;
-            this.lMultiplayerInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lMultiplayerInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lMultiplayerInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lMultiplayerInfo.Location = new System.Drawing.Point(22, 16);
-            this.lMultiplayerInfo.Name = "lMultiplayerInfo";
-            this.lMultiplayerInfo.Size = new System.Drawing.Size(321, 19);
-            this.lMultiplayerInfo.TabIndex = 37;
-            this.lMultiplayerInfo.Text = "Play with your friends Online on in local";
-            this.lMultiplayerInfo.Visible = false;
-            // 
-            // lRobotInfo
-            // 
-            this.lRobotInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lRobotInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lRobotInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lRobotInfo.Location = new System.Drawing.Point(22, 6);
-            this.lRobotInfo.Name = "lRobotInfo";
-            this.lRobotInfo.Size = new System.Drawing.Size(478, 47);
-            this.lRobotInfo.TabIndex = 38;
-            this.lRobotInfo.Text = "If you dont have friends you are even more welcom. Play with our Robot \"Joaquim\"";
-            this.lRobotInfo.Visible = false;
-            // 
-            // lLocalInfo
-            // 
-            this.lLocalInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lLocalInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lLocalInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lLocalInfo.Location = new System.Drawing.Point(22, 15);
-            this.lLocalInfo.Name = "lLocalInfo";
-            this.lLocalInfo.Size = new System.Drawing.Size(478, 29);
-            this.lLocalInfo.TabIndex = 39;
-            this.lLocalInfo.Text = "You can play with you physical friends if you selec \"Local\"";
-            this.lLocalInfo.Visible = false;
-            // 
-            // lOnlineInfo
-            // 
-            this.lOnlineInfo.BackColor = System.Drawing.Color.Transparent;
-            this.lOnlineInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lOnlineInfo.ForeColor = System.Drawing.Color.DimGray;
-            this.lOnlineInfo.Location = new System.Drawing.Point(13, 6);
-            this.lOnlineInfo.Name = "lOnlineInfo";
-            this.lOnlineInfo.Size = new System.Drawing.Size(487, 38);
-            this.lOnlineInfo.TabIndex = 40;
-            this.lOnlineInfo.Text = "Play with persons all over the world once you dont have physical friends";
-            this.lOnlineInfo.Visible = false;
             // 
             // lPlayGame
             // 

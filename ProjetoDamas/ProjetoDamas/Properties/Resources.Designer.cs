@@ -114,6 +114,26 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Confetis {
+            get {
+                object obj = ResourceManager.GetObject("Confetis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confets {
+            get {
+                object obj = ResourceManager.GetObject("confets", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap country_icon {
             get {
                 object obj = ResourceManager.GetObject("country icon", resourceCulture);
