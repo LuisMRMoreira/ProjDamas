@@ -23,7 +23,7 @@ namespace ProjetoDamas
 
         
 
-        public void RegistarJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imagem)
+        public void RegistarJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imagem, string dataDeNascimento)
         {
             //Criar Jogador
             //Inserir na base de dados

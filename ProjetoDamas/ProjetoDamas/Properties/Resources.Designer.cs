@@ -234,6 +234,16 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nascimento_icon {
+            get {
+                object obj = ResourceManager.GetObject("Nascimento icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Olho_icon {
             get {
                 object obj = ResourceManager.GetObject("Olho icon", resourceCulture);

@@ -19,6 +19,7 @@ namespace ProjetoDamas
         public static ViewJogo V_JogoMultiplayerLocal { get; private set; }
         public static ViewJogoOnline V_JogoMultiplayerOnline { get; private set; }
         public static ViewJogoRobot V_JogoRobot { get; private set; }
+        public static ViewStatistics V_GameStatistics { get; private set; }
 
         //Model
         public static Gestor M_Gestor { get; private set; }
@@ -50,6 +51,7 @@ namespace ProjetoDamas
             V_JogoMultiplayerLocal = new ViewJogo();
             V_JogoMultiplayerOnline = new ViewJogoOnline();
             V_JogoRobot = new ViewJogoRobot();
+            V_GameStatistics = new ViewStatistics();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
 

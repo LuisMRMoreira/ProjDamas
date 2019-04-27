@@ -93,9 +93,7 @@ namespace ProjetoDamas
         private void bGameInfo_Click_2(object sender, EventArgs e)
         {
             this.Hide();
-            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
-            menu.Closed += (s, args) => this.Close();
-            menu.Show();
+            Program.V_GameStatistics.Show();
         }
 
 

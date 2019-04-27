@@ -67,7 +67,7 @@ namespace ProjetoDamas
         {
             if (PedidoCriarJogador != null)
             {
-                PedidoCriarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBConfirmPass.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, pBAvatar.ImageLocation);
+                PedidoCriarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBConfirmPass.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, pBAvatar.ImageLocation, dTPDataNascimento.Text);
             }
         }
 
