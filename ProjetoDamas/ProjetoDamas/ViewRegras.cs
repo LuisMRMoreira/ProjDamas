@@ -12,6 +12,8 @@ namespace ProjetoDamas
 {
     public partial class ViewRegras : Form
     {
+        public bool jogo = false;
+
         public ViewRegras()
         {
             InitializeComponent();
@@ -19,8 +21,7 @@ namespace ProjetoDamas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.V_Menu.Show();
+
         }
 
         private void lCondicoesGanhar_MouseHover(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace ProjetoDamas
         {
             pUp.BackColor = Color.FromArgb(170, 0, 0, 0);
             pDown.BackColor = Color.FromArgb(170, 0, 0, 0);
+
         }
 
         private void lDrawConditions_MouseHover(object sender, EventArgs e)
@@ -67,6 +69,24 @@ namespace ProjetoDamas
         private void lDrawConditions_MouseLeave(object sender, EventArgs e)
         {
             lDrawConditions2.Visible = false;
+        }
+
+
+
+        private void pBReturn_Click(object sender, EventArgs e)
+        {
+            if (jogo)
+            {
+                this.Hide();
+                Program.V_JogoMultiplayerLocal.Show();
+                jogo = false;
+            }
+            else
+            {
+                this.Hide();
+                Program.V_Menu.Show();
+            }
+
         }
     }
 }

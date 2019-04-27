@@ -28,6 +28,9 @@ namespace ProjetoDamas
         private void ViewModoJogo_Load(object sender, EventArgs e)
         {
             pJogo.BackColor = Color.FromArgb(170, 0, 0, 0);
+
+
+            
         }
 
         /// <summary>
@@ -176,7 +179,7 @@ namespace ProjetoDamas
                 }
                 else
                 {
-                    this.Hide();
+                    this.Close();
                     Program.V_JogoMultiplayerOnline.Show();
                 }
             }

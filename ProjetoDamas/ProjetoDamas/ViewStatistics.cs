@@ -21,11 +21,13 @@ namespace ProjetoDamas
 
         private void ViewStatistics_Load(object sender, EventArgs e)
         {
-            pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
+
 
             ///
             ///Cor do painel
             ///
+
+            pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
 
             ///
             /// Definição do conteudo da comboBox (Paises)
@@ -36,6 +38,7 @@ namespace ProjetoDamas
             Distinct().OrderBy(s => s).ToList();
             cBCountries.DataSource = list;
             cBCountries.SelectedIndex = 177;
+            
 
         }
 
@@ -72,6 +75,14 @@ namespace ProjetoDamas
         private void rBName_CheckedChanged(object sender, EventArgs e)
         {
             cTBNickname.Visible = true;
+            cBCountries.Visible = false;
+            cTBTimePlayed.Visible = false;
+            dTPDataNascimento.Visible = false;
+        }
+
+        private void rBNone_CheckedChanged(object sender, EventArgs e)
+        {
+            cTBNickname.Visible = false;
             cBCountries.Visible = false;
             cTBTimePlayed.Visible = false;
             dTPDataNascimento.Visible = false;

@@ -12,6 +12,8 @@ namespace ProjetoDamas
 {
     public partial class ViewJogo : Form
     {
+        public event MetodosSemParametros PedidoRetirarReturnSettings;
+        public event MetodosSemParametros PedidoRetirarReturnRegras;
 
         public PictureBox[,] PictureBoxDoPanel;
         PictureBox selected;
@@ -231,79 +233,107 @@ namespace ProjetoDamas
 
         }
 
-        private void pbJogador1_MouseHover(object sender, EventArgs e)
-        {
-            lNome.Visible = true;
-            lNomeN.Visible = true;
 
-            lCountry.Visible = true;
-            lCountryN.Visible = true;
-
-            lVitorias.Visible = true;
-            lVitoriasN.Visible = true;
-        }
-
-        private void pbJogador1_MouseLeave(object sender, EventArgs e)
-        {
-            lNome.Visible = false;
-            lNomeN.Visible = false;
-
-            lCountry.Visible = false;
-            lCountryN.Visible = false;
-
-            lVitorias.Visible = false;
-            lVitoriasN.Visible = false;
-        }
-
-        private void pbJogador2_MouseHover(object sender, EventArgs e)
-        {
-            lNome2.Visible = true;
-            lNomeN2.Visible = true;
-
-            lCountry2.Visible = true;
-            lCountryN2.Visible = true;
-
-            lVitorias2.Visible = true;
-            lVitoriasN2.Visible = true;
-        }
-
-        private void pbJogador2_MouseLeave(object sender, EventArgs e)
-        {
-            lNome2.Visible = false;
-            lNomeN2.Visible = false;
-
-            lCountry2.Visible = false;
-            lCountryN2.Visible = false;
-
-            lVitorias2.Visible = false;
-            lVitoriasN2.Visible = false;
-        }
-
-        private void definiçõesToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewSettings set = new ViewSettings();
-            set.Closed += (s, args) => this.Close();
-            set.Show();
-        }
 
         private void regrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ViewRegras reg = new ViewRegras();
-            reg.Closed += (s, args) => this.Close();
-            reg.Show();
+            Program.V_Rules.jogo = true;
+            Program.V_Rules.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you wanna leave without save?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure that you want to leave?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (MessageBox.Show("Do you want to save the game to play later?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.Hide();
+                    Program.V_Menu.Show();
+                    //Guardar o jogo estado do jogo -----------------------------------------------------------------------------------------------------------------------------------
+                }
 
+                this.Hide();
+                Program.V_Menu.Show();
+            }
+        }
+
+        private void ViewJogo_Load(object sender, EventArgs e)
+        {
+
+            ///
+            ///Cor do painel
+            ///
+
+            pJogadorUm.BackColor = Color.FromArgb(150, 0, 0, 0);
+            pJogadorDois.BackColor = Color.FromArgb(150, 0, 0, 0);
+
+            ///
+            /// Cores do MenuStrip
+            ///
+            mSJogo.BackColor = Color.FromArgb(150, 0, 0, 0);
+            mSJogo.ForeColor = Color.White;
+        }
+
+        private void pBJogadoUm_MouseHover(object sender, EventArgs e)
+        {
+            pJogadorUm.Visible = true;
+        }
+
+        private void pBJogadoUm_MouseLeave(object sender, EventArgs e)
+        {
+            pJogadorUm.Visible = false;
+        }
+
+        private void pBJogadorDois_MouseHover(object sender, EventArgs e)
+        {
+            pJogadorDois.Visible = true;
+        }
+
+        private void pBJogadorDois_MouseLeave(object sender, EventArgs e)
+        {
+            pJogadorDois.Visible = false;
+        }
+
+        private void bSurrenderJogadorUm_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure that you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                //---Ir para a View do Resultado
+            }
+        }
+
+        private void bSurrenderJogadorDois_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure that you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                //---Ir para a View do Resultado
             }
 
-            this.Close();//?????????
         }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Guardar o jogo estado do jogo -----------------------------------------------------------------------------------------------------------------------------------
+
+            MessageBox.Show("Game saved", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void definicoesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //Abrir uma nova View
+            Program.V_Settings.jogo = true;
+            Program.V_Settings.Show();
+            
+        }
+
+
+
+
+
+
 
 
 

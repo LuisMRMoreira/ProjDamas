@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewRegras));
             this.lCondicoesGanhar2 = new System.Windows.Forms.Label();
             this.lCondicoesPerder2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pBReturn = new System.Windows.Forms.PictureBox();
             this.llaws2 = new System.Windows.Forms.Label();
             this.lWinConditions = new System.Windows.Forms.Label();
             this.lDrawConditions = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.pDown = new System.Windows.Forms.Panel();
             this.lDrawConditions2 = new System.Windows.Forms.Label();
             this.lRules = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).BeginInit();
             this.pUp.SuspendLayout();
             this.pDown.SuspendLayout();
             this.SuspendLayout();
@@ -74,17 +74,17 @@
             this.lCondicoesPerder2.Text = resources.GetString("lCondicoesPerder2.Text");
             this.lCondicoesPerder2.Visible = false;
             // 
-            // pictureBox1
+            // pBReturn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.Icon_return;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pBReturn.BackColor = System.Drawing.Color.Transparent;
+            this.pBReturn.Image = global::ProjetoDamas.Properties.Resources.Icon_return;
+            this.pBReturn.Location = new System.Drawing.Point(13, 13);
+            this.pBReturn.Name = "pBReturn";
+            this.pBReturn.Size = new System.Drawing.Size(29, 28);
+            this.pBReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBReturn.TabIndex = 5;
+            this.pBReturn.TabStop = false;
+            this.pBReturn.Click += new System.EventHandler(this.pBReturn_Click);
             // 
             // llaws2
             // 
@@ -215,7 +215,7 @@
             this.Controls.Add(this.lRules);
             this.Controls.Add(this.lDrawConditions2);
             this.Controls.Add(this.llaws2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBReturn);
             this.Controls.Add(this.lCondicoesPerder2);
             this.Controls.Add(this.lCondicoesGanhar2);
             this.Controls.Add(this.pUp);
@@ -225,7 +225,7 @@
             this.Name = "ViewRegras";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewRegras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).EndInit();
             this.pUp.ResumeLayout(false);
             this.pUp.PerformLayout();
             this.pDown.ResumeLayout(false);
@@ -238,7 +238,7 @@
         #endregion
         private System.Windows.Forms.Label lCondicoesGanhar2;
         private System.Windows.Forms.Label lCondicoesPerder2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBReturn;
         private System.Windows.Forms.Label llaws2;
         private System.Windows.Forms.Label lWinConditions;
         private System.Windows.Forms.Label lDrawConditions;

@@ -36,23 +36,27 @@
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ctBUsername = new ProjetoDamas.CueTextBox();
             this.pBUserEditar = new System.Windows.Forms.PictureBox();
             this.pBPasswordEditar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pBVerPass = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cTBPassword = new ProjetoDamas.CueTextBox();
             this.pBNickEdit = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.oFDImagemPerfil = new System.Windows.Forms.OpenFileDialog();
             this.pBEmailEditar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pBEmail = new System.Windows.Forms.PictureBox();
+            this.cTBEmail = new ProjetoDamas.CueTextBox();
             this.pBCountryEditar = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pCountries = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pBCountry = new System.Windows.Forms.PictureBox();
             this.pBGuardar = new System.Windows.Forms.PictureBox();
@@ -86,10 +90,7 @@
             this.tTNickname = new System.Windows.Forms.ToolTip(this.components);
             this.tTEmail = new System.Windows.Forms.ToolTip(this.components);
             this.tTPais = new System.Windows.Forms.ToolTip(this.components);
-            this.cTBEmail = new ProjetoDamas.CueTextBox();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
-            this.cTBPassword = new ProjetoDamas.CueTextBox();
-            this.ctBUsername = new ProjetoDamas.CueTextBox();
+            this.lProfile = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pUsername.SuspendLayout();
@@ -110,7 +111,7 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCountryEditar)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.pCountries.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).BeginInit();
@@ -124,7 +125,7 @@
             // 
             this.pBUser.BackColor = System.Drawing.Color.Transparent;
             this.pBUser.Image = ((System.Drawing.Image)(resources.GetObject("pBUser.Image")));
-            this.pBUser.Location = new System.Drawing.Point(26, 58);
+            this.pBUser.Location = new System.Drawing.Point(25, 101);
             this.pBUser.Margin = new System.Windows.Forms.Padding(2);
             this.pBUser.Name = "pBUser";
             this.pBUser.Size = new System.Drawing.Size(127, 119);
@@ -152,13 +153,14 @@
             this.cBCountries.BackColor = System.Drawing.SystemColors.Control;
             this.cBCountries.Enabled = false;
             this.cBCountries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 14F);
+            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
             this.cBCountries.Location = new System.Drawing.Point(41, 0);
             this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(233, 33);
+            this.cBCountries.Size = new System.Drawing.Size(234, 29);
             this.cBCountries.TabIndex = 50;
+            this.cBCountries.Text = "Portugal";
             // 
             // pUsername
             // 
@@ -191,6 +193,20 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             this.tTUsername.SetToolTip(this.pictureBox2, "Username");
+            // 
+            // ctBUsername
+            // 
+            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctBUsername.Cue = "Username";
+            this.ctBUsername.Enabled = false;
+            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
+            this.ctBUsername.MaxLength = 20;
+            this.ctBUsername.Name = "ctBUsername";
+            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
+            this.ctBUsername.TabIndex = 16;
             // 
             // pBUserEditar
             // 
@@ -261,6 +277,21 @@
             this.pictureBox6.TabStop = false;
             this.tTPassword.SetToolTip(this.pictureBox6, "Password");
             // 
+            // cTBPassword
+            // 
+            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBPassword.Cue = "Password";
+            this.cTBPassword.Enabled = false;
+            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
+            this.cTBPassword.MaxLength = 20;
+            this.cTBPassword.Name = "cTBPassword";
+            this.cTBPassword.PasswordChar = '*';
+            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
+            this.cTBPassword.TabIndex = 16;
+            // 
             // pBNickEdit
             // 
             this.pBNickEdit.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
@@ -304,6 +335,20 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             this.tTNickname.SetToolTip(this.pictureBox4, "Nickname");
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Enabled = false;
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
+            this.cTBNickname.MaxLength = 20;
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(219, 22);
+            this.cTBNickname.TabIndex = 16;
             // 
             // oFDImagemPerfil
             // 
@@ -353,10 +398,24 @@
             this.pBEmail.TabStop = false;
             this.tTEmail.SetToolTip(this.pBEmail, "Email");
             // 
+            // cTBEmail
+            // 
+            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBEmail.Cue = "Email";
+            this.cTBEmail.Enabled = false;
+            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
+            this.cTBEmail.MaxLength = 20;
+            this.cTBEmail.Name = "cTBEmail";
+            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
+            this.cTBEmail.TabIndex = 16;
+            // 
             // pBCountryEditar
             // 
             this.pBCountryEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBCountryEditar.Location = new System.Drawing.Point(460, 225);
+            this.pBCountryEditar.Location = new System.Drawing.Point(461, 223);
             this.pBCountryEditar.Name = "pBCountryEditar";
             this.pBCountryEditar.Size = new System.Drawing.Size(28, 29);
             this.pBCountryEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -365,14 +424,14 @@
             this.tTEdit.SetToolTip(this.pBCountryEditar, "Edit");
             this.pBCountryEditar.Click += new System.EventHandler(this.pBCountryEditar_Click);
             // 
-            // panel7
+            // pCountries
             // 
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.cBCountries);
-            this.panel7.Location = new System.Drawing.Point(189, 223);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(302, 32);
-            this.panel7.TabIndex = 62;
+            this.pCountries.Controls.Add(this.panel8);
+            this.pCountries.Controls.Add(this.cBCountries);
+            this.pCountries.Location = new System.Drawing.Point(189, 223);
+            this.pCountries.Name = "pCountries";
+            this.pCountries.Size = new System.Drawing.Size(302, 29);
+            this.pCountries.TabIndex = 62;
             // 
             // panel8
             // 
@@ -381,17 +440,17 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(42, 32);
+            this.panel8.Size = new System.Drawing.Size(42, 29);
             this.panel8.TabIndex = 10;
             // 
             // pBCountry
             // 
             this.pBCountry.BackColor = System.Drawing.Color.Transparent;
             this.pBCountry.Image = global::ProjetoDamas.Properties.Resources.country_icon;
-            this.pBCountry.Location = new System.Drawing.Point(2, 2);
+            this.pBCountry.Location = new System.Drawing.Point(4, 0);
             this.pBCountry.Margin = new System.Windows.Forms.Padding(2);
             this.pBCountry.Name = "pBCountry";
-            this.pBCountry.Size = new System.Drawing.Size(38, 28);
+            this.pBCountry.Size = new System.Drawing.Size(34, 27);
             this.pBCountry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBCountry.TabIndex = 9;
             this.pBCountry.TabStop = false;
@@ -649,62 +708,18 @@
             this.labelPassword.TabIndex = 16;
             this.labelPassword.Text = "Results:";
             // 
-            // cTBEmail
+            // lProfile
             // 
-            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBEmail.Cue = "Email";
-            this.cTBEmail.Enabled = false;
-            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
-            this.cTBEmail.MaxLength = 20;
-            this.cTBEmail.Name = "cTBEmail";
-            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
-            this.cTBEmail.TabIndex = 16;
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Enabled = false;
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
-            this.cTBNickname.MaxLength = 20;
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(219, 22);
-            this.cTBNickname.TabIndex = 16;
-            // 
-            // cTBPassword
-            // 
-            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBPassword.Cue = "Password";
-            this.cTBPassword.Enabled = false;
-            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
-            this.cTBPassword.MaxLength = 20;
-            this.cTBPassword.Name = "cTBPassword";
-            this.cTBPassword.PasswordChar = '*';
-            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
-            this.cTBPassword.TabIndex = 16;
-            // 
-            // ctBUsername
-            // 
-            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
-            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ctBUsername.Cue = "Username";
-            this.ctBUsername.Enabled = false;
-            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
-            this.ctBUsername.MaxLength = 20;
-            this.ctBUsername.Name = "ctBUsername";
-            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
-            this.ctBUsername.TabIndex = 16;
+            this.lProfile.AutoSize = true;
+            this.lProfile.BackColor = System.Drawing.Color.Transparent;
+            this.lProfile.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lProfile.ForeColor = System.Drawing.Color.DimGray;
+            this.lProfile.Location = new System.Drawing.Point(185, 9);
+            this.lProfile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lProfile.Name = "lProfile";
+            this.lProfile.Size = new System.Drawing.Size(129, 45);
+            this.lProfile.TabIndex = 72;
+            this.lProfile.Text = "Profile";
             // 
             // ViewProfileInfo
             // 
@@ -713,13 +728,14 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(548, 373);
+            this.Controls.Add(this.lProfile);
             this.Controls.Add(this.pBLogout);
             this.Controls.Add(this.pBMoreInfo);
             this.Controls.Add(this.pMoreInfo);
             this.Controls.Add(this.pBCheckGuardado);
             this.Controls.Add(this.pBGuardar);
             this.Controls.Add(this.pBCountryEditar);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.pCountries);
             this.Controls.Add(this.pBEmailEditar);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pBNickEdit);
@@ -759,7 +775,7 @@
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCountryEditar)).EndInit();
-            this.panel7.ResumeLayout(false);
+            this.pCountries.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBCountry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).EndInit();
@@ -769,6 +785,7 @@
             this.pMoreInfo.ResumeLayout(false);
             this.pMoreInfo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -800,7 +817,7 @@
         private System.Windows.Forms.PictureBox pBEmail;
         private CueTextBox cTBEmail;
         private System.Windows.Forms.PictureBox pBCountryEditar;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pCountries;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pBCountry;
         private System.Windows.Forms.PictureBox pBGuardar;
@@ -834,5 +851,6 @@
         private System.Windows.Forms.ToolTip tTNickname;
         private System.Windows.Forms.ToolTip tTEmail;
         private System.Windows.Forms.ToolTip tTPais;
+        private System.Windows.Forms.Label lProfile;
     }
 }

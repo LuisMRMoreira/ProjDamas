@@ -36,6 +36,10 @@
             this.cDefeats = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTotalGames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDataGridView = new System.Windows.Forms.Panel();
+            this.rBNone = new System.Windows.Forms.RadioButton();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
+            this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.cTBTimePlayed = new ProjetoDamas.CueTextBox();
             this.rBName = new System.Windows.Forms.RadioButton();
             this.cBCountries = new System.Windows.Forms.ComboBox();
             this.rBBirthDate = new System.Windows.Forms.RadioButton();
@@ -43,9 +47,6 @@
             this.rBCountry = new System.Windows.Forms.RadioButton();
             this.lSearchBy = new System.Windows.Forms.Label();
             this.lStatistics = new System.Windows.Forms.Label();
-            this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
-            this.cTBTimePlayed = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVEstatisticas)).BeginInit();
             this.pDataGridView.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // pDataGridView
             // 
+            this.pDataGridView.Controls.Add(this.rBNone);
             this.pDataGridView.Controls.Add(this.cTBNickname);
             this.pDataGridView.Controls.Add(this.dTPDataNascimento);
             this.pDataGridView.Controls.Add(this.cTBTimePlayed);
@@ -114,6 +116,60 @@
             this.pDataGridView.Size = new System.Drawing.Size(454, 300);
             this.pDataGridView.TabIndex = 26;
             // 
+            // rBNone
+            // 
+            this.rBNone.AutoSize = true;
+            this.rBNone.BackColor = System.Drawing.Color.Transparent;
+            this.rBNone.Checked = true;
+            this.rBNone.Font = new System.Drawing.Font("Kristen ITC", 9F);
+            this.rBNone.ForeColor = System.Drawing.Color.DimGray;
+            this.rBNone.Location = new System.Drawing.Point(349, 267);
+            this.rBNone.Name = "rBNone";
+            this.rBNone.Size = new System.Drawing.Size(58, 21);
+            this.rBNone.TabIndex = 86;
+            this.rBNone.TabStop = true;
+            this.rBNone.Text = "None";
+            this.rBNone.UseVisualStyleBackColor = false;
+            this.rBNone.CheckedChanged += new System.EventHandler(this.rBNone_CheckedChanged);
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(46, 262);
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
+            this.cTBNickname.TabIndex = 85;
+            this.cTBNickname.Visible = false;
+            // 
+            // dTPDataNascimento
+            // 
+            this.dTPDataNascimento.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTrailingForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dTPDataNascimento.Location = new System.Drawing.Point(46, 262);
+            this.dTPDataNascimento.Name = "dTPDataNascimento";
+            this.dTPDataNascimento.Size = new System.Drawing.Size(199, 29);
+            this.dTPDataNascimento.TabIndex = 84;
+            this.dTPDataNascimento.Visible = false;
+            // 
+            // cTBTimePlayed
+            // 
+            this.cTBTimePlayed.Cue = "Time played";
+            this.cTBTimePlayed.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBTimePlayed.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBTimePlayed.Location = new System.Drawing.Point(46, 262);
+            this.cTBTimePlayed.Name = "cTBTimePlayed";
+            this.cTBTimePlayed.Size = new System.Drawing.Size(199, 29);
+            this.cTBTimePlayed.TabIndex = 83;
+            this.cTBTimePlayed.Visible = false;
+            // 
             // rBName
             // 
             this.rBName.AutoSize = true;
@@ -124,7 +180,6 @@
             this.rBName.Name = "rBName";
             this.rBName.Size = new System.Drawing.Size(85, 21);
             this.rBName.TabIndex = 81;
-            this.rBName.TabStop = true;
             this.rBName.Text = "Nickname";
             this.rBName.UseVisualStyleBackColor = false;
             this.rBName.CheckedChanged += new System.EventHandler(this.rBName_CheckedChanged);
@@ -134,7 +189,7 @@
             this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(138, 262);
+            this.cBCountries.Location = new System.Drawing.Point(46, 262);
             this.cBCountries.Name = "cBCountries";
             this.cBCountries.Size = new System.Drawing.Size(199, 29);
             this.cBCountries.TabIndex = 80;
@@ -150,7 +205,6 @@
             this.rBBirthDate.Name = "rBBirthDate";
             this.rBBirthDate.Size = new System.Drawing.Size(88, 21);
             this.rBBirthDate.TabIndex = 79;
-            this.rBBirthDate.TabStop = true;
             this.rBBirthDate.Text = "Birth date";
             this.rBBirthDate.UseVisualStyleBackColor = false;
             this.rBBirthDate.CheckedChanged += new System.EventHandler(this.rBBirthDate_CheckedChanged);
@@ -165,7 +219,6 @@
             this.rBTimePlayed.Name = "rBTimePlayed";
             this.rBTimePlayed.Size = new System.Drawing.Size(96, 21);
             this.rBTimePlayed.TabIndex = 78;
-            this.rBTimePlayed.TabStop = true;
             this.rBTimePlayed.Text = "Time played";
             this.rBTimePlayed.UseVisualStyleBackColor = false;
             this.rBTimePlayed.CheckedChanged += new System.EventHandler(this.rBTimePlayed_CheckedChanged);
@@ -180,7 +233,6 @@
             this.rBCountry.Name = "rBCountry";
             this.rBCountry.Size = new System.Drawing.Size(71, 20);
             this.rBCountry.TabIndex = 77;
-            this.rBCountry.TabStop = true;
             this.rBCountry.Text = "Country";
             this.rBCountry.UseVisualStyleBackColor = false;
             this.rBCountry.CheckedChanged += new System.EventHandler(this.rBCountry_CheckedChanged);
@@ -210,44 +262,6 @@
             this.lStatistics.Size = new System.Drawing.Size(171, 45);
             this.lStatistics.TabIndex = 27;
             this.lStatistics.Text = "Statistics";
-            // 
-            // dTPDataNascimento
-            // 
-            this.dTPDataNascimento.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTitleForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTrailingForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dTPDataNascimento.Location = new System.Drawing.Point(138, 262);
-            this.dTPDataNascimento.Name = "dTPDataNascimento";
-            this.dTPDataNascimento.Size = new System.Drawing.Size(199, 29);
-            this.dTPDataNascimento.TabIndex = 84;
-            this.dTPDataNascimento.Visible = false;
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(138, 262);
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
-            this.cTBNickname.TabIndex = 85;
-            this.cTBNickname.Visible = false;
-            // 
-            // cTBTimePlayed
-            // 
-            this.cTBTimePlayed.Cue = "Time played";
-            this.cTBTimePlayed.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBTimePlayed.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBTimePlayed.Location = new System.Drawing.Point(138, 262);
-            this.cTBTimePlayed.Name = "cTBTimePlayed";
-            this.cTBTimePlayed.Size = new System.Drawing.Size(199, 29);
-            this.cTBTimePlayed.TabIndex = 83;
-            this.cTBTimePlayed.Visible = false;
             // 
             // ViewStatistics
             // 
@@ -290,5 +304,6 @@
         private CueTextBox cTBTimePlayed;
         private System.Windows.Forms.DateTimePicker dTPDataNascimento;
         private CueTextBox cTBNickname;
+        private System.Windows.Forms.RadioButton rBNone;
     }
 }

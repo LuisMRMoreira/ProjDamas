@@ -82,13 +82,7 @@ namespace ProjetoDamas
                        
         }
 
-        private void bGameInfo_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewMenuMoreInfo menu = new ViewMenuMoreInfo();
-            menu.Closed += (s, args) => this.Close();
-            menu.Show();
-        }
+
 
         private void bGameInfo_Click_2(object sender, EventArgs e)
         {
@@ -123,7 +117,7 @@ namespace ProjetoDamas
         private void buttonjogar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_ModoJogo.Show();
+            Program.V_ModoJogo.ShowDialog();
         }
 
         private void bRules_Click(object sender, EventArgs e)

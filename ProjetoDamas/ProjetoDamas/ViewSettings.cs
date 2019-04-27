@@ -13,6 +13,7 @@ namespace ProjetoDamas
     public partial class ViewSettings : Form
     {
 
+        public bool jogo = false;
         bool valoresAlterados = false;
 
         public event MetodosComDoisParametros PedidoGuardarDados;
@@ -33,11 +34,7 @@ namespace ProjetoDamas
 
 
 
-        private void nUDVolumeLevel_ValueChanged(object sender, EventArgs e)
-        {
-            valoresAlterados = true;
-            pBCheckGuardado.Visible = false;
-        }
+
 
         private void cBWindowSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -48,19 +45,33 @@ namespace ProjetoDamas
 
         private void pBReturn_Click(object sender, EventArgs e)
         {
-            if (valoresAlterados)//Se algum valor tiver mudado
+            if (jogo)
             {
-                if (MessageBox.Show("Do you want to save the changes?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Hide();
+                Program.V_JogoMultiplayerLocal.Show();
+                jogo = false;
+            }
+            else
+            {
+                if (valoresAlterados)//Se algum valor tiver mudado
                 {
-                    if (PedidoGuardarDados != null)
+                    if (MessageBox.Show("Do you want to save the changes?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        PedidoGuardarDados(Convert.ToInt32(nUDVolumeLevel.Value), cBWindowSize.SelectedText);
+                        if (PedidoGuardarDados != null)
+                        {
+                            PedidoGuardarDados(Convert.ToInt32(tBVolumeLevel.Value), cBWindowSize.SelectedText);
+                        }
                     }
                 }
+
+                this.Hide();
+                Program.V_Menu.Show();
+
             }
 
-            this.Hide();
-            Program.V_Menu.Show();
+
+
+
             
 
         }
@@ -68,15 +79,27 @@ namespace ProjetoDamas
         private void pBGuardar_Click(object sender, EventArgs e)
         {
             //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
-            valoresAlterados = false;
-            pBCheckGuardado.Visible = true;
+            valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
         }
 
         private void cBBotLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
             //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
-            valoresAlterados = false;
-            pBCheckGuardado.Visible = true;
+            valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
         }
+
+        private void tBVolumeLevel_ValueChanged(object sender, EventArgs e)
+        {
+            //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
+            valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
+        }
+
+
+
+
+
     }
 }

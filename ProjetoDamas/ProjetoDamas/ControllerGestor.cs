@@ -18,6 +18,7 @@ namespace ProjetoDamas
 
         }
 
+
         private void V_Settings_PedidoGuardarDados(int volume, string tamanho)
         {
             Program.M_Gestor.GuardarDados(volume, tamanho);

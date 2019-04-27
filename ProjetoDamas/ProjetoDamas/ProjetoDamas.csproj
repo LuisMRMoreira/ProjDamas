@@ -52,10 +52,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Delegates.cs" />
-    <Compile Include="Regras.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Regras.resx</DependentUpon>
+    <Compile Include="ViewEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEnd.Designer.cs">
+      <DependentUpon>ViewEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewJogoRobot.cs">
       <SubType>Form</SubType>
@@ -74,24 +75,6 @@
     </Compile>
     <Compile Include="ViewJogosInacabados.Designer.cs">
       <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewMakeProfileChanges.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewMakeProfileChanges.Designer.cs">
-      <DependentUpon>ViewMakeProfileChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewMenuMoreInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewMenuMoreInfo.Designer.cs">
-      <DependentUpon>ViewMenuMoreInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewProfile.Designer.cs">
-      <DependentUpon>ViewProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewMenu.cs">
       <SubType>Form</SubType>
@@ -119,12 +102,6 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewConfirmacaoSair.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewConfirmacaoSair.Designer.cs">
-      <DependentUpon>ViewConfirmacaoSair.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,18 +119,6 @@
     </Compile>
     <Compile Include="ViewModoJogo.Designer.cs">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewProfileValidation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewProfileValidation.Designer.cs">
-      <DependentUpon>ViewProfileValidation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewRank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewRank.Designer.cs">
-      <DependentUpon>ViewRank.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewRegister.cs">
       <SubType>Form</SubType>
@@ -179,21 +144,14 @@
     <Compile Include="ViewSettings.Designer.cs">
       <DependentUpon>ViewSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewShowProfileInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewShowProfileInfo.Designer.cs">
-      <DependentUpon>ViewShowProfileInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewStatistics.Designer.cs">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Regras.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Regras.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="ViewEnd.resx">
+      <DependentUpon>ViewEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewJogoRobot.resx">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
@@ -217,32 +175,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ViewConfirmacaoSair.resx">
-      <DependentUpon>ViewConfirmacaoSair.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewJogo.resx">
       <DependentUpon>ViewJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewMakeProfileChanges.resx">
-      <DependentUpon>ViewMakeProfileChanges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewMenuMoreInfo.resx">
-      <DependentUpon>ViewMenuMoreInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewModoJogo.resx">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewProfile.resx">
-      <DependentUpon>ViewProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewProfileValidation.resx">
-      <DependentUpon>ViewProfileValidation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewRank.resx">
-      <DependentUpon>ViewRank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
@@ -255,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewSettings.resx">
       <DependentUpon>ViewSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewShowProfileInfo.resx">
-      <DependentUpon>ViewShowProfileInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStatistics.resx">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
@@ -285,6 +222,8 @@
     <None Include="Resources\Save icon.png" />
     <None Include="Resources\Icon Level icon.png" />
     <None Include="Resources\Nascimento icon.png" />
+    <Content Include="Resources\Confetis.png" />
+    <Content Include="Resources\confets.png" />
     <Content Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
     <None Include="Resources\Check.jpg" />
