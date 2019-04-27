@@ -33,7 +33,6 @@
             this.lCondicoesPerder2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.llaws2 = new System.Windows.Forms.Label();
-            this.lRegras = new System.Windows.Forms.Label();
             this.lWinConditions = new System.Windows.Forms.Label();
             this.lDrawConditions = new System.Windows.Forms.Label();
             this.lDefeatConditions = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.pUp = new System.Windows.Forms.Panel();
             this.pDown = new System.Windows.Forms.Panel();
             this.lDrawConditions2 = new System.Windows.Forms.Label();
+            this.lRules = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pUp.SuspendLayout();
             this.pDown.SuspendLayout();
@@ -99,18 +99,6 @@
             this.llaws2.Text = resources.GetString("llaws2.Text");
             this.llaws2.Visible = false;
             // 
-            // lRegras
-            // 
-            this.lRegras.AutoSize = true;
-            this.lRegras.BackColor = System.Drawing.Color.Transparent;
-            this.lRegras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRegras.ForeColor = System.Drawing.Color.White;
-            this.lRegras.Location = new System.Drawing.Point(266, 13);
-            this.lRegras.Name = "lRegras";
-            this.lRegras.Size = new System.Drawing.Size(66, 25);
-            this.lRegras.TabIndex = 8;
-            this.lRegras.Text = "Rules";
-            // 
             // lWinConditions
             // 
             this.lWinConditions.AutoSize = true;
@@ -120,9 +108,9 @@
             this.lWinConditions.Location = new System.Drawing.Point(43, 12);
             this.lWinConditions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lWinConditions.Name = "lWinConditions";
-            this.lWinConditions.Size = new System.Drawing.Size(164, 28);
+            this.lWinConditions.Size = new System.Drawing.Size(158, 28);
             this.lWinConditions.TabIndex = 12;
-            this.lWinConditions.Text = "Win conditions:";
+            this.lWinConditions.Text = "Win conditions";
             this.lWinConditions.MouseLeave += new System.EventHandler(this.lCondicoesGanhar_MouseLeave);
             this.lWinConditions.MouseHover += new System.EventHandler(this.lCondicoesGanhar_MouseHover);
             // 
@@ -135,9 +123,9 @@
             this.lDrawConditions.Location = new System.Drawing.Point(43, 16);
             this.lDrawConditions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lDrawConditions.Name = "lDrawConditions";
-            this.lDrawConditions.Size = new System.Drawing.Size(181, 28);
+            this.lDrawConditions.Size = new System.Drawing.Size(175, 28);
             this.lDrawConditions.TabIndex = 13;
-            this.lDrawConditions.Text = "Draw conditions:";
+            this.lDrawConditions.Text = "Draw conditions";
             this.lDrawConditions.MouseLeave += new System.EventHandler(this.lDrawConditions_MouseLeave);
             this.lDrawConditions.MouseHover += new System.EventHandler(this.lDrawConditions_MouseHover);
             // 
@@ -150,9 +138,9 @@
             this.lDefeatConditions.Location = new System.Drawing.Point(364, 12);
             this.lDefeatConditions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lDefeatConditions.Name = "lDefeatConditions";
-            this.lDefeatConditions.Size = new System.Drawing.Size(197, 28);
+            this.lDefeatConditions.Size = new System.Drawing.Size(191, 28);
             this.lDefeatConditions.TabIndex = 14;
-            this.lDefeatConditions.Text = "Defeat conditions:";
+            this.lDefeatConditions.Text = "Defeat conditions";
             this.lDefeatConditions.MouseLeave += new System.EventHandler(this.lCondicoesPerder_MouseLeave);
             this.lDefeatConditions.MouseHover += new System.EventHandler(this.lCondicoesPerder_MouseHover);
             // 
@@ -165,9 +153,9 @@
             this.lLaws.Location = new System.Drawing.Point(432, 16);
             this.lLaws.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lLaws.Name = "lLaws";
-            this.lLaws.Size = new System.Drawing.Size(69, 28);
+            this.lLaws.Size = new System.Drawing.Size(63, 28);
             this.lLaws.TabIndex = 15;
-            this.lLaws.Text = "Laws:";
+            this.lLaws.Text = "Laws";
             this.lLaws.MouseLeave += new System.EventHandler(this.llaws_MouseLeave);
             this.lLaws.MouseHover += new System.EventHandler(this.llaws_MouseHover);
             // 
@@ -178,7 +166,7 @@
             this.pUp.Controls.Add(this.lDefeatConditions);
             this.pUp.Location = new System.Drawing.Point(0, 61);
             this.pUp.Name = "pUp";
-            this.pUp.Size = new System.Drawing.Size(586, 51);
+            this.pUp.Size = new System.Drawing.Size(606, 51);
             this.pUp.TabIndex = 16;
             // 
             // pDown
@@ -188,7 +176,7 @@
             this.pDown.Controls.Add(this.lDrawConditions);
             this.pDown.Location = new System.Drawing.Point(0, 315);
             this.pDown.Name = "pDown";
-            this.pDown.Size = new System.Drawing.Size(586, 51);
+            this.pDown.Size = new System.Drawing.Size(606, 51);
             this.pDown.TabIndex = 17;
             // 
             // lDrawConditions2
@@ -198,10 +186,23 @@
             this.lDrawConditions2.ForeColor = System.Drawing.SystemColors.Control;
             this.lDrawConditions2.Location = new System.Drawing.Point(18, 128);
             this.lDrawConditions2.Name = "lDrawConditions2";
-            this.lDrawConditions2.Size = new System.Drawing.Size(579, 152);
+            this.lDrawConditions2.Size = new System.Drawing.Size(552, 76);
             this.lDrawConditions2.TabIndex = 18;
             this.lDrawConditions2.Text = resources.GetString("lDrawConditions2.Text");
             this.lDrawConditions2.Visible = false;
+            // 
+            // lRules
+            // 
+            this.lRules.AutoSize = true;
+            this.lRules.BackColor = System.Drawing.Color.Transparent;
+            this.lRules.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lRules.ForeColor = System.Drawing.Color.DimGray;
+            this.lRules.Location = new System.Drawing.Point(213, 9);
+            this.lRules.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lRules.Name = "lRules";
+            this.lRules.Size = new System.Drawing.Size(185, 45);
+            this.lRules.TabIndex = 19;
+            this.lRules.Text = "Game rules";
             // 
             // ViewRegras
             // 
@@ -210,9 +211,9 @@
             this.AutoSize = true;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(586, 378);
+            this.ClientSize = new System.Drawing.Size(606, 378);
+            this.Controls.Add(this.lRules);
             this.Controls.Add(this.lDrawConditions2);
-            this.Controls.Add(this.lRegras);
             this.Controls.Add(this.llaws2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lCondicoesPerder2);
@@ -239,7 +240,6 @@
         private System.Windows.Forms.Label lCondicoesPerder2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label llaws2;
-        private System.Windows.Forms.Label lRegras;
         private System.Windows.Forms.Label lWinConditions;
         private System.Windows.Forms.Label lDrawConditions;
         private System.Windows.Forms.Label lDefeatConditions;
@@ -247,5 +247,6 @@
         private System.Windows.Forms.Panel pUp;
         private System.Windows.Forms.Panel pDown;
         private System.Windows.Forms.Label lDrawConditions2;
+        private System.Windows.Forms.Label lRules;
     }
 }

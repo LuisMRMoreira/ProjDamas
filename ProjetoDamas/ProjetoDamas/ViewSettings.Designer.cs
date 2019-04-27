@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewSettings));
             this.pBReturn = new System.Windows.Forms.PictureBox();
             this.lVolumeLevel = new System.Windows.Forms.Label();
@@ -40,6 +41,16 @@
             this.cBWindowSize = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pBGuardar = new System.Windows.Forms.PictureBox();
+            this.pBCheckGuardado = new System.Windows.Forms.PictureBox();
+            this.tTReturn = new System.Windows.Forms.ToolTip(this.components);
+            this.tTSaved = new System.Windows.Forms.ToolTip(this.components);
+            this.tTSave = new System.Windows.Forms.ToolTip(this.components);
+            this.lBotLevel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cBBotLevel = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDVolumeLevel)).BeginInit();
             this.pUsername.SuspendLayout();
@@ -48,6 +59,11 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pBReturn
@@ -60,6 +76,7 @@
             this.pBReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBReturn.TabIndex = 22;
             this.pBReturn.TabStop = false;
+            this.tTSaved.SetToolTip(this.pBReturn, "Return");
             this.pBReturn.Click += new System.EventHandler(this.pBReturn_Click);
             // 
             // lVolumeLevel
@@ -179,13 +196,105 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // pBGuardar
+            // 
+            this.pBGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.pBGuardar.Image = global::ProjetoDamas.Properties.Resources.Save_icon;
+            this.pBGuardar.Location = new System.Drawing.Point(383, 12);
+            this.pBGuardar.Name = "pBGuardar";
+            this.pBGuardar.Size = new System.Drawing.Size(31, 29);
+            this.pBGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBGuardar.TabIndex = 80;
+            this.pBGuardar.TabStop = false;
+            this.tTSave.SetToolTip(this.pBGuardar, "Save");
+            this.pBGuardar.Click += new System.EventHandler(this.pBGuardar_Click);
+            // 
+            // pBCheckGuardado
+            // 
+            this.pBCheckGuardado.BackColor = System.Drawing.Color.Transparent;
+            this.pBCheckGuardado.Image = global::ProjetoDamas.Properties.Resources.Check1;
+            this.pBCheckGuardado.Location = new System.Drawing.Point(346, 11);
+            this.pBCheckGuardado.Name = "pBCheckGuardado";
+            this.pBCheckGuardado.Size = new System.Drawing.Size(31, 29);
+            this.pBCheckGuardado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBCheckGuardado.TabIndex = 81;
+            this.pBCheckGuardado.TabStop = false;
+            this.tTSaved.SetToolTip(this.pBCheckGuardado, "Saved");
+            // 
+            // lBotLevel
+            // 
+            this.lBotLevel.AutoSize = true;
+            this.lBotLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lBotLevel.Font = new System.Drawing.Font("Kristen ITC", 15F);
+            this.lBotLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lBotLevel.Location = new System.Drawing.Point(43, 147);
+            this.lBotLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lBotLevel.Name = "lBotLevel";
+            this.lBotLevel.Size = new System.Drawing.Size(102, 28);
+            this.lBotLevel.TabIndex = 82;
+            this.lBotLevel.Text = "Bot level:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.cBBotLevel);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(196, 147);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(149, 28);
+            this.panel3.TabIndex = 83;
+            // 
+            // cBBotLevel
+            // 
+            this.cBBotLevel.BackColor = System.Drawing.SystemColors.Control;
+            this.cBBotLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cBBotLevel.Font = new System.Drawing.Font("Malgun Gothic", 10F);
+            this.cBBotLevel.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cBBotLevel.FormattingEnabled = true;
+            this.cBBotLevel.Items.AddRange(new object[] {
+            "Low",
+            "Medium",
+            "Hard",
+            "Thank you next"});
+            this.cBBotLevel.Location = new System.Drawing.Point(34, 2);
+            this.cBBotLevel.Name = "cBBotLevel";
+            this.cBBotLevel.Size = new System.Drawing.Size(115, 25);
+            this.cBBotLevel.TabIndex = 1;
+            this.cBBotLevel.Text = "Medium";
+            this.cBBotLevel.SelectedIndexChanged += new System.EventHandler(this.cBBotLevel_SelectedIndexChanged);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(35, 28);
+            this.panel4.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.Icon_Level_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // ViewSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(522, 314);
+            this.ClientSize = new System.Drawing.Size(426, 314);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.lBotLevel);
+            this.Controls.Add(this.pBCheckGuardado);
+            this.Controls.Add(this.pBGuardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lWindowSize);
             this.Controls.Add(this.pUsername);
@@ -203,6 +312,11 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +335,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox cBWindowSize;
+        private System.Windows.Forms.PictureBox pBGuardar;
+        private System.Windows.Forms.PictureBox pBCheckGuardado;
+        private System.Windows.Forms.ToolTip tTSaved;
+        private System.Windows.Forms.ToolTip tTSave;
+        private System.Windows.Forms.ToolTip tTReturn;
+        private System.Windows.Forms.Label lBotLevel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cBBotLevel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

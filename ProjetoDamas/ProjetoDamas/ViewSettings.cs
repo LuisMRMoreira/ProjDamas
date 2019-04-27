@@ -36,11 +36,14 @@ namespace ProjetoDamas
         private void nUDVolumeLevel_ValueChanged(object sender, EventArgs e)
         {
             valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
         }
 
         private void cBWindowSize_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
             valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
         }
 
         private void pBReturn_Click(object sender, EventArgs e)
@@ -60,6 +63,20 @@ namespace ProjetoDamas
             Program.V_Menu.Show();
             
 
+        }
+
+        private void pBGuardar_Click(object sender, EventArgs e)
+        {
+            //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
+            valoresAlterados = false;
+            pBCheckGuardado.Visible = true;
+        }
+
+        private void cBBotLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
+            valoresAlterados = false;
+            pBCheckGuardado.Visible = true;
         }
     }
 }

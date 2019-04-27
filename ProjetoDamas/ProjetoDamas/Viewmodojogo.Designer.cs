@@ -29,60 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewModoJogo));
-            this.label1 = new System.Windows.Forms.Label();
-            this.cBJogador = new System.Windows.Forms.ComboBox();
-            this.cBJogo = new System.Windows.Forms.ComboBox();
-            this.bPlay = new System.Windows.Forms.Button();
             this.pbReturn = new System.Windows.Forms.PictureBox();
-            this.lJogadores = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lGameMode = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pJogo = new System.Windows.Forms.Panel();
+            this.lRobot = new System.Windows.Forms.Label();
+            this.lMultiplayer = new System.Windows.Forms.Label();
+            this.lLocal = new System.Windows.Forms.Label();
+            this.lOnline = new System.Windows.Forms.Label();
+            this.lMultiplayerInfo = new System.Windows.Forms.Label();
+            this.lRobotInfo = new System.Windows.Forms.Label();
+            this.lLocalInfo = new System.Windows.Forms.Label();
+            this.lOnlineInfo = new System.Windows.Forms.Label();
+            this.lPlayGame = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
+            this.pJogo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(70, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "GAME MODE";
-            // 
-            // cBJogador
-            // 
-            this.cBJogador.FormattingEnabled = true;
-            this.cBJogador.Items.AddRange(new object[] {
-            "Multiplayer",
-            "Robot"});
-            this.cBJogador.Location = new System.Drawing.Point(134, 77);
-            this.cBJogador.Name = "cBJogador";
-            this.cBJogador.Size = new System.Drawing.Size(121, 21);
-            this.cBJogador.TabIndex = 6;
-            this.cBJogador.SelectionChangeCommitted += new System.EventHandler(this.cBJogador_SelectionChangeCommitted);
-            // 
-            // cBJogo
-            // 
-            this.cBJogo.FormattingEnabled = true;
-            this.cBJogo.Items.AddRange(new object[] {
-            "Local",
-            "Online"});
-            this.cBJogo.Location = new System.Drawing.Point(134, 139);
-            this.cBJogo.Name = "cBJogo";
-            this.cBJogo.Size = new System.Drawing.Size(121, 21);
-            this.cBJogo.TabIndex = 7;
-            // 
-            // bPlay
-            // 
-            this.bPlay.Location = new System.Drawing.Point(155, 183);
-            this.bPlay.Name = "bPlay";
-            this.bPlay.Size = new System.Drawing.Size(75, 23);
-            this.bPlay.TabIndex = 8;
-            this.bPlay.Text = "Play";
-            this.bPlay.UseVisualStyleBackColor = true;
-            this.bPlay.Click += new System.EventHandler(this.bPlay_Click);
             // 
             // pbReturn
             // 
@@ -96,61 +59,233 @@
             this.pbReturn.TabStop = false;
             this.pbReturn.Click += new System.EventHandler(this.pbReturn_Click);
             // 
-            // lJogadores
+            // lGameMode
             // 
-            this.lJogadores.AutoSize = true;
-            this.lJogadores.BackColor = System.Drawing.Color.Transparent;
-            this.lJogadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lJogadores.ForeColor = System.Drawing.Color.White;
-            this.lJogadores.Location = new System.Drawing.Point(151, 54);
-            this.lJogadores.Name = "lJogadores";
-            this.lJogadores.Size = new System.Drawing.Size(74, 20);
-            this.lJogadores.TabIndex = 22;
-            this.lJogadores.Text = "Jogador";
+            this.lGameMode.AutoSize = true;
+            this.lGameMode.BackColor = System.Drawing.Color.Transparent;
+            this.lGameMode.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lGameMode.ForeColor = System.Drawing.Color.DimGray;
+            this.lGameMode.Location = new System.Drawing.Point(157, 12);
+            this.lGameMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lGameMode.Name = "lGameMode";
+            this.lGameMode.Size = new System.Drawing.Size(185, 45);
+            this.lGameMode.TabIndex = 24;
+            this.lGameMode.Text = "Game mode";
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(161, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Jogo";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(48, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 36);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Jogador:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(58, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 36);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Jogo:";
+            // 
+            // pJogo
+            // 
+            this.pJogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pJogo.Controls.Add(this.lOnlineInfo);
+            this.pJogo.Controls.Add(this.lLocalInfo);
+            this.pJogo.Controls.Add(this.lRobotInfo);
+            this.pJogo.Controls.Add(this.lMultiplayerInfo);
+            this.pJogo.Location = new System.Drawing.Point(-1, 284);
+            this.pJogo.Name = "pJogo";
+            this.pJogo.Size = new System.Drawing.Size(512, 53);
+            this.pJogo.TabIndex = 32;
+            // 
+            // lRobot
+            // 
+            this.lRobot.AutoSize = true;
+            this.lRobot.BackColor = System.Drawing.Color.Transparent;
+            this.lRobot.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Bold);
+            this.lRobot.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lRobot.Location = new System.Drawing.Point(304, 103);
+            this.lRobot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lRobot.Name = "lRobot";
+            this.lRobot.Size = new System.Drawing.Size(77, 28);
+            this.lRobot.TabIndex = 33;
+            this.lRobot.Text = "Robot";
+            this.lRobot.Click += new System.EventHandler(this.lRobot_Click);
+            this.lRobot.MouseLeave += new System.EventHandler(this.lRobot_MouseLeave);
+            this.lRobot.MouseHover += new System.EventHandler(this.lRobot_MouseHover);
+            // 
+            // lMultiplayer
+            // 
+            this.lMultiplayer.AutoSize = true;
+            this.lMultiplayer.BackColor = System.Drawing.Color.Transparent;
+            this.lMultiplayer.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Bold);
+            this.lMultiplayer.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lMultiplayer.Location = new System.Drawing.Point(144, 103);
+            this.lMultiplayer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lMultiplayer.Name = "lMultiplayer";
+            this.lMultiplayer.Size = new System.Drawing.Size(134, 28);
+            this.lMultiplayer.TabIndex = 34;
+            this.lMultiplayer.Text = "Multiplayer";
+            this.lMultiplayer.Click += new System.EventHandler(this.lMultiplayer_Click);
+            this.lMultiplayer.MouseLeave += new System.EventHandler(this.lMultiplayer_MouseLeave);
+            this.lMultiplayer.MouseHover += new System.EventHandler(this.lMultiplayer_MouseHover);
+            // 
+            // lLocal
+            // 
+            this.lLocal.AutoSize = true;
+            this.lLocal.BackColor = System.Drawing.Color.Transparent;
+            this.lLocal.Enabled = false;
+            this.lLocal.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Bold);
+            this.lLocal.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lLocal.Location = new System.Drawing.Point(156, 186);
+            this.lLocal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lLocal.Name = "lLocal";
+            this.lLocal.Size = new System.Drawing.Size(72, 28);
+            this.lLocal.TabIndex = 36;
+            this.lLocal.Text = "Local";
+            this.lLocal.Click += new System.EventHandler(this.lLocal_Click);
+            this.lLocal.MouseLeave += new System.EventHandler(this.lLocal_MouseLeave);
+            this.lLocal.MouseHover += new System.EventHandler(this.lLocal_MouseHover);
+            // 
+            // lOnline
+            // 
+            this.lOnline.AutoSize = true;
+            this.lOnline.BackColor = System.Drawing.Color.Transparent;
+            this.lOnline.Enabled = false;
+            this.lOnline.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Bold);
+            this.lOnline.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lOnline.Location = new System.Drawing.Point(316, 186);
+            this.lOnline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lOnline.Name = "lOnline";
+            this.lOnline.Size = new System.Drawing.Size(82, 28);
+            this.lOnline.TabIndex = 35;
+            this.lOnline.Text = "Online";
+            this.lOnline.Click += new System.EventHandler(this.lOnline_Click);
+            this.lOnline.MouseLeave += new System.EventHandler(this.lOnline_MouseLeave);
+            this.lOnline.MouseHover += new System.EventHandler(this.lOnline_MouseHover);
+            // 
+            // lMultiplayerInfo
+            // 
+            this.lMultiplayerInfo.AutoSize = true;
+            this.lMultiplayerInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lMultiplayerInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lMultiplayerInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lMultiplayerInfo.Location = new System.Drawing.Point(22, 16);
+            this.lMultiplayerInfo.Name = "lMultiplayerInfo";
+            this.lMultiplayerInfo.Size = new System.Drawing.Size(321, 19);
+            this.lMultiplayerInfo.TabIndex = 37;
+            this.lMultiplayerInfo.Text = "Play with your friends Online on in local";
+            this.lMultiplayerInfo.Visible = false;
+            // 
+            // lRobotInfo
+            // 
+            this.lRobotInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lRobotInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lRobotInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lRobotInfo.Location = new System.Drawing.Point(22, 6);
+            this.lRobotInfo.Name = "lRobotInfo";
+            this.lRobotInfo.Size = new System.Drawing.Size(478, 47);
+            this.lRobotInfo.TabIndex = 38;
+            this.lRobotInfo.Text = "If you dont have friends you are even more welcom. Play with our Robot \"Joaquim\"";
+            this.lRobotInfo.Visible = false;
+            // 
+            // lLocalInfo
+            // 
+            this.lLocalInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lLocalInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lLocalInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lLocalInfo.Location = new System.Drawing.Point(22, 15);
+            this.lLocalInfo.Name = "lLocalInfo";
+            this.lLocalInfo.Size = new System.Drawing.Size(478, 29);
+            this.lLocalInfo.TabIndex = 39;
+            this.lLocalInfo.Text = "You can play with you physical friends if you selec \"Local\"";
+            this.lLocalInfo.Visible = false;
+            // 
+            // lOnlineInfo
+            // 
+            this.lOnlineInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lOnlineInfo.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lOnlineInfo.ForeColor = System.Drawing.Color.DimGray;
+            this.lOnlineInfo.Location = new System.Drawing.Point(13, 6);
+            this.lOnlineInfo.Name = "lOnlineInfo";
+            this.lOnlineInfo.Size = new System.Drawing.Size(487, 38);
+            this.lOnlineInfo.TabIndex = 40;
+            this.lOnlineInfo.Text = "Play with persons all over the world once you dont have physical friends";
+            this.lOnlineInfo.Visible = false;
+            // 
+            // lPlayGame
+            // 
+            this.lPlayGame.AutoSize = true;
+            this.lPlayGame.BackColor = System.Drawing.Color.Transparent;
+            this.lPlayGame.Enabled = false;
+            this.lPlayGame.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lPlayGame.ForeColor = System.Drawing.Color.Brown;
+            this.lPlayGame.Location = new System.Drawing.Point(153, 236);
+            this.lPlayGame.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lPlayGame.Name = "lPlayGame";
+            this.lPlayGame.Size = new System.Drawing.Size(216, 45);
+            this.lPlayGame.TabIndex = 78;
+            this.lPlayGame.Text = "Let\'s Goooo";
+            this.lPlayGame.Visible = false;
+            this.lPlayGame.Click += new System.EventHandler(this.lPlayGame_Click);
             // 
             // ViewModoJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(378, 298);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lJogadores);
-            this.Controls.Add(this.pbReturn);
-            this.Controls.Add(this.bPlay);
-            this.Controls.Add(this.cBJogo);
-            this.Controls.Add(this.cBJogador);
+            this.ClientSize = new System.Drawing.Size(511, 337);
+            this.Controls.Add(this.lPlayGame);
+            this.Controls.Add(this.lLocal);
+            this.Controls.Add(this.lMultiplayer);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lOnline);
+            this.Controls.Add(this.lRobot);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lGameMode);
+            this.Controls.Add(this.pbReturn);
+            this.Controls.Add(this.pJogo);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewModoJogo";
             this.Text = "Checkers";
+            this.Load += new System.EventHandler(this.ViewModoJogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
+            this.pJogo.ResumeLayout(false);
+            this.pJogo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cBJogador;
-        private System.Windows.Forms.ComboBox cBJogo;
-        private System.Windows.Forms.Button bPlay;
         private System.Windows.Forms.PictureBox pbReturn;
-        private System.Windows.Forms.Label lJogadores;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lGameMode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pJogo;
+        private System.Windows.Forms.Label lRobot;
+        private System.Windows.Forms.Label lMultiplayer;
+        private System.Windows.Forms.Label lLocal;
+        private System.Windows.Forms.Label lOnline;
+        private System.Windows.Forms.Label lOnlineInfo;
+        private System.Windows.Forms.Label lLocalInfo;
+        private System.Windows.Forms.Label lRobotInfo;
+        private System.Windows.Forms.Label lMultiplayerInfo;
+        private System.Windows.Forms.Label lPlayGame;
     }
 }

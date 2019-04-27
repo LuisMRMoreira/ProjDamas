@@ -33,6 +33,7 @@
             this.bContinueGame = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.pPainelOpcoes = new System.Windows.Forms.Panel();
+            this.bRules = new System.Windows.Forms.Button();
             this.bGameInfo = new System.Windows.Forms.Button();
             this.pBLogin = new System.Windows.Forms.PictureBox();
             this.lLogin = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pPainelOpcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogin)).BeginInit();
             this.pLoginOrUsername.SuspendLayout();
@@ -76,7 +76,7 @@
             this.buttonjogar.TabIndex = 1;
             this.buttonjogar.Text = "New Game";
             this.buttonjogar.UseVisualStyleBackColor = true;
-            this.buttonjogar.Click += new System.EventHandler(this.button1_Click);
+            this.buttonjogar.Click += new System.EventHandler(this.buttonjogar_Click);
             // 
             // bContinueGame
             // 
@@ -112,7 +112,7 @@
             // pPainelOpcoes
             // 
             this.pPainelOpcoes.BackColor = System.Drawing.Color.Transparent;
-            this.pPainelOpcoes.Controls.Add(this.button1);
+            this.pPainelOpcoes.Controls.Add(this.bRules);
             this.pPainelOpcoes.Controls.Add(this.bGameInfo);
             this.pPainelOpcoes.Controls.Add(this.buttonjogar);
             this.pPainelOpcoes.Controls.Add(this.bContinueGame);
@@ -122,6 +122,22 @@
             this.pPainelOpcoes.Name = "pPainelOpcoes";
             this.pPainelOpcoes.Size = new System.Drawing.Size(203, 301);
             this.pPainelOpcoes.TabIndex = 13;
+            // 
+            // bRules
+            // 
+            this.bRules.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bRules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bRules.FlatAppearance.BorderSize = 0;
+            this.bRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bRules.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bRules.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bRules.Location = new System.Drawing.Point(0, 75);
+            this.bRules.Name = "bRules";
+            this.bRules.Size = new System.Drawing.Size(203, 37);
+            this.bRules.TabIndex = 7;
+            this.bRules.Text = "Rules";
+            this.bRules.UseVisualStyleBackColor = true;
+            this.bRules.Click += new System.EventHandler(this.bRules_Click);
             // 
             // bGameInfo
             // 
@@ -287,22 +303,6 @@
             this.pictureBox10.TabIndex = 26;
             this.pictureBox10.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.button1.Location = new System.Drawing.Point(0, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 37);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Rules";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // ViewMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +366,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bRules;
     }
 }
 

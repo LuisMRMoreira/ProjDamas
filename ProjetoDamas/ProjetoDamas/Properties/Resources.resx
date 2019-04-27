@@ -124,14 +124,14 @@
   <data name="PecaBranca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PecaBranca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Window size" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window size.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Volume icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Volume icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Check" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Check.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +145,11 @@
   <data name="Icon More info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon More info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lock transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lock transparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Guardar icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Guardar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,19 +175,19 @@
   <data name="Check1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Volume icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Volume icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user-interface-login-icon--12[1]" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-interface-login-icon--12[1].png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Guardar icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Guardar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lock transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock transparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="More info icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\More info icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Window size" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Window size.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon Level icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon Level icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -274,6 +274,7 @@
     <None Include="Resources\Window size.png" />
     <None Include="Resources\Volume icon.png" />
     <None Include="Resources\Save icon.png" />
+    <None Include="Resources\Icon Level icon.png" />
     <Content Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
     <None Include="Resources\Check.jpg" />

@@ -34,23 +34,13 @@ namespace ProjetoDamas
 
         private void M_Gestor_PedidoAlterarLogin(string imagem, string nome)
         {
-            lLogin.Text = "Luis";
+            lLogin.Text = "Grupo";
             pBLogin.Image = Properties.Resources.DamaBranca;
             //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
             this.Show();
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //ViewMoDoJogo option_gamemode = new ViewMoDoJogo(); 
-            //option_gamemode.Show();
-            this.Hide();
-            ViewModoJogo option_gamemode = new ViewModoJogo();
-            option_gamemode.Closed += (s, args) => this.Close();
-            option_gamemode.Show();
-
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -130,11 +120,20 @@ namespace ProjetoDamas
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+
+
+        private void buttonjogar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_ModoJogo.Show();
+        }
+
+        private void bRules_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.V_Rules.Show();
         }
+
 
 
 

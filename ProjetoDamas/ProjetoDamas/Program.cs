@@ -15,6 +15,10 @@ namespace ProjetoDamas
         public static ViewProfileInfo V_Profile { get; private set; }
         public static ViewSettings V_Settings { get; private set; }
         public static ViewRegras V_Rules { get; private set; }
+        public static ViewModoJogo V_ModoJogo { get; private set; }
+        public static ViewJogo V_JogoMultiplayerLocal { get; private set; }
+        public static ViewJogoOnline V_JogoMultiplayerOnline { get; private set; }
+        public static ViewJogoRobot V_JogoRobot { get; private set; }
 
         //Model
         public static Gestor M_Gestor { get; private set; }
@@ -42,6 +46,10 @@ namespace ProjetoDamas
             V_Profile = new ViewProfileInfo();
             V_Settings = new ViewSettings();
             V_Rules = new ViewRegras();
+            V_ModoJogo = new ViewModoJogo();
+            V_JogoMultiplayerLocal = new ViewJogo();
+            V_JogoMultiplayerOnline = new ViewJogoOnline();
+            V_JogoRobot = new ViewJogoRobot();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
 
