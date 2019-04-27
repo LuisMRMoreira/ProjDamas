@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewSettings));
             this.pBReturn = new System.Windows.Forms.PictureBox();
             this.lVolumeLevel = new System.Windows.Forms.Label();
+            this.nUDVolumeLevel = new System.Windows.Forms.NumericUpDown();
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.trackBarVolume = new System.Windows.Forms.TrackBar();
             this.lWindowSize = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cBWindowSize = new System.Windows.Forms.ComboBox();
@@ -52,10 +52,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVolumeLevel)).BeginInit();
             this.pUsername.SuspendLayout();
             this.pUsernameImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,10 +92,21 @@
             this.lVolumeLevel.TabIndex = 76;
             this.lVolumeLevel.Text = "Volume level:";
             // 
+            // nUDVolumeLevel
+            // 
+            this.nUDVolumeLevel.BackColor = System.Drawing.SystemColors.Control;
+            this.nUDVolumeLevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nUDVolumeLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nUDVolumeLevel.Location = new System.Drawing.Point(45, 0);
+            this.nUDVolumeLevel.Name = "nUDVolumeLevel";
+            this.nUDVolumeLevel.Size = new System.Drawing.Size(57, 26);
+            this.nUDVolumeLevel.TabIndex = 77;
+            this.nUDVolumeLevel.ValueChanged += new System.EventHandler(this.nUDVolumeLevel_ValueChanged);
+            // 
             // pUsername
             // 
             this.pUsername.Controls.Add(this.pUsernameImage);
-            this.pUsername.Controls.Add(this.trackBarVolume);
+            this.pUsername.Controls.Add(this.nUDVolumeLevel);
             this.pUsername.Location = new System.Drawing.Point(196, 52);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(102, 28);
@@ -115,22 +126,13 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::ProjetoDamas.Properties.Resources.Volume_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
-            // 
-            // trackBarVolume
-            // 
-            this.trackBarVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.trackBarVolume.Location = new System.Drawing.Point(34, 0);
-            this.trackBarVolume.Name = "trackBarVolume";
-            this.trackBarVolume.Size = new System.Drawing.Size(68, 45);
-            this.trackBarVolume.TabIndex = 84;
-            this.trackBarVolume.ValueChanged += new System.EventHandler(this.trackBarVolume_ValueChanged);
             // 
             // lWindowSize
             // 
@@ -303,11 +305,10 @@
             this.Name = "ViewSettings";
             this.Text = "Checkers";
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVolumeLevel)).EndInit();
             this.pUsername.ResumeLayout(false);
-            this.pUsername.PerformLayout();
             this.pUsernameImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarVolume)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -325,6 +326,7 @@
 
         private System.Windows.Forms.PictureBox pBReturn;
         private System.Windows.Forms.Label lVolumeLevel;
+        private System.Windows.Forms.NumericUpDown nUDVolumeLevel;
         private System.Windows.Forms.Panel pUsername;
         private System.Windows.Forms.Panel pUsernameImage;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -343,6 +345,5 @@
         private System.Windows.Forms.ComboBox cBBotLevel;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TrackBar trackBarVolume;
     }
 }

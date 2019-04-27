@@ -152,8 +152,6 @@ namespace ProjetoDamas
             lOnlineInfo.Visible = false;
         }
 
-        
-
 
         /// <summary>
         /// 

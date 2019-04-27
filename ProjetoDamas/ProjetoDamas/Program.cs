@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WMPLib;
 
 namespace ProjetoDamas
 {
     static class Program
     {
-
 
         public static ViewMenu V_Menu { get; private set; }
         public static ViewLogin V_Login { get; private set; }
@@ -32,9 +30,6 @@ namespace ProjetoDamas
         public static ControllerGestor C_Gestor { get; private set; }
         public static ControllerJogador C_Jogador { get; private set; }
 
-       
-
-       
 
         /// <summary>
         /// The main entry point for the application.
@@ -59,8 +54,6 @@ namespace ProjetoDamas
             V_GameStatistics = new ViewStatistics();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
-            
-            
 
             Application.Run(V_Menu);
         }

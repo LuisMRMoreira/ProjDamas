@@ -305,23 +305,6 @@ namespace ProjetoDamas
             this.Close();//?????????
         }
 
-        private void button2surrender_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Are you sure you want to surrender!? This will cause you to lose...","Warning", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                //Ciar evento de desistencia receber como parametro o jogador
-            }
-            
-        }
-
-        private void button1surrender_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to surrender!? This will cause you to lose...", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                //Ciar evento de desistencia receber como parametro o jogador
-            }
-        }
-
 
 
 

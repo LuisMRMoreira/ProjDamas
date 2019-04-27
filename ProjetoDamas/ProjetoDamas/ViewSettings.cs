@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WMPLib;
 
 namespace ProjetoDamas
 {
@@ -17,7 +16,6 @@ namespace ProjetoDamas
         bool valoresAlterados = false;
 
         public event MetodosComDoisParametros PedidoGuardarDados;
-       
 
 
         public ViewSettings()
@@ -35,7 +33,11 @@ namespace ProjetoDamas
 
 
 
-      
+        private void nUDVolumeLevel_ValueChanged(object sender, EventArgs e)
+        {
+            valoresAlterados = true;
+            pBCheckGuardado.Visible = false;
+        }
 
         private void cBWindowSize_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -52,7 +54,7 @@ namespace ProjetoDamas
                 {
                     if (PedidoGuardarDados != null)
                     {
-                        PedidoGuardarDados(Convert.ToInt32(trackBarVolume.Value), cBWindowSize.SelectedText);
+                        PedidoGuardarDados(Convert.ToInt32(nUDVolumeLevel.Value), cBWindowSize.SelectedText);
                     }
                 }
             }
@@ -75,15 +77,6 @@ namespace ProjetoDamas
             //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
             valoresAlterados = false;
             pBCheckGuardado.Visible = true;
-        }
-
-       
-
-        private void trackBarVolume_ValueChanged(object sender, EventArgs e)
-        {
-            valoresAlterados = true;
-            pBCheckGuardado.Visible = false;
-            Program.V_Menu.wplayer.settings.volume = trackBarVolume.Value;
         }
     }
 }

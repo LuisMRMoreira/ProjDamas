@@ -84,8 +84,6 @@
             this.lCountry2 = new System.Windows.Forms.Label();
             this.lNomeN2 = new System.Windows.Forms.Label();
             this.lNome2 = new System.Windows.Forms.Label();
-            this.button1surrender = new System.Windows.Forms.Button();
-            this.button2surrender = new System.Windows.Forms.Button();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).BeginInit();
@@ -745,26 +743,6 @@
             this.lNome2.Text = "Name: ";
             this.lNome2.Visible = false;
             // 
-            // button1surrender
-            // 
-            this.button1surrender.Location = new System.Drawing.Point(721, 301);
-            this.button1surrender.Name = "button1surrender";
-            this.button1surrender.Size = new System.Drawing.Size(90, 31);
-            this.button1surrender.TabIndex = 24;
-            this.button1surrender.Text = "Surrender";
-            this.button1surrender.UseVisualStyleBackColor = true;
-            this.button1surrender.Click += new System.EventHandler(this.button1surrender_Click);
-            // 
-            // button2surrender
-            // 
-            this.button2surrender.Location = new System.Drawing.Point(27, 301);
-            this.button2surrender.Name = "button2surrender";
-            this.button2surrender.Size = new System.Drawing.Size(84, 31);
-            this.button2surrender.TabIndex = 25;
-            this.button2surrender.Text = "Surrender";
-            this.button2surrender.UseVisualStyleBackColor = true;
-            this.button2surrender.Click += new System.EventHandler(this.button2surrender_Click);
-            // 
             // ViewJogo
             // 
             this.AllowDrop = true;
@@ -773,8 +751,6 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.imagemDeFundo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(838, 498);
-            this.Controls.Add(this.button2surrender);
-            this.Controls.Add(this.button1surrender);
             this.Controls.Add(this.lVitoriasN2);
             this.Controls.Add(this.lVitorias2);
             this.Controls.Add(this.lCountryN2);
@@ -895,7 +871,5 @@
         private System.Windows.Forms.Label lCountry2;
         private System.Windows.Forms.Label lNomeN2;
         private System.Windows.Forms.Label lNome2;
-        private System.Windows.Forms.Button button1surrender;
-        private System.Windows.Forms.Button button2surrender;
     }
 }
