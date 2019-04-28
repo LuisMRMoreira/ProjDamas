@@ -416,7 +416,7 @@
             this.pSeacrhOpponent.Controls.Add(this.cBSearchInTheServer);
             this.pSeacrhOpponent.Controls.Add(this.pOpponentNickname);
             this.pSeacrhOpponent.Controls.Add(this.pServerIP);
-            this.pSeacrhOpponent.Location = new System.Drawing.Point(340, 66);
+            this.pSeacrhOpponent.Location = new System.Drawing.Point(340, 60);
             this.pSeacrhOpponent.Name = "pSeacrhOpponent";
             this.pSeacrhOpponent.Size = new System.Drawing.Size(247, 265);
             this.pSeacrhOpponent.TabIndex = 94;

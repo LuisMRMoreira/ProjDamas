@@ -22,6 +22,12 @@ namespace ProjetoDamas
         {
             ctBServerIP.Text = nickname;
             cTBOpponentNickname.Text = serverIP;
+            pSeacrhOpponent.Visible = false;
+            pOpponent.Visible = true;
+            bSearchOppoent.Visible = false;
+            bPlay.Visible = true;
+
+            //this.ShowDialog();
         }
 
         private void ctBServerIP_KeyPress(object sender, KeyPressEventArgs e)
@@ -90,5 +96,7 @@ namespace ProjetoDamas
         {
             pOpponentNickname.Visible = !cTBOpponentNickname.Visible;
         }
+
+
     }
 }

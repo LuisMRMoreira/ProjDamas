@@ -15,6 +15,8 @@ namespace ProjetoDamas
         //Vai para a ViewOponenteServidor
         public event MetodosComDuasStrings PedidoAlterarOponenteOnline;
 
+        string value1, value2;
+
         public ViewJogadoresNoServidor()
         {
             InitializeComponent();
@@ -56,26 +58,39 @@ namespace ProjetoDamas
             cTBNickname.Visible = false;
             cBCountries.Visible = false;
             rBNone.Checked = true;
+
+            ///
+            ///inicializar a DataGridView
+            ///
+
+
+            dGVServerOpponent.Rows.Add("Luis", "10", "20", "192.098.123.123");
+            dGVServerOpponent.Rows.Add("Carlos", "10", "23", "052.244.165.025");
+            dGVServerOpponent.Rows.Add("Diogo", "15", "17", "122.099.012.124");
+
         }
 
         private void bSelect_Click(object sender, EventArgs e)
         {
-
+            
             foreach (DataGridViewRow row in dGVServerOpponent.SelectedRows)
             {
                 //Enviar para a ViewOponenteServidor
-                string value1 = row.Cells[0].Value.ToString();
-                string value2 = row.Cells[1].Value.ToString();
+                value1 = row.Cells[0].Value.ToString();
+                value2 = row.Cells[3].Value.ToString();
 
                 //Enviado para o ControllerJogo -> Jogo (Model) -> ViewOponenteServidor
-                if (PedidoAlterarOponenteOnline != null)
-                {
-                    PedidoAlterarOponenteOnline(value1, value2);
-                }
+
             }
 
             this.Hide();
-            Program.V_OponenteServidor.Show();
+            Program.V_OponenteServidor.ShowDialog();
+
+            if (PedidoAlterarOponenteOnline != null)
+            {
+                PedidoAlterarOponenteOnline(value1, value2);
+            }
+
         }
 
         private void dGVEstatisticas_SelectionChanged(object sender, EventArgs e)
