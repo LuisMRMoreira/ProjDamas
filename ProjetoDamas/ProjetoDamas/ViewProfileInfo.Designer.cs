@@ -36,25 +36,21 @@
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ctBUsername = new ProjetoDamas.CueTextBox();
             this.pBUserEditar = new System.Windows.Forms.PictureBox();
             this.pBPasswordEditar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pBVerPass = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.cTBPassword = new ProjetoDamas.CueTextBox();
             this.pBNickEdit = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.oFDImagemPerfil = new System.Windows.Forms.OpenFileDialog();
             this.pBEmailEditar = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pBEmail = new System.Windows.Forms.PictureBox();
-            this.cTBEmail = new ProjetoDamas.CueTextBox();
             this.pBCountryEditar = new System.Windows.Forms.PictureBox();
             this.pCountries = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -91,6 +87,15 @@
             this.tTEmail = new System.Windows.Forms.ToolTip(this.components);
             this.tTPais = new System.Windows.Forms.ToolTip(this.components);
             this.lProfile = new System.Windows.Forms.Label();
+            this.pData = new System.Windows.Forms.Panel();
+            this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pBDateTimePickerEditar = new System.Windows.Forms.PictureBox();
+            this.cTBEmail = new ProjetoDamas.CueTextBox();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
+            this.cTBPassword = new ProjetoDamas.CueTextBox();
+            this.ctBUsername = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pBUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pUsername.SuspendLayout();
@@ -119,6 +124,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBCheckGuardado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).BeginInit();
             this.pMoreInfo.SuspendLayout();
+            this.pData.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBDateTimePickerEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // pBUser
@@ -153,12 +162,12 @@
             this.cBCountries.BackColor = System.Drawing.SystemColors.Control;
             this.cBCountries.Enabled = false;
             this.cBCountries.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12.7F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
             this.cBCountries.Location = new System.Drawing.Point(41, 0);
             this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(234, 29);
+            this.cBCountries.Size = new System.Drawing.Size(234, 31);
             this.cBCountries.TabIndex = 50;
             this.cBCountries.Text = "Portugal";
             // 
@@ -193,20 +202,6 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             this.tTUsername.SetToolTip(this.pictureBox2, "Username");
-            // 
-            // ctBUsername
-            // 
-            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
-            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ctBUsername.Cue = "Username";
-            this.ctBUsername.Enabled = false;
-            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
-            this.ctBUsername.MaxLength = 20;
-            this.ctBUsername.Name = "ctBUsername";
-            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
-            this.ctBUsername.TabIndex = 16;
             // 
             // pBUserEditar
             // 
@@ -277,21 +272,6 @@
             this.pictureBox6.TabStop = false;
             this.tTPassword.SetToolTip(this.pictureBox6, "Password");
             // 
-            // cTBPassword
-            // 
-            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBPassword.Cue = "Password";
-            this.cTBPassword.Enabled = false;
-            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
-            this.cTBPassword.MaxLength = 20;
-            this.cTBPassword.Name = "cTBPassword";
-            this.cTBPassword.PasswordChar = '*';
-            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
-            this.cTBPassword.TabIndex = 16;
-            // 
             // pBNickEdit
             // 
             this.pBNickEdit.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
@@ -335,20 +315,6 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             this.tTNickname.SetToolTip(this.pictureBox4, "Nickname");
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Enabled = false;
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
-            this.cTBNickname.MaxLength = 20;
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(219, 22);
-            this.cTBNickname.TabIndex = 16;
             // 
             // oFDImagemPerfil
             // 
@@ -398,26 +364,12 @@
             this.pBEmail.TabStop = false;
             this.tTEmail.SetToolTip(this.pBEmail, "Email");
             // 
-            // cTBEmail
-            // 
-            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBEmail.Cue = "Email";
-            this.cTBEmail.Enabled = false;
-            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
-            this.cTBEmail.MaxLength = 20;
-            this.cTBEmail.Name = "cTBEmail";
-            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
-            this.cTBEmail.TabIndex = 16;
-            // 
             // pBCountryEditar
             // 
             this.pBCountryEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBCountryEditar.Location = new System.Drawing.Point(461, 223);
+            this.pBCountryEditar.Location = new System.Drawing.Point(462, 224);
             this.pBCountryEditar.Name = "pBCountryEditar";
-            this.pBCountryEditar.Size = new System.Drawing.Size(28, 29);
+            this.pBCountryEditar.Size = new System.Drawing.Size(29, 28);
             this.pBCountryEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBCountryEditar.TabIndex = 63;
             this.pBCountryEditar.TabStop = false;
@@ -430,7 +382,7 @@
             this.pCountries.Controls.Add(this.cBCountries);
             this.pCountries.Location = new System.Drawing.Point(189, 223);
             this.pCountries.Name = "pCountries";
-            this.pCountries.Size = new System.Drawing.Size(302, 29);
+            this.pCountries.Size = new System.Drawing.Size(302, 31);
             this.pCountries.TabIndex = 62;
             // 
             // panel8
@@ -440,7 +392,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(42, 29);
+            this.panel8.Size = new System.Drawing.Size(42, 31);
             this.panel8.TabIndex = 10;
             // 
             // pBCountry
@@ -533,7 +485,7 @@
             this.pMoreInfo.Controls.Add(this.lNumVitorias);
             this.pMoreInfo.Controls.Add(this.labelPassword);
             this.pMoreInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pMoreInfo.Location = new System.Drawing.Point(0, 262);
+            this.pMoreInfo.Location = new System.Drawing.Point(0, 300);
             this.pMoreInfo.Name = "pMoreInfo";
             this.pMoreInfo.Size = new System.Drawing.Size(548, 111);
             this.pMoreInfo.TabIndex = 69;
@@ -721,13 +673,131 @@
             this.lProfile.TabIndex = 72;
             this.lProfile.Text = "Profile";
             // 
+            // pData
+            // 
+            this.pData.Controls.Add(this.pBDateTimePickerEditar);
+            this.pData.Controls.Add(this.dTPDataNascimento);
+            this.pData.Controls.Add(this.panel12);
+            this.pData.Location = new System.Drawing.Point(191, 262);
+            this.pData.Name = "pData";
+            this.pData.Size = new System.Drawing.Size(300, 28);
+            this.pData.TabIndex = 74;
+            // 
+            // dTPDataNascimento
+            // 
+            this.dTPDataNascimento.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTrailingForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.Enabled = false;
+            this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dTPDataNascimento.Location = new System.Drawing.Point(41, 0);
+            this.dTPDataNascimento.Name = "dTPDataNascimento";
+            this.dTPDataNascimento.Size = new System.Drawing.Size(232, 29);
+            this.dTPDataNascimento.TabIndex = 76;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(42, 28);
+            this.panel12.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.Nascimento_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pBDateTimePickerEditar
+            // 
+            this.pBDateTimePickerEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
+            this.pBDateTimePickerEditar.Location = new System.Drawing.Point(272, 2);
+            this.pBDateTimePickerEditar.Name = "pBDateTimePickerEditar";
+            this.pBDateTimePickerEditar.Size = new System.Drawing.Size(27, 26);
+            this.pBDateTimePickerEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBDateTimePickerEditar.TabIndex = 75;
+            this.pBDateTimePickerEditar.TabStop = false;
+            this.tTEdit.SetToolTip(this.pBDateTimePickerEditar, "Edit");
+            this.pBDateTimePickerEditar.Click += new System.EventHandler(this.pBDateTimePickerEditar_Click);
+            // 
+            // cTBEmail
+            // 
+            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBEmail.Cue = "Email";
+            this.cTBEmail.Enabled = false;
+            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
+            this.cTBEmail.MaxLength = 20;
+            this.cTBEmail.Name = "cTBEmail";
+            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
+            this.cTBEmail.TabIndex = 16;
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Enabled = false;
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
+            this.cTBNickname.MaxLength = 20;
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(219, 22);
+            this.cTBNickname.TabIndex = 16;
+            // 
+            // cTBPassword
+            // 
+            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBPassword.Cue = "Password";
+            this.cTBPassword.Enabled = false;
+            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
+            this.cTBPassword.MaxLength = 20;
+            this.cTBPassword.Name = "cTBPassword";
+            this.cTBPassword.PasswordChar = '*';
+            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
+            this.cTBPassword.TabIndex = 16;
+            // 
+            // ctBUsername
+            // 
+            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctBUsername.Cue = "Username";
+            this.ctBUsername.Enabled = false;
+            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
+            this.ctBUsername.MaxLength = 20;
+            this.ctBUsername.Name = "ctBUsername";
+            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
+            this.ctBUsername.TabIndex = 16;
+            // 
             // ViewProfileInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(548, 373);
+            this.ClientSize = new System.Drawing.Size(548, 411);
+            this.Controls.Add(this.pData);
             this.Controls.Add(this.lProfile);
             this.Controls.Add(this.pBLogout);
             this.Controls.Add(this.pBMoreInfo);
@@ -784,6 +854,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBMoreInfo)).EndInit();
             this.pMoreInfo.ResumeLayout(false);
             this.pMoreInfo.PerformLayout();
+            this.pData.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBDateTimePickerEditar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -852,5 +926,10 @@
         private System.Windows.Forms.ToolTip tTEmail;
         private System.Windows.Forms.ToolTip tTPais;
         private System.Windows.Forms.Label lProfile;
+        private System.Windows.Forms.Panel pData;
+        private System.Windows.Forms.PictureBox pBDateTimePickerEditar;
+        private System.Windows.Forms.DateTimePicker dTPDataNascimento;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

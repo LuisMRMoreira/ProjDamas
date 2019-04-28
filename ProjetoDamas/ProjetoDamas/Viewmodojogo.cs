@@ -29,9 +29,32 @@ namespace ProjetoDamas
         {
             pJogo.BackColor = Color.FromArgb(170, 0, 0, 0);
 
+            this.InicialiazarView();
 
             
         }
+
+        /// <summary>
+        /// função que inicializa todos os elementos da View tal e qual como foi instanciada.
+        /// </summary>
+        public void InicialiazarView()
+        {
+            robot = false;
+            local = false;
+
+            lLocal.Enabled = false;
+            lOnline.Enabled = false;
+
+            lLocal.BackColor = Color.Transparent;
+            lOnline.BackColor = Color.Transparent;
+            lMultiplayer.BackColor = Color.Transparent;
+            lRobot.BackColor = Color.Transparent;
+
+            lPlayGame.Visible = false;
+
+
+        }
+
 
         /// <summary>
         /// Click na label serve como botão e altera o fundo
@@ -168,20 +191,21 @@ namespace ProjetoDamas
             if (robot)
             {
                 this.Hide();
-                Program.V_JogoRobot.Show();
+                Program.V_JogoRobot.ShowDialog();
             }
             else
             {
                 if (local)
                 {
                     this.Hide();
-                    Program.V_JogoMultiplayerLocal.Show();
+                    Program.V_JogoMultiplayer.ShowDialog();
                 }
                 else
                 {
-                    this.Close();
-                    Program.V_JogoMultiplayerOnline.Show();
+                    this.Hide();
+                    Program.V_OponenteServidor.ShowDialog();
                 }
+                
             }
         }
 

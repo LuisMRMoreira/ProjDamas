@@ -246,6 +246,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewLogin";
             this.Text = "Checkers";
+            this.Load += new System.EventHandler(this.ViewLogin_Load);
+            this.Shown += new System.EventHandler(this.ViewLogin_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pUsername.ResumeLayout(false);
             this.pUsername.PerformLayout();

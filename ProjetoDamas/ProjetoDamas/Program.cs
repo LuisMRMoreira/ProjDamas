@@ -16,10 +16,13 @@ namespace ProjetoDamas
         public static ViewSettings V_Settings { get; private set; }
         public static ViewRegras V_Rules { get; private set; }
         public static ViewModoJogo V_ModoJogo { get; private set; }
-        public static ViewJogo V_JogoMultiplayerLocal { get; private set; }
-        public static ViewJogoOnline V_JogoMultiplayerOnline { get; private set; }
+        public static ViewJogo V_JogoMultiplayer { get; private set; }
         public static ViewJogoRobot V_JogoRobot { get; private set; }
         public static ViewStatistics V_GameStatistics { get; private set; }
+        public static ViewEnd V_Result { get; private set; }
+        public static ViewJogosInacabados V_JogosInacabados { get; private set; }
+        public static ViewOponenteServidor V_OponenteServidor { get; private set; }
+        public static ViewJogadoresNoServidor V_JogadoresNoServidor { get; private set; }
 
         //Model
         public static Gestor M_Gestor { get; private set; }
@@ -48,10 +51,13 @@ namespace ProjetoDamas
             V_Settings = new ViewSettings();
             V_Rules = new ViewRegras();
             V_ModoJogo = new ViewModoJogo();
-            V_JogoMultiplayerLocal = new ViewJogo();
-            V_JogoMultiplayerOnline = new ViewJogoOnline();
+            V_JogoMultiplayer = new ViewJogo();
             V_JogoRobot = new ViewJogoRobot();
             V_GameStatistics = new ViewStatistics();
+            V_Result = new ViewEnd();
+            V_JogosInacabados = new ViewJogosInacabados();
+            V_OponenteServidor = new ViewOponenteServidor();
+            V_JogadoresNoServidor = new ViewJogadoresNoServidor();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
 

@@ -15,13 +15,21 @@ namespace ProjetoDamas
         public event MetodosSemParametros PedidoRetirarReturnSettings;
         public event MetodosSemParametros PedidoRetirarReturnRegras;
 
-        public PictureBox[,] PictureBoxDoPanel;
+        public PictureBox[,] PictureBoxDoPanel, ArraySavePBP;
         PictureBox selected;
 
         public ViewJogo()//attache image to cursor
         {
             InitializeComponent();
             PictureBoxDoPanel = new PictureBox[8, 4] { { pB00, pB20, pB40, pB60 },
+                                                       { pB11, pB31, pB51, pB71 },
+                                                       { pB02, pB22, pB42, pB62 },
+                                                       { pB13, pB33, pB53, pB73 },
+                                                       { pB04, pB24, pB44, pB64 },
+                                                       { pB15, pB35, pB55, pB75 },
+                                                       { pB06, pB26, pB46, pB66 },
+                                                       { pB17, pB37, pB57, pB77 }};
+            ArraySavePBP = new PictureBox[8, 4] { { pB00, pB20, pB40, pB60 },
                                                        { pB11, pB31, pB51, pB71 },
                                                        { pB02, pB22, pB42, pB62 },
                                                        { pB13, pB33, pB53, pB73 },
@@ -40,7 +48,9 @@ namespace ProjetoDamas
                 //box.Paint += PictureBox_Paint;
             }
 
-            GerarPecasNoTabuleiro(false);
+            
+
+            
             
 
         }
@@ -178,6 +188,11 @@ namespace ProjetoDamas
                             PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;// Image.FromFile("PecaBranca.png");
                             PictureBoxDoPanel[x,y].BringToFront();
                         }
+                        else
+                        {
+                            PictureBoxDoPanel[x, y].Image = null;
+                            PictureBoxDoPanel[x, y].BringToFront();
+                        }
                     }
                     else
                     {
@@ -191,6 +206,11 @@ namespace ProjetoDamas
                         {
                             //meter a outra côr
                             PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaPreta;                            
+                            PictureBoxDoPanel[x, y].BringToFront();
+                        }
+                        else
+                        {
+                            PictureBoxDoPanel[x, y].Image = null;
                             PictureBoxDoPanel[x, y].BringToFront();
                         }
                     }
@@ -238,7 +258,7 @@ namespace ProjetoDamas
         private void regrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.V_Rules.jogo = true;
-            Program.V_Rules.Show();
+            Program.V_Rules.ShowDialog();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -248,12 +268,12 @@ namespace ProjetoDamas
                 if (MessageBox.Show("Do you want to save the game to play later?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     this.Hide();
-                    Program.V_Menu.Show();
+                    Program.V_Menu.ShowDialog();
                     //Guardar o jogo estado do jogo -----------------------------------------------------------------------------------------------------------------------------------
                 }
 
                 this.Hide();
-                Program.V_Menu.Show();
+                Program.V_Menu.ShowDialog();
             }
         }
 
@@ -272,6 +292,17 @@ namespace ProjetoDamas
             ///
             mSJogo.BackColor = Color.FromArgb(150, 0, 0, 0);
             mSJogo.ForeColor = Color.White;
+
+
+            ///
+            /// Inicializar componente
+            ///
+
+            GerarPecasNoTabuleiro(false);
+            //PictureBoxDoPanel = ArraySavePBP;
+            //GerarPecasNoTabuleiro(false);
+
+
         }
 
         private void pBJogadoUm_MouseHover(object sender, EventArgs e)
@@ -298,8 +329,10 @@ namespace ProjetoDamas
         {
             if (MessageBox.Show("Are you sure that you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
-                //---Ir para a View do Resultado
+                this.Hide();
+                Program.V_Result.ShowDialog();
+                //Enviar os dados do jogador 1 -----------------------------------------------------------------------------------------------------------------------------
+
             }
         }
 
@@ -307,8 +340,10 @@ namespace ProjetoDamas
         {
             if (MessageBox.Show("Are you sure that you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
-                //---Ir para a View do Resultado
+                this.Hide();
+                Program.V_Result.ShowDialog();
+                //Enviar os dados do jogador 2 -----------------------------------------------------------------------------------------------------------------------------
+
             }
 
         }
@@ -321,11 +356,13 @@ namespace ProjetoDamas
 
         }
 
+
+
         private void definicoesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //Abrir uma nova View
             Program.V_Settings.jogo = true;
-            Program.V_Settings.Show();
+            Program.V_Settings.ShowDialog();
             
         }
 

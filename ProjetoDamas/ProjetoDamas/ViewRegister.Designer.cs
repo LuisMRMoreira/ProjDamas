@@ -41,32 +41,32 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pBEmail = new System.Windows.Forms.PictureBox();
+            this.cTBEmail = new ProjetoDamas.CueTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pBVerPass = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cTBPassword = new ProjetoDamas.CueTextBox();
             this.pUsername = new System.Windows.Forms.Panel();
             this.pUsernameImage = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ctBUsername = new ProjetoDamas.CueTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pBConfirmPassSee = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.cTBConfirmPass = new ProjetoDamas.CueTextBox();
             this.tTSelectAvatar = new System.Windows.Forms.ToolTip(this.components);
             this.bCreateAccount = new System.Windows.Forms.Button();
             this.lAvatar = new System.Windows.Forms.Label();
             this.pData = new System.Windows.Forms.Panel();
+            this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
-            this.cTBConfirmPass = new ProjetoDamas.CueTextBox();
-            this.cTBEmail = new ProjetoDamas.CueTextBox();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
-            this.cTBPassword = new ProjetoDamas.CueTextBox();
-            this.ctBUsername = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatar)).BeginInit();
             this.pCountry.SuspendLayout();
@@ -212,6 +212,19 @@
             this.pBEmail.TabIndex = 9;
             this.pBEmail.TabStop = false;
             // 
+            // cTBEmail
+            // 
+            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBEmail.Cue = "Email";
+            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
+            this.cTBEmail.MaxLength = 20;
+            this.cTBEmail.Name = "cTBEmail";
+            this.cTBEmail.Size = new System.Drawing.Size(217, 22);
+            this.cTBEmail.TabIndex = 16;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
@@ -242,6 +255,19 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
+            this.cTBNickname.MaxLength = 20;
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(217, 22);
+            this.cTBNickname.TabIndex = 16;
             // 
             // panel3
             // 
@@ -286,6 +312,20 @@
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
             // 
+            // cTBPassword
+            // 
+            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBPassword.Cue = "Password";
+            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
+            this.cTBPassword.MaxLength = 20;
+            this.cTBPassword.Name = "cTBPassword";
+            this.cTBPassword.PasswordChar = '*';
+            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
+            this.cTBPassword.TabIndex = 16;
+            // 
             // pUsername
             // 
             this.pUsername.Controls.Add(this.pUsernameImage);
@@ -316,6 +356,19 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
+            // 
+            // ctBUsername
+            // 
+            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
+            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctBUsername.Cue = "Username";
+            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
+            this.ctBUsername.MaxLength = 20;
+            this.ctBUsername.Name = "ctBUsername";
+            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
+            this.ctBUsername.TabIndex = 16;
             // 
             // panel9
             // 
@@ -360,6 +413,20 @@
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
             // 
+            // cTBConfirmPass
+            // 
+            this.cTBConfirmPass.BackColor = System.Drawing.SystemColors.Control;
+            this.cTBConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cTBConfirmPass.Cue = "Confirm password";
+            this.cTBConfirmPass.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cTBConfirmPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBConfirmPass.Location = new System.Drawing.Point(45, 3);
+            this.cTBConfirmPass.MaxLength = 20;
+            this.cTBConfirmPass.Name = "cTBConfirmPass";
+            this.cTBConfirmPass.PasswordChar = '*';
+            this.cTBConfirmPass.Size = new System.Drawing.Size(186, 22);
+            this.cTBConfirmPass.TabIndex = 16;
+            // 
             // bCreateAccount
             // 
             this.bCreateAccount.BackColor = System.Drawing.Color.Transparent;
@@ -398,6 +465,21 @@
             this.pData.Size = new System.Drawing.Size(265, 28);
             this.pData.TabIndex = 73;
             // 
+            // dTPDataNascimento
+            // 
+            this.dTPDataNascimento.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTitleForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.CalendarTrailingForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dTPDataNascimento.Location = new System.Drawing.Point(41, 0);
+            this.dTPDataNascimento.Name = "dTPDataNascimento";
+            this.dTPDataNascimento.Size = new System.Drawing.Size(224, 29);
+            this.dTPDataNascimento.TabIndex = 76;
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.DarkOliveGreen;
@@ -419,88 +501,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
-            // dTPDataNascimento
-            // 
-            this.dTPDataNascimento.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTitleForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.CalendarTrailingForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dTPDataNascimento.Location = new System.Drawing.Point(41, 0);
-            this.dTPDataNascimento.Name = "dTPDataNascimento";
-            this.dTPDataNascimento.Size = new System.Drawing.Size(224, 29);
-            this.dTPDataNascimento.TabIndex = 76;
-            // 
-            // cTBConfirmPass
-            // 
-            this.cTBConfirmPass.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBConfirmPass.Cue = "Confirm password";
-            this.cTBConfirmPass.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBConfirmPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBConfirmPass.Location = new System.Drawing.Point(45, 3);
-            this.cTBConfirmPass.MaxLength = 20;
-            this.cTBConfirmPass.Name = "cTBConfirmPass";
-            this.cTBConfirmPass.PasswordChar = '*';
-            this.cTBConfirmPass.Size = new System.Drawing.Size(186, 22);
-            this.cTBConfirmPass.TabIndex = 16;
-            // 
-            // cTBEmail
-            // 
-            this.cTBEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBEmail.Cue = "Email";
-            this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
-            this.cTBEmail.MaxLength = 20;
-            this.cTBEmail.Name = "cTBEmail";
-            this.cTBEmail.Size = new System.Drawing.Size(217, 22);
-            this.cTBEmail.TabIndex = 16;
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
-            this.cTBNickname.MaxLength = 20;
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(217, 22);
-            this.cTBNickname.TabIndex = 16;
-            // 
-            // cTBPassword
-            // 
-            this.cTBPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.cTBPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cTBPassword.Cue = "Password";
-            this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
-            this.cTBPassword.MaxLength = 20;
-            this.cTBPassword.Name = "cTBPassword";
-            this.cTBPassword.PasswordChar = '*';
-            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
-            this.cTBPassword.TabIndex = 16;
-            // 
-            // ctBUsername
-            // 
-            this.ctBUsername.BackColor = System.Drawing.SystemColors.Control;
-            this.ctBUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ctBUsername.Cue = "Username";
-            this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
-            this.ctBUsername.MaxLength = 20;
-            this.ctBUsername.Name = "ctBUsername";
-            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
-            this.ctBUsername.TabIndex = 16;
             // 
             // ViewRegister
             // 

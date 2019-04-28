@@ -66,6 +66,9 @@
             // 
             // dGVEstatisticas
             // 
+            this.dGVEstatisticas.AllowUserToAddRows = false;
+            this.dGVEstatisticas.AllowUserToDeleteRows = false;
+            this.dGVEstatisticas.AllowUserToOrderColumns = true;
             this.dGVEstatisticas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVEstatisticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVEstatisticas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -75,6 +78,7 @@
             this.cTotalGames});
             this.dGVEstatisticas.Location = new System.Drawing.Point(5, 6);
             this.dGVEstatisticas.Name = "dGVEstatisticas";
+            this.dGVEstatisticas.ReadOnly = true;
             this.dGVEstatisticas.Size = new System.Drawing.Size(443, 196);
             this.dGVEstatisticas.TabIndex = 25;
             // 
@@ -82,21 +86,25 @@
             // 
             this.cNickname.HeaderText = "Nickname";
             this.cNickname.Name = "cNickname";
+            this.cNickname.ReadOnly = true;
             // 
             // cWins
             // 
             this.cWins.HeaderText = "Wins";
             this.cWins.Name = "cWins";
+            this.cWins.ReadOnly = true;
             // 
             // cDefeats
             // 
             this.cDefeats.HeaderText = "Defeats";
             this.cDefeats.Name = "cDefeats";
+            this.cDefeats.ReadOnly = true;
             // 
             // cTotalGames
             // 
             this.cTotalGames.HeaderText = "Total Games";
             this.cTotalGames.Name = "cTotalGames";
+            this.cTotalGames.ReadOnly = true;
             // 
             // pDataGridView
             // 
@@ -169,6 +177,7 @@
             this.cTBTimePlayed.Size = new System.Drawing.Size(199, 29);
             this.cTBTimePlayed.TabIndex = 83;
             this.cTBTimePlayed.Visible = false;
+            this.cTBTimePlayed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cTBTimePlayed_KeyPress);
             // 
             // rBName
             // 

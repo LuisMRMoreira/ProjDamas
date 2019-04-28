@@ -192,6 +192,9 @@
             // 
             // dGVJogosInacabados
             // 
+            this.dGVJogosInacabados.AllowUserToAddRows = false;
+            this.dGVJogosInacabados.AllowUserToDeleteRows = false;
+            this.dGVJogosInacabados.AllowUserToOrderColumns = true;
             this.dGVJogosInacabados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVJogosInacabados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVJogosInacabados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -201,6 +204,7 @@
             this.cDate});
             this.dGVJogosInacabados.Location = new System.Drawing.Point(5, 6);
             this.dGVJogosInacabados.Name = "dGVJogosInacabados";
+            this.dGVJogosInacabados.ReadOnly = true;
             this.dGVJogosInacabados.Size = new System.Drawing.Size(443, 143);
             this.dGVJogosInacabados.TabIndex = 25;
             // 
@@ -208,21 +212,25 @@
             // 
             this.cPlayerOne.HeaderText = "Player One";
             this.cPlayerOne.Name = "cPlayerOne";
+            this.cPlayerOne.ReadOnly = true;
             // 
             // cPlayerTwo
             // 
             this.cPlayerTwo.HeaderText = "Player Two";
             this.cPlayerTwo.Name = "cPlayerTwo";
+            this.cPlayerTwo.ReadOnly = true;
             // 
             // cTime
             // 
             this.cTime.HeaderText = "Time";
             this.cTime.Name = "cTime";
+            this.cTime.ReadOnly = true;
             // 
             // cDate
             // 
             this.cDate.HeaderText = "Date";
             this.cDate.Name = "cDate";
+            this.cDate.ReadOnly = true;
             this.cDate.ToolTipText = "Date";
             // 
             // lUnfinishedGames

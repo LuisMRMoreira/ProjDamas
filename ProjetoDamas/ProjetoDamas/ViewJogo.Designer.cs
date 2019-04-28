@@ -575,7 +575,7 @@
             // definicoesToolStripMenuItem1
             // 
             this.definicoesToolStripMenuItem1.Name = "definicoesToolStripMenuItem1";
-            this.definicoesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.definicoesToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.definicoesToolStripMenuItem1.Text = "&Settings";
             this.definicoesToolStripMenuItem1.Click += new System.EventHandler(this.definicoesToolStripMenuItem1_Click);
             // 

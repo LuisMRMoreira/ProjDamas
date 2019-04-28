@@ -78,7 +78,7 @@ namespace ProjetoDamas
             if (jogo)
             {
                 this.Hide();
-                Program.V_JogoMultiplayerLocal.Show();
+                Program.V_JogoMultiplayer.Show();
                 jogo = false;
             }
             else

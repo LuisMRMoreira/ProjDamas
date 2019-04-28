@@ -39,6 +39,15 @@ namespace ProjetoDamas
             cBCountries.SelectedIndex = 177;
 
             pMoreInfo.BackColor = Color.FromArgb(170, 0, 0, 0);
+
+
+
+
+            ///
+            /// Inicialização da View
+            ///
+
+            saveChanges = false;
         }
 
 
@@ -55,7 +64,7 @@ namespace ProjetoDamas
             }
 
             this.Hide();
-            Program.V_Menu.Show();
+            Program.V_Menu.ShowDialog();
         }
 
 
@@ -140,6 +149,9 @@ namespace ProjetoDamas
 
             pBCountryEditar.BorderStyle = BorderStyle.None;
             cBCountries.Enabled = false;
+
+            pBDateTimePickerEditar.BorderStyle = BorderStyle.None;
+            dTPDataNascimento.Enabled = false;
         }
 
         private void pBUser_Click(object sender, EventArgs e)
@@ -184,6 +196,21 @@ namespace ProjetoDamas
             saveChanges = true;
         }
 
+        private void pBDateTimePickerEditar_Click(object sender, EventArgs e)
+        {
+            if (dTPDataNascimento.Enabled)
+                ((PictureBox)sender).BorderStyle = BorderStyle.None;
+            else
+                ((PictureBox)sender).BorderStyle = BorderStyle.Fixed3D;
+
+            dTPDataNascimento.Enabled = !dTPDataNascimento.Enabled;
+
+            pBCheckGuardado.Visible = false;
+            saveChanges = true;
+        }
+
+
+
         private void pBMoreInfo_Click(object sender, EventArgs e)
         {
             pMoreInfo.Visible = !pMoreInfo.Visible;
@@ -198,8 +225,6 @@ namespace ProjetoDamas
                 PedidoTerminarSessao();
             }
         }
-
-
 
 
     }

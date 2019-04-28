@@ -58,17 +58,17 @@
     <Compile Include="ViewEnd.Designer.cs">
       <DependentUpon>ViewEnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewJogadoresNoServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewJogadoresNoServidor.Designer.cs">
+      <DependentUpon>ViewJogadoresNoServidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewJogoRobot.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewJogoRobot.Designer.cs">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewJogoOnline.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewJogoOnline.Designer.cs">
-      <DependentUpon>ViewJogoOnline.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewJogosInacabados.cs">
       <SubType>Form</SubType>
@@ -120,6 +120,12 @@
     <Compile Include="ViewModoJogo.Designer.cs">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewOponenteServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOponenteServidor.Designer.cs">
+      <DependentUpon>ViewOponenteServidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +159,11 @@
     <EmbeddedResource Include="ViewEnd.resx">
       <DependentUpon>ViewEnd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewJogadoresNoServidor.resx">
+      <DependentUpon>ViewJogadoresNoServidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewJogoRobot.resx">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewJogoOnline.resx">
-      <DependentUpon>ViewJogoOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewJogosInacabados.resx">
       <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewModoJogo.resx">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOponenteServidor.resx">
+      <DependentUpon>ViewOponenteServidor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
@@ -224,6 +233,7 @@
     <None Include="Resources\Nascimento icon.png" />
     <Content Include="Resources\Confetis.png" />
     <Content Include="Resources\confets.png" />
+    <None Include="Resources\IP icon.png" />
     <Content Include="Resources\user-interface-login-icon--12[1].png" />
     <None Include="Resources\a429924cb33912470dd40d51a2f760ec_go-back-icon-clip-art-at-clkercom-vector-clip-art-online-_300-300.png" />
     <None Include="Resources\Check.jpg" />

@@ -144,6 +144,16 @@ namespace ProjetoDamas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap country_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("country icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DamaBranca {
             get {
                 object obj = ResourceManager.GetObject("DamaBranca", resourceCulture);
@@ -217,6 +227,16 @@ namespace ProjetoDamas.Properties {
         internal static System.Drawing.Bitmap imagemDeFundo {
             get {
                 object obj = ResourceManager.GetObject("imagemDeFundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IP_icon {
+            get {
+                object obj = ResourceManager.GetObject("IP icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

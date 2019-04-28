@@ -29,135 +29,101 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewEnd));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pbJogador1 = new System.Windows.Forms.PictureBox();
-            this.lVitoriasN = new System.Windows.Forms.Label();
-            this.lVitorias = new System.Windows.Forms.Label();
-            this.lCountryN = new System.Windows.Forms.Label();
-            this.lCountry = new System.Windows.Forms.Label();
-            this.lNomeN = new System.Windows.Forms.Label();
-            this.lNome = new System.Windows.Forms.Label();
+            this.lWinner = new System.Windows.Forms.Label();
+            this.pbJogadorVencedor = new System.Windows.Forms.PictureBox();
+            this.lCountryVencedorN = new System.Windows.Forms.Label();
+            this.lCountryVencedor = new System.Windows.Forms.Label();
+            this.lNomeVencedorN = new System.Windows.Forms.Label();
+            this.lNomeVencedor = new System.Windows.Forms.Label();
             this.lGameEnded = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).BeginInit();
+            this.pInfoVencedor = new System.Windows.Forms.Panel();
+            this.pBJogadorPerdedor = new System.Windows.Forms.PictureBox();
+            this.pPerdedor = new System.Windows.Forms.Panel();
+            this.lNomePerdedor = new System.Windows.Forms.Label();
+            this.lNomePerdedorN = new System.Windows.Forms.Label();
+            this.lCountryPerdedor = new System.Windows.Forms.Label();
+            this.lCountryPerdedorN = new System.Windows.Forms.Label();
+            this.bBackMenu = new System.Windows.Forms.Button();
+            this.pCor = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogadorVencedor)).BeginInit();
+            this.pInfoVencedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadorPerdedor)).BeginInit();
+            this.pPerdedor.SuspendLayout();
+            this.pCor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lWinner
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(11, 94);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 27);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "The winner is";
+            this.lWinner.AutoSize = true;
+            this.lWinner.BackColor = System.Drawing.Color.Transparent;
+            this.lWinner.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lWinner.ForeColor = System.Drawing.Color.DimGray;
+            this.lWinner.Location = new System.Drawing.Point(11, 94);
+            this.lWinner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lWinner.Name = "lWinner";
+            this.lWinner.Size = new System.Drawing.Size(227, 45);
+            this.lWinner.TabIndex = 78;
+            this.lWinner.Text = "The winner is";
             // 
-            // label2
+            // pbJogadorVencedor
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Kristen ITC", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(155, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 33);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "The game has ended!";
+            this.pbJogadorVencedor.BackColor = System.Drawing.Color.Transparent;
+            this.pbJogadorVencedor.Image = ((System.Drawing.Image)(resources.GetObject("pbJogadorVencedor.Image")));
+            this.pbJogadorVencedor.Location = new System.Drawing.Point(111, 130);
+            this.pbJogadorVencedor.Margin = new System.Windows.Forms.Padding(2);
+            this.pbJogadorVencedor.Name = "pbJogadorVencedor";
+            this.pbJogadorVencedor.Size = new System.Drawing.Size(127, 119);
+            this.pbJogadorVencedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbJogadorVencedor.TabIndex = 80;
+            this.pbJogadorVencedor.TabStop = false;
             // 
-            // pbJogador1
+            // lCountryVencedorN
             // 
-            this.pbJogador1.BackColor = System.Drawing.Color.Transparent;
-            this.pbJogador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbJogador1.Image = ((System.Drawing.Image)(resources.GetObject("pbJogador1.Image")));
-            this.pbJogador1.Location = new System.Drawing.Point(191, 130);
-            this.pbJogador1.Margin = new System.Windows.Forms.Padding(2);
-            this.pbJogador1.Name = "pbJogador1";
-            this.pbJogador1.Size = new System.Drawing.Size(127, 119);
-            this.pbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbJogador1.TabIndex = 80;
-            this.pbJogador1.TabStop = false;
+            this.lCountryVencedorN.AutoSize = true;
+            this.lCountryVencedorN.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryVencedorN.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lCountryVencedorN.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lCountryVencedorN.Location = new System.Drawing.Point(129, 56);
+            this.lCountryVencedorN.Name = "lCountryVencedorN";
+            this.lCountryVencedorN.Size = new System.Drawing.Size(33, 27);
+            this.lCountryVencedorN.TabIndex = 84;
+            this.lCountryVencedorN.Text = "...";
             // 
-            // lVitoriasN
+            // lCountryVencedor
             // 
-            this.lVitoriasN.AutoSize = true;
-            this.lVitoriasN.BackColor = System.Drawing.Color.Transparent;
-            this.lVitoriasN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lVitoriasN.ForeColor = System.Drawing.Color.White;
-            this.lVitoriasN.Location = new System.Drawing.Point(432, 204);
-            this.lVitoriasN.Name = "lVitoriasN";
-            this.lVitoriasN.Size = new System.Drawing.Size(21, 20);
-            this.lVitoriasN.TabIndex = 86;
-            this.lVitoriasN.Text = "...";
-            this.lVitoriasN.Visible = false;
+            this.lCountryVencedor.AutoSize = true;
+            this.lCountryVencedor.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryVencedor.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lCountryVencedor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lCountryVencedor.Location = new System.Drawing.Point(14, 56);
+            this.lCountryVencedor.Name = "lCountryVencedor";
+            this.lCountryVencedor.Size = new System.Drawing.Size(109, 27);
+            this.lCountryVencedor.TabIndex = 83;
+            this.lCountryVencedor.Text = "Country: ";
             // 
-            // lVitorias
+            // lNomeVencedorN
             // 
-            this.lVitorias.AutoSize = true;
-            this.lVitorias.BackColor = System.Drawing.Color.Transparent;
-            this.lVitorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lVitorias.ForeColor = System.Drawing.Color.White;
-            this.lVitorias.Location = new System.Drawing.Point(370, 204);
-            this.lVitorias.Name = "lVitorias";
-            this.lVitorias.Size = new System.Drawing.Size(52, 20);
-            this.lVitorias.TabIndex = 85;
-            this.lVitorias.Text = "Wins: ";
-            this.lVitorias.Visible = false;
+            this.lNomeVencedorN.AutoSize = true;
+            this.lNomeVencedorN.BackColor = System.Drawing.Color.Transparent;
+            this.lNomeVencedorN.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lNomeVencedorN.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lNomeVencedorN.Location = new System.Drawing.Point(129, 9);
+            this.lNomeVencedorN.Name = "lNomeVencedorN";
+            this.lNomeVencedorN.Size = new System.Drawing.Size(33, 27);
+            this.lNomeVencedorN.TabIndex = 82;
+            this.lNomeVencedorN.Text = "...";
             // 
-            // lCountryN
+            // lNomeVencedor
             // 
-            this.lCountryN.AutoSize = true;
-            this.lCountryN.BackColor = System.Drawing.Color.Transparent;
-            this.lCountryN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCountryN.ForeColor = System.Drawing.Color.White;
-            this.lCountryN.Location = new System.Drawing.Point(432, 174);
-            this.lCountryN.Name = "lCountryN";
-            this.lCountryN.Size = new System.Drawing.Size(21, 20);
-            this.lCountryN.TabIndex = 84;
-            this.lCountryN.Text = "...";
-            this.lCountryN.Visible = false;
-            // 
-            // lCountry
-            // 
-            this.lCountry.AutoSize = true;
-            this.lCountry.BackColor = System.Drawing.Color.Transparent;
-            this.lCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCountry.ForeColor = System.Drawing.Color.White;
-            this.lCountry.Location = new System.Drawing.Point(370, 174);
-            this.lCountry.Name = "lCountry";
-            this.lCountry.Size = new System.Drawing.Size(72, 20);
-            this.lCountry.TabIndex = 83;
-            this.lCountry.Text = "Country: ";
-            this.lCountry.Visible = false;
-            // 
-            // lNomeN
-            // 
-            this.lNomeN.AutoSize = true;
-            this.lNomeN.BackColor = System.Drawing.Color.Transparent;
-            this.lNomeN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNomeN.ForeColor = System.Drawing.Color.White;
-            this.lNomeN.Location = new System.Drawing.Point(432, 148);
-            this.lNomeN.Name = "lNomeN";
-            this.lNomeN.Size = new System.Drawing.Size(21, 20);
-            this.lNomeN.TabIndex = 82;
-            this.lNomeN.Text = "...";
-            this.lNomeN.Visible = false;
-            // 
-            // lNome
-            // 
-            this.lNome.AutoSize = true;
-            this.lNome.BackColor = System.Drawing.Color.Transparent;
-            this.lNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNome.ForeColor = System.Drawing.Color.White;
-            this.lNome.Location = new System.Drawing.Point(370, 148);
-            this.lNome.Name = "lNome";
-            this.lNome.Size = new System.Drawing.Size(59, 20);
-            this.lNome.TabIndex = 81;
-            this.lNome.Text = "Name: ";
-            this.lNome.Visible = false;
+            this.lNomeVencedor.AutoSize = true;
+            this.lNomeVencedor.BackColor = System.Drawing.Color.Transparent;
+            this.lNomeVencedor.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lNomeVencedor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lNomeVencedor.Location = new System.Drawing.Point(14, 9);
+            this.lNomeVencedor.Name = "lNomeVencedor";
+            this.lNomeVencedor.Size = new System.Drawing.Size(83, 27);
+            this.lNomeVencedor.TabIndex = 81;
+            this.lNomeVencedor.Text = "Name: ";
             // 
             // lGameEnded
             // 
@@ -165,12 +131,122 @@
             this.lGameEnded.BackColor = System.Drawing.Color.Transparent;
             this.lGameEnded.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lGameEnded.ForeColor = System.Drawing.Color.DimGray;
-            this.lGameEnded.Location = new System.Drawing.Point(183, 63);
+            this.lGameEnded.Location = new System.Drawing.Point(144, 28);
             this.lGameEnded.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lGameEnded.Name = "lGameEnded";
             this.lGameEnded.Size = new System.Drawing.Size(322, 45);
             this.lGameEnded.TabIndex = 87;
             this.lGameEnded.Text = "The game has ended!";
+            // 
+            // pInfoVencedor
+            // 
+            this.pInfoVencedor.BackColor = System.Drawing.Color.Transparent;
+            this.pInfoVencedor.Controls.Add(this.lNomeVencedor);
+            this.pInfoVencedor.Controls.Add(this.lNomeVencedorN);
+            this.pInfoVencedor.Controls.Add(this.lCountryVencedor);
+            this.pInfoVencedor.Controls.Add(this.lCountryVencedorN);
+            this.pInfoVencedor.Location = new System.Drawing.Point(264, 140);
+            this.pInfoVencedor.Name = "pInfoVencedor";
+            this.pInfoVencedor.Size = new System.Drawing.Size(237, 90);
+            this.pInfoVencedor.TabIndex = 88;
+            // 
+            // pBJogadorPerdedor
+            // 
+            this.pBJogadorPerdedor.BackColor = System.Drawing.Color.Transparent;
+            this.pBJogadorPerdedor.Image = ((System.Drawing.Image)(resources.GetObject("pBJogadorPerdedor.Image")));
+            this.pBJogadorPerdedor.Location = new System.Drawing.Point(507, 297);
+            this.pBJogadorPerdedor.Margin = new System.Windows.Forms.Padding(2);
+            this.pBJogadorPerdedor.Name = "pBJogadorPerdedor";
+            this.pBJogadorPerdedor.Size = new System.Drawing.Size(62, 56);
+            this.pBJogadorPerdedor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBJogadorPerdedor.TabIndex = 89;
+            this.pBJogadorPerdedor.TabStop = false;
+            // 
+            // pPerdedor
+            // 
+            this.pPerdedor.BackColor = System.Drawing.Color.Transparent;
+            this.pPerdedor.Controls.Add(this.lNomePerdedor);
+            this.pPerdedor.Controls.Add(this.lNomePerdedorN);
+            this.pPerdedor.Controls.Add(this.lCountryPerdedor);
+            this.pPerdedor.Controls.Add(this.lCountryPerdedorN);
+            this.pPerdedor.Location = new System.Drawing.Point(329, 288);
+            this.pPerdedor.Name = "pPerdedor";
+            this.pPerdedor.Size = new System.Drawing.Size(172, 64);
+            this.pPerdedor.TabIndex = 90;
+            // 
+            // lNomePerdedor
+            // 
+            this.lNomePerdedor.AutoSize = true;
+            this.lNomePerdedor.BackColor = System.Drawing.Color.Transparent;
+            this.lNomePerdedor.Font = new System.Drawing.Font("Kristen ITC", 8F, System.Drawing.FontStyle.Bold);
+            this.lNomePerdedor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lNomePerdedor.Location = new System.Drawing.Point(14, 9);
+            this.lNomePerdedor.Name = "lNomePerdedor";
+            this.lNomePerdedor.Size = new System.Drawing.Size(51, 16);
+            this.lNomePerdedor.TabIndex = 81;
+            this.lNomePerdedor.Text = "Name: ";
+            // 
+            // lNomePerdedorN
+            // 
+            this.lNomePerdedorN.AutoSize = true;
+            this.lNomePerdedorN.BackColor = System.Drawing.Color.Transparent;
+            this.lNomePerdedorN.Font = new System.Drawing.Font("Kristen ITC", 8F, System.Drawing.FontStyle.Bold);
+            this.lNomePerdedorN.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lNomePerdedorN.Location = new System.Drawing.Point(96, 9);
+            this.lNomePerdedorN.Name = "lNomePerdedorN";
+            this.lNomePerdedorN.Size = new System.Drawing.Size(20, 16);
+            this.lNomePerdedorN.TabIndex = 82;
+            this.lNomePerdedorN.Text = "...";
+            // 
+            // lCountryPerdedor
+            // 
+            this.lCountryPerdedor.AutoSize = true;
+            this.lCountryPerdedor.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryPerdedor.Font = new System.Drawing.Font("Kristen ITC", 8F, System.Drawing.FontStyle.Bold);
+            this.lCountryPerdedor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lCountryPerdedor.Location = new System.Drawing.Point(14, 38);
+            this.lCountryPerdedor.Name = "lCountryPerdedor";
+            this.lCountryPerdedor.Size = new System.Drawing.Size(68, 16);
+            this.lCountryPerdedor.TabIndex = 83;
+            this.lCountryPerdedor.Text = "Country: ";
+            // 
+            // lCountryPerdedorN
+            // 
+            this.lCountryPerdedorN.AutoSize = true;
+            this.lCountryPerdedorN.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryPerdedorN.Font = new System.Drawing.Font("Kristen ITC", 8F, System.Drawing.FontStyle.Bold);
+            this.lCountryPerdedorN.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lCountryPerdedorN.Location = new System.Drawing.Point(96, 38);
+            this.lCountryPerdedorN.Name = "lCountryPerdedorN";
+            this.lCountryPerdedorN.Size = new System.Drawing.Size(20, 16);
+            this.lCountryPerdedorN.TabIndex = 84;
+            this.lCountryPerdedorN.Text = "...";
+            // 
+            // bBackMenu
+            // 
+            this.bBackMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bBackMenu.BackColor = System.Drawing.Color.Transparent;
+            this.bBackMenu.FlatAppearance.BorderSize = 0;
+            this.bBackMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bBackMenu.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBackMenu.ForeColor = System.Drawing.Color.DimGray;
+            this.bBackMenu.Location = new System.Drawing.Point(12, 309);
+            this.bBackMenu.Name = "bBackMenu";
+            this.bBackMenu.Size = new System.Drawing.Size(83, 44);
+            this.bBackMenu.TabIndex = 91;
+            this.bBackMenu.Text = "Menu";
+            this.bBackMenu.UseVisualStyleBackColor = false;
+            this.bBackMenu.Click += new System.EventHandler(this.bBackMenu_Click);
+            // 
+            // pCor
+            // 
+            this.pCor.BackColor = System.Drawing.Color.Transparent;
+            this.pCor.Controls.Add(this.pInfoVencedor);
+            this.pCor.Controls.Add(this.lGameEnded);
+            this.pCor.Location = new System.Drawing.Point(0, 0);
+            this.pCor.Name = "pCor";
+            this.pCor.Size = new System.Drawing.Size(580, 365);
+            this.pCor.TabIndex = 92;
             // 
             // ViewEnd
             // 
@@ -179,35 +255,45 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.confets;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(580, 364);
-            this.Controls.Add(this.lGameEnded);
-            this.Controls.Add(this.lVitoriasN);
-            this.Controls.Add(this.lVitorias);
-            this.Controls.Add(this.lCountryN);
-            this.Controls.Add(this.lCountry);
-            this.Controls.Add(this.lNomeN);
-            this.Controls.Add(this.lNome);
-            this.Controls.Add(this.pbJogador1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.bBackMenu);
+            this.Controls.Add(this.pPerdedor);
+            this.Controls.Add(this.pBJogadorPerdedor);
+            this.Controls.Add(this.pbJogadorVencedor);
+            this.Controls.Add(this.lWinner);
+            this.Controls.Add(this.pCor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewEnd";
             this.Text = "Checkers";
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).EndInit();
+            this.Load += new System.EventHandler(this.ViewEnd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbJogadorVencedor)).EndInit();
+            this.pInfoVencedor.ResumeLayout(false);
+            this.pInfoVencedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadorPerdedor)).EndInit();
+            this.pPerdedor.ResumeLayout(false);
+            this.pPerdedor.PerformLayout();
+            this.pCor.ResumeLayout(false);
+            this.pCor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pbJogador1;
-        private System.Windows.Forms.Label lVitoriasN;
-        private System.Windows.Forms.Label lVitorias;
-        private System.Windows.Forms.Label lCountryN;
-        private System.Windows.Forms.Label lCountry;
-        private System.Windows.Forms.Label lNomeN;
-        private System.Windows.Forms.Label lNome;
+        private System.Windows.Forms.Label lWinner;
+        private System.Windows.Forms.PictureBox pbJogadorVencedor;
+        private System.Windows.Forms.Label lCountryVencedorN;
+        private System.Windows.Forms.Label lCountryVencedor;
+        private System.Windows.Forms.Label lNomeVencedorN;
+        private System.Windows.Forms.Label lNomeVencedor;
         private System.Windows.Forms.Label lGameEnded;
+        private System.Windows.Forms.Panel pInfoVencedor;
+        private System.Windows.Forms.PictureBox pBJogadorPerdedor;
+        private System.Windows.Forms.Panel pPerdedor;
+        private System.Windows.Forms.Label lNomePerdedor;
+        private System.Windows.Forms.Label lNomePerdedorN;
+        private System.Windows.Forms.Label lCountryPerdedor;
+        private System.Windows.Forms.Label lCountryPerdedorN;
+        private System.Windows.Forms.Button bBackMenu;
+        private System.Windows.Forms.Panel pCor;
     }
 }

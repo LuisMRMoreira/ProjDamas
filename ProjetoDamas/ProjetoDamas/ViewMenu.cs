@@ -50,13 +50,6 @@ namespace ProjetoDamas
             }
         }
 
-        private void buttonregras_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewRegras option_regras = new ViewRegras();
-            option_regras.Closed += (s, args) => this.Close();
-            option_regras.Show();
-        }
 
  
         private void buttonProfile_Click(object sender, EventArgs e)
@@ -65,13 +58,6 @@ namespace ProjetoDamas
             Program.V_Settings.Show();
         }
 
-        private void bContinueGame_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewJogosInacabados jogos_inacabados = new ViewJogosInacabados();
-            jogos_inacabados.Closed += (s, args) => this.Close();
-            jogos_inacabados.Show();
-        }
 
 
         private void ViewMenu_Load(object sender, EventArgs e)
@@ -102,7 +88,6 @@ namespace ProjetoDamas
                 PedidoLogin();
             }
 
-
             //Program.M_Gestor.Login
 
             //this.Hide();
@@ -125,6 +110,13 @@ namespace ProjetoDamas
             this.Hide();
             Program.V_Rules.Show();
         }
+
+        private void bContinueGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_JogosInacabados.Show();
+        }
+
 
 
 

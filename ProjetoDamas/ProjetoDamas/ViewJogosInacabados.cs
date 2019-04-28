@@ -22,13 +22,13 @@ namespace ProjetoDamas
             this.Hide();
             ViewMenu menu = new ViewMenu();
             menu.Closed += (s, args) => this.Close();
-            menu.Show();
+            menu.ShowDialog();
         }
 
         private void pbReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Menu.Show();
+            Program.V_Menu.ShowDialog();
         }
 
         private void rBNone_CheckedChanged(object sender, EventArgs e)
@@ -66,6 +66,13 @@ namespace ProjetoDamas
             ///
 
             pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
+
+
+            ///
+            /// Inicializar componente
+            ///
+
+            
         }
     }
 }

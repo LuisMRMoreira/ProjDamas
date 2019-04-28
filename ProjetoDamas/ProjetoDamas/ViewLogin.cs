@@ -24,18 +24,18 @@ namespace ProjetoDamas
 
         private void M_Jogador_ContaCriada()
         {
-            this.Show();
+            this.ShowDialog();
         }
 
         private void M_Gestor_PedidoMostrarLogin()
         {
-            this.Show();
+            this.ShowDialog();
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Register.Show();
+            Program.V_Register.ShowDialog();
 
 
         }
@@ -104,7 +104,17 @@ namespace ProjetoDamas
             ((PictureBox)(sender)).BorderStyle = BorderStyle.None;
         }
 
+        private void ViewLogin_Load(object sender, EventArgs e)
+        {
+            cTBPassword.Text = "";
+            ctBUsername.Text = "";
+        }
 
+        private void ViewLogin_Shown(object sender, EventArgs e)
+        {
+            cTBPassword.Text = "";
+            ctBUsername.Text = "";
+        }
     }
 
 }
