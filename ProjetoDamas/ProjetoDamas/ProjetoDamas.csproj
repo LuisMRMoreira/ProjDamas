@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ControllerGestor.cs" />
     <Compile Include="ControllerJogador.cs" />
+    <Compile Include="ControllerJogo.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -156,6 +157,24 @@
     <Compile Include="ViewStatistics.Designer.cs">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewTorneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTorneio.Designer.cs">
+      <DependentUpon>ViewTorneio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTorneioJogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTorneioJogos.Designer.cs">
+      <DependentUpon>ViewTorneioJogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTorneiosInacabados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTorneiosInacabados.Designer.cs">
+      <DependentUpon>ViewTorneiosInacabados.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ViewEnd.resx">
       <DependentUpon>ViewEnd.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +226,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStatistics.resx">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTorneio.resx">
+      <DependentUpon>ViewTorneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTorneioJogos.resx">
+      <DependentUpon>ViewTorneioJogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTorneiosInacabados.resx">
+      <DependentUpon>ViewTorneiosInacabados.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

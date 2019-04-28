@@ -169,9 +169,9 @@
             this.pPerdedor.Controls.Add(this.lNomePerdedorN);
             this.pPerdedor.Controls.Add(this.lCountryPerdedor);
             this.pPerdedor.Controls.Add(this.lCountryPerdedorN);
-            this.pPerdedor.Location = new System.Drawing.Point(329, 288);
+            this.pPerdedor.Location = new System.Drawing.Point(342, 297);
             this.pPerdedor.Name = "pPerdedor";
-            this.pPerdedor.Size = new System.Drawing.Size(172, 64);
+            this.pPerdedor.Size = new System.Drawing.Size(159, 55);
             this.pPerdedor.TabIndex = 90;
             // 
             // lNomePerdedor

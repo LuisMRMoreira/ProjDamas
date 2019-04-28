@@ -268,12 +268,12 @@ namespace ProjetoDamas
                 if (MessageBox.Show("Do you want to save the game to play later?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     this.Hide();
-                    Program.V_Menu.ShowDialog();
+                    Program.V_Menu.Show();
                     //Guardar o jogo estado do jogo -----------------------------------------------------------------------------------------------------------------------------------
                 }
 
                 this.Hide();
-                Program.V_Menu.ShowDialog();
+                Program.V_Menu.Show();
             }
         }
 

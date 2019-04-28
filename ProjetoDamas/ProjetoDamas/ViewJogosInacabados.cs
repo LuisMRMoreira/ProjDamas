@@ -17,18 +17,10 @@ namespace ProjetoDamas
             InitializeComponent();
         }
 
-        private void bLeave_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ViewMenu menu = new ViewMenu();
-            menu.Closed += (s, args) => this.Close();
-            menu.ShowDialog();
-        }
-
         private void pbReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Menu.ShowDialog();
+            Program.V_Menu.Show();
         }
 
         private void rBNone_CheckedChanged(object sender, EventArgs e)
@@ -72,6 +64,49 @@ namespace ProjetoDamas
             /// Inicializar componente
             ///
 
+
+
+            ///
+            /// Inicializar DataGridView
+            ///
+            dGVJogosInacabados.Rows.Add("Luis", "Diogo", "Local", "15/04/2019");
+            dGVJogosInacabados.Rows.Add("Luis", "Carlos", "Online", "23/04/2019");
+            dGVJogosInacabados.Rows.Add("Carlos", "--------", "Robot", "22/04/2019");
+
+
+        }
+
+        private void dGVJogosInacabados_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dGVJogosInacabados.SelectedRows != null)
+            {
+                bContinueGame.Enabled = true;
+            }
+                
+        }
+
+        private void bContinueGame_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to go back to this game?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (dGVJogosInacabados.CurrentRow != null)
+                {
+                    if (dGVJogosInacabados.CurrentRow.Cells[2].Value.ToString() == "Robot")
+                    {
+                        this.Hide();
+                        Program.V_JogoRobot.ShowDialog();
+                        // Mudar o conteudo da view ---------------------------------------------------------------------------------------------------------
+                    }
+                    else 
+                    {
+                        //Local or online
+                        this.Hide();
+                        Program.V_JogoMultiplayer.ShowDialog();
+                        // Mudar o conteudo da view ---------------------------------------------------------------------------------------------------------
+                    }
+
+                }
+            }
             
         }
     }

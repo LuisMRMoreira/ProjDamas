@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewJogadoresNoServidor));
             this.pDataGridView = new System.Windows.Forms.Panel();
+            this.rBBestStatus = new System.Windows.Forms.RadioButton();
             this.rBNone = new System.Windows.Forms.RadioButton();
             this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.rBName = new System.Windows.Forms.RadioButton();
+            this.cBCountries = new System.Windows.Forms.ComboBox();
             this.rBCountry = new System.Windows.Forms.RadioButton();
             this.lSearchBy = new System.Windows.Forms.Label();
-            this.dGVEstatisticas = new System.Windows.Forms.DataGridView();
+            this.dGVServerOpponent = new System.Windows.Forms.DataGridView();
             this.cNickname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cWins = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTotalGames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIPAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cBCountries = new System.Windows.Forms.ComboBox();
-            this.rBBestStatus = new System.Windows.Forms.RadioButton();
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.lStatistics = new System.Windows.Forms.Label();
             this.bSelect = new System.Windows.Forms.Button();
             this.pDataGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVEstatisticas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVServerOpponent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,11 +59,25 @@
             this.pDataGridView.Controls.Add(this.cBCountries);
             this.pDataGridView.Controls.Add(this.rBCountry);
             this.pDataGridView.Controls.Add(this.lSearchBy);
-            this.pDataGridView.Controls.Add(this.dGVEstatisticas);
+            this.pDataGridView.Controls.Add(this.dGVServerOpponent);
             this.pDataGridView.Location = new System.Drawing.Point(101, 67);
             this.pDataGridView.Name = "pDataGridView";
             this.pDataGridView.Size = new System.Drawing.Size(454, 300);
             this.pDataGridView.TabIndex = 27;
+            // 
+            // rBBestStatus
+            // 
+            this.rBBestStatus.AutoSize = true;
+            this.rBBestStatus.BackColor = System.Drawing.Color.Transparent;
+            this.rBBestStatus.Font = new System.Drawing.Font("Kristen ITC", 9F);
+            this.rBBestStatus.ForeColor = System.Drawing.Color.DimGray;
+            this.rBBestStatus.Location = new System.Drawing.Point(250, 228);
+            this.rBBestStatus.Name = "rBBestStatus";
+            this.rBBestStatus.Size = new System.Drawing.Size(93, 21);
+            this.rBBestStatus.TabIndex = 87;
+            this.rBBestStatus.Text = "Best status";
+            this.rBBestStatus.UseVisualStyleBackColor = false;
+            this.rBBestStatus.CheckedChanged += new System.EventHandler(this.rBBestStatus_CheckedChanged);
             // 
             // rBNone
             // 
@@ -106,6 +120,17 @@
             this.rBName.UseVisualStyleBackColor = false;
             this.rBName.CheckedChanged += new System.EventHandler(this.rBName_CheckedChanged);
             // 
+            // cBCountries
+            // 
+            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cBCountries.FormattingEnabled = true;
+            this.cBCountries.Location = new System.Drawing.Point(46, 255);
+            this.cBCountries.Name = "cBCountries";
+            this.cBCountries.Size = new System.Drawing.Size(199, 29);
+            this.cBCountries.TabIndex = 80;
+            this.cBCountries.Visible = false;
+            // 
             // rBCountry
             // 
             this.rBCountry.AutoSize = true;
@@ -133,24 +158,25 @@
             this.lSearchBy.TabIndex = 76;
             this.lSearchBy.Text = "Search by:";
             // 
-            // dGVEstatisticas
+            // dGVServerOpponent
             // 
-            this.dGVEstatisticas.AllowUserToAddRows = false;
-            this.dGVEstatisticas.AllowUserToDeleteRows = false;
-            this.dGVEstatisticas.AllowUserToOrderColumns = true;
-            this.dGVEstatisticas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dGVEstatisticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVEstatisticas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGVServerOpponent.AllowUserToAddRows = false;
+            this.dGVServerOpponent.AllowUserToDeleteRows = false;
+            this.dGVServerOpponent.AllowUserToOrderColumns = true;
+            this.dGVServerOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dGVServerOpponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGVServerOpponent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cNickname,
             this.cWins,
             this.cTotalGames,
             this.cIPAdress});
-            this.dGVEstatisticas.Location = new System.Drawing.Point(5, 6);
-            this.dGVEstatisticas.Name = "dGVEstatisticas";
-            this.dGVEstatisticas.ReadOnly = true;
-            this.dGVEstatisticas.Size = new System.Drawing.Size(443, 196);
-            this.dGVEstatisticas.TabIndex = 25;
-            this.dGVEstatisticas.SelectionChanged += new System.EventHandler(this.dGVEstatisticas_SelectionChanged);
+            this.dGVServerOpponent.Location = new System.Drawing.Point(5, 6);
+            this.dGVServerOpponent.MultiSelect = false;
+            this.dGVServerOpponent.Name = "dGVServerOpponent";
+            this.dGVServerOpponent.ReadOnly = true;
+            this.dGVServerOpponent.Size = new System.Drawing.Size(443, 196);
+            this.dGVServerOpponent.TabIndex = 25;
+            this.dGVServerOpponent.SelectionChanged += new System.EventHandler(this.dGVEstatisticas_SelectionChanged);
             // 
             // cNickname
             // 
@@ -175,31 +201,6 @@
             this.cIPAdress.HeaderText = "IP Adress";
             this.cIPAdress.Name = "cIPAdress";
             this.cIPAdress.ReadOnly = true;
-            // 
-            // cBCountries
-            // 
-            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(46, 255);
-            this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(199, 29);
-            this.cBCountries.TabIndex = 80;
-            this.cBCountries.Visible = false;
-            // 
-            // rBBestStatus
-            // 
-            this.rBBestStatus.AutoSize = true;
-            this.rBBestStatus.BackColor = System.Drawing.Color.Transparent;
-            this.rBBestStatus.Font = new System.Drawing.Font("Kristen ITC", 9F);
-            this.rBBestStatus.ForeColor = System.Drawing.Color.DimGray;
-            this.rBBestStatus.Location = new System.Drawing.Point(250, 228);
-            this.rBBestStatus.Name = "rBBestStatus";
-            this.rBBestStatus.Size = new System.Drawing.Size(93, 21);
-            this.rBBestStatus.TabIndex = 87;
-            this.rBBestStatus.Text = "Best status";
-            this.rBBestStatus.UseVisualStyleBackColor = false;
-            this.rBBestStatus.CheckedChanged += new System.EventHandler(this.rBBestStatus_CheckedChanged);
             // 
             // pbReturn
             // 
@@ -260,7 +261,7 @@
             this.Load += new System.EventHandler(this.ViewJogadoresNoServidor_Load);
             this.pDataGridView.ResumeLayout(false);
             this.pDataGridView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVEstatisticas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVServerOpponent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,7 +278,7 @@
         private System.Windows.Forms.ComboBox cBCountries;
         private System.Windows.Forms.RadioButton rBCountry;
         private System.Windows.Forms.Label lSearchBy;
-        private System.Windows.Forms.DataGridView dGVEstatisticas;
+        private System.Windows.Forms.DataGridView dGVServerOpponent;
         private System.Windows.Forms.DataGridViewTextBoxColumn cNickname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cWins;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTotalGames;

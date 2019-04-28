@@ -15,6 +15,13 @@ namespace ProjetoDamas
         public ViewOponenteServidor()
         {
             InitializeComponent();
+            Program.M_Jogo.RespostaAlterarOponenteOnline += M_Jogo_RespostaAlterarOponenteOnline;
+        }
+
+        private void M_Jogo_RespostaAlterarOponenteOnline(string nickname, string serverIP)
+        {
+            ctBServerIP.Text = nickname;
+            cTBOpponentNickname.Text = serverIP;
         }
 
         private void ctBServerIP_KeyPress(object sender, KeyPressEventArgs e)

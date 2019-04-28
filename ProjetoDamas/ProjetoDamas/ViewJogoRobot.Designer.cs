@@ -62,21 +62,40 @@
             this.pB51 = new System.Windows.Forms.PictureBox();
             this.pB31 = new System.Windows.Forms.PictureBox();
             this.pB11 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mSJogo = new System.Windows.Forms.MenuStrip();
             this.jogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.definiçõesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pbJogador1 = new System.Windows.Forms.PictureBox();
-            this.lNome = new System.Windows.Forms.Label();
-            this.lNomeN = new System.Windows.Forms.Label();
-            this.lCountryN = new System.Windows.Forms.Label();
-            this.lCountry = new System.Windows.Forms.Label();
-            this.lVitoriasN = new System.Windows.Forms.Label();
-            this.lVitorias = new System.Windows.Forms.Label();
+            this.opcoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.definicoesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lNome1 = new System.Windows.Forms.Label();
+            this.lNome1N = new System.Windows.Forms.Label();
+            this.lCountry1N = new System.Windows.Forms.Label();
+            this.lCountry1 = new System.Windows.Forms.Label();
+            this.lVitorias1N = new System.Windows.Forms.Label();
+            this.lVitorias1 = new System.Windows.Forms.Label();
+            this.lVitoriasN2 = new System.Windows.Forms.Label();
+            this.lVitorias2 = new System.Windows.Forms.Label();
+            this.lCountryN2 = new System.Windows.Forms.Label();
+            this.lCountry2 = new System.Windows.Forms.Label();
+            this.lNomeN2 = new System.Windows.Forms.Label();
+            this.lNome2 = new System.Windows.Forms.Label();
+            this.pBJogadoUm = new System.Windows.Forms.PictureBox();
+            this.pBJogadorDois = new System.Windows.Forms.PictureBox();
+            this.pJogadorUm = new System.Windows.Forms.Panel();
+            this.lTotalJogos1N = new System.Windows.Forms.Label();
+            this.lColor1N = new System.Windows.Forms.Label();
+            this.lTotalJogos1 = new System.Windows.Forms.Label();
+            this.lColor1 = new System.Windows.Forms.Label();
+            this.pJogadorDois = new System.Windows.Forms.Panel();
+            this.lTotalJogos2N = new System.Windows.Forms.Label();
+            this.lColor2N = new System.Windows.Forms.Label();
+            this.lTotalJogos2 = new System.Windows.Forms.Label();
+            this.lColor2 = new System.Windows.Forms.Label();
+            this.bSurrenderJogadorUm = new System.Windows.Forms.Button();
+            this.bSurrenderJogadorDois = new System.Windows.Forms.Button();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).BeginInit();
@@ -110,8 +129,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).BeginInit();
+            this.mSJogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadoUm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadorDois)).BeginInit();
+            this.pJogadorUm.SuspendLayout();
+            this.pJogadorDois.SuspendLayout();
             this.SuspendLayout();
             // 
             // tLPTabuleiro
@@ -158,7 +180,7 @@
             this.tLPTabuleiro.Controls.Add(this.pB51, 5, 1);
             this.tLPTabuleiro.Controls.Add(this.pB31, 3, 1);
             this.tLPTabuleiro.Controls.Add(this.pB11, 1, 1);
-            this.tLPTabuleiro.Location = new System.Drawing.Point(192, 36);
+            this.tLPTabuleiro.Location = new System.Drawing.Point(196, 36);
             this.tLPTabuleiro.Name = "tLPTabuleiro";
             this.tLPTabuleiro.RowCount = 8;
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -493,16 +515,17 @@
             this.pB11.TabIndex = 9;
             this.pB11.TabStop = false;
             // 
-            // menuStrip1
+            // mSJogo
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mSJogo.BackColor = System.Drawing.Color.Transparent;
+            this.mSJogo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jogoToolStripMenuItem,
-            this.opçõesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(838, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.opcoesToolStripMenuItem});
+            this.mSJogo.Location = new System.Drawing.Point(0, 0);
+            this.mSJogo.Name = "mSJogo";
+            this.mSJogo.Size = new System.Drawing.Size(843, 24);
+            this.mSJogo.TabIndex = 1;
+            this.mSJogo.Text = "menuStrip1";
             // 
             // jogoToolStripMenuItem
             // 
@@ -518,156 +541,442 @@
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.guardarToolStripMenuItem.Text = "&Save";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // regrasToolStripMenuItem
             // 
             this.regrasToolStripMenuItem.Name = "regrasToolStripMenuItem";
-            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.regrasToolStripMenuItem.Text = "&Rules";
             this.regrasToolStripMenuItem.Click += new System.EventHandler(this.regrasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(101, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sairToolStripMenuItem.Text = "&Leave";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // opçõesToolStripMenuItem
+            // opcoesToolStripMenuItem
             // 
-            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.definiçõesToolStripMenuItem1});
-            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.opçõesToolStripMenuItem.Text = "&Options";
+            this.opcoesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.definicoesToolStripMenuItem1});
+            this.opcoesToolStripMenuItem.Name = "opcoesToolStripMenuItem";
+            this.opcoesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.opcoesToolStripMenuItem.Text = "&Options";
             // 
-            // definiçõesToolStripMenuItem1
+            // definicoesToolStripMenuItem1
             // 
-            this.definiçõesToolStripMenuItem1.Name = "definiçõesToolStripMenuItem1";
-            this.definiçõesToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
-            this.definiçõesToolStripMenuItem1.Text = "&Settings";
-            this.definiçõesToolStripMenuItem1.Click += new System.EventHandler(this.definiçõesToolStripMenuItem1_Click);
+            this.definicoesToolStripMenuItem1.Name = "definicoesToolStripMenuItem1";
+            this.definicoesToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.definicoesToolStripMenuItem1.Text = "&Settings";
+            this.definicoesToolStripMenuItem1.Click += new System.EventHandler(this.definicoesToolStripMenuItem1_Click);
             // 
-            // pbJogador1
+            // lNome1
             // 
-            this.pbJogador1.BackColor = System.Drawing.Color.Transparent;
-            this.pbJogador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbJogador1.Image = ((System.Drawing.Image)(resources.GetObject("pbJogador1.Image")));
-            this.pbJogador1.Location = new System.Drawing.Point(27, 67);
-            this.pbJogador1.Margin = new System.Windows.Forms.Padding(2);
-            this.pbJogador1.Name = "pbJogador1";
-            this.pbJogador1.Size = new System.Drawing.Size(127, 119);
-            this.pbJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbJogador1.TabIndex = 10;
-            this.pbJogador1.TabStop = false;
-            this.pbJogador1.MouseLeave += new System.EventHandler(this.pbJogador1_MouseLeave);
-            this.pbJogador1.MouseHover += new System.EventHandler(this.pbJogador1_MouseHover);
+            this.lNome1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lNome1.AutoSize = true;
+            this.lNome1.BackColor = System.Drawing.Color.Transparent;
+            this.lNome1.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lNome1.ForeColor = System.Drawing.Color.White;
+            this.lNome1.Location = new System.Drawing.Point(12, 8);
+            this.lNome1.Name = "lNome1";
+            this.lNome1.Size = new System.Drawing.Size(62, 19);
+            this.lNome1.TabIndex = 12;
+            this.lNome1.Text = "Name: ";
             // 
-            // lNome
+            // lNome1N
             // 
-            this.lNome.AutoSize = true;
-            this.lNome.BackColor = System.Drawing.Color.Transparent;
-            this.lNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNome.ForeColor = System.Drawing.Color.White;
-            this.lNome.Location = new System.Drawing.Point(33, 207);
-            this.lNome.Name = "lNome";
-            this.lNome.Size = new System.Drawing.Size(47, 13);
-            this.lNome.TabIndex = 12;
-            this.lNome.Text = "Name: ";
-            this.lNome.Visible = false;
+            this.lNome1N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lNome1N.AutoSize = true;
+            this.lNome1N.BackColor = System.Drawing.Color.Transparent;
+            this.lNome1N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lNome1N.ForeColor = System.Drawing.Color.White;
+            this.lNome1N.Location = new System.Drawing.Point(125, 8);
+            this.lNome1N.Name = "lNome1N";
+            this.lNome1N.Size = new System.Drawing.Size(17, 16);
+            this.lNome1N.TabIndex = 13;
+            this.lNome1N.Text = "...";
             // 
-            // lNomeN
+            // lCountry1N
             // 
-            this.lNomeN.AutoSize = true;
-            this.lNomeN.BackColor = System.Drawing.Color.Transparent;
-            this.lNomeN.ForeColor = System.Drawing.Color.White;
-            this.lNomeN.Location = new System.Drawing.Point(95, 207);
-            this.lNomeN.Name = "lNomeN";
-            this.lNomeN.Size = new System.Drawing.Size(16, 13);
-            this.lNomeN.TabIndex = 13;
-            this.lNomeN.Text = "...";
-            this.lNomeN.Visible = false;
+            this.lCountry1N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lCountry1N.AutoSize = true;
+            this.lCountry1N.BackColor = System.Drawing.Color.Transparent;
+            this.lCountry1N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lCountry1N.ForeColor = System.Drawing.Color.White;
+            this.lCountry1N.Location = new System.Drawing.Point(125, 36);
+            this.lCountry1N.Name = "lCountry1N";
+            this.lCountry1N.Size = new System.Drawing.Size(17, 16);
+            this.lCountry1N.TabIndex = 15;
+            this.lCountry1N.Text = "...";
             // 
-            // lCountryN
+            // lCountry1
             // 
-            this.lCountryN.AutoSize = true;
-            this.lCountryN.BackColor = System.Drawing.Color.Transparent;
-            this.lCountryN.ForeColor = System.Drawing.Color.White;
-            this.lCountryN.Location = new System.Drawing.Point(95, 233);
-            this.lCountryN.Name = "lCountryN";
-            this.lCountryN.Size = new System.Drawing.Size(16, 13);
-            this.lCountryN.TabIndex = 15;
-            this.lCountryN.Text = "...";
-            this.lCountryN.Visible = false;
+            this.lCountry1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lCountry1.AutoSize = true;
+            this.lCountry1.BackColor = System.Drawing.Color.Transparent;
+            this.lCountry1.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lCountry1.ForeColor = System.Drawing.Color.White;
+            this.lCountry1.Location = new System.Drawing.Point(12, 36);
+            this.lCountry1.Name = "lCountry1";
+            this.lCountry1.Size = new System.Drawing.Size(83, 19);
+            this.lCountry1.TabIndex = 14;
+            this.lCountry1.Text = "Country: ";
             // 
-            // lCountry
+            // lVitorias1N
             // 
-            this.lCountry.AutoSize = true;
-            this.lCountry.BackColor = System.Drawing.Color.Transparent;
-            this.lCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCountry.ForeColor = System.Drawing.Color.White;
-            this.lCountry.Location = new System.Drawing.Point(33, 233);
-            this.lCountry.Name = "lCountry";
-            this.lCountry.Size = new System.Drawing.Size(58, 13);
-            this.lCountry.TabIndex = 14;
-            this.lCountry.Text = "Country: ";
-            this.lCountry.Visible = false;
+            this.lVitorias1N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lVitorias1N.AutoSize = true;
+            this.lVitorias1N.BackColor = System.Drawing.Color.Transparent;
+            this.lVitorias1N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lVitorias1N.ForeColor = System.Drawing.Color.White;
+            this.lVitorias1N.Location = new System.Drawing.Point(125, 69);
+            this.lVitorias1N.Name = "lVitorias1N";
+            this.lVitorias1N.Size = new System.Drawing.Size(17, 16);
+            this.lVitorias1N.TabIndex = 17;
+            this.lVitorias1N.Text = "...";
             // 
-            // lVitoriasN
+            // lVitorias1
             // 
-            this.lVitoriasN.AutoSize = true;
-            this.lVitoriasN.BackColor = System.Drawing.Color.Transparent;
-            this.lVitoriasN.ForeColor = System.Drawing.Color.White;
-            this.lVitoriasN.Location = new System.Drawing.Point(95, 263);
-            this.lVitoriasN.Name = "lVitoriasN";
-            this.lVitoriasN.Size = new System.Drawing.Size(16, 13);
-            this.lVitoriasN.TabIndex = 17;
-            this.lVitoriasN.Text = "...";
-            this.lVitoriasN.Visible = false;
+            this.lVitorias1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lVitorias1.AutoSize = true;
+            this.lVitorias1.BackColor = System.Drawing.Color.Transparent;
+            this.lVitorias1.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lVitorias1.ForeColor = System.Drawing.Color.White;
+            this.lVitorias1.Location = new System.Drawing.Point(12, 66);
+            this.lVitorias1.Name = "lVitorias1";
+            this.lVitorias1.Size = new System.Drawing.Size(54, 19);
+            this.lVitorias1.TabIndex = 16;
+            this.lVitorias1.Text = "Wins: ";
             // 
-            // lVitorias
+            // lVitoriasN2
             // 
-            this.lVitorias.AutoSize = true;
-            this.lVitorias.BackColor = System.Drawing.Color.Transparent;
-            this.lVitorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lVitorias.ForeColor = System.Drawing.Color.White;
-            this.lVitorias.Location = new System.Drawing.Point(33, 263);
-            this.lVitorias.Name = "lVitorias";
-            this.lVitorias.Size = new System.Drawing.Size(43, 13);
-            this.lVitorias.TabIndex = 16;
-            this.lVitorias.Text = "Wins: ";
-            this.lVitorias.Visible = false;
+            this.lVitoriasN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lVitoriasN2.AutoSize = true;
+            this.lVitoriasN2.BackColor = System.Drawing.Color.Transparent;
+            this.lVitoriasN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lVitoriasN2.ForeColor = System.Drawing.Color.White;
+            this.lVitoriasN2.Location = new System.Drawing.Point(122, 68);
+            this.lVitoriasN2.Name = "lVitoriasN2";
+            this.lVitoriasN2.Size = new System.Drawing.Size(17, 16);
+            this.lVitoriasN2.TabIndex = 23;
+            this.lVitoriasN2.Text = "...";
+            // 
+            // lVitorias2
+            // 
+            this.lVitorias2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lVitorias2.AutoSize = true;
+            this.lVitorias2.BackColor = System.Drawing.Color.Transparent;
+            this.lVitorias2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lVitorias2.ForeColor = System.Drawing.Color.White;
+            this.lVitorias2.Location = new System.Drawing.Point(9, 66);
+            this.lVitorias2.Name = "lVitorias2";
+            this.lVitorias2.Size = new System.Drawing.Size(54, 19);
+            this.lVitorias2.TabIndex = 22;
+            this.lVitorias2.Text = "Wins: ";
+            // 
+            // lCountryN2
+            // 
+            this.lCountryN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lCountryN2.AutoSize = true;
+            this.lCountryN2.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lCountryN2.ForeColor = System.Drawing.Color.White;
+            this.lCountryN2.Location = new System.Drawing.Point(122, 38);
+            this.lCountryN2.Name = "lCountryN2";
+            this.lCountryN2.Size = new System.Drawing.Size(17, 16);
+            this.lCountryN2.TabIndex = 21;
+            this.lCountryN2.Text = "...";
+            // 
+            // lCountry2
+            // 
+            this.lCountry2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lCountry2.AutoSize = true;
+            this.lCountry2.BackColor = System.Drawing.Color.Transparent;
+            this.lCountry2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lCountry2.ForeColor = System.Drawing.Color.White;
+            this.lCountry2.Location = new System.Drawing.Point(9, 36);
+            this.lCountry2.Name = "lCountry2";
+            this.lCountry2.Size = new System.Drawing.Size(83, 19);
+            this.lCountry2.TabIndex = 20;
+            this.lCountry2.Text = "Country: ";
+            // 
+            // lNomeN2
+            // 
+            this.lNomeN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lNomeN2.AutoSize = true;
+            this.lNomeN2.BackColor = System.Drawing.Color.Transparent;
+            this.lNomeN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lNomeN2.ForeColor = System.Drawing.Color.White;
+            this.lNomeN2.Location = new System.Drawing.Point(122, 14);
+            this.lNomeN2.Name = "lNomeN2";
+            this.lNomeN2.Size = new System.Drawing.Size(17, 16);
+            this.lNomeN2.TabIndex = 19;
+            this.lNomeN2.Text = "...";
+            // 
+            // lNome2
+            // 
+            this.lNome2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lNome2.AutoSize = true;
+            this.lNome2.BackColor = System.Drawing.Color.Transparent;
+            this.lNome2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lNome2.ForeColor = System.Drawing.Color.White;
+            this.lNome2.Location = new System.Drawing.Point(9, 10);
+            this.lNome2.Name = "lNome2";
+            this.lNome2.Size = new System.Drawing.Size(62, 19);
+            this.lNome2.TabIndex = 18;
+            this.lNome2.Text = "Name: ";
+            // 
+            // pBJogadoUm
+            // 
+            this.pBJogadoUm.BackColor = System.Drawing.Color.Transparent;
+            this.pBJogadoUm.Image = global::ProjetoDamas.Properties.Resources.DamaPreta;
+            this.pBJogadoUm.Location = new System.Drawing.Point(19, 37);
+            this.pBJogadoUm.Name = "pBJogadoUm";
+            this.pBJogadoUm.Size = new System.Drawing.Size(160, 177);
+            this.pBJogadoUm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBJogadoUm.TabIndex = 24;
+            this.pBJogadoUm.TabStop = false;
+            this.pBJogadoUm.MouseLeave += new System.EventHandler(this.pBJogadoUm_MouseLeave);
+            this.pBJogadoUm.MouseHover += new System.EventHandler(this.pBJogadoUm_MouseHover);
+            // 
+            // pBJogadorDois
+            // 
+            this.pBJogadorDois.BackColor = System.Drawing.Color.Transparent;
+            this.pBJogadorDois.Image = global::ProjetoDamas.Properties.Resources.DamaBranca;
+            this.pBJogadorDois.Location = new System.Drawing.Point(663, 37);
+            this.pBJogadorDois.Name = "pBJogadorDois";
+            this.pBJogadorDois.Size = new System.Drawing.Size(160, 177);
+            this.pBJogadorDois.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBJogadorDois.TabIndex = 25;
+            this.pBJogadorDois.TabStop = false;
+            this.pBJogadorDois.MouseLeave += new System.EventHandler(this.pBJogadorDois_MouseLeave);
+            this.pBJogadorDois.MouseHover += new System.EventHandler(this.pBJogadorDois_MouseHover);
+            // 
+            // pJogadorUm
+            // 
+            this.pJogadorUm.BackColor = System.Drawing.Color.Transparent;
+            this.pJogadorUm.Controls.Add(this.lNome1);
+            this.pJogadorUm.Controls.Add(this.lCountry1);
+            this.pJogadorUm.Controls.Add(this.lNome1N);
+            this.pJogadorUm.Controls.Add(this.lCountry1N);
+            this.pJogadorUm.Controls.Add(this.lVitorias1);
+            this.pJogadorUm.Controls.Add(this.lVitorias1N);
+            this.pJogadorUm.Controls.Add(this.lTotalJogos1N);
+            this.pJogadorUm.Controls.Add(this.lColor1N);
+            this.pJogadorUm.Controls.Add(this.lTotalJogos1);
+            this.pJogadorUm.Controls.Add(this.lColor1);
+            this.pJogadorUm.Location = new System.Drawing.Point(19, 213);
+            this.pJogadorUm.Name = "pJogadorUm";
+            this.pJogadorUm.Size = new System.Drawing.Size(160, 156);
+            this.pJogadorUm.TabIndex = 26;
+            this.pJogadorUm.Visible = false;
+            // 
+            // lTotalJogos1N
+            // 
+            this.lTotalJogos1N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lTotalJogos1N.AutoSize = true;
+            this.lTotalJogos1N.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalJogos1N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lTotalJogos1N.ForeColor = System.Drawing.Color.White;
+            this.lTotalJogos1N.Location = new System.Drawing.Point(125, 102);
+            this.lTotalJogos1N.Name = "lTotalJogos1N";
+            this.lTotalJogos1N.Size = new System.Drawing.Size(17, 16);
+            this.lTotalJogos1N.TabIndex = 20;
+            this.lTotalJogos1N.Text = "...";
+            // 
+            // lColor1N
+            // 
+            this.lColor1N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lColor1N.AutoSize = true;
+            this.lColor1N.BackColor = System.Drawing.Color.Transparent;
+            this.lColor1N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lColor1N.ForeColor = System.Drawing.Color.White;
+            this.lColor1N.Location = new System.Drawing.Point(125, 126);
+            this.lColor1N.Name = "lColor1N";
+            this.lColor1N.Size = new System.Drawing.Size(17, 16);
+            this.lColor1N.TabIndex = 21;
+            this.lColor1N.Text = "...";
+            // 
+            // lTotalJogos1
+            // 
+            this.lTotalJogos1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lTotalJogos1.AutoSize = true;
+            this.lTotalJogos1.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalJogos1.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lTotalJogos1.ForeColor = System.Drawing.Color.White;
+            this.lTotalJogos1.Location = new System.Drawing.Point(12, 98);
+            this.lTotalJogos1.Name = "lTotalJogos1";
+            this.lTotalJogos1.Size = new System.Drawing.Size(112, 19);
+            this.lTotalJogos1.TabIndex = 19;
+            this.lTotalJogos1.Text = "Total games: ";
+            // 
+            // lColor1
+            // 
+            this.lColor1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lColor1.AutoSize = true;
+            this.lColor1.BackColor = System.Drawing.Color.Transparent;
+            this.lColor1.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lColor1.ForeColor = System.Drawing.Color.White;
+            this.lColor1.Location = new System.Drawing.Point(12, 125);
+            this.lColor1.Name = "lColor1";
+            this.lColor1.Size = new System.Drawing.Size(64, 19);
+            this.lColor1.TabIndex = 18;
+            this.lColor1.Text = "Color: ";
+            // 
+            // pJogadorDois
+            // 
+            this.pJogadorDois.BackColor = System.Drawing.Color.Transparent;
+            this.pJogadorDois.Controls.Add(this.lVitoriasN2);
+            this.pJogadorDois.Controls.Add(this.lTotalJogos2N);
+            this.pJogadorDois.Controls.Add(this.lVitorias2);
+            this.pJogadorDois.Controls.Add(this.lColor2N);
+            this.pJogadorDois.Controls.Add(this.lCountryN2);
+            this.pJogadorDois.Controls.Add(this.lTotalJogos2);
+            this.pJogadorDois.Controls.Add(this.lCountry2);
+            this.pJogadorDois.Controls.Add(this.lColor2);
+            this.pJogadorDois.Controls.Add(this.lNomeN2);
+            this.pJogadorDois.Controls.Add(this.lNome2);
+            this.pJogadorDois.Location = new System.Drawing.Point(663, 213);
+            this.pJogadorDois.Name = "pJogadorDois";
+            this.pJogadorDois.Size = new System.Drawing.Size(160, 156);
+            this.pJogadorDois.TabIndex = 27;
+            this.pJogadorDois.Visible = false;
+            // 
+            // lTotalJogos2N
+            // 
+            this.lTotalJogos2N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lTotalJogos2N.AutoSize = true;
+            this.lTotalJogos2N.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalJogos2N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lTotalJogos2N.ForeColor = System.Drawing.Color.White;
+            this.lTotalJogos2N.Location = new System.Drawing.Point(122, 99);
+            this.lTotalJogos2N.Name = "lTotalJogos2N";
+            this.lTotalJogos2N.Size = new System.Drawing.Size(17, 16);
+            this.lTotalJogos2N.TabIndex = 20;
+            this.lTotalJogos2N.Text = "...";
+            // 
+            // lColor2N
+            // 
+            this.lColor2N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lColor2N.AutoSize = true;
+            this.lColor2N.BackColor = System.Drawing.Color.Transparent;
+            this.lColor2N.Font = new System.Drawing.Font("Kristen ITC", 8F);
+            this.lColor2N.ForeColor = System.Drawing.Color.White;
+            this.lColor2N.Location = new System.Drawing.Point(122, 127);
+            this.lColor2N.Name = "lColor2N";
+            this.lColor2N.Size = new System.Drawing.Size(17, 16);
+            this.lColor2N.TabIndex = 21;
+            this.lColor2N.Text = "...";
+            // 
+            // lTotalJogos2
+            // 
+            this.lTotalJogos2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lTotalJogos2.AutoSize = true;
+            this.lTotalJogos2.BackColor = System.Drawing.Color.Transparent;
+            this.lTotalJogos2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lTotalJogos2.ForeColor = System.Drawing.Color.White;
+            this.lTotalJogos2.Location = new System.Drawing.Point(9, 95);
+            this.lTotalJogos2.Name = "lTotalJogos2";
+            this.lTotalJogos2.Size = new System.Drawing.Size(112, 19);
+            this.lTotalJogos2.TabIndex = 19;
+            this.lTotalJogos2.Text = "Total games: ";
+            // 
+            // lColor2
+            // 
+            this.lColor2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lColor2.AutoSize = true;
+            this.lColor2.BackColor = System.Drawing.Color.Transparent;
+            this.lColor2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lColor2.ForeColor = System.Drawing.Color.White;
+            this.lColor2.Location = new System.Drawing.Point(9, 124);
+            this.lColor2.Name = "lColor2";
+            this.lColor2.Size = new System.Drawing.Size(64, 19);
+            this.lColor2.TabIndex = 18;
+            this.lColor2.Text = "Color: ";
+            // 
+            // bSurrenderJogadorUm
+            // 
+            this.bSurrenderJogadorUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSurrenderJogadorUm.BackColor = System.Drawing.Color.Transparent;
+            this.bSurrenderJogadorUm.FlatAppearance.BorderSize = 0;
+            this.bSurrenderJogadorUm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSurrenderJogadorUm.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSurrenderJogadorUm.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bSurrenderJogadorUm.Location = new System.Drawing.Point(2, 430);
+            this.bSurrenderJogadorUm.Name = "bSurrenderJogadorUm";
+            this.bSurrenderJogadorUm.Size = new System.Drawing.Size(191, 42);
+            this.bSurrenderJogadorUm.TabIndex = 28;
+            this.bSurrenderJogadorUm.Text = "Surrender";
+            this.bSurrenderJogadorUm.UseVisualStyleBackColor = false;
+            this.bSurrenderJogadorUm.Click += new System.EventHandler(this.bSurrenderJogadorUm_Click);
+            // 
+            // bSurrenderJogadorDois
+            // 
+            this.bSurrenderJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSurrenderJogadorDois.BackColor = System.Drawing.Color.Transparent;
+            this.bSurrenderJogadorDois.FlatAppearance.BorderSize = 0;
+            this.bSurrenderJogadorDois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bSurrenderJogadorDois.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSurrenderJogadorDois.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bSurrenderJogadorDois.Location = new System.Drawing.Point(649, 430);
+            this.bSurrenderJogadorDois.Name = "bSurrenderJogadorDois";
+            this.bSurrenderJogadorDois.Size = new System.Drawing.Size(191, 42);
+            this.bSurrenderJogadorDois.TabIndex = 29;
+            this.bSurrenderJogadorDois.Text = "Surrender";
+            this.bSurrenderJogadorDois.UseVisualStyleBackColor = false;
+            this.bSurrenderJogadorDois.Click += new System.EventHandler(this.bSurrenderJogadorDois_Click);
             // 
             // ViewJogoRobot
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoDamas.Properties.Resources.imagemDeFundo;
+            this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(838, 498);
-            this.Controls.Add(this.lVitoriasN);
-            this.Controls.Add(this.lVitorias);
-            this.Controls.Add(this.lCountryN);
-            this.Controls.Add(this.lCountry);
-            this.Controls.Add(this.lNomeN);
-            this.Controls.Add(this.lNome);
-            this.Controls.Add(this.pbJogador1);
+            this.ClientSize = new System.Drawing.Size(843, 498);
+            this.Controls.Add(this.bSurrenderJogadorDois);
+            this.Controls.Add(this.bSurrenderJogadorUm);
+            this.Controls.Add(this.pBJogadorDois);
+            this.Controls.Add(this.pBJogadoUm);
             this.Controls.Add(this.tLPTabuleiro);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mSJogo);
+            this.Controls.Add(this.pJogadorUm);
+            this.Controls.Add(this.pJogadorDois);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mSJogo;
             this.Name = "ViewJogoRobot";
             this.Text = "Checkers";
+            this.Load += new System.EventHandler(this.ViewJogo_Load);
             this.tLPTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).EndInit();
@@ -701,9 +1010,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pB51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB11)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbJogador1)).EndInit();
+            this.mSJogo.ResumeLayout(false);
+            this.mSJogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadoUm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBJogadorDois)).EndInit();
+            this.pJogadorUm.ResumeLayout(false);
+            this.pJogadorUm.PerformLayout();
+            this.pJogadorDois.ResumeLayout(false);
+            this.pJogadorDois.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,20 +1058,39 @@
         private System.Windows.Forms.PictureBox pB60;
         private System.Windows.Forms.PictureBox pB20;
         private System.Windows.Forms.PictureBox pB40;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mSJogo;
         private System.Windows.Forms.ToolStripMenuItem jogoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem definiçõesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem opcoesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem definicoesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.PictureBox pbJogador1;
-        private System.Windows.Forms.Label lNome;
-        private System.Windows.Forms.Label lNomeN;
-        private System.Windows.Forms.Label lCountryN;
-        private System.Windows.Forms.Label lCountry;
-        private System.Windows.Forms.Label lVitoriasN;
-        private System.Windows.Forms.Label lVitorias;
+        private System.Windows.Forms.Label lNome1;
+        private System.Windows.Forms.Label lNome1N;
+        private System.Windows.Forms.Label lCountry1N;
+        private System.Windows.Forms.Label lCountry1;
+        private System.Windows.Forms.Label lVitorias1N;
+        private System.Windows.Forms.Label lVitorias1;
+        private System.Windows.Forms.Label lVitoriasN2;
+        private System.Windows.Forms.Label lVitorias2;
+        private System.Windows.Forms.Label lCountryN2;
+        private System.Windows.Forms.Label lCountry2;
+        private System.Windows.Forms.Label lNomeN2;
+        private System.Windows.Forms.Label lNome2;
+        private System.Windows.Forms.PictureBox pBJogadoUm;
+        private System.Windows.Forms.PictureBox pBJogadorDois;
+        private System.Windows.Forms.Panel pJogadorUm;
+        private System.Windows.Forms.Label lTotalJogos1N;
+        private System.Windows.Forms.Label lColor1N;
+        private System.Windows.Forms.Label lTotalJogos1;
+        private System.Windows.Forms.Label lColor1;
+        private System.Windows.Forms.Panel pJogadorDois;
+        private System.Windows.Forms.Label lTotalJogos2N;
+        private System.Windows.Forms.Label lColor2N;
+        private System.Windows.Forms.Label lTotalJogos2;
+        private System.Windows.Forms.Label lColor2;
+        private System.Windows.Forms.Button bSurrenderJogadorUm;
+        private System.Windows.Forms.Button bSurrenderJogadorDois;
     }
 }

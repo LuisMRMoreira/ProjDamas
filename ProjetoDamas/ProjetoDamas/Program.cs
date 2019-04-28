@@ -23,15 +23,20 @@ namespace ProjetoDamas
         public static ViewJogosInacabados V_JogosInacabados { get; private set; }
         public static ViewOponenteServidor V_OponenteServidor { get; private set; }
         public static ViewJogadoresNoServidor V_JogadoresNoServidor { get; private set; }
+        public static ViewTorneio V_Torneio { get; private set; }
+        public static ViewTorneioJogos V_JogosTorneio { get; private set; }
+        public static ViewTorneiosInacabados V_TorneiosInacabados { get; private set; }
 
         //Model
         public static Gestor M_Gestor { get; private set; }
         public static Jogador M_Jogador { get; private set; }
+        public static Jogo M_Jogo { get; private set; }
 
 
         //Controller
         public static ControllerGestor C_Gestor { get; private set; }
         public static ControllerJogador C_Jogador { get; private set; }
+        public static ControllerJogo C_Jogo { get; private set; }
 
 
         /// <summary>
@@ -44,6 +49,7 @@ namespace ProjetoDamas
             Application.SetCompatibleTextRenderingDefault(false);
             M_Gestor = new Gestor();
             M_Jogador = new Jogador();
+            M_Jogo = new Jogo();
             V_Menu = new ViewMenu();
             V_Login = new ViewLogin();
             V_Register = new ViewRegister();
@@ -58,8 +64,12 @@ namespace ProjetoDamas
             V_JogosInacabados = new ViewJogosInacabados();
             V_OponenteServidor = new ViewOponenteServidor();
             V_JogadoresNoServidor = new ViewJogadoresNoServidor();
+            V_Torneio = new ViewTorneio();
+            V_JogosTorneio = new ViewTorneioJogos();
+            V_TorneiosInacabados = new ViewTorneiosInacabados();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
+            C_Jogo = new ControllerJogo();
 
             Application.Run(V_Menu);
         }

@@ -77,6 +77,7 @@
             this.cDefeats,
             this.cTotalGames});
             this.dGVEstatisticas.Location = new System.Drawing.Point(5, 6);
+            this.dGVEstatisticas.MultiSelect = false;
             this.dGVEstatisticas.Name = "dGVEstatisticas";
             this.dGVEstatisticas.ReadOnly = true;
             this.dGVEstatisticas.Size = new System.Drawing.Size(443, 196);

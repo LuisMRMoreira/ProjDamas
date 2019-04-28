@@ -117,6 +117,18 @@ namespace ProjetoDamas
             Program.V_JogosInacabados.Show();
         }
 
+        private void bTournament_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_Torneio.Show();
+        }
+
+        private void bContinueTournament_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_TorneiosInacabados.ShowDialog();
+        }
+
 
 
 

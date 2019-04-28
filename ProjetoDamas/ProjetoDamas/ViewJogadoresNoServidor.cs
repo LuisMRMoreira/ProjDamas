@@ -12,10 +12,14 @@ namespace ProjetoDamas
 {
     public partial class ViewJogadoresNoServidor : Form
     {
+        //Vai para a ViewOponenteServidor
+        public event MetodosComDuasStrings PedidoAlterarOponenteOnline;
+
         public ViewJogadoresNoServidor()
         {
             InitializeComponent();
         }
+
 
         private void rBCountry_CheckedChanged(object sender, EventArgs e)
         {
@@ -56,6 +60,20 @@ namespace ProjetoDamas
 
         private void bSelect_Click(object sender, EventArgs e)
         {
+
+            foreach (DataGridViewRow row in dGVServerOpponent.SelectedRows)
+            {
+                //Enviar para a ViewOponenteServidor
+                string value1 = row.Cells[0].Value.ToString();
+                string value2 = row.Cells[1].Value.ToString();
+
+                //Enviado para o ControllerJogo -> Jogo (Model) -> ViewOponenteServidor
+                if (PedidoAlterarOponenteOnline != null)
+                {
+                    PedidoAlterarOponenteOnline(value1, value2);
+                }
+            }
+
             this.Hide();
             Program.V_OponenteServidor.Show();
         }
