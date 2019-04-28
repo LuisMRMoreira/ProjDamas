@@ -112,10 +112,11 @@
             // 
             // pBAvatar
             // 
+            this.pBAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBAvatar.BackColor = System.Drawing.Color.Transparent;
             this.pBAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pBAvatar.Image = ((System.Drawing.Image)(resources.GetObject("pBAvatar.Image")));
-            this.pBAvatar.Location = new System.Drawing.Point(409, 106);
+            this.pBAvatar.Location = new System.Drawing.Point(430, 127);
             this.pBAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.pBAvatar.Name = "pBAvatar";
             this.pBAvatar.Size = new System.Drawing.Size(150, 151);
@@ -127,11 +128,12 @@
             // 
             // lMemberRegister
             // 
+            this.lMemberRegister.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lMemberRegister.AutoSize = true;
             this.lMemberRegister.BackColor = System.Drawing.Color.Transparent;
             this.lMemberRegister.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lMemberRegister.ForeColor = System.Drawing.Color.DimGray;
-            this.lMemberRegister.Location = new System.Drawing.Point(145, 9);
+            this.lMemberRegister.Location = new System.Drawing.Point(166, 9);
             this.lMemberRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lMemberRegister.Name = "lMemberRegister";
             this.lMemberRegister.Size = new System.Drawing.Size(291, 45);
@@ -140,9 +142,10 @@
             // 
             // pCountry
             // 
+            this.pCountry.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pCountry.Controls.Add(this.panel8);
             this.pCountry.Controls.Add(this.cBCountries);
-            this.pCountry.Location = new System.Drawing.Point(36, 269);
+            this.pCountry.Location = new System.Drawing.Point(57, 290);
             this.pCountry.Name = "pCountry";
             this.pCountry.Size = new System.Drawing.Size(265, 30);
             this.pCountry.TabIndex = 72;
@@ -179,13 +182,14 @@
             this.cBCountries.Location = new System.Drawing.Point(43, 0);
             this.cBCountries.Name = "cBCountries";
             this.cBCountries.Size = new System.Drawing.Size(222, 29);
-            this.cBCountries.TabIndex = 50;
+            this.cBCountries.TabIndex = 0;
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.cTBEmail);
-            this.panel5.Location = new System.Drawing.Point(36, 232);
+            this.panel5.Location = new System.Drawing.Point(57, 250);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(265, 32);
             this.panel5.TabIndex = 70;
@@ -223,13 +227,14 @@
             this.cTBEmail.MaxLength = 20;
             this.cTBEmail.Name = "cTBEmail";
             this.cTBEmail.Size = new System.Drawing.Size(217, 22);
-            this.cTBEmail.TabIndex = 16;
+            this.cTBEmail.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cTBNickname);
-            this.panel1.Location = new System.Drawing.Point(36, 195);
+            this.panel1.Location = new System.Drawing.Point(57, 213);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 32);
             this.panel1.TabIndex = 68;
@@ -267,14 +272,15 @@
             this.cTBNickname.MaxLength = 20;
             this.cTBNickname.Name = "cTBNickname";
             this.cTBNickname.Size = new System.Drawing.Size(217, 22);
-            this.cTBNickname.TabIndex = 16;
+            this.cTBNickname.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.pBVerPass);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.cTBPassword);
-            this.panel3.Location = new System.Drawing.Point(36, 119);
+            this.panel3.Location = new System.Drawing.Point(57, 137);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(265, 32);
             this.panel3.TabIndex = 66;
@@ -324,13 +330,14 @@
             this.cTBPassword.Name = "cTBPassword";
             this.cTBPassword.PasswordChar = '*';
             this.cTBPassword.Size = new System.Drawing.Size(186, 22);
-            this.cTBPassword.TabIndex = 16;
+            this.cTBPassword.TabIndex = 0;
             // 
             // pUsername
             // 
+            this.pUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pUsername.Controls.Add(this.pUsernameImage);
             this.pUsername.Controls.Add(this.ctBUsername);
-            this.pUsername.Location = new System.Drawing.Point(36, 82);
+            this.pUsername.Location = new System.Drawing.Point(57, 100);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(265, 32);
             this.pUsername.TabIndex = 64;
@@ -368,14 +375,15 @@
             this.ctBUsername.MaxLength = 20;
             this.ctBUsername.Name = "ctBUsername";
             this.ctBUsername.Size = new System.Drawing.Size(219, 22);
-            this.ctBUsername.TabIndex = 16;
+            this.ctBUsername.TabIndex = 0;
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel9.Controls.Add(this.pBConfirmPassSee);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.cTBConfirmPass);
-            this.panel9.Location = new System.Drawing.Point(36, 157);
+            this.panel9.Location = new System.Drawing.Point(57, 175);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(265, 32);
             this.panel9.TabIndex = 68;
@@ -425,31 +433,33 @@
             this.cTBConfirmPass.Name = "cTBConfirmPass";
             this.cTBConfirmPass.PasswordChar = '*';
             this.cTBConfirmPass.Size = new System.Drawing.Size(186, 22);
-            this.cTBConfirmPass.TabIndex = 16;
+            this.cTBConfirmPass.TabIndex = 0;
             // 
             // bCreateAccount
             // 
+            this.bCreateAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bCreateAccount.BackColor = System.Drawing.Color.Transparent;
             this.bCreateAccount.FlatAppearance.BorderSize = 0;
             this.bCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCreateAccount.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bCreateAccount.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.bCreateAccount.Location = new System.Drawing.Point(349, 307);
+            this.bCreateAccount.Location = new System.Drawing.Point(390, 350);
             this.bCreateAccount.Margin = new System.Windows.Forms.Padding(2);
             this.bCreateAccount.Name = "bCreateAccount";
             this.bCreateAccount.Size = new System.Drawing.Size(247, 38);
-            this.bCreateAccount.TabIndex = 74;
+            this.bCreateAccount.TabIndex = 0;
             this.bCreateAccount.Text = "Create Account";
             this.bCreateAccount.UseVisualStyleBackColor = false;
             this.bCreateAccount.Click += new System.EventHandler(this.bCreateAccount_Click);
             // 
             // lAvatar
             // 
+            this.lAvatar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lAvatar.AutoSize = true;
             this.lAvatar.BackColor = System.Drawing.Color.Transparent;
             this.lAvatar.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.lAvatar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lAvatar.Location = new System.Drawing.Point(395, 76);
+            this.lAvatar.Location = new System.Drawing.Point(416, 97);
             this.lAvatar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lAvatar.Name = "lAvatar";
             this.lAvatar.Size = new System.Drawing.Size(173, 28);
@@ -458,9 +468,10 @@
             // 
             // pData
             // 
+            this.pData.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pData.Controls.Add(this.dTPDataNascimento);
             this.pData.Controls.Add(this.panel12);
-            this.pData.Location = new System.Drawing.Point(36, 304);
+            this.pData.Location = new System.Drawing.Point(57, 325);
             this.pData.Name = "pData";
             this.pData.Size = new System.Drawing.Size(265, 28);
             this.pData.TabIndex = 73;
@@ -478,7 +489,7 @@
             this.dTPDataNascimento.Location = new System.Drawing.Point(41, 0);
             this.dTPDataNascimento.Name = "dTPDataNascimento";
             this.dTPDataNascimento.Size = new System.Drawing.Size(224, 29);
-            this.dTPDataNascimento.TabIndex = 76;
+            this.dTPDataNascimento.TabIndex = 0;
             // 
             // panel12
             // 
@@ -508,7 +519,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.pData);
             this.Controls.Add(this.lAvatar);
             this.Controls.Add(this.bCreateAccount);
@@ -524,6 +535,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(550, 360);
             this.Name = "ViewRegister";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewRegister_Load);

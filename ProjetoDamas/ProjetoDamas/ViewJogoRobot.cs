@@ -285,7 +285,6 @@ namespace ProjetoDamas
             ///
 
             pJogadorUm.BackColor = Color.FromArgb(150, 0, 0, 0);
-            pJogadorDois.BackColor = Color.FromArgb(150, 0, 0, 0);
 
             ///
             /// Cores do MenuStrip
@@ -315,15 +314,6 @@ namespace ProjetoDamas
             pJogadorUm.Visible = false;
         }
 
-        private void pBJogadorDois_MouseHover(object sender, EventArgs e)
-        {
-            pJogadorDois.Visible = true;
-        }
-
-        private void pBJogadorDois_MouseLeave(object sender, EventArgs e)
-        {
-            pJogadorDois.Visible = false;
-        }
 
         private void bSurrenderJogadorUm_Click(object sender, EventArgs e)
         {
@@ -362,7 +352,7 @@ namespace ProjetoDamas
         {
             //Abrir uma nova View
             Program.V_Settings.jogo = true;
-            Program.V_Settings.ShowDialog();
+            //Program.V_Settings.ShowDialog();
             
         }
 

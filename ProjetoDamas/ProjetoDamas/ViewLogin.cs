@@ -115,6 +115,12 @@ namespace ProjetoDamas
             cTBPassword.Text = "";
             ctBUsername.Text = "";
         }
+
+        private void pbReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_Menu.Show();
+        }
     }
 
 }

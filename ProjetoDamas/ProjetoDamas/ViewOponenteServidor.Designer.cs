@@ -93,17 +93,19 @@
             // 
             // pBarraTranparentePreta
             // 
+            this.pBarraTranparentePreta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBarraTranparentePreta.Controls.Add(this.pBarraCinzenta);
-            this.pBarraTranparentePreta.Location = new System.Drawing.Point(306, 72);
+            this.pBarraTranparentePreta.Location = new System.Drawing.Point(273, 70);
             this.pBarraTranparentePreta.Name = "pBarraTranparentePreta";
             this.pBarraTranparentePreta.Size = new System.Drawing.Size(20, 273);
             this.pBarraTranparentePreta.TabIndex = 1;
             // 
             // pJogadorLocal
             // 
+            this.pJogadorLocal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pJogadorLocal.BackColor = System.Drawing.Color.Transparent;
             this.pJogadorLocal.Image = global::ProjetoDamas.Properties.Resources.DamaPreta;
-            this.pJogadorLocal.Location = new System.Drawing.Point(97, 76);
+            this.pJogadorLocal.Location = new System.Drawing.Point(64, 74);
             this.pJogadorLocal.Name = "pJogadorLocal";
             this.pJogadorLocal.Size = new System.Drawing.Size(153, 171);
             this.pJogadorLocal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,12 +114,13 @@
             // 
             // pInfoVencedor
             // 
+            this.pInfoVencedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pInfoVencedor.BackColor = System.Drawing.Color.Transparent;
             this.pInfoVencedor.Controls.Add(this.lNomeVencedor);
             this.pInfoVencedor.Controls.Add(this.lNomeVencedorN);
             this.pInfoVencedor.Controls.Add(this.lCountryVencedor);
             this.pInfoVencedor.Controls.Add(this.lCountryVencedorN);
-            this.pInfoVencedor.Location = new System.Drawing.Point(63, 255);
+            this.pInfoVencedor.Location = new System.Drawing.Point(30, 253);
             this.pInfoVencedor.Name = "pInfoVencedor";
             this.pInfoVencedor.Size = new System.Drawing.Size(237, 72);
             this.pInfoVencedor.TabIndex = 89;
@@ -180,12 +183,13 @@
             // 
             // pLatencia
             // 
+            this.pLatencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pLatencia.BackColor = System.Drawing.Color.Transparent;
             this.pLatencia.Controls.Add(this.pBarraLatencia1);
             this.pLatencia.Controls.Add(this.pBarraLatencia4);
             this.pLatencia.Controls.Add(this.pBarraLatencia3);
             this.pLatencia.Controls.Add(this.pBarraLatencia2);
-            this.pLatencia.Location = new System.Drawing.Point(610, 365);
+            this.pLatencia.Location = new System.Drawing.Point(578, 361);
             this.pLatencia.Name = "pLatencia";
             this.pLatencia.Size = new System.Drawing.Size(47, 42);
             this.pLatencia.TabIndex = 2;
@@ -217,11 +221,12 @@
             // 
             // lGameOpponent
             // 
+            this.lGameOpponent.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lGameOpponent.AutoSize = true;
             this.lGameOpponent.BackColor = System.Drawing.Color.Transparent;
             this.lGameOpponent.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lGameOpponent.ForeColor = System.Drawing.Color.DimGray;
-            this.lGameOpponent.Location = new System.Drawing.Point(188, 9);
+            this.lGameOpponent.Location = new System.Drawing.Point(172, 9);
             this.lGameOpponent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lGameOpponent.Name = "lGameOpponent";
             this.lGameOpponent.Size = new System.Drawing.Size(258, 45);
@@ -314,12 +319,13 @@
             // 
             // bSearchOppoent
             // 
+            this.bSearchOppoent.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bSearchOppoent.BackColor = System.Drawing.Color.Transparent;
             this.bSearchOppoent.FlatAppearance.BorderSize = 0;
             this.bSearchOppoent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSearchOppoent.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSearchOppoent.ForeColor = System.Drawing.Color.DimGray;
-            this.bSearchOppoent.Location = new System.Drawing.Point(174, 365);
+            this.bSearchOppoent.Location = new System.Drawing.Point(152, 364);
             this.bSearchOppoent.Margin = new System.Windows.Forms.Padding(2);
             this.bSearchOppoent.Name = "bSearchOppoent";
             this.bSearchOppoent.Size = new System.Drawing.Size(299, 38);
@@ -330,12 +336,13 @@
             // 
             // bPlay
             // 
+            this.bPlay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bPlay.BackColor = System.Drawing.Color.Transparent;
             this.bPlay.FlatAppearance.BorderSize = 0;
             this.bPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPlay.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPlay.ForeColor = System.Drawing.Color.DimGray;
-            this.bPlay.Location = new System.Drawing.Point(174, 365);
+            this.bPlay.Location = new System.Drawing.Point(120, 361);
             this.bPlay.Margin = new System.Windows.Forms.Padding(2);
             this.bPlay.Name = "bPlay";
             this.bPlay.Size = new System.Drawing.Size(299, 38);
@@ -393,21 +400,23 @@
             // 
             // pOpponent
             // 
+            this.pOpponent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pOpponent.BackColor = System.Drawing.Color.Transparent;
             this.pOpponent.Controls.Add(this.panel1);
             this.pOpponent.Controls.Add(this.pBUser);
-            this.pOpponent.Location = new System.Drawing.Point(373, 68);
+            this.pOpponent.Location = new System.Drawing.Point(340, 66);
             this.pOpponent.Name = "pOpponent";
             this.pOpponent.Size = new System.Drawing.Size(247, 273);
             this.pOpponent.TabIndex = 2;
             // 
             // pSeacrhOpponent
             // 
+            this.pSeacrhOpponent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pSeacrhOpponent.BackColor = System.Drawing.Color.Transparent;
             this.pSeacrhOpponent.Controls.Add(this.cBSearchInTheServer);
             this.pSeacrhOpponent.Controls.Add(this.pOpponentNickname);
             this.pSeacrhOpponent.Controls.Add(this.pServerIP);
-            this.pSeacrhOpponent.Location = new System.Drawing.Point(373, 68);
+            this.pSeacrhOpponent.Location = new System.Drawing.Point(340, 66);
             this.pSeacrhOpponent.Name = "pSeacrhOpponent";
             this.pSeacrhOpponent.Size = new System.Drawing.Size(247, 265);
             this.pSeacrhOpponent.TabIndex = 94;
@@ -476,7 +485,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(666, 415);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.pSeacrhOpponent);
             this.Controls.Add(this.bPlay);
             this.Controls.Add(this.bSearchOppoent);
@@ -488,6 +497,7 @@
             this.Controls.Add(this.pLatencia);
             this.Controls.Add(this.pOpponent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(607, 425);
             this.Name = "ViewOponenteServidor";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewOponenteServidor_Load);

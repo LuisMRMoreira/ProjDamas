@@ -362,7 +362,7 @@ namespace ProjetoDamas
         {
             //Abrir uma nova View
             Program.V_Settings.jogo = true;
-            Program.V_Settings.ShowDialog();
+            //Program.V_Settings.ShowDialog();
             
         }
 

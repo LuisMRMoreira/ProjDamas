@@ -32,6 +32,7 @@
             this.lTournament = new System.Windows.Forms.Label();
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.pDataGridView = new System.Windows.Forms.Panel();
+            this.cTBTournamentName = new ProjetoDamas.CueTextBox();
             this.bRemove = new System.Windows.Forms.Button();
             this.bAddPlayer = new System.Windows.Forms.Button();
             this.cTBNickname = new ProjetoDamas.CueTextBox();
@@ -46,7 +47,6 @@
             this.lTournamentInfo = new System.Windows.Forms.Label();
             this.pConeccaoServidor = new System.Windows.Forms.Panel();
             this.cTBServerIP = new ProjetoDamas.CueTextBox();
-            this.cTBTournamentName = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJogadoresTorneio)).BeginInit();
@@ -56,11 +56,12 @@
             // 
             // lTournament
             // 
+            this.lTournament.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lTournament.AutoSize = true;
             this.lTournament.BackColor = System.Drawing.Color.Transparent;
             this.lTournament.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lTournament.ForeColor = System.Drawing.Color.DimGray;
-            this.lTournament.Location = new System.Drawing.Point(188, 9);
+            this.lTournament.Location = new System.Drawing.Point(216, 9);
             this.lTournament.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lTournament.Name = "lTournament";
             this.lTournament.Size = new System.Drawing.Size(196, 45);
@@ -81,6 +82,9 @@
             // 
             // pDataGridView
             // 
+            this.pDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pDataGridView.Controls.Add(this.cTBTournamentName);
             this.pDataGridView.Controls.Add(this.bRemove);
             this.pDataGridView.Controls.Add(this.bAddPlayer);
@@ -91,16 +95,28 @@
             this.pDataGridView.Controls.Add(this.dGVJogadoresTorneio);
             this.pDataGridView.Location = new System.Drawing.Point(65, 57);
             this.pDataGridView.Name = "pDataGridView";
-            this.pDataGridView.Size = new System.Drawing.Size(454, 198);
+            this.pDataGridView.Size = new System.Drawing.Size(521, 211);
             this.pDataGridView.TabIndex = 90;
+            // 
+            // cTBTournamentName
+            // 
+            this.cTBTournamentName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cTBTournamentName.Cue = "Tournament name";
+            this.cTBTournamentName.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBTournamentName.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBTournamentName.Location = new System.Drawing.Point(77, 103);
+            this.cTBTournamentName.Name = "cTBTournamentName";
+            this.cTBTournamentName.Size = new System.Drawing.Size(201, 29);
+            this.cTBTournamentName.TabIndex = 0;
             // 
             // bRemove
             // 
+            this.bRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bRemove.Font = new System.Drawing.Font("Kristen ITC", 12F);
             this.bRemove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bRemove.Location = new System.Drawing.Point(307, 152);
+            this.bRemove.Location = new System.Drawing.Point(347, 146);
             this.bRemove.Name = "bRemove";
-            this.bRemove.Size = new System.Drawing.Size(95, 43);
+            this.bRemove.Size = new System.Drawing.Size(105, 41);
             this.bRemove.TabIndex = 87;
             this.bRemove.Text = "Remove";
             this.bRemove.UseVisualStyleBackColor = true;
@@ -108,33 +124,36 @@
             // 
             // bAddPlayer
             // 
+            this.bAddPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bAddPlayer.Font = new System.Drawing.Font("Kristen ITC", 12F);
             this.bAddPlayer.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.bAddPlayer.Location = new System.Drawing.Point(307, 101);
+            this.bAddPlayer.Location = new System.Drawing.Point(347, 96);
             this.bAddPlayer.Name = "bAddPlayer";
-            this.bAddPlayer.Size = new System.Drawing.Size(95, 43);
-            this.bAddPlayer.TabIndex = 86;
+            this.bAddPlayer.Size = new System.Drawing.Size(105, 41);
+            this.bAddPlayer.TabIndex = 2;
             this.bAddPlayer.Text = "Add";
             this.bAddPlayer.UseVisualStyleBackColor = true;
             this.bAddPlayer.Click += new System.EventHandler(this.bAddPlayer_Click);
             // 
             // cTBNickname
             // 
+            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cTBNickname.Cue = "Nickname";
             this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(39, 131);
+            this.cTBNickname.Location = new System.Drawing.Point(77, 138);
             this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
-            this.cTBNickname.TabIndex = 85;
+            this.cTBNickname.Size = new System.Drawing.Size(201, 29);
+            this.cTBNickname.TabIndex = 1;
             // 
             // rBOnlineGame
             // 
+            this.rBOnlineGame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBOnlineGame.AutoSize = true;
             this.rBOnlineGame.BackColor = System.Drawing.Color.Transparent;
             this.rBOnlineGame.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBOnlineGame.ForeColor = System.Drawing.Color.DimGray;
-            this.rBOnlineGame.Location = new System.Drawing.Point(170, 171);
+            this.rBOnlineGame.Location = new System.Drawing.Point(195, 178);
             this.rBOnlineGame.Name = "rBOnlineGame";
             this.rBOnlineGame.Size = new System.Drawing.Size(64, 21);
             this.rBOnlineGame.TabIndex = 81;
@@ -144,12 +163,13 @@
             // 
             // rBLocalGame
             // 
+            this.rBLocalGame.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBLocalGame.AutoSize = true;
             this.rBLocalGame.BackColor = System.Drawing.Color.Transparent;
             this.rBLocalGame.Checked = true;
             this.rBLocalGame.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBLocalGame.ForeColor = System.Drawing.Color.DimGray;
-            this.rBLocalGame.Location = new System.Drawing.Point(52, 171);
+            this.rBLocalGame.Location = new System.Drawing.Point(77, 178);
             this.rBLocalGame.Name = "rBLocalGame";
             this.rBLocalGame.Size = new System.Drawing.Size(59, 21);
             this.rBLocalGame.TabIndex = 79;
@@ -159,11 +179,12 @@
             // 
             // lAddToTournament
             // 
+            this.lAddToTournament.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lAddToTournament.AutoSize = true;
             this.lAddToTournament.BackColor = System.Drawing.Color.Transparent;
             this.lAddToTournament.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
             this.lAddToTournament.ForeColor = System.Drawing.Color.DimGray;
-            this.lAddToTournament.Location = new System.Drawing.Point(2, 74);
+            this.lAddToTournament.Location = new System.Drawing.Point(54, 80);
             this.lAddToTournament.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lAddToTournament.Name = "lAddToTournament";
             this.lAddToTournament.Size = new System.Drawing.Size(108, 19);
@@ -175,6 +196,8 @@
             this.dGVJogadoresTorneio.AllowUserToAddRows = false;
             this.dGVJogadoresTorneio.AllowUserToDeleteRows = false;
             this.dGVJogadoresTorneio.AllowUserToOrderColumns = true;
+            this.dGVJogadoresTorneio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dGVJogadoresTorneio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVJogadoresTorneio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVJogadoresTorneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -187,7 +210,7 @@
             this.dGVJogadoresTorneio.ReadOnly = true;
             this.dGVJogadoresTorneio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dGVJogadoresTorneio.RowHeadersWidth = 40;
-            this.dGVJogadoresTorneio.Size = new System.Drawing.Size(443, 62);
+            this.dGVJogadoresTorneio.Size = new System.Drawing.Size(511, 62);
             this.dGVJogadoresTorneio.TabIndex = 25;
             // 
             // cNickname
@@ -204,17 +227,18 @@
             // 
             // bProceed
             // 
+            this.bProceed.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bProceed.BackColor = System.Drawing.Color.Transparent;
             this.bProceed.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.bProceed.FlatAppearance.BorderSize = 0;
             this.bProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bProceed.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bProceed.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bProceed.Location = new System.Drawing.Point(214, 313);
+            this.bProceed.Location = new System.Drawing.Point(239, 330);
             this.bProceed.Margin = new System.Windows.Forms.Padding(2);
             this.bProceed.Name = "bProceed";
             this.bProceed.Size = new System.Drawing.Size(134, 38);
-            this.bProceed.TabIndex = 91;
+            this.bProceed.TabIndex = 0;
             this.bProceed.Text = "Proceed";
             this.bProceed.UseVisualStyleBackColor = false;
             this.bProceed.Click += new System.EventHandler(this.bProceed_Click);
@@ -224,9 +248,9 @@
             this.pInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pInfo.Controls.Add(this.lTournamentInfo);
-            this.pInfo.Location = new System.Drawing.Point(0, 354);
+            this.pInfo.Location = new System.Drawing.Point(0, 380);
             this.pInfo.Name = "pInfo";
-            this.pInfo.Size = new System.Drawing.Size(596, 31);
+            this.pInfo.Size = new System.Drawing.Size(634, 31);
             this.pInfo.TabIndex = 92;
             // 
             // lTournamentInfo
@@ -243,33 +267,26 @@
             // 
             // pConeccaoServidor
             // 
+            this.pConeccaoServidor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pConeccaoServidor.Controls.Add(this.cTBServerIP);
-            this.pConeccaoServidor.Location = new System.Drawing.Point(65, 255);
+            this.pConeccaoServidor.Location = new System.Drawing.Point(65, 267);
             this.pConeccaoServidor.Name = "pConeccaoServidor";
-            this.pConeccaoServidor.Size = new System.Drawing.Size(454, 52);
+            this.pConeccaoServidor.Size = new System.Drawing.Size(521, 58);
             this.pConeccaoServidor.TabIndex = 93;
             this.pConeccaoServidor.Visible = false;
             // 
             // cTBServerIP
             // 
+            this.cTBServerIP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cTBServerIP.Cue = "Server IP";
             this.cTBServerIP.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBServerIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBServerIP.Location = new System.Drawing.Point(36, 10);
+            this.cTBServerIP.Location = new System.Drawing.Point(61, 13);
             this.cTBServerIP.Name = "cTBServerIP";
-            this.cTBServerIP.Size = new System.Drawing.Size(198, 29);
+            this.cTBServerIP.Size = new System.Drawing.Size(223, 29);
             this.cTBServerIP.TabIndex = 87;
             this.cTBServerIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cTBServerIP_KeyPress);
-            // 
-            // cTBTournamentName
-            // 
-            this.cTBTournamentName.Cue = "Tournament name";
-            this.cTBTournamentName.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBTournamentName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBTournamentName.Location = new System.Drawing.Point(39, 96);
-            this.cTBTournamentName.Name = "cTBTournamentName";
-            this.cTBTournamentName.Size = new System.Drawing.Size(199, 29);
-            this.cTBTournamentName.TabIndex = 88;
             // 
             // ViewTorneio
             // 
@@ -277,7 +294,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(596, 385);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.pConeccaoServidor);
             this.Controls.Add(this.pInfo);
             this.Controls.Add(this.bProceed);
@@ -285,6 +302,7 @@
             this.Controls.Add(this.pbReturn);
             this.Controls.Add(this.lTournament);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(548, 426);
             this.Name = "ViewTorneio";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewTorneio_Load);

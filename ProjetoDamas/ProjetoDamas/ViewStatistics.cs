@@ -40,6 +40,22 @@ namespace ProjetoDamas
             cBCountries.SelectedIndex = 177;
 
 
+
+            ///
+            ///Inilcializar componentes da View
+            ///
+            rBNone.Checked = true;
+
+
+
+            dGVEstatisticas.Rows.Add("Nome", "12", "2","14");
+            dGVEstatisticas.Rows.Add("Outro nome", "2", "5", "7");
+            dGVEstatisticas.Rows.Add("Nick", "15", "0", "15");
+            dGVEstatisticas.Rows.Add("Nome do nome", "0", "1", "1");
+            dGVEstatisticas.Rows.Add("Boyyyyy", "7", "7", "14");
+            dGVEstatisticas.Rows.Add("Finiii", "15", "5", "20");
+
+
         }
 
         private void pbReturn_Click(object sender, EventArgs e)
@@ -102,5 +118,7 @@ namespace ProjetoDamas
 
             }
         }
+
+
     }
 }

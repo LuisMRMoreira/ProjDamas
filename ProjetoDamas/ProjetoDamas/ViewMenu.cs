@@ -55,7 +55,7 @@ namespace ProjetoDamas
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Settings.Show();
+            Program.V_Settings.ShowDialog();
         }
 
 
@@ -73,7 +73,7 @@ namespace ProjetoDamas
         private void bGameInfo_Click_2(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_GameStatistics.Show();
+            Program.V_GameStatistics.ShowDialog();
         }
 
 
@@ -108,19 +108,19 @@ namespace ProjetoDamas
         private void bRules_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Rules.Show();
+            Program.V_Rules.ShowDialog();
         }
 
         private void bContinueGame_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_JogosInacabados.Show();
+            Program.V_JogosInacabados.ShowDialog();
         }
 
         private void bTournament_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Torneio.Show();
+            Program.V_Torneio.ShowDialog();
         }
 
         private void bContinueTournament_Click(object sender, EventArgs e)

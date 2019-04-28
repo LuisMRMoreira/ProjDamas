@@ -81,11 +81,12 @@
             // 
             // lVolumeLevel
             // 
+            this.lVolumeLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lVolumeLevel.AutoSize = true;
             this.lVolumeLevel.BackColor = System.Drawing.Color.Transparent;
             this.lVolumeLevel.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.lVolumeLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lVolumeLevel.Location = new System.Drawing.Point(42, 52);
+            this.lVolumeLevel.Location = new System.Drawing.Point(155, 132);
             this.lVolumeLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lVolumeLevel.Name = "lVolumeLevel";
             this.lVolumeLevel.Size = new System.Drawing.Size(139, 28);
@@ -94,9 +95,10 @@
             // 
             // pVolumeLevel
             // 
+            this.pVolumeLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pVolumeLevel.Controls.Add(this.tBVolumeLevel);
             this.pVolumeLevel.Controls.Add(this.pVolumeLevelImage);
-            this.pVolumeLevel.Location = new System.Drawing.Point(196, 52);
+            this.pVolumeLevel.Location = new System.Drawing.Point(309, 132);
             this.pVolumeLevel.Name = "pVolumeLevel";
             this.pVolumeLevel.Size = new System.Drawing.Size(149, 47);
             this.pVolumeLevel.TabIndex = 78;
@@ -133,11 +135,12 @@
             // 
             // lWindowSize
             // 
+            this.lWindowSize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lWindowSize.AutoSize = true;
             this.lWindowSize.BackColor = System.Drawing.Color.Transparent;
             this.lWindowSize.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.lWindowSize.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lWindowSize.Location = new System.Drawing.Point(42, 120);
+            this.lWindowSize.Location = new System.Drawing.Point(155, 200);
             this.lWindowSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lWindowSize.Name = "lWindowSize";
             this.lWindowSize.Size = new System.Drawing.Size(138, 28);
@@ -146,9 +149,10 @@
             // 
             // pWindowSize
             // 
+            this.pWindowSize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pWindowSize.Controls.Add(this.cBWindowSize);
             this.pWindowSize.Controls.Add(this.pWindowSizeImage);
-            this.pWindowSize.Location = new System.Drawing.Point(196, 120);
+            this.pWindowSize.Location = new System.Drawing.Point(309, 200);
             this.pWindowSize.Name = "pWindowSize";
             this.pWindowSize.Size = new System.Drawing.Size(149, 36);
             this.pWindowSize.TabIndex = 79;
@@ -195,9 +199,10 @@
             // 
             // pBGuardar
             // 
+            this.pBGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBGuardar.BackColor = System.Drawing.Color.Transparent;
             this.pBGuardar.Image = global::ProjetoDamas.Properties.Resources.Save_icon;
-            this.pBGuardar.Location = new System.Drawing.Point(383, 12);
+            this.pBGuardar.Location = new System.Drawing.Point(591, 12);
             this.pBGuardar.Name = "pBGuardar";
             this.pBGuardar.Size = new System.Drawing.Size(31, 29);
             this.pBGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,9 +213,10 @@
             // 
             // pBCheckGuardado
             // 
+            this.pBCheckGuardado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBCheckGuardado.BackColor = System.Drawing.Color.Transparent;
             this.pBCheckGuardado.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheckGuardado.Location = new System.Drawing.Point(346, 11);
+            this.pBCheckGuardado.Location = new System.Drawing.Point(554, 11);
             this.pBCheckGuardado.Name = "pBCheckGuardado";
             this.pBCheckGuardado.Size = new System.Drawing.Size(31, 29);
             this.pBCheckGuardado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,11 +226,12 @@
             // 
             // lBotLevel
             // 
+            this.lBotLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lBotLevel.AutoSize = true;
             this.lBotLevel.BackColor = System.Drawing.Color.Transparent;
             this.lBotLevel.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.lBotLevel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lBotLevel.Location = new System.Drawing.Point(42, 182);
+            this.lBotLevel.Location = new System.Drawing.Point(155, 262);
             this.lBotLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lBotLevel.Name = "lBotLevel";
             this.lBotLevel.Size = new System.Drawing.Size(102, 28);
@@ -233,9 +240,10 @@
             // 
             // pBotLevel
             // 
+            this.pBotLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBotLevel.Controls.Add(this.cBBotLevel);
             this.pBotLevel.Controls.Add(this.pBotLevelImage);
-            this.pBotLevel.Location = new System.Drawing.Point(195, 182);
+            this.pBotLevel.Location = new System.Drawing.Point(308, 262);
             this.pBotLevel.Name = "pBotLevel";
             this.pBotLevel.Size = new System.Drawing.Size(150, 36);
             this.pBotLevel.TabIndex = 83;
@@ -287,7 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(426, 314);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.pBotLevel);
             this.Controls.Add(this.lBotLevel);
             this.Controls.Add(this.pBCheckGuardado);
@@ -299,6 +307,7 @@
             this.Controls.Add(this.pBReturn);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(362, 286);
             this.Name = "ViewSettings";
             this.Text = "Checkers";
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).EndInit();

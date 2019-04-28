@@ -54,11 +54,12 @@
             // 
             // lWinner
             // 
+            this.lWinner.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lWinner.AutoSize = true;
             this.lWinner.BackColor = System.Drawing.Color.Transparent;
             this.lWinner.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lWinner.ForeColor = System.Drawing.Color.DimGray;
-            this.lWinner.Location = new System.Drawing.Point(11, 94);
+            this.lWinner.Location = new System.Drawing.Point(38, 117);
             this.lWinner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lWinner.Name = "lWinner";
             this.lWinner.Size = new System.Drawing.Size(227, 45);
@@ -67,9 +68,10 @@
             // 
             // pbJogadorVencedor
             // 
+            this.pbJogadorVencedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbJogadorVencedor.BackColor = System.Drawing.Color.Transparent;
             this.pbJogadorVencedor.Image = ((System.Drawing.Image)(resources.GetObject("pbJogadorVencedor.Image")));
-            this.pbJogadorVencedor.Location = new System.Drawing.Point(111, 130);
+            this.pbJogadorVencedor.Location = new System.Drawing.Point(138, 153);
             this.pbJogadorVencedor.Margin = new System.Windows.Forms.Padding(2);
             this.pbJogadorVencedor.Name = "pbJogadorVencedor";
             this.pbJogadorVencedor.Size = new System.Drawing.Size(127, 119);
@@ -127,11 +129,12 @@
             // 
             // lGameEnded
             // 
+            this.lGameEnded.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lGameEnded.AutoSize = true;
             this.lGameEnded.BackColor = System.Drawing.Color.Transparent;
             this.lGameEnded.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lGameEnded.ForeColor = System.Drawing.Color.DimGray;
-            this.lGameEnded.Location = new System.Drawing.Point(144, 28);
+            this.lGameEnded.Location = new System.Drawing.Point(171, 28);
             this.lGameEnded.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lGameEnded.Name = "lGameEnded";
             this.lGameEnded.Size = new System.Drawing.Size(322, 45);
@@ -140,21 +143,23 @@
             // 
             // pInfoVencedor
             // 
+            this.pInfoVencedor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pInfoVencedor.BackColor = System.Drawing.Color.Transparent;
             this.pInfoVencedor.Controls.Add(this.lNomeVencedor);
             this.pInfoVencedor.Controls.Add(this.lNomeVencedorN);
             this.pInfoVencedor.Controls.Add(this.lCountryVencedor);
             this.pInfoVencedor.Controls.Add(this.lCountryVencedorN);
-            this.pInfoVencedor.Location = new System.Drawing.Point(264, 140);
+            this.pInfoVencedor.Location = new System.Drawing.Point(291, 163);
             this.pInfoVencedor.Name = "pInfoVencedor";
             this.pInfoVencedor.Size = new System.Drawing.Size(237, 90);
             this.pInfoVencedor.TabIndex = 88;
             // 
             // pBJogadorPerdedor
             // 
+            this.pBJogadorPerdedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pBJogadorPerdedor.BackColor = System.Drawing.Color.Transparent;
             this.pBJogadorPerdedor.Image = ((System.Drawing.Image)(resources.GetObject("pBJogadorPerdedor.Image")));
-            this.pBJogadorPerdedor.Location = new System.Drawing.Point(507, 297);
+            this.pBJogadorPerdedor.Location = new System.Drawing.Point(561, 344);
             this.pBJogadorPerdedor.Margin = new System.Windows.Forms.Padding(2);
             this.pBJogadorPerdedor.Name = "pBJogadorPerdedor";
             this.pBJogadorPerdedor.Size = new System.Drawing.Size(62, 56);
@@ -164,12 +169,13 @@
             // 
             // pPerdedor
             // 
+            this.pPerdedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pPerdedor.BackColor = System.Drawing.Color.Transparent;
             this.pPerdedor.Controls.Add(this.lNomePerdedor);
             this.pPerdedor.Controls.Add(this.lNomePerdedorN);
             this.pPerdedor.Controls.Add(this.lCountryPerdedor);
             this.pPerdedor.Controls.Add(this.lCountryPerdedorN);
-            this.pPerdedor.Location = new System.Drawing.Point(342, 297);
+            this.pPerdedor.Location = new System.Drawing.Point(396, 344);
             this.pPerdedor.Name = "pPerdedor";
             this.pPerdedor.Size = new System.Drawing.Size(159, 55);
             this.pPerdedor.TabIndex = 90;
@@ -224,13 +230,13 @@
             // 
             // bBackMenu
             // 
-            this.bBackMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bBackMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bBackMenu.BackColor = System.Drawing.Color.Transparent;
             this.bBackMenu.FlatAppearance.BorderSize = 0;
             this.bBackMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bBackMenu.Font = new System.Drawing.Font("Matura MT Script Capitals", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBackMenu.ForeColor = System.Drawing.Color.DimGray;
-            this.bBackMenu.Location = new System.Drawing.Point(12, 309);
+            this.bBackMenu.Location = new System.Drawing.Point(12, 356);
             this.bBackMenu.Name = "bBackMenu";
             this.bBackMenu.Size = new System.Drawing.Size(83, 44);
             this.bBackMenu.TabIndex = 91;
@@ -243,9 +249,10 @@
             this.pCor.BackColor = System.Drawing.Color.Transparent;
             this.pCor.Controls.Add(this.pInfoVencedor);
             this.pCor.Controls.Add(this.lGameEnded);
+            this.pCor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pCor.Location = new System.Drawing.Point(0, 0);
             this.pCor.Name = "pCor";
-            this.pCor.Size = new System.Drawing.Size(580, 365);
+            this.pCor.Size = new System.Drawing.Size(634, 411);
             this.pCor.TabIndex = 92;
             // 
             // ViewEnd
@@ -254,7 +261,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.confets;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(580, 364);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.bBackMenu);
             this.Controls.Add(this.pPerdedor);
             this.Controls.Add(this.pBJogadorPerdedor);
@@ -262,6 +269,7 @@
             this.Controls.Add(this.lWinner);
             this.Controls.Add(this.pCor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(562, 361);
             this.Name = "ViewEnd";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewEnd_Load);

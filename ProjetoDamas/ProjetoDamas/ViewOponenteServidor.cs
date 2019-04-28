@@ -86,11 +86,9 @@ namespace ProjetoDamas
             Program.V_JogoMultiplayer.ShowDialog();//------------------------------------------------------------------------------------
         }
 
-
-
         private void cBSearchInTheServer_CheckedChanged(object sender, EventArgs e)
         {
-            pOpponentNickname.Visible = !pOpponentNickname.Visible;
+            pOpponentNickname.Visible = !cTBOpponentNickname.Visible;
         }
     }
 }

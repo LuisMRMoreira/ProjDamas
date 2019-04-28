@@ -33,6 +33,7 @@
             this.bContinueGame = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.pPainelOpcoes = new System.Windows.Forms.Panel();
+            this.bContinueTournament = new System.Windows.Forms.Button();
             this.bTournament = new System.Windows.Forms.Button();
             this.bRules = new System.Windows.Forms.Button();
             this.bGameInfo = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.bContinueTournament = new System.Windows.Forms.Button();
             this.pPainelOpcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogin)).BeginInit();
             this.pLoginOrUsername.SuspendLayout();
@@ -80,7 +80,7 @@
             this.buttonjogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonjogar.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonjogar.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.buttonjogar.Location = new System.Drawing.Point(0, 42);
+            this.buttonjogar.Location = new System.Drawing.Point(0, 38);
             this.buttonjogar.Name = "buttonjogar";
             this.buttonjogar.Size = new System.Drawing.Size(289, 44);
             this.buttonjogar.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.bContinueGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bContinueGame.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bContinueGame.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bContinueGame.Location = new System.Drawing.Point(0, 280);
+            this.bContinueGame.Location = new System.Drawing.Point(0, 276);
             this.bContinueGame.Name = "bContinueGame";
             this.bContinueGame.Size = new System.Drawing.Size(289, 47);
             this.bContinueGame.TabIndex = 4;
@@ -111,7 +111,7 @@
             this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonProfile.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F);
             this.buttonProfile.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.buttonProfile.Location = new System.Drawing.Point(0, 137);
+            this.buttonProfile.Location = new System.Drawing.Point(0, 133);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(289, 37);
             this.buttonProfile.TabIndex = 5;
@@ -132,8 +132,23 @@
             this.pPainelOpcoes.Dock = System.Windows.Forms.DockStyle.Left;
             this.pPainelOpcoes.Location = new System.Drawing.Point(0, 0);
             this.pPainelOpcoes.Name = "pPainelOpcoes";
-            this.pPainelOpcoes.Size = new System.Drawing.Size(289, 419);
+            this.pPainelOpcoes.Size = new System.Drawing.Size(289, 411);
             this.pPainelOpcoes.TabIndex = 13;
+            // 
+            // bContinueTournament
+            // 
+            this.bContinueTournament.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bContinueTournament.FlatAppearance.BorderSize = 0;
+            this.bContinueTournament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bContinueTournament.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bContinueTournament.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bContinueTournament.Location = new System.Drawing.Point(0, 328);
+            this.bContinueTournament.Name = "bContinueTournament";
+            this.bContinueTournament.Size = new System.Drawing.Size(289, 44);
+            this.bContinueTournament.TabIndex = 9;
+            this.bContinueTournament.Text = "Continue Tournament";
+            this.bContinueTournament.UseVisualStyleBackColor = true;
+            this.bContinueTournament.Click += new System.EventHandler(this.bContinueTournament_Click);
             // 
             // bTournament
             // 
@@ -142,11 +157,11 @@
             this.bTournament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTournament.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bTournament.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bTournament.Location = new System.Drawing.Point(0, 234);
+            this.bTournament.Location = new System.Drawing.Point(0, 230);
             this.bTournament.Name = "bTournament";
             this.bTournament.Size = new System.Drawing.Size(289, 47);
             this.bTournament.TabIndex = 8;
-            this.bTournament.Text = "Tournament";
+            this.bTournament.Text = "Create tournament";
             this.bTournament.UseVisualStyleBackColor = true;
             this.bTournament.Click += new System.EventHandler(this.bTournament_Click);
             // 
@@ -158,7 +173,7 @@
             this.bRules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bRules.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bRules.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bRules.Location = new System.Drawing.Point(0, 87);
+            this.bRules.Location = new System.Drawing.Point(0, 83);
             this.bRules.Name = "bRules";
             this.bRules.Size = new System.Drawing.Size(289, 37);
             this.bRules.TabIndex = 7;
@@ -174,7 +189,7 @@
             this.bGameInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bGameInfo.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bGameInfo.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bGameInfo.Location = new System.Drawing.Point(0, 184);
+            this.bGameInfo.Location = new System.Drawing.Point(0, 180);
             this.bGameInfo.Name = "bGameInfo";
             this.bGameInfo.Size = new System.Drawing.Size(289, 37);
             this.bGameInfo.TabIndex = 6;
@@ -214,7 +229,7 @@
             this.pLoginOrUsername.BackColor = System.Drawing.Color.Transparent;
             this.pLoginOrUsername.Controls.Add(this.pBLogin);
             this.pLoginOrUsername.Controls.Add(this.lLogin);
-            this.pLoginOrUsername.Location = new System.Drawing.Point(295, 377);
+            this.pLoginOrUsername.Location = new System.Drawing.Point(295, 369);
             this.pLoginOrUsername.Name = "pLoginOrUsername";
             this.pLoginOrUsername.Size = new System.Drawing.Size(167, 34);
             this.pLoginOrUsername.TabIndex = 16;
@@ -222,9 +237,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.DamaPreta;
-            this.pictureBox1.Location = new System.Drawing.Point(334, 137);
+            this.pictureBox1.Location = new System.Drawing.Point(345, 124);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 150);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,9 +249,10 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::ProjetoDamas.Properties.Resources.DamaBranca;
-            this.pictureBox2.Location = new System.Drawing.Point(533, 120);
+            this.pictureBox2.Location = new System.Drawing.Point(544, 107);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(145, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,9 +261,10 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox3.Location = new System.Drawing.Point(303, 120);
+            this.pictureBox3.Location = new System.Drawing.Point(314, 109);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -255,9 +273,10 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox4.Location = new System.Drawing.Point(296, 277);
+            this.pictureBox4.Location = new System.Drawing.Point(327, 273);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(49, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,9 +285,10 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox5.Location = new System.Drawing.Point(478, 19);
+            this.pictureBox5.Location = new System.Drawing.Point(489, 8);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(49, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,9 +297,10 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox6.Location = new System.Drawing.Point(482, 280);
+            this.pictureBox6.Location = new System.Drawing.Point(519, 269);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(49, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,9 +309,10 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox7.Location = new System.Drawing.Point(603, 52);
+            this.pictureBox7.Location = new System.Drawing.Point(602, 32);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(49, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -299,9 +321,10 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox8.Location = new System.Drawing.Point(303, 34);
+            this.pictureBox8.Location = new System.Drawing.Point(327, 21);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(49, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,9 +333,10 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox9.Location = new System.Drawing.Point(478, 114);
+            this.pictureBox9.Location = new System.Drawing.Point(515, 103);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(49, 50);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -321,9 +345,10 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox10.Location = new System.Drawing.Point(589, 305);
+            this.pictureBox10.Location = new System.Drawing.Point(626, 294);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(49, 50);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,9 +357,10 @@
             // 
             // pictureBox11
             // 
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox11.Location = new System.Drawing.Point(394, 293);
+            this.pictureBox11.Location = new System.Drawing.Point(432, 294);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(49, 50);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,9 +369,10 @@
             // 
             // pictureBox12
             // 
+            this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::ProjetoDamas.Properties.Resources.PecaPreta;
-            this.pictureBox12.Location = new System.Drawing.Point(394, 58);
+            this.pictureBox12.Location = new System.Drawing.Point(405, 47);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(49, 50);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -354,9 +381,10 @@
             // 
             // pictureBox13
             // 
+            this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox13.Location = new System.Drawing.Point(658, 64);
+            this.pictureBox13.Location = new System.Drawing.Point(669, 53);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(49, 50);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -365,29 +393,15 @@
             // 
             // pictureBox14
             // 
+            this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::ProjetoDamas.Properties.Resources.PecaBranca;
-            this.pictureBox14.Location = new System.Drawing.Point(653, 305);
+            this.pictureBox14.Location = new System.Drawing.Point(684, 350);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(49, 50);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 30;
             this.pictureBox14.TabStop = false;
-            // 
-            // bContinueTournament
-            // 
-            this.bContinueTournament.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bContinueTournament.FlatAppearance.BorderSize = 0;
-            this.bContinueTournament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bContinueTournament.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContinueTournament.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bContinueTournament.Location = new System.Drawing.Point(0, 332);
-            this.bContinueTournament.Name = "bContinueTournament";
-            this.bContinueTournament.Size = new System.Drawing.Size(289, 44);
-            this.bContinueTournament.TabIndex = 9;
-            this.bContinueTournament.Text = "Continue Tournament";
-            this.bContinueTournament.UseVisualStyleBackColor = true;
-            this.bContinueTournament.Click += new System.EventHandler(this.bContinueTournament_Click);
             // 
             // ViewMenu
             // 
@@ -396,7 +410,7 @@
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(742, 419);
+            this.ClientSize = new System.Drawing.Size(784, 411);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox12);
@@ -416,6 +430,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Olive;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(760, 441);
             this.Name = "ViewMenu";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewMenu_Load);

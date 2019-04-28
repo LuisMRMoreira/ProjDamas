@@ -33,6 +33,7 @@
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.pDataGridView = new System.Windows.Forms.Panel();
             this.rBNone = new System.Windows.Forms.RadioButton();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.dTPDataDeJogo = new System.Windows.Forms.DateTimePicker();
             this.rBName = new System.Windows.Forms.RadioButton();
             this.cBCountries = new System.Windows.Forms.ComboBox();
@@ -40,17 +41,16 @@
             this.rBCountry = new System.Windows.Forms.RadioButton();
             this.lSearchBy = new System.Windows.Forms.Label();
             this.dGVJogosInacabados = new System.Windows.Forms.DataGridView();
+            this.cPlayerOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPlayerTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lUnfinishedGames = new System.Windows.Forms.Label();
             this.tTJogoInacabados = new System.Windows.Forms.ToolTip(this.components);
             this.bContinueGame = new System.Windows.Forms.Button();
             this.tTContinueGame = new System.Windows.Forms.ToolTip(this.components);
             this.tTDGV = new System.Windows.Forms.ToolTip(this.components);
             this.tTReturnButton = new System.Windows.Forms.ToolTip(this.components);
-            this.cPlayerOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPlayerTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJogosInacabados)).BeginInit();
@@ -71,6 +71,9 @@
             // 
             // pDataGridView
             // 
+            this.pDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pDataGridView.Controls.Add(this.rBNone);
             this.pDataGridView.Controls.Add(this.cTBNickname);
             this.pDataGridView.Controls.Add(this.dTPDataDeJogo);
@@ -82,18 +85,19 @@
             this.pDataGridView.Controls.Add(this.dGVJogosInacabados);
             this.pDataGridView.Location = new System.Drawing.Point(69, 70);
             this.pDataGridView.Name = "pDataGridView";
-            this.pDataGridView.Size = new System.Drawing.Size(454, 262);
+            this.pDataGridView.Size = new System.Drawing.Size(511, 281);
             this.pDataGridView.TabIndex = 27;
             this.tTJogoInacabados.SetToolTip(this.pDataGridView, "Unfineshed local games");
             // 
             // rBNone
             // 
+            this.rBNone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBNone.AutoSize = true;
             this.rBNone.BackColor = System.Drawing.Color.Transparent;
             this.rBNone.Checked = true;
             this.rBNone.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBNone.ForeColor = System.Drawing.Color.DimGray;
-            this.rBNone.Location = new System.Drawing.Point(361, 191);
+            this.rBNone.Location = new System.Drawing.Point(389, 200);
             this.rBNone.Name = "rBNone";
             this.rBNone.Size = new System.Drawing.Size(58, 21);
             this.rBNone.TabIndex = 86;
@@ -102,8 +106,21 @@
             this.rBNone.UseVisualStyleBackColor = false;
             this.rBNone.CheckedChanged += new System.EventHandler(this.rBNone_CheckedChanged);
             // 
+            // cTBNickname
+            // 
+            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(158, 230);
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
+            this.cTBNickname.TabIndex = 85;
+            this.cTBNickname.Visible = false;
+            // 
             // dTPDataDeJogo
             // 
+            this.dTPDataDeJogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dTPDataDeJogo.CalendarForeColor = System.Drawing.SystemColors.WindowFrame;
             this.dTPDataDeJogo.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dTPDataDeJogo.CalendarTitleBackColor = System.Drawing.SystemColors.WindowFrame;
@@ -112,7 +129,7 @@
             this.dTPDataDeJogo.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.dTPDataDeJogo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTPDataDeJogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dTPDataDeJogo.Location = new System.Drawing.Point(130, 221);
+            this.dTPDataDeJogo.Location = new System.Drawing.Point(158, 230);
             this.dTPDataDeJogo.Name = "dTPDataDeJogo";
             this.dTPDataDeJogo.Size = new System.Drawing.Size(199, 29);
             this.dTPDataDeJogo.TabIndex = 84;
@@ -120,11 +137,12 @@
             // 
             // rBName
             // 
+            this.rBName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBName.AutoSize = true;
             this.rBName.BackColor = System.Drawing.Color.Transparent;
             this.rBName.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBName.ForeColor = System.Drawing.Color.DimGray;
-            this.rBName.Location = new System.Drawing.Point(244, 191);
+            this.rBName.Location = new System.Drawing.Point(272, 200);
             this.rBName.Name = "rBName";
             this.rBName.Size = new System.Drawing.Size(85, 21);
             this.rBName.TabIndex = 81;
@@ -134,10 +152,11 @@
             // 
             // cBCountries
             // 
+            this.cBCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(130, 221);
+            this.cBCountries.Location = new System.Drawing.Point(158, 230);
             this.cBCountries.Name = "cBCountries";
             this.cBCountries.Size = new System.Drawing.Size(199, 29);
             this.cBCountries.TabIndex = 80;
@@ -145,11 +164,12 @@
             // 
             // rBDate
             // 
+            this.rBDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBDate.AutoSize = true;
             this.rBDate.BackColor = System.Drawing.Color.Transparent;
             this.rBDate.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBDate.ForeColor = System.Drawing.Color.DimGray;
-            this.rBDate.Location = new System.Drawing.Point(157, 190);
+            this.rBDate.Location = new System.Drawing.Point(185, 199);
             this.rBDate.Name = "rBDate";
             this.rBDate.Size = new System.Drawing.Size(57, 21);
             this.rBDate.TabIndex = 79;
@@ -159,11 +179,12 @@
             // 
             // rBCountry
             // 
+            this.rBCountry.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBCountry.AutoSize = true;
             this.rBCountry.BackColor = System.Drawing.Color.Transparent;
             this.rBCountry.Font = new System.Drawing.Font("Kristen ITC", 8F);
             this.rBCountry.ForeColor = System.Drawing.Color.DimGray;
-            this.rBCountry.Location = new System.Drawing.Point(45, 191);
+            this.rBCountry.Location = new System.Drawing.Point(73, 200);
             this.rBCountry.Name = "rBCountry";
             this.rBCountry.Size = new System.Drawing.Size(71, 20);
             this.rBCountry.TabIndex = 77;
@@ -173,11 +194,12 @@
             // 
             // lSearchBy
             // 
+            this.lSearchBy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lSearchBy.AutoSize = true;
             this.lSearchBy.BackColor = System.Drawing.Color.Transparent;
             this.lSearchBy.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
             this.lSearchBy.ForeColor = System.Drawing.Color.DimGray;
-            this.lSearchBy.Location = new System.Drawing.Point(1, 167);
+            this.lSearchBy.Location = new System.Drawing.Point(29, 176);
             this.lSearchBy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lSearchBy.Name = "lSearchBy";
             this.lSearchBy.Size = new System.Drawing.Size(90, 19);
@@ -189,6 +211,9 @@
             this.dGVJogosInacabados.AllowUserToAddRows = false;
             this.dGVJogosInacabados.AllowUserToDeleteRows = false;
             this.dGVJogosInacabados.AllowUserToOrderColumns = true;
+            this.dGVJogosInacabados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGVJogosInacabados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVJogosInacabados.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVJogosInacabados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVJogosInacabados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -200,41 +225,10 @@
             this.dGVJogosInacabados.MultiSelect = false;
             this.dGVJogosInacabados.Name = "dGVJogosInacabados";
             this.dGVJogosInacabados.ReadOnly = true;
-            this.dGVJogosInacabados.Size = new System.Drawing.Size(443, 143);
+            this.dGVJogosInacabados.Size = new System.Drawing.Size(500, 143);
             this.dGVJogosInacabados.TabIndex = 25;
             this.tTDGV.SetToolTip(this.dGVJogosInacabados, "Select a game");
             this.dGVJogosInacabados.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dGVJogosInacabados_RowStateChanged);
-            // 
-            // lUnfinishedGames
-            // 
-            this.lUnfinishedGames.AutoSize = true;
-            this.lUnfinishedGames.BackColor = System.Drawing.Color.Transparent;
-            this.lUnfinishedGames.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
-            this.lUnfinishedGames.ForeColor = System.Drawing.Color.DimGray;
-            this.lUnfinishedGames.Location = new System.Drawing.Point(154, 12);
-            this.lUnfinishedGames.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lUnfinishedGames.Name = "lUnfinishedGames";
-            this.lUnfinishedGames.Size = new System.Drawing.Size(299, 45);
-            this.lUnfinishedGames.TabIndex = 28;
-            this.lUnfinishedGames.Text = "Unfinished Games";
-            // 
-            // bContinueGame
-            // 
-            this.bContinueGame.BackColor = System.Drawing.Color.Transparent;
-            this.bContinueGame.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
-            this.bContinueGame.FlatAppearance.BorderSize = 0;
-            this.bContinueGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bContinueGame.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContinueGame.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bContinueGame.Location = new System.Drawing.Point(173, 343);
-            this.bContinueGame.Margin = new System.Windows.Forms.Padding(2);
-            this.bContinueGame.Name = "bContinueGame";
-            this.bContinueGame.Size = new System.Drawing.Size(249, 38);
-            this.bContinueGame.TabIndex = 95;
-            this.bContinueGame.Text = "Continue Game";
-            this.tTContinueGame.SetToolTip(this.bContinueGame, "Click to return to the unfinished game");
-            this.bContinueGame.UseVisualStyleBackColor = false;
-            this.bContinueGame.Click += new System.EventHandler(this.bContinueGame_Click);
             // 
             // cPlayerOne
             // 
@@ -261,16 +255,38 @@
             this.cDate.ReadOnly = true;
             this.cDate.ToolTipText = "Date";
             // 
-            // cTBNickname
+            // lUnfinishedGames
             // 
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(130, 221);
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
-            this.cTBNickname.TabIndex = 85;
-            this.cTBNickname.Visible = false;
+            this.lUnfinishedGames.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lUnfinishedGames.AutoSize = true;
+            this.lUnfinishedGames.BackColor = System.Drawing.Color.Transparent;
+            this.lUnfinishedGames.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
+            this.lUnfinishedGames.ForeColor = System.Drawing.Color.DimGray;
+            this.lUnfinishedGames.Location = new System.Drawing.Point(183, 12);
+            this.lUnfinishedGames.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lUnfinishedGames.Name = "lUnfinishedGames";
+            this.lUnfinishedGames.Size = new System.Drawing.Size(299, 45);
+            this.lUnfinishedGames.TabIndex = 28;
+            this.lUnfinishedGames.Text = "Unfinished Games";
+            // 
+            // bContinueGame
+            // 
+            this.bContinueGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bContinueGame.BackColor = System.Drawing.Color.Transparent;
+            this.bContinueGame.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.bContinueGame.FlatAppearance.BorderSize = 0;
+            this.bContinueGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bContinueGame.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bContinueGame.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.bContinueGame.Location = new System.Drawing.Point(202, 362);
+            this.bContinueGame.Margin = new System.Windows.Forms.Padding(2);
+            this.bContinueGame.Name = "bContinueGame";
+            this.bContinueGame.Size = new System.Drawing.Size(249, 38);
+            this.bContinueGame.TabIndex = 95;
+            this.bContinueGame.Text = "Continue Game";
+            this.tTContinueGame.SetToolTip(this.bContinueGame, "Click to return to the unfinished game");
+            this.bContinueGame.UseVisualStyleBackColor = false;
+            this.bContinueGame.Click += new System.EventHandler(this.bContinueGame_Click);
             // 
             // ViewJogosInacabados
             // 
@@ -278,13 +294,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(577, 392);
+            this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.bContinueGame);
             this.Controls.Add(this.lUnfinishedGames);
             this.Controls.Add(this.pDataGridView);
             this.Controls.Add(this.pbReturn);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(551, 416);
             this.Name = "ViewJogosInacabados";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogosInacabados_Load);

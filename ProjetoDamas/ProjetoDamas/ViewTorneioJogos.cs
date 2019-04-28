@@ -39,18 +39,28 @@ namespace ProjetoDamas
 
         private void pbReturn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.V_Torneio.Show();
+
+            if (!returnAvalable)
+            {
+                this.Hide();
+                Program.V_TorneiosInacabados.Show();//------------------------------
+            }
+            else
+            {
+                this.Hide();
+                Program.V_Torneio.Show();//-------------------------------------------
+            }
+            
         }
 
         private void ViewTorneioJogos_Load(object sender, EventArgs e)
         {
             pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
 
-            if (!returnAvalable)
-            {
-                pbReturn.Visible = false;
-            }
+            dGVJogosTorneio.Rows.Add("Luis", "Diogo");
+            dGVJogosTorneio.Rows.Add("Carlos", "Jose");
+            dGVJogosTorneio.Rows.Add("Manuel", "Robot");
+
         }
     }
 }

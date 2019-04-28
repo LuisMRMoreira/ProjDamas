@@ -76,12 +76,6 @@
             this.lCountry1 = new System.Windows.Forms.Label();
             this.lVitorias1N = new System.Windows.Forms.Label();
             this.lVitorias1 = new System.Windows.Forms.Label();
-            this.lVitoriasN2 = new System.Windows.Forms.Label();
-            this.lVitorias2 = new System.Windows.Forms.Label();
-            this.lCountryN2 = new System.Windows.Forms.Label();
-            this.lCountry2 = new System.Windows.Forms.Label();
-            this.lNomeN2 = new System.Windows.Forms.Label();
-            this.lNome2 = new System.Windows.Forms.Label();
             this.pBJogadoUm = new System.Windows.Forms.PictureBox();
             this.pBJogadorDois = new System.Windows.Forms.PictureBox();
             this.pJogadorUm = new System.Windows.Forms.Panel();
@@ -89,13 +83,7 @@
             this.lColor1N = new System.Windows.Forms.Label();
             this.lTotalJogos1 = new System.Windows.Forms.Label();
             this.lColor1 = new System.Windows.Forms.Label();
-            this.pJogadorDois = new System.Windows.Forms.Panel();
-            this.lTotalJogos2N = new System.Windows.Forms.Label();
-            this.lColor2N = new System.Windows.Forms.Label();
-            this.lTotalJogos2 = new System.Windows.Forms.Label();
-            this.lColor2 = new System.Windows.Forms.Label();
             this.bSurrenderJogadorUm = new System.Windows.Forms.Button();
-            this.bSurrenderJogadorDois = new System.Windows.Forms.Button();
             this.tLPTabuleiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).BeginInit();
@@ -133,12 +121,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBJogadoUm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBJogadorDois)).BeginInit();
             this.pJogadorUm.SuspendLayout();
-            this.pJogadorDois.SuspendLayout();
             this.SuspendLayout();
             // 
             // tLPTabuleiro
             // 
             this.tLPTabuleiro.AllowDrop = true;
+            this.tLPTabuleiro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tLPTabuleiro.ColumnCount = 8;
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -180,7 +168,7 @@
             this.tLPTabuleiro.Controls.Add(this.pB51, 5, 1);
             this.tLPTabuleiro.Controls.Add(this.pB31, 3, 1);
             this.tLPTabuleiro.Controls.Add(this.pB11, 1, 1);
-            this.tLPTabuleiro.Location = new System.Drawing.Point(196, 36);
+            this.tLPTabuleiro.Location = new System.Drawing.Point(217, 67);
             this.tLPTabuleiro.Name = "tLPTabuleiro";
             this.tLPTabuleiro.RowCount = 8;
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -523,7 +511,7 @@
             this.opcoesToolStripMenuItem});
             this.mSJogo.Location = new System.Drawing.Point(0, 0);
             this.mSJogo.Name = "mSJogo";
-            this.mSJogo.Size = new System.Drawing.Size(843, 24);
+            this.mSJogo.Size = new System.Drawing.Size(884, 24);
             this.mSJogo.TabIndex = 1;
             this.mSJogo.Text = "menuStrip1";
             // 
@@ -663,90 +651,6 @@
             this.lVitorias1.TabIndex = 16;
             this.lVitorias1.Text = "Wins: ";
             // 
-            // lVitoriasN2
-            // 
-            this.lVitoriasN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lVitoriasN2.AutoSize = true;
-            this.lVitoriasN2.BackColor = System.Drawing.Color.Transparent;
-            this.lVitoriasN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
-            this.lVitoriasN2.ForeColor = System.Drawing.Color.White;
-            this.lVitoriasN2.Location = new System.Drawing.Point(122, 68);
-            this.lVitoriasN2.Name = "lVitoriasN2";
-            this.lVitoriasN2.Size = new System.Drawing.Size(17, 16);
-            this.lVitoriasN2.TabIndex = 23;
-            this.lVitoriasN2.Text = "...";
-            // 
-            // lVitorias2
-            // 
-            this.lVitorias2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lVitorias2.AutoSize = true;
-            this.lVitorias2.BackColor = System.Drawing.Color.Transparent;
-            this.lVitorias2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lVitorias2.ForeColor = System.Drawing.Color.White;
-            this.lVitorias2.Location = new System.Drawing.Point(9, 66);
-            this.lVitorias2.Name = "lVitorias2";
-            this.lVitorias2.Size = new System.Drawing.Size(54, 19);
-            this.lVitorias2.TabIndex = 22;
-            this.lVitorias2.Text = "Wins: ";
-            // 
-            // lCountryN2
-            // 
-            this.lCountryN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lCountryN2.AutoSize = true;
-            this.lCountryN2.BackColor = System.Drawing.Color.Transparent;
-            this.lCountryN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
-            this.lCountryN2.ForeColor = System.Drawing.Color.White;
-            this.lCountryN2.Location = new System.Drawing.Point(122, 38);
-            this.lCountryN2.Name = "lCountryN2";
-            this.lCountryN2.Size = new System.Drawing.Size(17, 16);
-            this.lCountryN2.TabIndex = 21;
-            this.lCountryN2.Text = "...";
-            // 
-            // lCountry2
-            // 
-            this.lCountry2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lCountry2.AutoSize = true;
-            this.lCountry2.BackColor = System.Drawing.Color.Transparent;
-            this.lCountry2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lCountry2.ForeColor = System.Drawing.Color.White;
-            this.lCountry2.Location = new System.Drawing.Point(9, 36);
-            this.lCountry2.Name = "lCountry2";
-            this.lCountry2.Size = new System.Drawing.Size(83, 19);
-            this.lCountry2.TabIndex = 20;
-            this.lCountry2.Text = "Country: ";
-            // 
-            // lNomeN2
-            // 
-            this.lNomeN2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lNomeN2.AutoSize = true;
-            this.lNomeN2.BackColor = System.Drawing.Color.Transparent;
-            this.lNomeN2.Font = new System.Drawing.Font("Kristen ITC", 8F);
-            this.lNomeN2.ForeColor = System.Drawing.Color.White;
-            this.lNomeN2.Location = new System.Drawing.Point(122, 14);
-            this.lNomeN2.Name = "lNomeN2";
-            this.lNomeN2.Size = new System.Drawing.Size(17, 16);
-            this.lNomeN2.TabIndex = 19;
-            this.lNomeN2.Text = "...";
-            // 
-            // lNome2
-            // 
-            this.lNome2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lNome2.AutoSize = true;
-            this.lNome2.BackColor = System.Drawing.Color.Transparent;
-            this.lNome2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lNome2.ForeColor = System.Drawing.Color.White;
-            this.lNome2.Location = new System.Drawing.Point(9, 10);
-            this.lNome2.Name = "lNome2";
-            this.lNome2.Size = new System.Drawing.Size(62, 19);
-            this.lNome2.TabIndex = 18;
-            this.lNome2.Text = "Name: ";
-            // 
             // pBJogadoUm
             // 
             this.pBJogadoUm.BackColor = System.Drawing.Color.Transparent;
@@ -762,16 +666,15 @@
             // 
             // pBJogadorDois
             // 
+            this.pBJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBJogadorDois.BackColor = System.Drawing.Color.Transparent;
-            this.pBJogadorDois.Image = global::ProjetoDamas.Properties.Resources.DamaBranca;
-            this.pBJogadorDois.Location = new System.Drawing.Point(663, 37);
+            this.pBJogadorDois.Image = global::ProjetoDamas.Properties.Resources.Robot_Image;
+            this.pBJogadorDois.Location = new System.Drawing.Point(704, 37);
             this.pBJogadorDois.Name = "pBJogadorDois";
             this.pBJogadorDois.Size = new System.Drawing.Size(160, 177);
             this.pBJogadorDois.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBJogadorDois.TabIndex = 25;
             this.pBJogadorDois.TabStop = false;
-            this.pBJogadorDois.MouseLeave += new System.EventHandler(this.pBJogadorDois_MouseLeave);
-            this.pBJogadorDois.MouseHover += new System.EventHandler(this.pBJogadorDois_MouseHover);
             // 
             // pJogadorUm
             // 
@@ -848,112 +751,21 @@
             this.lColor1.TabIndex = 18;
             this.lColor1.Text = "Color: ";
             // 
-            // pJogadorDois
-            // 
-            this.pJogadorDois.BackColor = System.Drawing.Color.Transparent;
-            this.pJogadorDois.Controls.Add(this.lVitoriasN2);
-            this.pJogadorDois.Controls.Add(this.lTotalJogos2N);
-            this.pJogadorDois.Controls.Add(this.lVitorias2);
-            this.pJogadorDois.Controls.Add(this.lColor2N);
-            this.pJogadorDois.Controls.Add(this.lCountryN2);
-            this.pJogadorDois.Controls.Add(this.lTotalJogos2);
-            this.pJogadorDois.Controls.Add(this.lCountry2);
-            this.pJogadorDois.Controls.Add(this.lColor2);
-            this.pJogadorDois.Controls.Add(this.lNomeN2);
-            this.pJogadorDois.Controls.Add(this.lNome2);
-            this.pJogadorDois.Location = new System.Drawing.Point(663, 213);
-            this.pJogadorDois.Name = "pJogadorDois";
-            this.pJogadorDois.Size = new System.Drawing.Size(160, 156);
-            this.pJogadorDois.TabIndex = 27;
-            this.pJogadorDois.Visible = false;
-            // 
-            // lTotalJogos2N
-            // 
-            this.lTotalJogos2N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lTotalJogos2N.AutoSize = true;
-            this.lTotalJogos2N.BackColor = System.Drawing.Color.Transparent;
-            this.lTotalJogos2N.Font = new System.Drawing.Font("Kristen ITC", 8F);
-            this.lTotalJogos2N.ForeColor = System.Drawing.Color.White;
-            this.lTotalJogos2N.Location = new System.Drawing.Point(122, 99);
-            this.lTotalJogos2N.Name = "lTotalJogos2N";
-            this.lTotalJogos2N.Size = new System.Drawing.Size(17, 16);
-            this.lTotalJogos2N.TabIndex = 20;
-            this.lTotalJogos2N.Text = "...";
-            // 
-            // lColor2N
-            // 
-            this.lColor2N.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lColor2N.AutoSize = true;
-            this.lColor2N.BackColor = System.Drawing.Color.Transparent;
-            this.lColor2N.Font = new System.Drawing.Font("Kristen ITC", 8F);
-            this.lColor2N.ForeColor = System.Drawing.Color.White;
-            this.lColor2N.Location = new System.Drawing.Point(122, 127);
-            this.lColor2N.Name = "lColor2N";
-            this.lColor2N.Size = new System.Drawing.Size(17, 16);
-            this.lColor2N.TabIndex = 21;
-            this.lColor2N.Text = "...";
-            // 
-            // lTotalJogos2
-            // 
-            this.lTotalJogos2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lTotalJogos2.AutoSize = true;
-            this.lTotalJogos2.BackColor = System.Drawing.Color.Transparent;
-            this.lTotalJogos2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lTotalJogos2.ForeColor = System.Drawing.Color.White;
-            this.lTotalJogos2.Location = new System.Drawing.Point(9, 95);
-            this.lTotalJogos2.Name = "lTotalJogos2";
-            this.lTotalJogos2.Size = new System.Drawing.Size(112, 19);
-            this.lTotalJogos2.TabIndex = 19;
-            this.lTotalJogos2.Text = "Total games: ";
-            // 
-            // lColor2
-            // 
-            this.lColor2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lColor2.AutoSize = true;
-            this.lColor2.BackColor = System.Drawing.Color.Transparent;
-            this.lColor2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.lColor2.ForeColor = System.Drawing.Color.White;
-            this.lColor2.Location = new System.Drawing.Point(9, 124);
-            this.lColor2.Name = "lColor2";
-            this.lColor2.Size = new System.Drawing.Size(64, 19);
-            this.lColor2.TabIndex = 18;
-            this.lColor2.Text = "Color: ";
-            // 
             // bSurrenderJogadorUm
             // 
-            this.bSurrenderJogadorUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSurrenderJogadorUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bSurrenderJogadorUm.BackColor = System.Drawing.Color.Transparent;
             this.bSurrenderJogadorUm.FlatAppearance.BorderSize = 0;
             this.bSurrenderJogadorUm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSurrenderJogadorUm.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSurrenderJogadorUm.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bSurrenderJogadorUm.Location = new System.Drawing.Point(2, 430);
+            this.bSurrenderJogadorUm.Location = new System.Drawing.Point(0, 500);
             this.bSurrenderJogadorUm.Name = "bSurrenderJogadorUm";
             this.bSurrenderJogadorUm.Size = new System.Drawing.Size(191, 42);
             this.bSurrenderJogadorUm.TabIndex = 28;
             this.bSurrenderJogadorUm.Text = "Surrender";
             this.bSurrenderJogadorUm.UseVisualStyleBackColor = false;
             this.bSurrenderJogadorUm.Click += new System.EventHandler(this.bSurrenderJogadorUm_Click);
-            // 
-            // bSurrenderJogadorDois
-            // 
-            this.bSurrenderJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bSurrenderJogadorDois.BackColor = System.Drawing.Color.Transparent;
-            this.bSurrenderJogadorDois.FlatAppearance.BorderSize = 0;
-            this.bSurrenderJogadorDois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bSurrenderJogadorDois.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSurrenderJogadorDois.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bSurrenderJogadorDois.Location = new System.Drawing.Point(649, 430);
-            this.bSurrenderJogadorDois.Name = "bSurrenderJogadorDois";
-            this.bSurrenderJogadorDois.Size = new System.Drawing.Size(191, 42);
-            this.bSurrenderJogadorDois.TabIndex = 29;
-            this.bSurrenderJogadorDois.Text = "Surrender";
-            this.bSurrenderJogadorDois.UseVisualStyleBackColor = false;
-            this.bSurrenderJogadorDois.Click += new System.EventHandler(this.bSurrenderJogadorDois_Click);
             // 
             // ViewJogoRobot
             // 
@@ -962,18 +774,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(843, 498);
-            this.Controls.Add(this.bSurrenderJogadorDois);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.bSurrenderJogadorUm);
             this.Controls.Add(this.pBJogadorDois);
             this.Controls.Add(this.pBJogadoUm);
             this.Controls.Add(this.tLPTabuleiro);
             this.Controls.Add(this.mSJogo);
             this.Controls.Add(this.pJogadorUm);
-            this.Controls.Add(this.pJogadorDois);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mSJogo;
+            this.MinimumSize = new System.Drawing.Size(849, 518);
             this.Name = "ViewJogoRobot";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogo_Load);
@@ -1016,8 +827,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBJogadorDois)).EndInit();
             this.pJogadorUm.ResumeLayout(false);
             this.pJogadorUm.PerformLayout();
-            this.pJogadorDois.ResumeLayout(false);
-            this.pJogadorDois.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1072,12 +881,6 @@
         private System.Windows.Forms.Label lCountry1;
         private System.Windows.Forms.Label lVitorias1N;
         private System.Windows.Forms.Label lVitorias1;
-        private System.Windows.Forms.Label lVitoriasN2;
-        private System.Windows.Forms.Label lVitorias2;
-        private System.Windows.Forms.Label lCountryN2;
-        private System.Windows.Forms.Label lCountry2;
-        private System.Windows.Forms.Label lNomeN2;
-        private System.Windows.Forms.Label lNome2;
         private System.Windows.Forms.PictureBox pBJogadoUm;
         private System.Windows.Forms.PictureBox pBJogadorDois;
         private System.Windows.Forms.Panel pJogadorUm;
@@ -1085,12 +888,6 @@
         private System.Windows.Forms.Label lColor1N;
         private System.Windows.Forms.Label lTotalJogos1;
         private System.Windows.Forms.Label lColor1;
-        private System.Windows.Forms.Panel pJogadorDois;
-        private System.Windows.Forms.Label lTotalJogos2N;
-        private System.Windows.Forms.Label lColor2N;
-        private System.Windows.Forms.Label lTotalJogos2;
-        private System.Windows.Forms.Label lColor2;
         private System.Windows.Forms.Button bSurrenderJogadorUm;
-        private System.Windows.Forms.Button bSurrenderJogadorDois;
     }
 }

@@ -72,6 +72,18 @@ namespace ProjetoDamas
             pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
             pConeccaoServidor.BackColor = Color.FromArgb(150, 0, 0, 0);
             pInfo.BackColor = Color.FromArgb(150, 0, 0, 0);
+
+
+
+            ///
+            ///Inicializar a view
+            ///
+
+            cTBNickname.Text = "";
+            cTBServerIP.Text = "";
+            cTBTournamentName.Text = "";
+            rBLocalGame.Checked = true;
+            dGVJogadoresTorneio.Rows.Clear();
         }
 
         private void bRemove_Click(object sender, EventArgs e)
@@ -90,14 +102,15 @@ namespace ProjetoDamas
             {
                 MessageBox.Show("Invalid tournament name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (dGVJogadoresTorneio.Rows.Count != 0)
+            else if (dGVJogadoresTorneio.Rows.Count == 0)
             {
-                MessageBox.Show("No players added to the tournament!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No players were added to the tournament!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
 
                 this.Hide();
+                Program.V_JogosTorneio.ShowDialog();
                 //-------------------------------------------------------------------------------------------------
             }
         }
@@ -109,5 +122,7 @@ namespace ProjetoDamas
                 e.Handled = true;
             }
         }
+
+
     }
 }

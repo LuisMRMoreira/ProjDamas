@@ -139,6 +139,7 @@
             // tLPTabuleiro
             // 
             this.tLPTabuleiro.AllowDrop = true;
+            this.tLPTabuleiro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tLPTabuleiro.ColumnCount = 8;
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tLPTabuleiro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -180,7 +181,7 @@
             this.tLPTabuleiro.Controls.Add(this.pB51, 5, 1);
             this.tLPTabuleiro.Controls.Add(this.pB31, 3, 1);
             this.tLPTabuleiro.Controls.Add(this.pB11, 1, 1);
-            this.tLPTabuleiro.Location = new System.Drawing.Point(196, 36);
+            this.tLPTabuleiro.Location = new System.Drawing.Point(217, 67);
             this.tLPTabuleiro.Name = "tLPTabuleiro";
             this.tLPTabuleiro.RowCount = 8;
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -523,7 +524,7 @@
             this.opcoesToolStripMenuItem});
             this.mSJogo.Location = new System.Drawing.Point(0, 0);
             this.mSJogo.Name = "mSJogo";
-            this.mSJogo.Size = new System.Drawing.Size(843, 24);
+            this.mSJogo.Size = new System.Drawing.Size(884, 24);
             this.mSJogo.TabIndex = 1;
             this.mSJogo.Text = "menuStrip1";
             // 
@@ -541,26 +542,26 @@
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.guardarToolStripMenuItem.Text = "&Save";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // regrasToolStripMenuItem
             // 
             this.regrasToolStripMenuItem.Name = "regrasToolStripMenuItem";
-            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.regrasToolStripMenuItem.Text = "&Rules";
             this.regrasToolStripMenuItem.Click += new System.EventHandler(this.regrasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(101, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sairToolStripMenuItem.Text = "&Leave";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -762,9 +763,10 @@
             // 
             // pBJogadorDois
             // 
+            this.pBJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBJogadorDois.BackColor = System.Drawing.Color.Transparent;
             this.pBJogadorDois.Image = global::ProjetoDamas.Properties.Resources.DamaBranca;
-            this.pBJogadorDois.Location = new System.Drawing.Point(663, 37);
+            this.pBJogadorDois.Location = new System.Drawing.Point(704, 37);
             this.pBJogadorDois.Name = "pBJogadorDois";
             this.pBJogadorDois.Size = new System.Drawing.Size(160, 177);
             this.pBJogadorDois.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -850,6 +852,7 @@
             // 
             // pJogadorDois
             // 
+            this.pJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pJogadorDois.BackColor = System.Drawing.Color.Transparent;
             this.pJogadorDois.Controls.Add(this.lVitoriasN2);
             this.pJogadorDois.Controls.Add(this.lTotalJogos2N);
@@ -861,7 +864,7 @@
             this.pJogadorDois.Controls.Add(this.lColor2);
             this.pJogadorDois.Controls.Add(this.lNomeN2);
             this.pJogadorDois.Controls.Add(this.lNome2);
-            this.pJogadorDois.Location = new System.Drawing.Point(663, 213);
+            this.pJogadorDois.Location = new System.Drawing.Point(704, 213);
             this.pJogadorDois.Name = "pJogadorDois";
             this.pJogadorDois.Size = new System.Drawing.Size(160, 156);
             this.pJogadorDois.TabIndex = 27;
@@ -925,13 +928,13 @@
             // 
             // bSurrenderJogadorUm
             // 
-            this.bSurrenderJogadorUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSurrenderJogadorUm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bSurrenderJogadorUm.BackColor = System.Drawing.Color.Transparent;
             this.bSurrenderJogadorUm.FlatAppearance.BorderSize = 0;
             this.bSurrenderJogadorUm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSurrenderJogadorUm.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSurrenderJogadorUm.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bSurrenderJogadorUm.Location = new System.Drawing.Point(2, 430);
+            this.bSurrenderJogadorUm.Location = new System.Drawing.Point(2, 493);
             this.bSurrenderJogadorUm.Name = "bSurrenderJogadorUm";
             this.bSurrenderJogadorUm.Size = new System.Drawing.Size(191, 42);
             this.bSurrenderJogadorUm.TabIndex = 28;
@@ -941,13 +944,13 @@
             // 
             // bSurrenderJogadorDois
             // 
-            this.bSurrenderJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bSurrenderJogadorDois.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bSurrenderJogadorDois.BackColor = System.Drawing.Color.Transparent;
             this.bSurrenderJogadorDois.FlatAppearance.BorderSize = 0;
             this.bSurrenderJogadorDois.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSurrenderJogadorDois.Font = new System.Drawing.Font("Matura MT Script Capitals", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSurrenderJogadorDois.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bSurrenderJogadorDois.Location = new System.Drawing.Point(649, 430);
+            this.bSurrenderJogadorDois.Location = new System.Drawing.Point(690, 493);
             this.bSurrenderJogadorDois.Name = "bSurrenderJogadorDois";
             this.bSurrenderJogadorDois.Size = new System.Drawing.Size(191, 42);
             this.bSurrenderJogadorDois.TabIndex = 29;
@@ -962,7 +965,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(843, 498);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.bSurrenderJogadorDois);
             this.Controls.Add(this.bSurrenderJogadorUm);
             this.Controls.Add(this.pBJogadorDois);
@@ -974,6 +977,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mSJogo;
+            this.MinimumSize = new System.Drawing.Size(855, 518);
             this.Name = "ViewJogo";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogo_Load);

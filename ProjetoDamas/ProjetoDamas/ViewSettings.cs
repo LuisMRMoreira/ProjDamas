@@ -48,7 +48,7 @@ namespace ProjetoDamas
             if (jogo)
             {
                 this.Hide();
-                Program.V_JogoMultiplayer.Show();
+                Program.V_JogoMultiplayer.ShowDialog();
                 jogo = false;
             }
             else
@@ -80,7 +80,7 @@ namespace ProjetoDamas
         {
             //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
             valoresAlterados = true;
-            pBCheckGuardado.Visible = false;
+            pBCheckGuardado.Visible = true;
         }
 
         private void cBBotLevel_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,10 +96,6 @@ namespace ProjetoDamas
             valoresAlterados = true;
             pBCheckGuardado.Visible = false;
         }
-
-
-
-
 
     }
 }

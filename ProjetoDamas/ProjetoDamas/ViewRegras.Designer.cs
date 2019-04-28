@@ -38,8 +38,8 @@
             this.lDefeatConditions = new System.Windows.Forms.Label();
             this.lLaws = new System.Windows.Forms.Label();
             this.pUp = new System.Windows.Forms.Panel();
-            this.pDown = new System.Windows.Forms.Panel();
             this.lDrawConditions2 = new System.Windows.Forms.Label();
+            this.pDown = new System.Windows.Forms.Panel();
             this.lRules = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).BeginInit();
             this.pUp.SuspendLayout();
@@ -48,11 +48,12 @@
             // 
             // lCondicoesGanhar2
             // 
+            this.lCondicoesGanhar2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lCondicoesGanhar2.AutoSize = true;
             this.lCondicoesGanhar2.BackColor = System.Drawing.Color.Transparent;
             this.lCondicoesGanhar2.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lCondicoesGanhar2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lCondicoesGanhar2.Location = new System.Drawing.Point(18, 128);
+            this.lCondicoesGanhar2.Location = new System.Drawing.Point(21, 143);
             this.lCondicoesGanhar2.Name = "lCondicoesGanhar2";
             this.lCondicoesGanhar2.Size = new System.Drawing.Size(568, 76);
             this.lCondicoesGanhar2.TabIndex = 2;
@@ -63,11 +64,12 @@
             // 
             // lCondicoesPerder2
             // 
+            this.lCondicoesPerder2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lCondicoesPerder2.AutoSize = true;
             this.lCondicoesPerder2.BackColor = System.Drawing.Color.Transparent;
             this.lCondicoesPerder2.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lCondicoesPerder2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lCondicoesPerder2.Location = new System.Drawing.Point(22, 128);
+            this.lCondicoesPerder2.Location = new System.Drawing.Point(21, 143);
             this.lCondicoesPerder2.Name = "lCondicoesPerder2";
             this.lCondicoesPerder2.Size = new System.Drawing.Size(500, 171);
             this.lCondicoesPerder2.TabIndex = 4;
@@ -88,11 +90,12 @@
             // 
             // llaws2
             // 
+            this.llaws2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.llaws2.AutoSize = true;
             this.llaws2.BackColor = System.Drawing.Color.Transparent;
             this.llaws2.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.llaws2.ForeColor = System.Drawing.SystemColors.Control;
-            this.llaws2.Location = new System.Drawing.Point(22, 128);
+            this.llaws2.Location = new System.Drawing.Point(21, 143);
             this.llaws2.Name = "llaws2";
             this.llaws2.Size = new System.Drawing.Size(579, 152);
             this.llaws2.TabIndex = 7;
@@ -161,43 +164,47 @@
             // 
             // pUp
             // 
-            this.pUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pUp.Controls.Add(this.lWinConditions);
             this.pUp.Controls.Add(this.lDefeatConditions);
-            this.pUp.Location = new System.Drawing.Point(0, 61);
+            this.pUp.Location = new System.Drawing.Point(0, 63);
             this.pUp.Name = "pUp";
-            this.pUp.Size = new System.Drawing.Size(606, 51);
+            this.pUp.Size = new System.Drawing.Size(684, 51);
             this.pUp.TabIndex = 16;
-            // 
-            // pDown
-            // 
-            this.pDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pDown.Controls.Add(this.lLaws);
-            this.pDown.Controls.Add(this.lDrawConditions);
-            this.pDown.Location = new System.Drawing.Point(0, 315);
-            this.pDown.Name = "pDown";
-            this.pDown.Size = new System.Drawing.Size(606, 51);
-            this.pDown.TabIndex = 17;
             // 
             // lDrawConditions2
             // 
+            this.lDrawConditions2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lDrawConditions2.BackColor = System.Drawing.Color.Transparent;
             this.lDrawConditions2.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lDrawConditions2.ForeColor = System.Drawing.SystemColors.Control;
-            this.lDrawConditions2.Location = new System.Drawing.Point(18, 128);
+            this.lDrawConditions2.Location = new System.Drawing.Point(21, 143);
             this.lDrawConditions2.Name = "lDrawConditions2";
             this.lDrawConditions2.Size = new System.Drawing.Size(552, 76);
             this.lDrawConditions2.TabIndex = 18;
             this.lDrawConditions2.Text = resources.GetString("lDrawConditions2.Text");
             this.lDrawConditions2.Visible = false;
             // 
+            // pDown
+            // 
+            this.pDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pDown.Controls.Add(this.lLaws);
+            this.pDown.Controls.Add(this.lDrawConditions);
+            this.pDown.Location = new System.Drawing.Point(0, 345);
+            this.pDown.Name = "pDown";
+            this.pDown.Size = new System.Drawing.Size(684, 51);
+            this.pDown.TabIndex = 17;
+            // 
             // lRules
             // 
+            this.lRules.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lRules.AutoSize = true;
             this.lRules.BackColor = System.Drawing.Color.Transparent;
             this.lRules.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lRules.ForeColor = System.Drawing.Color.DimGray;
-            this.lRules.Location = new System.Drawing.Point(213, 9);
+            this.lRules.Location = new System.Drawing.Point(234, 9);
             this.lRules.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lRules.Name = "lRules";
             this.lRules.Size = new System.Drawing.Size(185, 45);
@@ -211,7 +218,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(606, 378);
+            this.ClientSize = new System.Drawing.Size(684, 411);
             this.Controls.Add(this.lRules);
             this.Controls.Add(this.lDrawConditions2);
             this.Controls.Add(this.llaws2);
@@ -222,6 +229,7 @@
             this.Controls.Add(this.pDown);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(676, 405);
             this.Name = "ViewRegras";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewRegras_Load);

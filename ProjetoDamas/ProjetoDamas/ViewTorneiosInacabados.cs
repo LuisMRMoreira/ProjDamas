@@ -20,6 +20,15 @@ namespace ProjetoDamas
         private void ViewTorneiosInacabados_Load(object sender, EventArgs e)
         {
             pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
+
+            ///
+            //Inicializar DataGridView
+            ///
+
+            dGVTorneiosInacabados.Rows.Add("O torneio", "10", "15/04/2019");
+            dGVTorneiosInacabados.Rows.Add("Nome", "2", "30/03/2019");
+            dGVTorneiosInacabados.Rows.Add("Torneio de hoje", "4", "22/04/2019");
+
         }
 
         private void bProceed_Click(object sender, EventArgs e)
@@ -43,5 +52,9 @@ namespace ProjetoDamas
             this.Hide();
             Program.V_Menu.Show();
         }
+
+
+
+
     }
 }

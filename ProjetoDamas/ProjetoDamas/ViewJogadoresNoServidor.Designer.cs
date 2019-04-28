@@ -52,6 +52,9 @@
             // 
             // pDataGridView
             // 
+            this.pDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pDataGridView.Controls.Add(this.rBBestStatus);
             this.pDataGridView.Controls.Add(this.rBNone);
             this.pDataGridView.Controls.Add(this.cTBNickname);
@@ -62,16 +65,17 @@
             this.pDataGridView.Controls.Add(this.dGVServerOpponent);
             this.pDataGridView.Location = new System.Drawing.Point(101, 67);
             this.pDataGridView.Name = "pDataGridView";
-            this.pDataGridView.Size = new System.Drawing.Size(454, 300);
+            this.pDataGridView.Size = new System.Drawing.Size(465, 329);
             this.pDataGridView.TabIndex = 27;
             // 
             // rBBestStatus
             // 
+            this.rBBestStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBBestStatus.AutoSize = true;
             this.rBBestStatus.BackColor = System.Drawing.Color.Transparent;
             this.rBBestStatus.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBBestStatus.ForeColor = System.Drawing.Color.DimGray;
-            this.rBBestStatus.Location = new System.Drawing.Point(250, 228);
+            this.rBBestStatus.Location = new System.Drawing.Point(255, 242);
             this.rBBestStatus.Name = "rBBestStatus";
             this.rBBestStatus.Size = new System.Drawing.Size(93, 21);
             this.rBBestStatus.TabIndex = 87;
@@ -81,12 +85,13 @@
             // 
             // rBNone
             // 
+            this.rBNone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBNone.AutoSize = true;
             this.rBNone.BackColor = System.Drawing.Color.Transparent;
             this.rBNone.Checked = true;
             this.rBNone.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBNone.ForeColor = System.Drawing.Color.DimGray;
-            this.rBNone.Location = new System.Drawing.Point(373, 228);
+            this.rBNone.Location = new System.Drawing.Point(378, 242);
             this.rBNone.Name = "rBNone";
             this.rBNone.Size = new System.Drawing.Size(58, 21);
             this.rBNone.TabIndex = 86;
@@ -97,10 +102,11 @@
             // 
             // cTBNickname
             // 
+            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cTBNickname.Cue = "Nickname";
             this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(46, 255);
+            this.cTBNickname.Location = new System.Drawing.Point(51, 269);
             this.cTBNickname.Name = "cTBNickname";
             this.cTBNickname.Size = new System.Drawing.Size(199, 29);
             this.cTBNickname.TabIndex = 85;
@@ -108,11 +114,12 @@
             // 
             // rBName
             // 
+            this.rBName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBName.AutoSize = true;
             this.rBName.BackColor = System.Drawing.Color.Transparent;
             this.rBName.Font = new System.Drawing.Font("Kristen ITC", 9F);
             this.rBName.ForeColor = System.Drawing.Color.DimGray;
-            this.rBName.Location = new System.Drawing.Point(144, 229);
+            this.rBName.Location = new System.Drawing.Point(149, 243);
             this.rBName.Name = "rBName";
             this.rBName.Size = new System.Drawing.Size(85, 21);
             this.rBName.TabIndex = 81;
@@ -122,10 +129,11 @@
             // 
             // cBCountries
             // 
+            this.cBCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(46, 255);
+            this.cBCountries.Location = new System.Drawing.Point(51, 269);
             this.cBCountries.Name = "cBCountries";
             this.cBCountries.Size = new System.Drawing.Size(199, 29);
             this.cBCountries.TabIndex = 80;
@@ -133,11 +141,12 @@
             // 
             // rBCountry
             // 
+            this.rBCountry.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBCountry.AutoSize = true;
             this.rBCountry.BackColor = System.Drawing.Color.Transparent;
             this.rBCountry.Font = new System.Drawing.Font("Kristen ITC", 8F);
             this.rBCountry.ForeColor = System.Drawing.Color.DimGray;
-            this.rBCountry.Location = new System.Drawing.Point(46, 229);
+            this.rBCountry.Location = new System.Drawing.Point(51, 243);
             this.rBCountry.Name = "rBCountry";
             this.rBCountry.Size = new System.Drawing.Size(71, 20);
             this.rBCountry.TabIndex = 77;
@@ -147,11 +156,12 @@
             // 
             // lSearchBy
             // 
+            this.lSearchBy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lSearchBy.AutoSize = true;
             this.lSearchBy.BackColor = System.Drawing.Color.Transparent;
             this.lSearchBy.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
             this.lSearchBy.ForeColor = System.Drawing.Color.DimGray;
-            this.lSearchBy.Location = new System.Drawing.Point(2, 205);
+            this.lSearchBy.Location = new System.Drawing.Point(7, 219);
             this.lSearchBy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lSearchBy.Name = "lSearchBy";
             this.lSearchBy.Size = new System.Drawing.Size(90, 19);
@@ -163,6 +173,9 @@
             this.dGVServerOpponent.AllowUserToAddRows = false;
             this.dGVServerOpponent.AllowUserToDeleteRows = false;
             this.dGVServerOpponent.AllowUserToOrderColumns = true;
+            this.dGVServerOpponent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGVServerOpponent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVServerOpponent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGVServerOpponent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVServerOpponent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -174,7 +187,7 @@
             this.dGVServerOpponent.MultiSelect = false;
             this.dGVServerOpponent.Name = "dGVServerOpponent";
             this.dGVServerOpponent.ReadOnly = true;
-            this.dGVServerOpponent.Size = new System.Drawing.Size(443, 196);
+            this.dGVServerOpponent.Size = new System.Drawing.Size(454, 196);
             this.dGVServerOpponent.TabIndex = 25;
             this.dGVServerOpponent.SelectionChanged += new System.EventHandler(this.dGVEstatisticas_SelectionChanged);
             // 
@@ -216,11 +229,12 @@
             // 
             // lStatistics
             // 
+            this.lStatistics.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lStatistics.AutoSize = true;
             this.lStatistics.BackColor = System.Drawing.Color.Transparent;
             this.lStatistics.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lStatistics.ForeColor = System.Drawing.Color.DimGray;
-            this.lStatistics.Location = new System.Drawing.Point(191, 12);
+            this.lStatistics.Location = new System.Drawing.Point(197, 12);
             this.lStatistics.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lStatistics.Name = "lStatistics";
             this.lStatistics.Size = new System.Drawing.Size(271, 45);
@@ -229,12 +243,13 @@
             // 
             // bSelect
             // 
+            this.bSelect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bSelect.BackColor = System.Drawing.Color.Transparent;
             this.bSelect.FlatAppearance.BorderSize = 0;
             this.bSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSelect.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSelect.ForeColor = System.Drawing.Color.DimGray;
-            this.bSelect.Location = new System.Drawing.Point(199, 383);
+            this.bSelect.Location = new System.Drawing.Point(205, 412);
             this.bSelect.Margin = new System.Windows.Forms.Padding(2);
             this.bSelect.Name = "bSelect";
             this.bSelect.Size = new System.Drawing.Size(210, 38);
@@ -250,12 +265,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(673, 432);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.bSelect);
             this.Controls.Add(this.lStatistics);
             this.Controls.Add(this.pbReturn);
             this.Controls.Add(this.pDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(692, 472);
             this.Name = "ViewJogadoresNoServidor";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogadoresNoServidor_Load);

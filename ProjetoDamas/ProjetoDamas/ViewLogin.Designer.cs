@@ -43,6 +43,7 @@
             this.pPasswordImage = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelPassword = new System.Windows.Forms.Label();
+            this.pbReturn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pUsername.SuspendLayout();
             this.pUsernameImage.SuspendLayout();
@@ -50,17 +51,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pPasswordImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
+            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLogin.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogin.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.buttonLogin.Location = new System.Drawing.Point(95, 233);
+            this.buttonLogin.Location = new System.Drawing.Point(181, 276);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(134, 38);
@@ -71,12 +74,13 @@
             // 
             // buttonRegister
             // 
+            this.buttonRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonRegister.BackColor = System.Drawing.Color.Transparent;
             this.buttonRegister.FlatAppearance.BorderSize = 0;
             this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRegister.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.buttonRegister.Location = new System.Drawing.Point(243, 233);
+            this.buttonRegister.Location = new System.Drawing.Point(329, 276);
             this.buttonRegister.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(119, 38);
@@ -99,11 +103,12 @@
             // 
             // lUsername
             // 
+            this.lUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lUsername.AutoSize = true;
             this.lUsername.BackColor = System.Drawing.Color.Transparent;
             this.lUsername.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.lUsername.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lUsername.Location = new System.Drawing.Point(90, 66);
+            this.lUsername.Location = new System.Drawing.Point(176, 109);
             this.lUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lUsername.Name = "lUsername";
             this.lUsername.Size = new System.Drawing.Size(114, 28);
@@ -112,9 +117,10 @@
             // 
             // pUsername
             // 
+            this.pUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pUsername.Controls.Add(this.pUsernameImage);
             this.pUsername.Controls.Add(this.ctBUsername);
-            this.pUsername.Location = new System.Drawing.Point(95, 95);
+            this.pUsername.Location = new System.Drawing.Point(181, 138);
             this.pUsername.Name = "pUsername";
             this.pUsername.Size = new System.Drawing.Size(267, 32);
             this.pUsername.TabIndex = 12;
@@ -144,11 +150,12 @@
             // 
             // lMemberLogin
             // 
+            this.lMemberLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lMemberLogin.AutoSize = true;
             this.lMemberLogin.BackColor = System.Drawing.Color.Transparent;
             this.lMemberLogin.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lMemberLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lMemberLogin.Location = new System.Drawing.Point(97, 9);
+            this.lMemberLogin.Location = new System.Drawing.Point(183, 9);
             this.lMemberLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lMemberLogin.Name = "lMemberLogin";
             this.lMemberLogin.Size = new System.Drawing.Size(262, 45);
@@ -157,10 +164,11 @@
             // 
             // pPassword
             // 
+            this.pPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pPassword.Controls.Add(this.cTBPassword);
             this.pPassword.Controls.Add(this.pictureBox2);
             this.pPassword.Controls.Add(this.pPasswordImage);
-            this.pPassword.Location = new System.Drawing.Point(95, 177);
+            this.pPassword.Location = new System.Drawing.Point(181, 220);
             this.pPassword.Name = "pPassword";
             this.pPassword.Size = new System.Drawing.Size(267, 32);
             this.pPassword.TabIndex = 13;
@@ -215,16 +223,29 @@
             // 
             // labelPassword
             // 
+            this.labelPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPassword.AutoSize = true;
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Kristen ITC", 15F);
             this.labelPassword.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPassword.Location = new System.Drawing.Point(94, 148);
+            this.labelPassword.Location = new System.Drawing.Point(180, 191);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(111, 28);
             this.labelPassword.TabIndex = 15;
             this.labelPassword.Text = "Password:";
+            // 
+            // pbReturn
+            // 
+            this.pbReturn.BackColor = System.Drawing.Color.Transparent;
+            this.pbReturn.Image = global::ProjetoDamas.Properties.Resources.a429924cb33912470dd40d51a2f760ec_go_back_icon_clip_art_at_clkercom_vector_clip_art_online__300_300;
+            this.pbReturn.Location = new System.Drawing.Point(12, 12);
+            this.pbReturn.Name = "pbReturn";
+            this.pbReturn.Size = new System.Drawing.Size(29, 28);
+            this.pbReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReturn.TabIndex = 22;
+            this.pbReturn.TabStop = false;
+            this.pbReturn.Click += new System.EventHandler(this.pbReturn_Click);
             // 
             // ViewLogin
             // 
@@ -233,7 +254,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(463, 325);
+            this.ClientSize = new System.Drawing.Size(634, 411);
+            this.Controls.Add(this.pbReturn);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.pPassword);
             this.Controls.Add(this.lMemberLogin);
@@ -244,6 +266,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(374, 342);
             this.Name = "ViewLogin";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewLogin_Load);
@@ -257,6 +280,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pPasswordImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +301,7 @@
         private System.Windows.Forms.Label labelPassword;
         private CueTextBox ctBUsername;
         private CueTextBox cTBPassword;
+        private System.Windows.Forms.PictureBox pbReturn;
     }
 }
 
