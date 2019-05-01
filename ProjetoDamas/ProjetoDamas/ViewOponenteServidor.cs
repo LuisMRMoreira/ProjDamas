@@ -20,14 +20,15 @@ namespace ProjetoDamas
 
         private void M_Jogo_RespostaAlterarOponenteOnline(string nickname, string serverIP)
         {
-            ctBServerIP.Text = nickname;
-            cTBOpponentNickname.Text = serverIP;
+
+            this.Show();
+            lNomeOponente.Text = nickname;
+            lCountryOponente.Text = serverIP;
             pSeacrhOpponent.Visible = false;
             pOpponent.Visible = true;
             bSearchOppoent.Visible = false;
             bPlay.Visible = true;
 
-            //this.ShowDialog();
         }
 
         private void ctBServerIP_KeyPress(object sender, KeyPressEventArgs e)
@@ -83,7 +84,7 @@ namespace ProjetoDamas
         private void pbReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_ModoJogo.Show();//------------------------------------------------------------------------------------
+            Program.V_ModoJogo.ShowDialog();//------------------------------------------------------------------------------------
         }
 
         private void bPlay_Click(object sender, EventArgs e)

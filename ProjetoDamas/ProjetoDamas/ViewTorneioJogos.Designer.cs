@@ -32,10 +32,11 @@
             this.pDataGridView = new System.Windows.Forms.Panel();
             this.bProceed = new System.Windows.Forms.Button();
             this.dGVJogosTorneio = new System.Windows.Forms.DataGridView();
-            this.cPlayerOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPlayerTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.lTournamentGames = new System.Windows.Forms.Label();
+            this.cPlayerOne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPlayerTwo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cGameStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJogosTorneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
@@ -50,7 +51,7 @@
             this.pDataGridView.Controls.Add(this.dGVJogosTorneio);
             this.pDataGridView.Location = new System.Drawing.Point(59, 72);
             this.pDataGridView.Name = "pDataGridView";
-            this.pDataGridView.Size = new System.Drawing.Size(515, 328);
+            this.pDataGridView.Size = new System.Drawing.Size(515, 244);
             this.pDataGridView.TabIndex = 91;
             // 
             // bProceed
@@ -62,7 +63,7 @@
             this.bProceed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bProceed.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bProceed.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.bProceed.Location = new System.Drawing.Point(182, 284);
+            this.bProceed.Location = new System.Drawing.Point(182, 200);
             this.bProceed.Margin = new System.Windows.Forms.Padding(2);
             this.bProceed.Name = "bProceed";
             this.bProceed.Size = new System.Drawing.Size(134, 38);
@@ -84,27 +85,16 @@
             this.dGVJogosTorneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVJogosTorneio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cPlayerOne,
-            this.cPlayerTwo});
+            this.cPlayerTwo,
+            this.cGameStatus});
             this.dGVJogosTorneio.Location = new System.Drawing.Point(5, 6);
             this.dGVJogosTorneio.MultiSelect = false;
             this.dGVJogosTorneio.Name = "dGVJogosTorneio";
             this.dGVJogosTorneio.ReadOnly = true;
             this.dGVJogosTorneio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dGVJogosTorneio.RowHeadersWidth = 40;
-            this.dGVJogosTorneio.Size = new System.Drawing.Size(504, 273);
+            this.dGVJogosTorneio.Size = new System.Drawing.Size(504, 174);
             this.dGVJogosTorneio.TabIndex = 25;
-            // 
-            // cPlayerOne
-            // 
-            this.cPlayerOne.HeaderText = "Player One";
-            this.cPlayerOne.Name = "cPlayerOne";
-            this.cPlayerOne.ReadOnly = true;
-            // 
-            // cPlayerTwo
-            // 
-            this.cPlayerTwo.HeaderText = "Player Two";
-            this.cPlayerTwo.Name = "cPlayerTwo";
-            this.cPlayerTwo.ReadOnly = true;
             // 
             // pbReturn
             // 
@@ -131,6 +121,24 @@
             this.lTournamentGames.Size = new System.Drawing.Size(306, 45);
             this.lTournamentGames.TabIndex = 93;
             this.lTournamentGames.Text = "Tournament Games";
+            // 
+            // cPlayerOne
+            // 
+            this.cPlayerOne.HeaderText = "Player One";
+            this.cPlayerOne.Name = "cPlayerOne";
+            this.cPlayerOne.ReadOnly = true;
+            // 
+            // cPlayerTwo
+            // 
+            this.cPlayerTwo.HeaderText = "Player Two";
+            this.cPlayerTwo.Name = "cPlayerTwo";
+            this.cPlayerTwo.ReadOnly = true;
+            // 
+            // cGameStatus
+            // 
+            this.cGameStatus.HeaderText = "Satus";
+            this.cGameStatus.Name = "cGameStatus";
+            this.cGameStatus.ReadOnly = true;
             // 
             // ViewTorneioJogos
             // 
@@ -161,8 +169,9 @@
         private System.Windows.Forms.DataGridView dGVJogosTorneio;
         private System.Windows.Forms.PictureBox pbReturn;
         private System.Windows.Forms.Label lTournamentGames;
+        private System.Windows.Forms.Button bProceed;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPlayerOne;
         private System.Windows.Forms.DataGridViewTextBoxColumn cPlayerTwo;
-        private System.Windows.Forms.Button bProceed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cGameStatus;
     }
 }

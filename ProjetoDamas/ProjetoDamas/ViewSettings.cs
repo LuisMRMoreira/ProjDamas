@@ -79,7 +79,7 @@ namespace ProjetoDamas
         private void pBGuardar_Click(object sender, EventArgs e)
         {
             //------------------------------------------------- Guardar Valores-----------------------------------------------------------------------------------
-            valoresAlterados = true;
+            valoresAlterados = false;
             pBCheckGuardado.Visible = true;
         }
 
@@ -97,5 +97,9 @@ namespace ProjetoDamas
             pBCheckGuardado.Visible = false;
         }
 
+        private void ViewSettings_Load(object sender, EventArgs e)
+        {
+            pBCheckGuardado.Visible = true;
+        }
     }
 }

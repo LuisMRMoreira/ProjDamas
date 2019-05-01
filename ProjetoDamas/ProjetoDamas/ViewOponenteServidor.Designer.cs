@@ -48,9 +48,9 @@
             this.pBUser = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lNomeOponente = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lCountryOponente = new System.Windows.Forms.Label();
             this.tTOpponentFound = new System.Windows.Forms.ToolTip(this.components);
             this.tTLantency = new System.Windows.Forms.ToolTip(this.components);
             this.bSearchOppoent = new System.Windows.Forms.Button();
@@ -261,9 +261,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lNomeOponente);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lCountryOponente);
             this.panel1.Location = new System.Drawing.Point(3, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 72);
@@ -281,17 +281,17 @@
             this.label1.TabIndex = 81;
             this.label1.Text = "Name: ";
             // 
-            // label2
+            // lNomeOponente
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(129, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 19);
-            this.label2.TabIndex = 82;
-            this.label2.Text = "...";
+            this.lNomeOponente.AutoSize = true;
+            this.lNomeOponente.BackColor = System.Drawing.Color.Transparent;
+            this.lNomeOponente.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lNomeOponente.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lNomeOponente.Location = new System.Drawing.Point(129, 9);
+            this.lNomeOponente.Name = "lNomeOponente";
+            this.lNomeOponente.Size = new System.Drawing.Size(24, 19);
+            this.lNomeOponente.TabIndex = 82;
+            this.lNomeOponente.Text = "...";
             // 
             // label3
             // 
@@ -305,17 +305,17 @@
             this.label3.TabIndex = 83;
             this.label3.Text = "Country: ";
             // 
-            // label4
+            // lCountryOponente
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(129, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 19);
-            this.label4.TabIndex = 84;
-            this.label4.Text = "...";
+            this.lCountryOponente.AutoSize = true;
+            this.lCountryOponente.BackColor = System.Drawing.Color.Transparent;
+            this.lCountryOponente.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
+            this.lCountryOponente.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lCountryOponente.Location = new System.Drawing.Point(129, 44);
+            this.lCountryOponente.Name = "lCountryOponente";
+            this.lCountryOponente.Size = new System.Drawing.Size(24, 19);
+            this.lCountryOponente.TabIndex = 84;
+            this.lCountryOponente.Text = "...";
             // 
             // bSearchOppoent
             // 
@@ -404,7 +404,7 @@
             this.pOpponent.BackColor = System.Drawing.Color.Transparent;
             this.pOpponent.Controls.Add(this.panel1);
             this.pOpponent.Controls.Add(this.pBUser);
-            this.pOpponent.Location = new System.Drawing.Point(340, 66);
+            this.pOpponent.Location = new System.Drawing.Point(340, 57);
             this.pOpponent.Name = "pOpponent";
             this.pOpponent.Size = new System.Drawing.Size(247, 273);
             this.pOpponent.TabIndex = 2;
@@ -416,7 +416,7 @@
             this.pSeacrhOpponent.Controls.Add(this.cBSearchInTheServer);
             this.pSeacrhOpponent.Controls.Add(this.pOpponentNickname);
             this.pSeacrhOpponent.Controls.Add(this.pServerIP);
-            this.pSeacrhOpponent.Location = new System.Drawing.Point(340, 60);
+            this.pSeacrhOpponent.Location = new System.Drawing.Point(340, 51);
             this.pSeacrhOpponent.Name = "pSeacrhOpponent";
             this.pSeacrhOpponent.Size = new System.Drawing.Size(247, 265);
             this.pSeacrhOpponent.TabIndex = 94;
@@ -489,13 +489,13 @@
             this.Controls.Add(this.pSeacrhOpponent);
             this.Controls.Add(this.bPlay);
             this.Controls.Add(this.bSearchOppoent);
+            this.Controls.Add(this.pOpponent);
             this.Controls.Add(this.pbReturn);
             this.Controls.Add(this.lGameOpponent);
             this.Controls.Add(this.pInfoVencedor);
             this.Controls.Add(this.pJogadorLocal);
             this.Controls.Add(this.pBarraTranparentePreta);
             this.Controls.Add(this.pLatencia);
-            this.Controls.Add(this.pOpponent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(607, 425);
             this.Name = "ViewOponenteServidor";
@@ -546,9 +546,9 @@
         private System.Windows.Forms.PictureBox pBUser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lNomeOponente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lCountryOponente;
         private System.Windows.Forms.ToolTip tTLantency;
         private System.Windows.Forms.ToolTip tTOpponentFound;
         private System.Windows.Forms.Button bSearchOppoent;

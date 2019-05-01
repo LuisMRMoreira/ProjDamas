@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewJogadoresNoServidor));
             this.pDataGridView = new System.Windows.Forms.Panel();
             this.rBBestStatus = new System.Windows.Forms.RadioButton();
             this.rBNone = new System.Windows.Forms.RadioButton();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.rBName = new System.Windows.Forms.RadioButton();
             this.cBCountries = new System.Windows.Forms.ComboBox();
             this.rBCountry = new System.Windows.Forms.RadioButton();
@@ -45,6 +45,8 @@
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.lStatistics = new System.Windows.Forms.Label();
             this.bSelect = new System.Windows.Forms.Button();
+            this.tTSelect = new System.Windows.Forms.ToolTip(this.components);
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.pDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVServerOpponent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
@@ -99,18 +101,6 @@
             this.rBNone.Text = "None";
             this.rBNone.UseVisualStyleBackColor = false;
             this.rBNone.CheckedChanged += new System.EventHandler(this.rBNone_CheckedChanged);
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(51, 269);
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
-            this.cTBNickname.TabIndex = 85;
-            this.cTBNickname.Visible = false;
             // 
             // rBName
             // 
@@ -189,7 +179,8 @@
             this.dGVServerOpponent.ReadOnly = true;
             this.dGVServerOpponent.Size = new System.Drawing.Size(454, 196);
             this.dGVServerOpponent.TabIndex = 25;
-            this.dGVServerOpponent.SelectionChanged += new System.EventHandler(this.dGVEstatisticas_SelectionChanged);
+            this.tTSelect.SetToolTip(this.dGVServerOpponent, "Please select a server opponent to proceed");
+            this.dGVServerOpponent.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dGVServerOpponent_RowStateChanged);
             // 
             // cNickname
             // 
@@ -245,6 +236,7 @@
             // 
             this.bSelect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bSelect.BackColor = System.Drawing.Color.Transparent;
+            this.bSelect.Enabled = false;
             this.bSelect.FlatAppearance.BorderSize = 0;
             this.bSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSelect.Font = new System.Drawing.Font("Kristen ITC", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,8 +248,19 @@
             this.bSelect.TabIndex = 97;
             this.bSelect.Text = "Select";
             this.bSelect.UseVisualStyleBackColor = false;
-            this.bSelect.Visible = false;
             this.bSelect.Click += new System.EventHandler(this.bSelect_Click);
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(51, 269);
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(199, 29);
+            this.cTBNickname.TabIndex = 85;
+            this.cTBNickname.Visible = false;
             // 
             // ViewJogadoresNoServidor
             // 
@@ -302,5 +305,6 @@
         private System.Windows.Forms.PictureBox pbReturn;
         private System.Windows.Forms.Label lStatistics;
         private System.Windows.Forms.Button bSelect;
+        private System.Windows.Forms.ToolTip tTSelect;
     }
 }

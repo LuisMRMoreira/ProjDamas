@@ -57,9 +57,9 @@ namespace ProjetoDamas
         {
             pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
 
-            dGVJogosTorneio.Rows.Add("Luis", "Diogo");
-            dGVJogosTorneio.Rows.Add("Carlos", "Jose");
-            dGVJogosTorneio.Rows.Add("Manuel", "Robot");
+            dGVJogosTorneio.Rows.Add("Luis", "Diogo", "15 min");
+            dGVJogosTorneio.Rows.Add("Carlos", "Jose", "not started");
+            dGVJogosTorneio.Rows.Add("Manuel", "Robot", "not started");
 
         }
     }

@@ -64,6 +64,22 @@ namespace ProjetoDamas
             Program.V_Menu.Show();
         }
 
+
+        private void cTBTimePlayed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+
+            }
+        }
+
         private void rBCountry_CheckedChanged(object sender, EventArgs e)
         {
             cBCountries.Visible = true;
@@ -103,22 +119,5 @@ namespace ProjetoDamas
             cTBTimePlayed.Visible = false;
             dTPDataNascimento.Visible = false;
         }
-
-        private void cTBTimePlayed_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-
-            }
-        }
-
-
     }
 }

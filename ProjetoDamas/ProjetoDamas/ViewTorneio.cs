@@ -88,6 +88,11 @@ namespace ProjetoDamas
 
         private void bRemove_Click(object sender, EventArgs e)
         {
+            if (dGVJogadoresTorneio.SelectedRows != null)
+            {
+                MessageBox.Show("No players selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             foreach (DataGridViewRow item in this.dGVJogadoresTorneio.SelectedRows)
             {
                 dGVJogadoresTorneio.Rows.RemoveAt(item.Index);
@@ -104,7 +109,7 @@ namespace ProjetoDamas
             }
             else if (dGVJogadoresTorneio.Rows.Count == 0)
             {
-                MessageBox.Show("No players were added to the tournament!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No player added to the tournament!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -122,7 +127,6 @@ namespace ProjetoDamas
                 e.Handled = true;
             }
         }
-
 
     }
 }

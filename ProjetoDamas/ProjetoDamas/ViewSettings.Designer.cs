@@ -310,6 +310,7 @@
             this.MinimumSize = new System.Drawing.Size(362, 286);
             this.Name = "ViewSettings";
             this.Text = "Checkers";
+            this.Load += new System.EventHandler(this.ViewSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBReturn)).EndInit();
             this.pVolumeLevel.ResumeLayout(false);
             this.pVolumeLevel.PerformLayout();

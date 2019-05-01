@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Collections;
 
 namespace ProjetoDamas
 {
@@ -50,14 +52,30 @@ namespace ProjetoDamas
         private void pbReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_OponenteServidor.Show();
+            Program.V_OponenteServidor.ShowDialog();
         }
 
         private void ViewJogadoresNoServidor_Load(object sender, EventArgs e)
         {
+            pDataGridView.BackColor = Color.FromArgb(150, 0, 0, 0);
+
+            ///
+            ///Inicialização dos componentes da form
+            ///
+
             cTBNickname.Visible = false;
             cBCountries.Visible = false;
             rBNone.Checked = true;
+            cTBNickname.Text = "";
+            //bSelect.Enabled = false;
+            cBCountries.Text = "Portugal";
+
+            var list = CultureInfo.GetCultures(CultureTypes.SpecificCultures).
+            Select(p => new RegionInfo(p.Name).EnglishName).
+            Distinct().OrderBy(s => s).ToList();
+            cBCountries.DataSource = list;
+            cBCountries.SelectedIndex = 177;
+
 
             ///
             ///inicializar a DataGridView
@@ -70,9 +88,16 @@ namespace ProjetoDamas
 
         }
 
+        private void dGVServerOpponent_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            if (dGVServerOpponent.Rows.Count == 1)
+            {
+                bSelect.Enabled = true;
+            }
+        }
+
         private void bSelect_Click(object sender, EventArgs e)
         {
-            
             foreach (DataGridViewRow row in dGVServerOpponent.SelectedRows)
             {
                 //Enviar para a ViewOponenteServidor
@@ -84,18 +109,14 @@ namespace ProjetoDamas
             }
 
             this.Hide();
-            Program.V_OponenteServidor.ShowDialog();
+            //Program.V_OponenteServidor.ShowDialog();
 
             if (PedidoAlterarOponenteOnline != null)
             {
                 PedidoAlterarOponenteOnline(value1, value2);
             }
-
         }
 
-        private void dGVEstatisticas_SelectionChanged(object sender, EventArgs e)
-        {
-            bSelect.Visible = !bSelect.Visible;//-------------------------------------------------------------------------
-        }
+
     }
 }

@@ -32,12 +32,12 @@
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.lStatistics = new System.Windows.Forms.Label();
             this.pDataGridView = new System.Windows.Forms.Panel();
-            this.rBNone = new System.Windows.Forms.RadioButton();
             this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.dTPDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.cTBTimePlayed = new ProjetoDamas.CueTextBox();
-            this.rBName = new System.Windows.Forms.RadioButton();
             this.cBCountries = new System.Windows.Forms.ComboBox();
+            this.rBNone = new System.Windows.Forms.RadioButton();
+            this.rBName = new System.Windows.Forms.RadioButton();
             this.rBBirthDate = new System.Windows.Forms.RadioButton();
             this.rBTimePlayed = new System.Windows.Forms.RadioButton();
             this.rBCountry = new System.Windows.Forms.RadioButton();
@@ -83,12 +83,12 @@
             this.pDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pDataGridView.Controls.Add(this.rBNone);
             this.pDataGridView.Controls.Add(this.cTBNickname);
             this.pDataGridView.Controls.Add(this.dTPDataNascimento);
             this.pDataGridView.Controls.Add(this.cTBTimePlayed);
-            this.pDataGridView.Controls.Add(this.rBName);
             this.pDataGridView.Controls.Add(this.cBCountries);
+            this.pDataGridView.Controls.Add(this.rBNone);
+            this.pDataGridView.Controls.Add(this.rBName);
             this.pDataGridView.Controls.Add(this.rBBirthDate);
             this.pDataGridView.Controls.Add(this.rBTimePlayed);
             this.pDataGridView.Controls.Add(this.rBCountry);
@@ -99,29 +99,13 @@
             this.pDataGridView.Size = new System.Drawing.Size(561, 308);
             this.pDataGridView.TabIndex = 28;
             // 
-            // rBNone
-            // 
-            this.rBNone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rBNone.AutoSize = true;
-            this.rBNone.BackColor = System.Drawing.Color.Transparent;
-            this.rBNone.Checked = true;
-            this.rBNone.Font = new System.Drawing.Font("Kristen ITC", 9F);
-            this.rBNone.ForeColor = System.Drawing.Color.DimGray;
-            this.rBNone.Location = new System.Drawing.Point(403, 227);
-            this.rBNone.Name = "rBNone";
-            this.rBNone.Size = new System.Drawing.Size(58, 21);
-            this.rBNone.TabIndex = 86;
-            this.rBNone.TabStop = true;
-            this.rBNone.Text = "None";
-            this.rBNone.UseVisualStyleBackColor = false;
-            // 
             // cTBNickname
             // 
             this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cTBNickname.Cue = "Nickname";
             this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(100, 222);
+            this.cTBNickname.Location = new System.Drawing.Point(100, 227);
             this.cTBNickname.Name = "cTBNickname";
             this.cTBNickname.Size = new System.Drawing.Size(199, 29);
             this.cTBNickname.TabIndex = 85;
@@ -138,7 +122,7 @@
             this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dTPDataNascimento.Location = new System.Drawing.Point(100, 222);
+            this.dTPDataNascimento.Location = new System.Drawing.Point(100, 227);
             this.dTPDataNascimento.Name = "dTPDataNascimento";
             this.dTPDataNascimento.Size = new System.Drawing.Size(199, 29);
             this.dTPDataNascimento.TabIndex = 84;
@@ -150,11 +134,40 @@
             this.cTBTimePlayed.Cue = "Time played";
             this.cTBTimePlayed.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBTimePlayed.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBTimePlayed.Location = new System.Drawing.Point(100, 222);
+            this.cTBTimePlayed.Location = new System.Drawing.Point(100, 227);
             this.cTBTimePlayed.Name = "cTBTimePlayed";
             this.cTBTimePlayed.Size = new System.Drawing.Size(199, 29);
             this.cTBTimePlayed.TabIndex = 83;
             this.cTBTimePlayed.Visible = false;
+            // 
+            // cBCountries
+            // 
+            this.cBCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cBCountries.FormattingEnabled = true;
+            this.cBCountries.Location = new System.Drawing.Point(100, 227);
+            this.cBCountries.Name = "cBCountries";
+            this.cBCountries.Size = new System.Drawing.Size(199, 29);
+            this.cBCountries.TabIndex = 80;
+            this.cBCountries.Visible = false;
+            // 
+            // rBNone
+            // 
+            this.rBNone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rBNone.AutoSize = true;
+            this.rBNone.BackColor = System.Drawing.Color.Transparent;
+            this.rBNone.Checked = true;
+            this.rBNone.Font = new System.Drawing.Font("Kristen ITC", 9F);
+            this.rBNone.ForeColor = System.Drawing.Color.DimGray;
+            this.rBNone.Location = new System.Drawing.Point(403, 227);
+            this.rBNone.Name = "rBNone";
+            this.rBNone.Size = new System.Drawing.Size(58, 21);
+            this.rBNone.TabIndex = 86;
+            this.rBNone.TabStop = true;
+            this.rBNone.Text = "None";
+            this.rBNone.UseVisualStyleBackColor = false;
+            this.rBNone.CheckedChanged += new System.EventHandler(this.rBNone_CheckedChanged);
             // 
             // rBName
             // 
@@ -169,18 +182,7 @@
             this.rBName.TabIndex = 81;
             this.rBName.Text = "Nickname";
             this.rBName.UseVisualStyleBackColor = false;
-            // 
-            // cBCountries
-            // 
-            this.cBCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(100, 222);
-            this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(199, 29);
-            this.cBCountries.TabIndex = 80;
-            this.cBCountries.Visible = false;
+            this.rBName.CheckedChanged += new System.EventHandler(this.rBName_CheckedChanged);
             // 
             // rBBirthDate
             // 
@@ -195,6 +197,7 @@
             this.rBBirthDate.TabIndex = 79;
             this.rBBirthDate.Text = "Birth date";
             this.rBBirthDate.UseVisualStyleBackColor = false;
+            this.rBBirthDate.CheckedChanged += new System.EventHandler(this.rBBirthDate_CheckedChanged);
             // 
             // rBTimePlayed
             // 
@@ -209,6 +212,7 @@
             this.rBTimePlayed.TabIndex = 78;
             this.rBTimePlayed.Text = "Time played";
             this.rBTimePlayed.UseVisualStyleBackColor = false;
+            this.rBTimePlayed.CheckedChanged += new System.EventHandler(this.rBTimePlayed_CheckedChanged);
             // 
             // rBCountry
             // 
@@ -223,6 +227,7 @@
             this.rBCountry.TabIndex = 77;
             this.rBCountry.Text = "Country";
             this.rBCountry.UseVisualStyleBackColor = false;
+            this.rBCountry.CheckedChanged += new System.EventHandler(this.rBCountry_CheckedChanged);
             // 
             // lSearchBy
             // 

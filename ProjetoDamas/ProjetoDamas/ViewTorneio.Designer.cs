@@ -32,10 +32,8 @@
             this.lTournament = new System.Windows.Forms.Label();
             this.pbReturn = new System.Windows.Forms.PictureBox();
             this.pDataGridView = new System.Windows.Forms.Panel();
-            this.cTBTournamentName = new ProjetoDamas.CueTextBox();
             this.bRemove = new System.Windows.Forms.Button();
             this.bAddPlayer = new System.Windows.Forms.Button();
-            this.cTBNickname = new ProjetoDamas.CueTextBox();
             this.rBOnlineGame = new System.Windows.Forms.RadioButton();
             this.rBLocalGame = new System.Windows.Forms.RadioButton();
             this.lAddToTournament = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.lTournamentInfo = new System.Windows.Forms.Label();
             this.pConeccaoServidor = new System.Windows.Forms.Panel();
             this.cTBServerIP = new ProjetoDamas.CueTextBox();
+            this.cTBTournamentName = new ProjetoDamas.CueTextBox();
+            this.cTBNickname = new ProjetoDamas.CueTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.pDataGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVJogadoresTorneio)).BeginInit();
@@ -98,17 +98,6 @@
             this.pDataGridView.Size = new System.Drawing.Size(521, 211);
             this.pDataGridView.TabIndex = 90;
             // 
-            // cTBTournamentName
-            // 
-            this.cTBTournamentName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cTBTournamentName.Cue = "Tournament name";
-            this.cTBTournamentName.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBTournamentName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBTournamentName.Location = new System.Drawing.Point(77, 103);
-            this.cTBTournamentName.Name = "cTBTournamentName";
-            this.cTBTournamentName.Size = new System.Drawing.Size(201, 29);
-            this.cTBTournamentName.TabIndex = 0;
-            // 
             // bRemove
             // 
             this.bRemove.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -134,17 +123,6 @@
             this.bAddPlayer.Text = "Add";
             this.bAddPlayer.UseVisualStyleBackColor = true;
             this.bAddPlayer.Click += new System.EventHandler(this.bAddPlayer_Click);
-            // 
-            // cTBNickname
-            // 
-            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cTBNickname.Cue = "Nickname";
-            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(77, 138);
-            this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(201, 29);
-            this.cTBNickname.TabIndex = 1;
             // 
             // rBOnlineGame
             // 
@@ -184,7 +162,7 @@
             this.lAddToTournament.BackColor = System.Drawing.Color.Transparent;
             this.lAddToTournament.Font = new System.Drawing.Font("Kristen ITC", 10F, System.Drawing.FontStyle.Bold);
             this.lAddToTournament.ForeColor = System.Drawing.Color.DimGray;
-            this.lAddToTournament.Location = new System.Drawing.Point(54, 80);
+            this.lAddToTournament.Location = new System.Drawing.Point(12, 80);
             this.lAddToTournament.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lAddToTournament.Name = "lAddToTournament";
             this.lAddToTournament.Size = new System.Drawing.Size(108, 19);
@@ -282,11 +260,33 @@
             this.cTBServerIP.Cue = "Server IP";
             this.cTBServerIP.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cTBServerIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBServerIP.Location = new System.Drawing.Point(61, 13);
+            this.cTBServerIP.Location = new System.Drawing.Point(35, 13);
             this.cTBServerIP.Name = "cTBServerIP";
             this.cTBServerIP.Size = new System.Drawing.Size(223, 29);
             this.cTBServerIP.TabIndex = 87;
             this.cTBServerIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cTBServerIP_KeyPress);
+            // 
+            // cTBTournamentName
+            // 
+            this.cTBTournamentName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cTBTournamentName.Cue = "Tournament name";
+            this.cTBTournamentName.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBTournamentName.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBTournamentName.Location = new System.Drawing.Point(35, 103);
+            this.cTBTournamentName.Name = "cTBTournamentName";
+            this.cTBTournamentName.Size = new System.Drawing.Size(223, 29);
+            this.cTBTournamentName.TabIndex = 0;
+            // 
+            // cTBNickname
+            // 
+            this.cTBNickname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cTBNickname.Cue = "Nickname";
+            this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F);
+            this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cTBNickname.Location = new System.Drawing.Point(35, 138);
+            this.cTBNickname.Name = "cTBNickname";
+            this.cTBNickname.Size = new System.Drawing.Size(223, 29);
+            this.cTBNickname.TabIndex = 1;
             // 
             // ViewTorneio
             // 

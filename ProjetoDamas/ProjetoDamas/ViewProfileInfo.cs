@@ -64,7 +64,7 @@ namespace ProjetoDamas
             }
 
             this.Hide();
-            Program.V_Menu.ShowDialog();
+            Program.V_Menu.Show();
         }
 
 
