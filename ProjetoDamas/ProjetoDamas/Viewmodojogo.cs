@@ -178,6 +178,13 @@ namespace ProjetoDamas
             lOnlineInfo.Visible = false;
         }
 
+        private void ViewModoJogo_VisibleChanged(object sender, EventArgs e)
+        {
+
+            if(Visible == true)
+                InicialiazarView();
+        }
+
 
         /// <summary>
         /// 

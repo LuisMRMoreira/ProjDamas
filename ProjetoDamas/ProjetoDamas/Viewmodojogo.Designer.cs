@@ -273,6 +273,7 @@
             this.Name = "ViewModoJogo";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewModoJogo_Load);
+            this.VisibleChanged += new System.EventHandler(this.ViewModoJogo_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
             this.pJogo.ResumeLayout(false);
             this.pJogo.PerformLayout();
