@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using WMPLib;
 
 namespace ProjetoDamas
 {
@@ -15,13 +16,15 @@ namespace ProjetoDamas
     {
 
         public event MetodosSemParametros PedidoLogin;
-
+        public WindowsMediaPlayer wepg;
 
         public ViewMenu()
         {
             InitializeComponent();
             Program.M_Gestor.PedidoAlterarLogin += M_Gestor_PedidoAlterarLogin;
             Program.M_Gestor.PedidoTerminarSessaoNaView += M_Gestor_PedidoTerminarSessaoNaView;
+            wepg = new WindowsMediaPlayer();
+            wepg.URL = "Resources\\Minecraft-Theme Song.mp3";
         }
 
         private void M_Gestor_PedidoTerminarSessaoNaView()
@@ -64,8 +67,11 @@ namespace ProjetoDamas
         {
             pPainelOpcoes.BackColor = Color.FromArgb(80, 0, 0, 0);
 
+            if (wepg.controls.currentPosition == 0)
+            {
+                wepg.controls.play();
+            }
 
-                       
         }
 
 

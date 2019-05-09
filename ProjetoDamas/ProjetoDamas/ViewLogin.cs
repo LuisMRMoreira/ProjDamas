@@ -24,7 +24,7 @@ namespace ProjetoDamas
 
         private void M_Jogador_ContaCriada()
         {
-            this.ShowDialog();
+            this.Show();
         }
 
         private void M_Gestor_PedidoMostrarLogin()
