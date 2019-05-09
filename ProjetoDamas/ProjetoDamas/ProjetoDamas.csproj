@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Delegates.cs" />
     <Compile Include="PlayMusic.cs" />
+    <Compile Include="ResetControls.cs" />
     <Compile Include="ViewEnd.cs">
       <SubType>Form</SubType>
     </Compile>
