@@ -21,14 +21,9 @@ namespace ProjetoDamas
         public ViewProfileInfo()
         {
             InitializeComponent();
-            Program.M_Gestor.PedidoMostrarPerfil += M_Gestor_PedidoMostrarPerfil;
 
         }
 
-        private void M_Gestor_PedidoMostrarPerfil()
-        {
-            this.Show();
-        }
 
         private void ViewProfileInfo_Load(object sender, EventArgs e)
         {

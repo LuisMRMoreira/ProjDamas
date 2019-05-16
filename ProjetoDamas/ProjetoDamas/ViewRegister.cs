@@ -14,13 +14,13 @@ namespace ProjetoDamas
 {
     public partial class ViewRegister : Form
     {
-        public event MetodosComInfoJogador PedidoCriarJogador;
+        public event MetodosComInfoJogador PedidoCriarJogador; //ModelJogador
 
         public ViewRegister()
         {
             InitializeComponent();
             Program.M_Jogador.ErroPassDiferente += M_Jogador_ErroPassDiferente;
-            Program.M_Jogador.ContaCriada += M_Jogador_ContaCriada;
+            Program.M_Jogador.ContaCriada += M_Jogador_ContaCriada; 
         }
 
         private void M_Jogador_ContaCriada()
@@ -67,7 +67,7 @@ namespace ProjetoDamas
         {
             if (PedidoCriarJogador != null)
             {
-                PedidoCriarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBConfirmPass.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, pBAvatar.ImageLocation, dTPDataNascimento.Text);
+                PedidoCriarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBConfirmPass.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, this.pBAvatar.ImageLocation, this.dTPDataNascimento.Text);
             }
         }
 
@@ -99,6 +99,21 @@ namespace ProjetoDamas
             }
         }
 
-
+        private void ViewRegister_VisibleChanged(object sender, EventArgs e)
+        {
+            //Sempre que a visibilidade muda, os valores voltam a estar nulos
+            if (this.Visible)
+            {
+                ctBUsername.Text = "";
+                cTBPassword.Text = "";
+                cTBConfirmPass.Text = "";
+                cTBNickname.Text = "";
+                cTBEmail.Text = "";
+                cBCountries.Text = "Portugal";
+                pBAvatar
+                dTPDataNascimento.Value = DateTime.Today;
+            }
+            
+        }
     }
 }

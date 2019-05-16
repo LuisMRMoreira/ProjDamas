@@ -29,7 +29,7 @@ namespace ProjetoDamas
         {
             pJogo.BackColor = Color.FromArgb(170, 0, 0, 0);
 
-            this.InicialiazarView();
+            //this.InicialiazarView();
 
             
         }

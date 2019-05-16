@@ -539,6 +539,7 @@
             this.Name = "ViewRegister";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewRegister_Load);
+            this.VisibleChanged += new System.EventHandler(this.ViewRegister_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatar)).EndInit();
             this.pCountry.ResumeLayout(false);

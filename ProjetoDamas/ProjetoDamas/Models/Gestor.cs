@@ -8,11 +8,10 @@ namespace ProjetoDamas
 {
     public class Gestor
     {
-        public event MetodosComDuasStrings PedidoAlterarLogin;
-        public event MetodosSemParametros PedidoMostrarPerfil;
-        public event MetodosSemParametros PedidoMostrarLogin;
-        public event MetodosSemParametros PedidoTerminarSessaoNaView;
-        public event MetodosSemParametros RespostaDadosGuardados;
+        public event MetodosSemParametros RespostaDadosGuardados; //View...
+        public event MetodosComDuasStrings RespostaLoginBemSucedido; //ViewMenu
+        public event MetodosSemParametros RespostaLoginInvalido; //ViewLogin
+        public event MetodosSemParametros RespostaTerminarSessao; //ViewLogin
 
 
         public bool Login = false;
@@ -35,7 +34,7 @@ namespace ProjetoDamas
 
         public void GuardarDados(int volume, string tamanho)
         {
-            //Guardar dados ---------------------------------------------------------------------------------------------------------------------------------
+            //BASE DE DADOS: Guardar dados ---------------------------------------------------------------------------------------------------------------
 
             if (RespostaDadosGuardados != null)
             {
@@ -44,48 +43,55 @@ namespace ProjetoDamas
             
 
         }
-        
 
-        public void AlterarLogin()
-        {//altera a lable e a imagem que do login. Aqui vamos ter de ir buscar à base de dados ---------------------------------------------------------------------------------------------------------------------------------
 
-            if (Login)
+
+
+
+        public void TermninarSessao()
+        {
+            //Destruir instancia de jogador caso tenha sido criada no metodo VerificarLogin????? 
+
+            //Voltar à ViewLogin
+            if (RespostaTerminarSessao != null)
             {
-                if (PedidoTerminarSessaoNaView != null)
-                {
-                    PedidoTerminarSessaoNaView();
-                    Login = false;
-                }
+                RespostaTerminarSessao();
             }
-            else
-            {
-                if (PedidoAlterarLogin != null)
-                {
-                    PedidoAlterarLogin(@"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources\" + "DamaBranca", "nomezito");
-                    Login = true;
-                }
-            }
-            
 
         }
 
 
-        public void AbrePerfilOuLogin()
-        {
-            if (Login)//Se ja tiver feito login
+
+        public void VerificarLogin(string username, string password)
+        {//BASE DE DADOS: Verificar se os valores coincidem (LEMBRAR: A password na base de dados está encriprada)
+
+            if (/*forem válidos*/true)
             {
-                if (PedidoMostrarPerfil != null)
+                //BASE DE DADOS: Obter a imagem e nickname do jogador na Base de dados
+                string localizacaoImagem_jogador = null;
+                string nikname_jogador = null;
+
+                //abrir View Menu com a lable com o nome e imahem do jogador
+                if (RespostaLoginBemSucedido != null)
                 {
-                    PedidoMostrarPerfil();
+                    RespostaLoginBemSucedido(nikname_jogador,localizacaoImagem_jogador);
                 }
+
+                //instanciar um jogador???
+
+                
             }
-            else
+            else /*Caso sejam invalidos*/
             {
-                if (PedidoMostrarLogin != null)
+                //Mostrar mensagem de erro
+
+                if (RespostaLoginInvalido != null)
                 {
-                    PedidoMostrarLogin();
-                }
+                    RespostaLoginInvalido();
+                }                
             }
+
+
 
         }
 

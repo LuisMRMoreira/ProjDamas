@@ -12,15 +12,40 @@ namespace ProjetoDamas
 {    
     public partial class ViewLogin : Form
     {
-        public event MetodosSemParametros PedidoAlterarLableVmenu;
+        public event MetodosComDuasStrings PedidoLoginJogador;
 
         public ViewLogin()
         {
             InitializeComponent();
-            Program.M_Gestor.PedidoMostrarLogin += M_Gestor_PedidoMostrarLogin;
             Program.M_Jogador.ContaCriada += M_Jogador_ContaCriada;
 
+
+
+
+            Program.M_Gestor.RespostaLoginInvalido += M_Gestor_RespostaLoginInvalido;
+            Program.M_Gestor.RespostaTerminarSessao += M_Gestor_RespostaTerminarSessao;
+
         }
+
+        private void M_Gestor_RespostaTerminarSessao()
+        {
+            this.Show();
+            MessageBox.Show("The session has ended successfully", "Successfull logout", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            ctBUsername.Text = "";
+            cTBPassword.Text = "";
+        }
+
+        private void M_Gestor_RespostaLoginInvalido()
+        {
+            this.Show();
+            MessageBox.Show("Invalid username or password. Please try again.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            ctBUsername.Text = "";
+            cTBPassword.Text = "";
+        }
+
+
+
+
 
         private void M_Jogador_ContaCriada()
         {
@@ -44,23 +69,10 @@ namespace ProjetoDamas
         {
             this.Hide();
 
-            if (PedidoAlterarLableVmenu != null)
+            if (PedidoLoginJogador != null)
             {
-                PedidoAlterarLableVmenu();
+                PedidoLoginJogador(ctBUsername.Text, cTBPassword.Text);
             }
-
-            //evia evento para 
-            
-            
-            //Menu menu = new Menu
-            //this.Hide();
-            //iewMenu Menu = new ViewMenu();
-            //Menu.Size = this.Size;
-            //Menu.Location = this.Location;// new Point(this.Left, this.Top);            
-            //Menu.Show();            
-            //Menu.Closed += (s, args) => this.Close();
-
-            
             
         }
 

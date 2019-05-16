@@ -14,54 +14,41 @@ namespace ProjetoDamas
 {
     public partial class ViewMenu : Form
     {
-
-        public event MetodosSemParametros PedidoLogin;
         public WindowsMediaPlayer wepg;
 
         public ViewMenu()
         {
             InitializeComponent();
-            Program.M_Gestor.PedidoAlterarLogin += M_Gestor_PedidoAlterarLogin;
-            Program.M_Gestor.PedidoTerminarSessaoNaView += M_Gestor_PedidoTerminarSessaoNaView;
+
+
+            Program.M_Gestor.RespostaLoginBemSucedido += M_Gestor_RespostaLoginBemSucedido;
+
+
             wepg = new WindowsMediaPlayer();
             wepg.URL = "Resources\\Minecraft-Theme Song.mp3";
         }
 
-        private void M_Gestor_PedidoTerminarSessaoNaView()
-        {
-            lLogin.Text = "Login";
-            pBLogin.Image = Properties.Resources.user_interface_login_icon__12_1_;
-            //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
+
+        /// <summary>
+        /// Eventos na ViewMenu
+        /// </summary>
+        /// <param name="nickname"></param>
+        /// <param name="imagem"></param>
+
+        ///Login bem sucedido. Muda a label para o nickname do jogador e a imagem para a imgame do jogador. 
+        private void M_Gestor_RespostaLoginBemSucedido(string nickname, string imagem)
+        {            
+            lLogin.Text = nickname;
+            pBLogin.ImageLocation = nickname;
             this.Show();
         }
 
-        private void M_Gestor_PedidoAlterarLogin(string imagem, string nome)
-        {
-            lLogin.Text = "Grupo";
-            pBLogin.Image = Properties.Resources.DamaBranca;
-            //pBLogin.ImageLocation = @"C:\Users\lmr_m\Desktop\Temporario\Laboratorio\ProjDamas\ProjetoDamas\ProjetoDamas\Resources";
-            this.Show();
-        }
 
-
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("You sure you wanna leave the aplicattion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-
- 
-        private void buttonProfile_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Program.V_Settings.Show();
-        }
-
-
+        /// <summary>
+        /// Inicialização da ViewMenu. Cor de fundo e Musica.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ViewMenu_Load(object sender, EventArgs e)
         {
@@ -76,34 +63,11 @@ namespace ProjetoDamas
 
 
 
-        private void bGameInfo_Click_2(object sender, EventArgs e)
-        {
-            this.Hide();
-            Program.V_GameStatistics.Show();
-        }
-
-
-
-        private void pLoginOrUsername_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            //Program.V_Login.Show();
-
-            if (PedidoLogin != null)
-            {
-                PedidoLogin();
-            }
-
-            //Program.M_Gestor.Login
-
-            //this.Hide();
-            //ViewLogin login = new ViewLogin();
-            //login.Closed += (s, args) => this.Close();
-            //login.Show();
-
-        }
-
-
+        /// <summary>
+        /// Evento Click do butões 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void buttonjogar_Click(object sender, EventArgs e)
         {
@@ -135,51 +99,24 @@ namespace ProjetoDamas
             Program.V_TorneiosInacabados.Show();
         }
 
+        private void bSettings_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_Settings.Show();
+        }
 
+        private void bGameInfo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.V_GameStatistics.Show();
+        }
 
-
-
-
-
-
-        /*
-         
-         
-                     //Graphics graphics = e.Graphics;
-
-            ////the rectangle, the same size as our Form
-            //Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
-
-            ////define gradient's properties
-            //Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(0, 0, 0), Color.FromArgb(227,128, 57), 100f);
-
-            ////apply gradient         
-            //graphics.FillRectangle(b, gradient_rectangle);
-
-            LinearGradientBrush linearGradientBrush =
-   new LinearGradientBrush(pPainelOpcoes.ClientRectangle, Color.Red, Color.Yellow, 45);
-
-            ColorBlend cblend = new ColorBlend(3);
-            cblend.Colors = new Color[3] { Color.Red, Color.Yellow, Color.Green };
-            cblend.Positions = new float[3] { 0f, 0.5f, 1f };
-
-            linearGradientBrush.InterpolationColors = cblend;
-
-            e.Graphics.FillRectangle(linearGradientBrush, pPainelOpcoes.ClientRectangle);
-         
-         
-         
-         
-         
-         
-         */
-
-
-
-
-
-
-
+        private void pLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //PERGUNTA: é necessario fazer um evento que chame o Show dentro da ViewLogin()????????????
+            Program.V_Login.Show();
+        }
     }
 
 
