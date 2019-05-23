@@ -14,6 +14,8 @@ namespace ProjetoDamas
     {
         bool robot = false, local = false;
 
+        public event MetodosSemParametros PedidoComecarJogo;
+
         public ViewModoJogo()
         {
             InitializeComponent();
@@ -198,19 +200,23 @@ namespace ProjetoDamas
             if (robot)
             {
                 this.Hide();
-                Program.V_JogoRobot.ShowDialog();
+                Program.V_JogoRobot.Show();
             }
             else
             {
                 if (local)
                 {
                     this.Hide();
-                    Program.V_JogoMultiplayer.ShowDialog();
+                    Program.V_JogoMultiplayer.Show();
+                    if (PedidoComecarJogo != null)
+                    {
+                        PedidoComecarJogo();
+                    }
                 }
                 else
                 {
                     this.Hide();
-                    Program.V_OponenteServidor.ShowDialog();
+                    Program.V_OponenteServidor.Show();
                 }
                 
             }

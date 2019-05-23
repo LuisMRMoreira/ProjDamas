@@ -981,6 +981,7 @@
             this.Name = "ViewJogo";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogo_Load);
+            this.VisibleChanged += new System.EventHandler(this.ViewJogo_VisibleChanged);
             this.tLPTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).EndInit();

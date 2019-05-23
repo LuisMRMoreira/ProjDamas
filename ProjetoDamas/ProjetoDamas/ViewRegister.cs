@@ -110,7 +110,7 @@ namespace ProjetoDamas
                 cTBNickname.Text = "";
                 cTBEmail.Text = "";
                 cBCountries.Text = "Portugal";
-                pBAvatar
+                //pBAvatar
                 dTPDataNascimento.Value = DateTime.Today;
             }
             

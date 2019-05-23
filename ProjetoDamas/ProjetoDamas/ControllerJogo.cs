@@ -12,7 +12,13 @@ namespace ProjetoDamas
         public ControllerJogo()
         {
             Program.V_JogadoresNoServidor.PedidoAlterarOponenteOnline += V_JogadoresNoServidor_PedidoAlterarOponenteOnline;
+            Program.V_ModoJogo.PedidoComecarJogo += V_ModoJogo_PedidoComecarJogo;
 
+        }
+
+        private void V_ModoJogo_PedidoComecarJogo()
+        {
+            Program.M_Jogo.ComecarJogo();
         }
 
         private void V_JogadoresNoServidor_PedidoAlterarOponenteOnline(string nickname, string servidorIP)

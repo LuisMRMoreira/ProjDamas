@@ -10,5 +10,9 @@ namespace ProjetoDamas
     {
         //Classe representativa da peça de jogo dama
         //O movimento mais amplo que a peça simples
+
+        public Dama(bool cor)
+            : base(cor)
+        { }
     }
 }

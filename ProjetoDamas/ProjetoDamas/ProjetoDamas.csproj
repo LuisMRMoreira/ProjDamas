@@ -49,12 +49,14 @@
     <Compile Include="ControllerGestor.cs" />
     <Compile Include="ControllerJogador.cs" />
     <Compile Include="ControllerJogo.cs" />
+    <Compile Include="ControllerTabuleiro.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Delegates.cs" />
     <Compile Include="PlayMusic.cs" />
     <Compile Include="ResetControls.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="ViewEnd.cs">
       <SubType>Form</SubType>
     </Compile>

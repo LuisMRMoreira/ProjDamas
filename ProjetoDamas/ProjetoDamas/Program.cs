@@ -32,14 +32,16 @@ namespace ProjetoDamas
         public static Gestor M_Gestor { get; private set; }
         public static Jogador M_Jogador { get; private set; }
         public static Jogo M_Jogo { get; private set; }
+        public static Tabuleiro M_Tabuleiro { get; private set; }
 
 
         //Controller
         public static ControllerGestor C_Gestor { get; private set; }
         public static ControllerJogador C_Jogador { get; private set; }
         public static ControllerJogo C_Jogo { get; private set; }
+        public static ControllerTabuleiro C_Tabuleiro { get; private set; }
 
-        
+
 
         /// <summary>
         /// The main entry point for the application.
@@ -52,6 +54,7 @@ namespace ProjetoDamas
             M_Gestor = new Gestor();
             M_Jogador = new Jogador();
             M_Jogo = new Jogo();
+            M_Tabuleiro = new Tabuleiro();
             V_Menu = new ViewMenu();
             V_Login = new ViewLogin();
             V_Register = new ViewRegister();
@@ -72,6 +75,7 @@ namespace ProjetoDamas
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
             C_Jogo = new ControllerJogo();
+            C_Tabuleiro = new ControllerTabuleiro();
             Application.Run(V_Menu);
         }
     }

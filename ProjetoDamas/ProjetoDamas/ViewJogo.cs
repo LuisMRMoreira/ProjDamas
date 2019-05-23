@@ -15,21 +15,16 @@ namespace ProjetoDamas
         public event MetodosSemParametros PedidoRetirarReturnSettings;
         public event MetodosSemParametros PedidoRetirarReturnRegras;
 
-        public PictureBox[,] PictureBoxDoPanel, ArraySavePBP;
+
+        public event MetodosComUmaPosicao PedidoMostarPossiveisJogadas;
+
+        public PictureBox[,] PictureBoxDoPanel;
         PictureBox selected;
 
         public ViewJogo()//attache image to cursor
         {
             InitializeComponent();
             PictureBoxDoPanel = new PictureBox[8, 4] { { pB00, pB20, pB40, pB60 },
-                                                       { pB11, pB31, pB51, pB71 },
-                                                       { pB02, pB22, pB42, pB62 },
-                                                       { pB13, pB33, pB53, pB73 },
-                                                       { pB04, pB24, pB44, pB64 },
-                                                       { pB15, pB35, pB55, pB75 },
-                                                       { pB06, pB26, pB46, pB66 },
-                                                       { pB17, pB37, pB57, pB77 }};
-            ArraySavePBP = new PictureBox[8, 4] { { pB00, pB20, pB40, pB60 },
                                                        { pB11, pB31, pB51, pB71 },
                                                        { pB02, pB22, pB42, pB62 },
                                                        { pB13, pB33, pB53, pB73 },
@@ -48,27 +43,39 @@ namespace ProjetoDamas
                 //box.Paint += PictureBox_Paint;
             }
 
-            
 
-            
+
+            Program.M_Tabuleiro.RespostaPossiveisJogadas += M_Tabuleiro_RespostaPossiveisJogadas;
             
 
         }
 
+        private void M_Tabuleiro_RespostaPossiveisJogadas(List<Coordenada> coordenadas)
+        {
+            //Pintar coordenadas enviadas
 
-
-
+            foreach  (Coordenada coor in coordenadas)
+            {
+                foreach (var box in PictureBoxDoPanel)
+                {
+                    if (box.Name == "pB" + coor.x.ToString() + coor.y.ToString())
+                    {
+                        box.BackColor = Color.FromArgb(100,20,0,0);
+                    }
+                }
+            }
+        }
 
         private void PictureBox_DragDrop(object sender, DragEventArgs e)
         {
+
             var target = (PictureBox)sender;
             var source = (PictureBox)e.Data.GetData(typeof(PictureBox));
             
-            if (target.Image == null && MoveLengthVality(PictureBoxDoPanel, source, target))
+            if (target.Image == null /* && está nas possiveis jogadas*/)
             {
                 if (e.Data.GetDataPresent(typeof(PictureBox)))
-                {
-                    
+                {                    
                     if (source != target)
                     {
                         Console.WriteLine("Do DragDrop from " + source.Name + " to " + target.Name);
@@ -84,12 +91,28 @@ namespace ProjetoDamas
                     }
                 }
             }
+
+            tLPTabuleiro.CellPaint += tLPTabuleiro_CellPaint;//Depois de fazer o drag and drop, limpa as sugestões de possiveis jogadas
+            
             Console.WriteLine("Don't do DragDrop");
         }
-        
+
+
         private void PictureBox_DragEnter(object sender, DragEventArgs e)
         {
+
             e.Effect = DragDropEffects.Move;
+
+            string nome = ((PictureBox)sender).Name;
+            int x, y;
+            x = Convert.ToInt32((nome.Remove(0, 2)).Remove(1, 1)); // pB02 -> 0
+            y = Convert.ToInt32(nome.Remove(0, 3));// pB02 -> 2
+
+
+            if (PedidoMostarPossiveisJogadas != null)
+            {
+                PedidoMostarPossiveisJogadas(x, y);
+            }
         }
         
         private void PictureBox_MouseClick(object sender, MouseEventArgs e)
@@ -169,89 +192,89 @@ namespace ProjetoDamas
         }
 
 
-        private void GerarPecasNoTabuleiro(bool corCima)
-        {
-            for (int x = 0; x < 8; x++)
-            {
-                for (int y = 0; y < 4; y++)
-                {
-                    if (corCima) //0 branco, 1 preto
-                    {
-                        if (x < 3)
-                        {
-                            PictureBoxDoPanel[x,y].Image = Properties.Resources.PecaPreta;
-                            PictureBoxDoPanel[x,y].BringToFront();
-                        }
-                        else if (x >= 5)
-                        {
-                            //meter a outra côr
-                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;// Image.FromFile("PecaBranca.png");
-                            PictureBoxDoPanel[x,y].BringToFront();
-                        }
-                        else
-                        {
-                            PictureBoxDoPanel[x, y].Image = null;
-                            PictureBoxDoPanel[x, y].BringToFront();
-                        }
-                    }
-                    else
-                    {
+        //private void GerarPecasNoTabuleiro(bool corCima)
+        //{
+        //    for (int x = 0; x < 8; x++)
+        //    {
+        //        for (int y = 0; y < 4; y++)
+        //        {
+        //            if (corCima) //0 branco, 1 preto
+        //            {
+        //                if (x < 3)
+        //                {
+        //                    PictureBoxDoPanel[x,y].Image = Properties.Resources.PecaPreta;
+        //                    PictureBoxDoPanel[x,y].BringToFront();
+        //                }
+        //                else if (x >= 5)
+        //                {
+        //                    //meter a outra côr
+        //                    PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;// Image.FromFile("PecaBranca.png");
+        //                    PictureBoxDoPanel[x,y].BringToFront();
+        //                }
+        //                else
+        //                {
+        //                    PictureBoxDoPanel[x, y].Image = null;
+        //                    PictureBoxDoPanel[x, y].BringToFront();
+        //                }
+        //            }
+        //            else
+        //            {
 
-                        if (x < 3)
-                        {
-                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;
-                            PictureBoxDoPanel[x, y].BringToFront();
-                        }
-                        else if (x >= 5)
-                        {
-                            //meter a outra côr
-                            PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaPreta;                            
-                            PictureBoxDoPanel[x, y].BringToFront();
-                        }
-                        else
-                        {
-                            PictureBoxDoPanel[x, y].Image = null;
-                            PictureBoxDoPanel[x, y].BringToFront();
-                        }
-                    }
+        //                if (x < 3)
+        //                {
+        //                    PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaBranca;
+        //                    PictureBoxDoPanel[x, y].BringToFront();
+        //                }
+        //                else if (x >= 5)
+        //                {
+        //                    //meter a outra côr
+        //                    PictureBoxDoPanel[x, y].Image = Properties.Resources.PecaPreta;                            
+        //                    PictureBoxDoPanel[x, y].BringToFront();
+        //                }
+        //                else
+        //                {
+        //                    PictureBoxDoPanel[x, y].Image = null;
+        //                    PictureBoxDoPanel[x, y].BringToFront();
+        //                }
+        //            }
 
-                }
-            }
-        }
-
-
-        private bool MoveLengthVality(PictureBox[,] matrix, PictureBox source, PictureBox target)
-        {
-
-            Point indexSource = new Point();
-            Point indexTarget = new Point(); ;
-
-            for (int y = 0; y < 8; y++)
-            {
-                for (int x = 0; x < 4; x++)
-                {
-                    if (matrix[y, x] == source)
-                    {
-                        indexSource.X = x;
-                        indexSource.Y = y;
-                    }
-                    else if(matrix[y, x] == target)
-                    {
-                        indexTarget.X = x;
-                        indexTarget.Y = y;
-                    }
-                }
-            }
+        //        }
+        //    }
+        //}
 
 
-            if (!(Math.Abs(indexSource.X - indexTarget.X) <=1 && Math.Abs(indexSource.Y - indexTarget.Y) == 1))
-            {
-                return false;
-            }
+        //private bool MoveLengthVality(PictureBox[,] matrix, PictureBox source, PictureBox target)
+        //{
 
-            return true;
+        //    Point indexSource = new Point();
+        //    Point indexTarget = new Point(); ;
 
-        }
+        //    for (int y = 0; y < 8; y++)
+        //    {
+        //        for (int x = 0; x < 4; x++)
+        //        {
+        //            if (matrix[y, x] == source)
+        //            {
+        //                indexSource.X = x;
+        //                indexSource.Y = y;
+        //            }
+        //            else if(matrix[y, x] == target)
+        //            {
+        //                indexTarget.X = x;
+        //                indexTarget.Y = y;
+        //            }
+        //        }
+        //    }
+
+
+        //    if (!(Math.Abs(indexSource.X - indexTarget.X) <=1 && Math.Abs(indexSource.Y - indexTarget.Y) == 1))
+        //    {
+        //        return false;
+        //    }
+
+        //    return true;
+
+        //}
 
 
 
@@ -292,17 +315,6 @@ namespace ProjetoDamas
             ///
             mSJogo.BackColor = Color.FromArgb(150, 0, 0, 0);
             mSJogo.ForeColor = Color.White;
-
-
-            ///
-            /// Inicializar componente
-            ///
-
-            GerarPecasNoTabuleiro(false);
-            //PictureBoxDoPanel = ArraySavePBP;
-            //GerarPecasNoTabuleiro(false);
-
-
         }
 
         private void pBJogadoUm_MouseHover(object sender, EventArgs e)
@@ -366,42 +378,24 @@ namespace ProjetoDamas
             
         }
 
+        private void ViewJogo_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                
 
+            ///
+            /// Inicializar componente
+            ///
 
+            //Evento para a view iniciar as picture box com os valores que estão no model
 
+            //GerarPecasNoTabuleiro(false);
+            //PictureBoxDoPanel = ArraySavePBP;
+            //GerarPecasNoTabuleiro(false);
 
-
-
-
-
-
-
-
-        //private Point firstPoint = new Point();
-        //public void MovingPiece(PictureBox im)
-        //{
-        //    im.MouseDown += (ss, ee) =>
-        //    {
-        //        if (ee.Button == System.Windows.Forms.MouseButtons.Left) { firstPoint = Control.MousePosition; }
-
-        //    };
-
-        //    im.MouseMove += (ss, ee) =>
-        //    {
-        //        if (ee.Button == System.Windows.Forms.MouseButtons.Left)
-        //        {
-        //            Point temp = Control.MousePosition;
-        //            Point res = new Point(firstPoint.X - temp.X, firstPoint.Y - temp.Y);
-
-        //            im.Location = new Point(im.Location.X - res.X, im.Location.Y - res.Y);
-
-        //            firstPoint = temp;
-        //        }
-
-        //    };
-
-
-        //}
+            }
+        }
 
     }
 }

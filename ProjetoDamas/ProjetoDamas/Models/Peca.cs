@@ -8,17 +8,23 @@ namespace ProjetoDamas
 {
     public class Peca : Posicao
     {//Classe que representa cada peca que está no tabuleiro. Recebe as coordenadas por herança de Posicao
-        private bool corPeca; //0-> branca ou 1 ->preta. 
-        private bool estado; //0-> simples ou 1-> dama
-        private List<Coordenada> historico;
-        private int jogadasSucessivas;
+        public bool corPeca { get; private set; } //0-> branca ou 1 ->preta. 
+        public int jogadasSucessivas { get; private set; }
+        public bool sentidoJogada { get; private set; } //0-> cima para baixo ou 1 -> baixo para cima.
 
-        public Coordenada Coordenada
+
+        public Peca(bool corP)
         {
-            get => default(Coordenada);
-            set
-            {
-            }
+            corPeca = corP;
         }
+
+
+        //public Coordenada Coordenada
+        //{
+        //    get => default(Coordenada);
+        //    set
+        //    {
+        //    }
+        //}
     }
 }

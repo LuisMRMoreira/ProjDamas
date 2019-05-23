@@ -12,5 +12,6 @@ namespace ProjetoDamas
     public delegate void MetodosComUmInteiro(int escolha);
     public delegate void MetodosComInfoJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imageLocation, string dataDeNascimento);
     public delegate void MetodosComDoisParametros(int volume, string tamanho); //pode ser alterado
-
+    public delegate void MetodosComUmaPosicao(int x, int y);
+    public delegate void MetodosComListaDeCoordenadas(List<Coordenada> coordenadas);
 }

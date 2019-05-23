@@ -29,6 +29,9 @@ namespace ProjetoDamas
 
         }
 
+        public void ComecarJogo()
+        {
 
+        }
     }
 }
