@@ -11,6 +11,7 @@ namespace ProjetoDamas
         public Posicao[,] tabuleiro { get; private set; }
 
         public List<Coordenada> PossiveisJogadasL { get; private set; }
+        public List<Coordenada> JogadasObrigatoriasL { get; private set; }
 
         public event MetodosComListaDeCoordenadas RespostaPossiveisJogadas; // Vai para a ViewJogo
         public event MetodosSemParametros RespostaTabuleiroInicializado; // Vai para a ViewJogo
@@ -25,6 +26,7 @@ namespace ProjetoDamas
             //INa View jogo, ir buscar as informaçõe necessarias inicializar as posições na View, de acordo com o tabuleiro;
             tabuleiro = new Posicao[8, 8];
             PossiveisJogadasL = new List<Coordenada>();
+            JogadasObrigatoriasL = new List<Coordenada>();
             this.InicializarTabuleiro();
 
         }
@@ -34,6 +36,7 @@ namespace ProjetoDamas
         {
             //PossiveisJogadasL.Clear();//limpar as possiveis jogadas para uma proxima jogada
             PossiveisJogadasL.Clear();
+            JogadasObrigatoriasL.Clear();
 
             int incrementoX, rowDir = x, collumn = y, rowEsq = x; // Usa-se o incremeto de Y para que não se repita o codigo, assim, de acordo com o sentido de jogo (cima para baixo -> y = +1 /**/ baixo cima -> y = -1)
             int xVal,  yVal;
@@ -59,6 +62,7 @@ namespace ProjetoDamas
                                 if ((x + 2 * incrementoX >= 0 && x + 2 * incrementoX <= 7) && (y - 2 >= 0 && y - 2 <= 7))
                                     if (tabuleiro[x + 2 * incrementoX, y - 2] is Vazia)
                                     {
+                                        JogadasObrigatoriasL.Add(new Coordenada(x + 2 * incrementoX, y - 2));
                                         PossiveisJogadasL.Add(new Coordenada(x + 2 * incrementoX, y - 2)); //Posicao Possivel                     
                                     }
                             
@@ -76,6 +80,7 @@ namespace ProjetoDamas
                                 if ((x + 2 * incrementoX <= 7 && x + 2 * incrementoX >= 0) && (y + 2 >= 0 && y + 2 <= 7))
                                     if (tabuleiro[x + 2 * incrementoX, y + 2] is Vazia)
                                     {
+                                        JogadasObrigatoriasL.Add(new Coordenada(x + 2 * incrementoX, y + 2));
                                         PossiveisJogadasL.Add(new Coordenada(x + 2 * incrementoX, y + 2));//Posicao Possivel
                                     }
                         }
@@ -93,6 +98,7 @@ namespace ProjetoDamas
                                 if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y - 2 >= 0 && y - 2 <= 7))
                                     if (tabuleiro[x - 2 * incrementoX, y - 2] is Vazia)
                                     {
+                                        JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));
                                         PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));//Posicao Possivel
                                     }
                         }
@@ -107,6 +113,7 @@ namespace ProjetoDamas
                                 if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y + 2 >= 0 && y + 2 <= 7))
                                     if (tabuleiro[x - 2 * incrementoX, y + 2] is Vazia)
                                     {
+                                        JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));
                                         PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));//Posicao Possivel
                                     }
                         }
@@ -124,7 +131,7 @@ namespace ProjetoDamas
                     //colunaDir += 1; // anda uma unidade para trás no x
                     //colunaEsq -= 1; // anda uma unidade para a frente no x
                     int count = 0;
-
+                    bool pecaEncontrada = false;
                     //diagonal canto superior esquerdo
                     xVal = x - 1;
                     yVal = y - 1;
@@ -146,12 +153,17 @@ namespace ProjetoDamas
                             else
                             {
                                 //Dama come peca
-                                count++;
+                                count++;                                
+                                pecaEncontrada = true;
                             } //Caso contrário, não adiciona, mas continua a contar. Se na posição seguinte estiver outra peça, para de verificar 
                         }
                         else
                         {
                             PossiveisJogadasL.Add(new Coordenada(xVal, yVal));
+                            if (pecaEncontrada) //Se já se tiver encontrado uma peca de cor diferente, a partir desta coordenada, é obrigatória.
+                            {
+                                JogadasObrigatoriasL.Add(new Coordenada(xVal, yVal));
+                            }
                         }
                             
 
@@ -165,6 +177,7 @@ namespace ProjetoDamas
                     xVal = x - 1;
                     yVal = y + 1;
                     count = 0;
+                    pecaEncontrada = false;
 
                     while (xVal >= 0 && yVal <= 7)
                     {
@@ -184,11 +197,16 @@ namespace ProjetoDamas
                             {
                                 //Dama come peca
                                 count++;
+                                pecaEncontrada = true;
                             } //Caso contrário, não adiciona, mas continua a contar. Se na posição seguinte estiver outra peça, para de verificar 
                         }
                         else
                         {
                             PossiveisJogadasL.Add(new Coordenada(xVal, yVal));
+                            if (pecaEncontrada) //Se já se tiver encontrado uma peca de cor diferente, a partir desta coordenada, é obrigatória.
+                            {
+                                JogadasObrigatoriasL.Add(new Coordenada(xVal, yVal));
+                            }
                         }
 
 
@@ -202,6 +220,7 @@ namespace ProjetoDamas
                     xVal = x + 1;
                     yVal = y - 1;
                     count = 0;
+                    pecaEncontrada = false;
 
                     while (xVal <= 7 && yVal >= 0)
                     {
@@ -222,12 +241,17 @@ namespace ProjetoDamas
                             {
                                 //Dama come peca
                                 count++;
+                                pecaEncontrada = true;
                             } //Caso contrário, não adiciona, mas continua a contar. Se na posição seguinte estiver outra peça, para de verificar 
 
                         }
                         else
                         {
                             PossiveisJogadasL.Add(new Coordenada(xVal, yVal));
+                            if (pecaEncontrada) //Se já se tiver encontrado uma peca de cor diferente, a partir desta coordenada, é obrigatória.
+                            {
+                                JogadasObrigatoriasL.Add(new Coordenada(xVal, yVal));
+                            }
                         }
 
                         xVal += 1;
@@ -239,6 +263,7 @@ namespace ProjetoDamas
                     xVal = x + 1;
                     yVal = y + 1;
                     count = 0;
+                    pecaEncontrada = false;
 
                     while (xVal <= 7 && yVal <= 7)
                     {
@@ -258,11 +283,16 @@ namespace ProjetoDamas
                             {
                                 //Dama come peca
                                 count++;
+                                pecaEncontrada = true;//Na diagonal que está a tratar encontrou uma peca de cor diferente por isso mete a true poque todas as posições que vierem daí para a frente são possiveis obrigatorias (uma das que vem para a frente é obrigatoria)
                             } //Caso contrário, não adiciona, mas continua a contar. Se na posição seguinte estiver outra peça, para de verificar 
                         }
                         else
                         {
                             PossiveisJogadasL.Add(new Coordenada(xVal, yVal));
+                            if (pecaEncontrada) //Se já se tiver encontrado uma peca de cor diferente, a partir desta coordenada, é obrigatória.
+                            {
+                                JogadasObrigatoriasL.Add(new Coordenada(xVal, yVal));
+                            }
                         }
 
                         xVal += 1;
@@ -273,10 +303,22 @@ namespace ProjetoDamas
 
             }
 
-            if (RespostaPossiveisJogadas != null)
+            if (JogadasObrigatoriasL.Count != 0)//Caso não existam jogadas obrigatorias, mostra-se apenas as possiveis jogadas.
             {
-                RespostaPossiveisJogadas(PossiveisJogadasL);
+                if (RespostaPossiveisJogadas != null)
+                {
+                    RespostaPossiveisJogadas(JogadasObrigatoriasL);
+                }
             }
+            else
+            {
+                if (RespostaPossiveisJogadas != null)
+                {
+                    RespostaPossiveisJogadas(PossiveisJogadasL);
+                }
+            }
+
+
         }
 
 
