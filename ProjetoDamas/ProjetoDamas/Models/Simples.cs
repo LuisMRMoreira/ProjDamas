@@ -11,7 +11,7 @@ namespace ProjetoDamas
         //Classe representativa da peça de jogo simples
         //moviemento desta peça tem mais restrições que a dama
 
-        public Simples(bool cor) : base(cor)
+        public Simples(bool cor, bool sentidoJogada) : base(cor, sentidoJogada)
         {
 
         }

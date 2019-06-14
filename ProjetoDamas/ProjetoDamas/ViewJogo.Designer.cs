@@ -181,7 +181,7 @@
             this.tLPTabuleiro.Controls.Add(this.pB51, 5, 1);
             this.tLPTabuleiro.Controls.Add(this.pB31, 3, 1);
             this.tLPTabuleiro.Controls.Add(this.pB11, 1, 1);
-            this.tLPTabuleiro.Location = new System.Drawing.Point(217, 67);
+            this.tLPTabuleiro.Location = new System.Drawing.Point(215, 51);
             this.tLPTabuleiro.Name = "tLPTabuleiro";
             this.tLPTabuleiro.RowCount = 8;
             this.tLPTabuleiro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
