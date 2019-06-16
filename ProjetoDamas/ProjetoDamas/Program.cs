@@ -17,7 +17,7 @@ namespace ProjetoDamas
         public static ViewSettings V_Settings { get; private set; }
         public static ViewRegras V_Rules { get; private set; }
         public static ViewModoJogo V_ModoJogo { get; private set; }
-        public static ViewJogo V_JogoMultiplayer { get; private set; }
+        public static ViewTabuleiro V_Tabuleiro { get; private set; }
         public static ViewJogoRobot V_JogoRobot { get; private set; }
         public static ViewStatistics V_GameStatistics { get; private set; }
         public static ViewEnd V_Result { get; private set; }
@@ -27,6 +27,7 @@ namespace ProjetoDamas
         public static ViewTorneio V_Torneio { get; private set; }
         public static ViewTorneioJogos V_JogosTorneio { get; private set; }
         public static ViewTorneiosInacabados V_TorneiosInacabados { get; private set; }
+        public static ViewJogadorOponente V_JogadorOponente { get; private set; }
 
         //Model
         public static Gestor M_Gestor { get; private set; }
@@ -35,11 +36,14 @@ namespace ProjetoDamas
         public static Tabuleiro M_Tabuleiro { get; private set; }
 
 
+
         //Controller
         public static ControllerGestor C_Gestor { get; private set; }
         public static ControllerJogador C_Jogador { get; private set; }
         public static ControllerJogo C_Jogo { get; private set; }
         public static ControllerTabuleiro C_Tabuleiro { get; private set; }
+        public static ControllerPessoa C_Pessoa { get; private set; }
+        public static ControllerUser C_User { get; private set; }
 
 
 
@@ -62,7 +66,7 @@ namespace ProjetoDamas
             V_Settings = new ViewSettings();
             V_Rules = new ViewRegras();
             V_ModoJogo = new ViewModoJogo();
-            V_JogoMultiplayer = new ViewJogo();
+            V_Tabuleiro = new ViewTabuleiro();
             V_JogoRobot = new ViewJogoRobot();
             V_GameStatistics = new ViewStatistics();
             V_Result = new ViewEnd();
@@ -72,11 +76,14 @@ namespace ProjetoDamas
             V_Torneio = new ViewTorneio();
             V_JogosTorneio = new ViewTorneioJogos();
             V_TorneiosInacabados = new ViewTorneiosInacabados();
+            V_JogadorOponente = new ViewJogadorOponente();
             C_Gestor = new ControllerGestor();
             C_Jogador = new ControllerJogador();
             C_Jogo = new ControllerJogo();
             C_Tabuleiro = new ControllerTabuleiro();
-            Application.Run(V_Menu);
+            C_Pessoa = new ControllerPessoa();
+            C_User = new ControllerUser();
+            Application.Run(V_Login);
         }
     }
 }

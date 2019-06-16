@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDamas
 {
-    partial class ViewJogo
+    partial class ViewTabuleiro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewJogo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTabuleiro));
             this.tLPTabuleiro = new System.Windows.Forms.TableLayoutPanel();
             this.pB60 = new System.Windows.Forms.PictureBox();
             this.pB40 = new System.Windows.Forms.PictureBox();

@@ -11,12 +11,21 @@ namespace ProjetoDamas
 
         public event MetodosComDuasStrings RespostaAlterarOponenteOnline;
 
-        private int id; //Para quando quiseremos voltar a um jogo seja mais facil procurar através do id
-        private Jogador jogadorUm;
-        private Jogador jogadorDois;
-        private Tabuleiro tabuleiro;
-        private int contadorJogadas; //serve para os casos de empate ou para as regras
-        private DateTime tempo;//tempo de jogo. Apenas para informação
+        public int id; //Para quando quiseremos voltar a um jogo seja mais facil procurar através do id
+        public Jogador jogadorUm { get; private set; }
+        public Jogador jogadorDois { get; private set; }
+        public Tabuleiro tabuleiro { get; private set; }
+        public int contadorJogadas { get; private set; } //serve para os casos de empate ou para as regras
+        public DateTime tempo { get; private set; }//tempo de jogo. Apenas para informação
+
+
+        public Jogo()
+        {
+            //id =
+            //jogadorUm
+
+        }
+
 
         public void MostarDadosConectividade(string nickname, string servidorIP)
         {
@@ -31,7 +40,12 @@ namespace ProjetoDamas
 
         public void ComecarJogo()
         {
-
+            
         }
+
+
+
+
+
     }
 }

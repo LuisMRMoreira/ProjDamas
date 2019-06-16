@@ -43,7 +43,6 @@
             this.pPasswordImage = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelPassword = new System.Windows.Forms.Label();
-            this.pbReturn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pUsername.SuspendLayout();
             this.pUsernameImage.SuspendLayout();
@@ -51,7 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pPasswordImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -235,18 +233,6 @@
             this.labelPassword.TabIndex = 15;
             this.labelPassword.Text = "Password:";
             // 
-            // pbReturn
-            // 
-            this.pbReturn.BackColor = System.Drawing.Color.Transparent;
-            this.pbReturn.Image = global::ProjetoDamas.Properties.Resources.a429924cb33912470dd40d51a2f760ec_go_back_icon_clip_art_at_clkercom_vector_clip_art_online__300_300;
-            this.pbReturn.Location = new System.Drawing.Point(12, 12);
-            this.pbReturn.Name = "pbReturn";
-            this.pbReturn.Size = new System.Drawing.Size(29, 28);
-            this.pbReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbReturn.TabIndex = 22;
-            this.pbReturn.TabStop = false;
-            this.pbReturn.Click += new System.EventHandler(this.pbReturn_Click);
-            // 
             // ViewLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,7 +241,6 @@
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 411);
-            this.Controls.Add(this.pbReturn);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.pPassword);
             this.Controls.Add(this.lMemberLogin);
@@ -280,7 +265,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pPasswordImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +285,6 @@
         private System.Windows.Forms.Label labelPassword;
         private CueTextBox ctBUsername;
         private CueTextBox cTBPassword;
-        private System.Windows.Forms.PictureBox pbReturn;
     }
 }
 

@@ -117,6 +117,8 @@ namespace ProjetoDamas
             //PERGUNTA: é necessario fazer um evento que chame o Show dentro da ViewLogin()????????????
             Program.V_Login.Show();
         }
+
+
     }
 
 

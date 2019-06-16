@@ -12,7 +12,7 @@ namespace ProjetoDamas
         public ControllerJogo()
         {
             Program.V_JogadoresNoServidor.PedidoAlterarOponenteOnline += V_JogadoresNoServidor_PedidoAlterarOponenteOnline;
-            Program.V_ModoJogo.PedidoComecarJogo += V_ModoJogo_PedidoComecarJogo;
+            Program.V_JogadorOponente.PedidoComecarJogo += V_ModoJogo_PedidoComecarJogo;
 
         }
 

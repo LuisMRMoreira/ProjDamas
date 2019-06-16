@@ -219,9 +219,9 @@
             this.lLogin.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lLogin.Location = new System.Drawing.Point(43, 3);
             this.lLogin.Name = "lLogin";
-            this.lLogin.Size = new System.Drawing.Size(71, 26);
+            this.lLogin.Size = new System.Drawing.Size(54, 26);
             this.lLogin.TabIndex = 15;
-            this.lLogin.Text = "Login";
+            this.lLogin.Text = "nome";
             // 
             // pLogin
             // 

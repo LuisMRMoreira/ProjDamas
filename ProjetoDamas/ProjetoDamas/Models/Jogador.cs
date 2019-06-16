@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoDamas
 {
-    public class Jogador
+    public class Jogador : User
     {//Classe representativa de cada jogador que intervem no jogo
 
         public event MetodosSemParametros ErroPassDiferente;

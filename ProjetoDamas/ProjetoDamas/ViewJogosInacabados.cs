@@ -101,7 +101,7 @@ namespace ProjetoDamas
                     {
                         //Local or online
                         this.Hide();
-                        Program.V_JogoMultiplayer.ShowDialog();
+                        Program.V_Tabuleiro.ShowDialog();
                         // Mudar o conteudo da view ---------------------------------------------------------------------------------------------------------
                     }
 

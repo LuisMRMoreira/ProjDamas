@@ -11,9 +11,9 @@ namespace ProjetoDamas
 
         public ControllerTabuleiro()
         {
-            Program.V_JogoMultiplayer.PedidoMostarPossiveisJogadas += V_JogoMultiplayer_PedidoMostarPossiveisJogadas;
-            Program.V_JogoMultiplayer.PedidoInicializarTabuleiro += V_JogoMultiplayer_PedidoInicializarTabuleiro;
-            Program.V_JogoMultiplayer.PedidoVerificarJogada += V_JogoMultiplayer_PedidoVerificarJogada;
+            Program.V_Tabuleiro.PedidoMostarPossiveisJogadas += V_JogoMultiplayer_PedidoMostarPossiveisJogadas;
+            Program.V_Tabuleiro.PedidoInicializarTabuleiro += V_JogoMultiplayer_PedidoInicializarTabuleiro;
+            Program.V_Tabuleiro.PedidoVerificarJogada += V_JogoMultiplayer_PedidoVerificarJogada;
         }
 
         private void V_JogoMultiplayer_PedidoVerificarJogada(Coordenada c1, Coordenada c2)

@@ -90,7 +90,7 @@ namespace ProjetoDamas
         private void bPlay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_JogoMultiplayer.ShowDialog();//------------------------------------------------------------------------------------
+            Program.V_Tabuleiro.ShowDialog();//------------------------------------------------------------------------------------
         }
 
         private void cBSearchInTheServer_CheckedChanged(object sender, EventArgs e)

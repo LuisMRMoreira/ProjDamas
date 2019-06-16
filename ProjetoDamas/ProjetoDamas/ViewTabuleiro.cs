@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoDamas
 {
-    public partial class ViewJogo : Form
+    public partial class ViewTabuleiro : Form
     {
         public event MetodosComUmaPosicao PedidoMostarPossiveisJogadas;
         public event MetodosSemParametros PedidoInicializarTabuleiro; //Vai para o model tabuleiro
@@ -19,7 +19,7 @@ namespace ProjetoDamas
         public PictureBox[,] PictureBoxDoPanel;
         PictureBox selected;
 
-        public ViewJogo()//attache image to cursor
+        public ViewTabuleiro()//attache image to cursor
         {
             InitializeComponent();
 

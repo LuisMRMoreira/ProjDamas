@@ -13,6 +13,7 @@ namespace ProjetoDamas
         public event MetodosSemParametros RespostaLoginInvalido; //ViewLogin
         public event MetodosSemParametros RespostaTerminarSessao; //ViewLogin
 
+        public List<User> UsersLogados { get; private set; }
 
         public bool Login = false;
 
@@ -28,13 +29,23 @@ namespace ProjetoDamas
 
         //Poderiamos ter utilizado enums ou apenas identificação por inteiros, no entanto optamos por esta opção por parecer a mais intuitiva.
 
+        public Gestor()
+        {
+            UsersLogados = new List<User>();
+        }
 
-
+        public void AdicionaJogador(User user)
+        {
+            UsersLogados.Add(user);
+        }
 
 
         public void GuardarDados(int volume, string tamanho)
         {
             //BASE DE DADOS: Guardar dados ---------------------------------------------------------------------------------------------------------------
+
+
+            
 
             if (RespostaDadosGuardados != null)
             {
@@ -70,6 +81,9 @@ namespace ProjetoDamas
                 //BASE DE DADOS: Obter a imagem e nickname do jogador na Base de dados
                 string localizacaoImagem_jogador = null;
                 string nikname_jogador = null;
+
+                //Procura os dados sobre o jogador na base de dados e instancia uma nova pessoa nessa base de dados
+                //Program.M_Pessoa.
 
                 //abrir View Menu com a lable com o nome e imahem do jogador
                 if (RespostaLoginBemSucedido != null)

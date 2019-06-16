@@ -1,0 +1,47 @@
+Solution Explorer > "Nome do projeto" > Add > New item > Visual c# Items > Data > Service-based DataBase
+Depois de se ter criado o Service-based DataBase (tem a extensão mdf), no solution explorer, clica-se duas vezes por cima dele e vai abrir p Server Explorer.
+
+No Server Explorer: Data Connections > "Nome da BD".mdf > Tables > Clica-se com o botão direito do rato sobre a pasta Table e depois em Add new Table para criarmos uma nova tabela
+*Ter em atenção às propriedades de cada um (IDENTITY mete-se lá)
+
+Para se adicionarem valores à tabela da base de dados, clica-se com o botão direito no nome da Tabela onde se quer adicionar valores e de seguida em Show table data
+
+
+No controller respetivo ao adicionar, cria-se a conexão à base de dados, acedemos à base de dados através de um comando e trata-se esse resultado (ou se envia um evento para ser tratado no model, ou se envia uma mensagem de erro). Ver A classe ControladorEntrada do projeto DemoMVC_Damas
+
+//Código para criação de ligação e acesso a dados numa BD
+
+
+            //Obtem o caminho fisico para a pasta do código da aplicação
+            //para poder reutilizar a base de dados, caso contrário, ele está sempre a substituir
+            var folder = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
+
+            //construir a ligação ao servidor SQL Server local com o caminho do ficheiro
+            string sqlConnection = "Server=(localdb)\\MSSQLLocalDB;AttachDbFilename=" + folder + "Utilizadores.mdf" +
+                                     ";Trusted_Connection=True;";
+
+            //inicializar a ligação ao servidor
+            SqlConnection server = new SqlConnection(sqlConnection);
+
+            //abrir a ligação
+            server.Open();
+
+            string cmdText = string.Format("SELECT * FROM Utilizadores WHERE " +
+                                            "username = '{0}' and password = '{1}'",
+                                            s1, s2);
+
+            //construir o comando SQL com a ligação ao servidor
+            SqlCommand command = new SqlCommand(cmdText, server);
+
+	    //executar o comando e receber os dados resultantes dessa query 
+            SqlDataReader dados = command.ExecuteReader();
+
+	    server.Close();
+
+
+É necessário adixionar as bibliotecas
+
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
