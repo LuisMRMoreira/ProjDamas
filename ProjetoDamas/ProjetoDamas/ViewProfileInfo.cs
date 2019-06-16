@@ -21,9 +21,21 @@ namespace ProjetoDamas
         public ViewProfileInfo()
         {
             InitializeComponent();
+            Program.M_Gestor.RespostaPedidoLoginSucesso += M_Gestor_RespostaPedidoLoginSucesso;
 
         }
 
+        private void M_Gestor_RespostaPedidoLoginSucesso(User u)
+        {
+            ctBUsername.Text = u.Username;
+            cTBPassword.Text = u.Password;
+            cTBNickname.Text = u.Nome;
+            cTBEmail.Text = u.Email;
+            cBCountries.Text = u.Pais;
+            dTPDataNascimento.Value = u.DataNascimento;
+            pBUser.Image = u.Imagem;
+            lDataDeCriacaoValor.Text = u.DataCriacaoConta.ToShortDateString();
+        }
 
         private void ViewProfileInfo_Load(object sender, EventArgs e)
         {

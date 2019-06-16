@@ -23,32 +23,32 @@ namespace ProjetoDamas
 
         
 
-        public void RegistarJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imagem, string dataDeNascimento)
-        {
-            //Criar Jogador
-            //Inserir na base de dados
+        //public void RegistarJogador(string nome, string pass, string confirmPass, string nick, string email, string pais, string imagem, string dataDeNascimento)
+        //{
+        //    //Criar Jogador
+        //    //Inserir na base de dados
 
 
-            //Verificar se as passwords são iguais
-            if (pass != confirmPass)
-            {
-                if (ErroPassDiferente != null)
-                {
-                    ErroPassDiferente();
-                }
-            }
-            else
-            {
-                if (ContaCriada != null)
-                {
-                    ContaCriada();
-                }
-                //Program.V_Register.Hide();
-                //Program.V_Login.Show();
-            }
+        //    //Verificar se as passwords são iguais
+        //    if (pass != confirmPass)
+        //    {
+        //        if (ErroPassDiferente != null)
+        //        {
+        //            ErroPassDiferente();
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (ContaCriada != null)
+        //        {
+        //            ContaCriada();
+        //        }
+        //        //Program.V_Register.Hide();
+        //        //Program.V_Login.Show();
+        //    }
 
-            //eviar evento a imformar que já foi inserido
-        }
+        //    //eviar evento a imformar que já foi inserido
+        //}
 
 
     }

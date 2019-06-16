@@ -224,7 +224,7 @@
             this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cTBEmail.Location = new System.Drawing.Point(45, 3);
-            this.cTBEmail.MaxLength = 20;
+            this.cTBEmail.MaxLength = 200;
             this.cTBEmail.Name = "cTBEmail";
             this.cTBEmail.Size = new System.Drawing.Size(217, 22);
             this.cTBEmail.TabIndex = 0;
@@ -269,7 +269,7 @@
             this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cTBNickname.Location = new System.Drawing.Point(45, 3);
-            this.cTBNickname.MaxLength = 20;
+            this.cTBNickname.MaxLength = 100;
             this.cTBNickname.Name = "cTBNickname";
             this.cTBNickname.Size = new System.Drawing.Size(217, 22);
             this.cTBNickname.TabIndex = 0;
@@ -326,7 +326,7 @@
             this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cTBPassword.Location = new System.Drawing.Point(45, 3);
-            this.cTBPassword.MaxLength = 20;
+            this.cTBPassword.MaxLength = 100;
             this.cTBPassword.Name = "cTBPassword";
             this.cTBPassword.PasswordChar = '*';
             this.cTBPassword.Size = new System.Drawing.Size(186, 22);
@@ -372,7 +372,7 @@
             this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.ctBUsername.Location = new System.Drawing.Point(45, 3);
-            this.ctBUsername.MaxLength = 20;
+            this.ctBUsername.MaxLength = 100;
             this.ctBUsername.Name = "ctBUsername";
             this.ctBUsername.Size = new System.Drawing.Size(219, 22);
             this.ctBUsername.TabIndex = 0;
@@ -429,7 +429,7 @@
             this.cTBConfirmPass.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBConfirmPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cTBConfirmPass.Location = new System.Drawing.Point(45, 3);
-            this.cTBConfirmPass.MaxLength = 20;
+            this.cTBConfirmPass.MaxLength = 100;
             this.cTBConfirmPass.Name = "cTBConfirmPass";
             this.cTBConfirmPass.PasswordChar = '*';
             this.cTBConfirmPass.Size = new System.Drawing.Size(186, 22);

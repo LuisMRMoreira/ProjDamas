@@ -13,6 +13,8 @@ namespace ProjetoDamas
         public event MetodosSemParametros RespostaLoginInvalido; //ViewLogin
         public event MetodosSemParametros RespostaTerminarSessao; //ViewLogin
 
+        public event MetodosComUmUser RespostaPedidoLoginSucesso;//Muitas views (Menu, perfil, Tabuleiro)
+
         public List<User> UsersLogados { get; private set; }
 
         public bool Login = false;
@@ -33,10 +35,15 @@ namespace ProjetoDamas
         {
             UsersLogados = new List<User>();
         }
-
+        
         public void AdicionaJogador(User user)
         {
             UsersLogados.Add(user);
+            if (RespostaPedidoLoginSucesso != null)
+            {
+                RespostaPedidoLoginSucesso(user);
+            }
+
         }
 
 

@@ -206,7 +206,7 @@
             this.pBLogin.Location = new System.Drawing.Point(7, 2);
             this.pBLogin.Name = "pBLogin";
             this.pBLogin.Size = new System.Drawing.Size(30, 29);
-            this.pBLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBLogin.TabIndex = 14;
             this.pBLogin.TabStop = false;
             // 

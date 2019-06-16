@@ -60,8 +60,7 @@ namespace ProjetoDamas
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Program.V_Register.ShowDialog();
-
+            Program.V_Register.Show();
 
         }
 

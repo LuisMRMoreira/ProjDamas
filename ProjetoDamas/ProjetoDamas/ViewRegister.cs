@@ -14,7 +14,7 @@ namespace ProjetoDamas
 {
     public partial class ViewRegister : Form
     {
-        public event MetodosComInfoJogador PedidoCriarJogador; //ModelJogador
+        public event MetodosComInfoJogador PedidoRegistarJogador; //ModelGestor
 
         public ViewRegister()
         {
@@ -56,19 +56,43 @@ namespace ProjetoDamas
         {
             oFDImagemPerfil.Filter = "All Graphics Types | *.bmp; *.jpg; *.jpeg; *.png; *.tif; *.tiff";
 
+            //pBAvatar.ImageLocation = 
 
             if (oFDImagemPerfil.ShowDialog() == DialogResult.OK)
             {
-                pBAvatar.Image = new Bitmap(oFDImagemPerfil.FileName);
+                pBAvatar.ImageLocation = oFDImagemPerfil.FileName;//= new Bitmap(oFDImagemPerfil.FileName);
             }
         }
 
         private void bCreateAccount_Click(object sender, EventArgs e)
         {
-            if (PedidoCriarJogador != null)
+            if (string.IsNullOrWhiteSpace(this.ctBUsername.Text) ||
+                string.IsNullOrWhiteSpace(this.cTBPassword.Text) ||
+                string.IsNullOrWhiteSpace(this.cTBConfirmPass.Text) ||
+                string.IsNullOrWhiteSpace(this.cTBNickname.Text) ||
+                string.IsNullOrWhiteSpace(this.cTBEmail.Text) ||
+                string.IsNullOrWhiteSpace(this.cBCountries.Text) ||
+                string.IsNullOrWhiteSpace(this.pBAvatar.ImageLocation) ||
+                string.IsNullOrWhiteSpace(this.dTPDataNascimento.Text) )
             {
-                PedidoCriarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBConfirmPass.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, this.pBAvatar.ImageLocation, this.dTPDataNascimento.Text);
+                MessageBox.Show("Falta preencher campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                if (this.cTBConfirmPass.Text == this.cTBPassword.Text)
+                {
+                    if (PedidoRegistarJogador != null)
+                    {
+                        PedidoRegistarJogador(this.ctBUsername.Text, this.cTBPassword.Text, this.cTBNickname.Text, this.cTBEmail.Text, this.cBCountries.Text, this.pBAvatar.ImageLocation, this.dTPDataNascimento.Text);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Passwords não coincidem", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
         }
 
         private void pBVerPass_Click(object sender, EventArgs e)

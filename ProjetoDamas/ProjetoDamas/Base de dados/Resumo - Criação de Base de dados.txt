@@ -3,6 +3,8 @@ Depois de se ter criado o Service-based DataBase (tem a extensão mdf), no solut
 
 No Server Explorer: Data Connections > "Nome da BD".mdf > Tables > Clica-se com o botão direito do rato sobre a pasta Table e depois em Add new Table para criarmos uma nova tabela
 *Ter em atenção às propriedades de cada um (IDENTITY mete-se lá)
+Depois de se ter feito uma alteração na tabela, deve-se clicar no bootão Update (lado esquerdo, quase no cimo)
+
 
 Para se adicionarem valores à tabela da base de dados, clica-se com o botão direito no nome da Tabela onde se quer adicionar valores e de seguida em Show table data
 

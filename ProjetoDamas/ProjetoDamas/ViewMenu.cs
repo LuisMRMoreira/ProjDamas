@@ -21,12 +21,15 @@ namespace ProjetoDamas
             InitializeComponent();
 
 
-            Program.M_Gestor.RespostaLoginBemSucedido += M_Gestor_RespostaLoginBemSucedido;
+            
 
+            Program.M_Gestor.RespostaPedidoLoginSucesso += M_Gestor_RespostaPedidoLoginSucesso;
 
             wepg = new WindowsMediaPlayer();
             wepg.URL = "Resources\\Minecraft-Theme Song.mp3";
         }
+
+
 
 
         /// <summary>
@@ -36,13 +39,12 @@ namespace ProjetoDamas
         /// <param name="imagem"></param>
 
         ///Login bem sucedido. Muda a label para o nickname do jogador e a imagem para a imgame do jogador. 
-        private void M_Gestor_RespostaLoginBemSucedido(string nickname, string imagem)
-        {            
-            lLogin.Text = nickname;
-            pBLogin.ImageLocation = nickname;
-            this.Show();
-        }
 
+        private void M_Gestor_RespostaPedidoLoginSucesso(User u)
+        {
+            lLogin.Text = u.Username;
+            pBLogin.Image = u.Imagem;
+        }
 
         /// <summary>
         /// Inicialização da ViewMenu. Cor de fundo e Musica.
@@ -115,7 +117,7 @@ namespace ProjetoDamas
         {
             this.Hide();
             //PERGUNTA: é necessario fazer um evento que chame o Show dentro da ViewLogin()????????????
-            Program.V_Login.Show();
+            Program.V_Profile.Show();
         }
 
 

@@ -135,10 +135,10 @@
             this.pBUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBUser.BackColor = System.Drawing.Color.Transparent;
             this.pBUser.Image = ((System.Drawing.Image)(resources.GetObject("pBUser.Image")));
-            this.pBUser.Location = new System.Drawing.Point(32, 126);
-            this.pBUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pBUser.Location = new System.Drawing.Point(24, 102);
+            this.pBUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pBUser.Name = "pBUser";
-            this.pBUser.Size = new System.Drawing.Size(169, 146);
+            this.pBUser.Size = new System.Drawing.Size(127, 119);
             this.pBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBUser.TabIndex = 10;
             this.pBUser.TabStop = false;
@@ -149,10 +149,9 @@
             // 
             this.pbReturn.BackColor = System.Drawing.Color.Transparent;
             this.pbReturn.Image = global::ProjetoDamas.Properties.Resources.a429924cb33912470dd40d51a2f760ec_go_back_icon_clip_art_at_clkercom_vector_clip_art_online__300_300;
-            this.pbReturn.Location = new System.Drawing.Point(16, 15);
-            this.pbReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbReturn.Location = new System.Drawing.Point(12, 12);
             this.pbReturn.Name = "pbReturn";
-            this.pbReturn.Size = new System.Drawing.Size(39, 34);
+            this.pbReturn.Size = new System.Drawing.Size(29, 28);
             this.pbReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbReturn.TabIndex = 23;
             this.pbReturn.TabStop = false;
@@ -167,10 +166,9 @@
             this.cBCountries.Font = new System.Drawing.Font("Malgun Gothic", 12.7F);
             this.cBCountries.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cBCountries.FormattingEnabled = true;
-            this.cBCountries.Location = new System.Drawing.Point(55, 0);
-            this.cBCountries.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBCountries.Location = new System.Drawing.Point(41, 0);
             this.cBCountries.Name = "cBCountries";
-            this.cBCountries.Size = new System.Drawing.Size(311, 38);
+            this.cBCountries.Size = new System.Drawing.Size(234, 31);
             this.cBCountries.TabIndex = 50;
             this.cBCountries.Text = "Portugal";
             // 
@@ -179,10 +177,9 @@
             this.pUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pUsername.Controls.Add(this.pUsernameImage);
             this.pUsername.Controls.Add(this.ctBUsername);
-            this.pUsername.Location = new System.Drawing.Point(251, 73);
-            this.pUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pUsername.Location = new System.Drawing.Point(188, 59);
             this.pUsername.Name = "pUsername";
-            this.pUsername.Size = new System.Drawing.Size(403, 39);
+            this.pUsername.Size = new System.Drawing.Size(302, 32);
             this.pUsername.TabIndex = 52;
             // 
             // pUsernameImage
@@ -191,19 +188,18 @@
             this.pUsernameImage.Controls.Add(this.pictureBox2);
             this.pUsernameImage.Dock = System.Windows.Forms.DockStyle.Left;
             this.pUsernameImage.Location = new System.Drawing.Point(0, 0);
-            this.pUsernameImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pUsernameImage.Name = "pUsernameImage";
-            this.pUsernameImage.Size = new System.Drawing.Size(56, 39);
+            this.pUsernameImage.Size = new System.Drawing.Size(42, 32);
             this.pUsernameImage.TabIndex = 10;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -217,21 +213,19 @@
             this.ctBUsername.Enabled = false;
             this.ctBUsername.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctBUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.ctBUsername.Location = new System.Drawing.Point(60, 4);
-            this.ctBUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctBUsername.Location = new System.Drawing.Point(45, 3);
             this.ctBUsername.MaxLength = 20;
             this.ctBUsername.Name = "ctBUsername";
-            this.ctBUsername.Size = new System.Drawing.Size(292, 27);
+            this.ctBUsername.Size = new System.Drawing.Size(219, 22);
             this.ctBUsername.TabIndex = 16;
             // 
             // pBUserEditar
             // 
             this.pBUserEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBUserEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBUserEditar.Location = new System.Drawing.Point(612, 75);
-            this.pBUserEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBUserEditar.Location = new System.Drawing.Point(459, 61);
             this.pBUserEditar.Name = "pBUserEditar";
-            this.pBUserEditar.Size = new System.Drawing.Size(37, 36);
+            this.pBUserEditar.Size = new System.Drawing.Size(28, 29);
             this.pBUserEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBUserEditar.TabIndex = 53;
             this.pBUserEditar.TabStop = false;
@@ -242,10 +236,9 @@
             // 
             this.pBPasswordEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBPasswordEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBPasswordEditar.Location = new System.Drawing.Point(613, 126);
-            this.pBPasswordEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBPasswordEditar.Location = new System.Drawing.Point(460, 102);
             this.pBPasswordEditar.Name = "pBPasswordEditar";
-            this.pBPasswordEditar.Size = new System.Drawing.Size(37, 36);
+            this.pBPasswordEditar.Size = new System.Drawing.Size(28, 29);
             this.pBPasswordEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBPasswordEditar.TabIndex = 57;
             this.pBPasswordEditar.TabStop = false;
@@ -258,19 +251,17 @@
             this.panel3.Controls.Add(this.pBVerPass);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.cTBPassword);
-            this.panel3.Location = new System.Drawing.Point(252, 122);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(189, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(403, 39);
+            this.panel3.Size = new System.Drawing.Size(302, 32);
             this.panel3.TabIndex = 56;
             // 
             // pBVerPass
             // 
             this.pBVerPass.Image = global::ProjetoDamas.Properties.Resources.Olho_icon;
-            this.pBVerPass.Location = new System.Drawing.Point(316, 2);
-            this.pBVerPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBVerPass.Location = new System.Drawing.Point(237, 2);
             this.pBVerPass.Name = "pBVerPass";
-            this.pBVerPass.Size = new System.Drawing.Size(37, 36);
+            this.pBVerPass.Size = new System.Drawing.Size(28, 29);
             this.pBVerPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBVerPass.TabIndex = 58;
             this.pBVerPass.TabStop = false;
@@ -283,19 +274,18 @@
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(56, 39);
+            this.panel4.Size = new System.Drawing.Size(42, 32);
             this.panel4.TabIndex = 10;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::ProjetoDamas.Properties.Resources.Lock_transparente;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox6.Size = new System.Drawing.Size(38, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
@@ -309,22 +299,20 @@
             this.cTBPassword.Enabled = false;
             this.cTBPassword.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBPassword.Location = new System.Drawing.Point(60, 4);
-            this.cTBPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cTBPassword.Location = new System.Drawing.Point(45, 3);
             this.cTBPassword.MaxLength = 20;
             this.cTBPassword.Name = "cTBPassword";
             this.cTBPassword.PasswordChar = '*';
-            this.cTBPassword.Size = new System.Drawing.Size(248, 27);
+            this.cTBPassword.Size = new System.Drawing.Size(186, 22);
             this.cTBPassword.TabIndex = 16;
             // 
             // pBNickEdit
             // 
             this.pBNickEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBNickEdit.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBNickEdit.Location = new System.Drawing.Point(612, 175);
-            this.pBNickEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBNickEdit.Location = new System.Drawing.Point(459, 142);
             this.pBNickEdit.Name = "pBNickEdit";
-            this.pBNickEdit.Size = new System.Drawing.Size(37, 36);
+            this.pBNickEdit.Size = new System.Drawing.Size(28, 29);
             this.pBNickEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBNickEdit.TabIndex = 59;
             this.pBNickEdit.TabStop = false;
@@ -336,10 +324,9 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.cTBNickname);
-            this.panel1.Location = new System.Drawing.Point(251, 171);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(188, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 39);
+            this.panel1.Size = new System.Drawing.Size(302, 32);
             this.panel1.TabIndex = 58;
             // 
             // panel2
@@ -348,19 +335,18 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(56, 39);
+            this.panel2.Size = new System.Drawing.Size(42, 32);
             this.panel2.TabIndex = 10;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(38, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -374,11 +360,10 @@
             this.cTBNickname.Enabled = false;
             this.cTBNickname.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBNickname.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBNickname.Location = new System.Drawing.Point(60, 4);
-            this.cTBNickname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cTBNickname.Location = new System.Drawing.Point(45, 3);
             this.cTBNickname.MaxLength = 20;
             this.cTBNickname.Name = "cTBNickname";
-            this.cTBNickname.Size = new System.Drawing.Size(292, 27);
+            this.cTBNickname.Size = new System.Drawing.Size(219, 22);
             this.cTBNickname.TabIndex = 16;
             // 
             // oFDImagemPerfil
@@ -389,10 +374,9 @@
             // 
             this.pBEmailEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBEmailEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBEmailEditar.Location = new System.Drawing.Point(613, 226);
-            this.pBEmailEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBEmailEditar.Location = new System.Drawing.Point(460, 184);
             this.pBEmailEditar.Name = "pBEmailEditar";
-            this.pBEmailEditar.Size = new System.Drawing.Size(37, 36);
+            this.pBEmailEditar.Size = new System.Drawing.Size(28, 29);
             this.pBEmailEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBEmailEditar.TabIndex = 61;
             this.pBEmailEditar.TabStop = false;
@@ -404,10 +388,9 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.cTBEmail);
-            this.panel5.Location = new System.Drawing.Point(252, 223);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(189, 181);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(403, 39);
+            this.panel5.Size = new System.Drawing.Size(302, 32);
             this.panel5.TabIndex = 60;
             // 
             // panel6
@@ -416,19 +399,18 @@
             this.panel6.Controls.Add(this.pBEmail);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(56, 39);
+            this.panel6.Size = new System.Drawing.Size(42, 32);
             this.panel6.TabIndex = 10;
             // 
             // pBEmail
             // 
             this.pBEmail.BackColor = System.Drawing.Color.Transparent;
             this.pBEmail.Image = global::ProjetoDamas.Properties.Resources.Arroba_icon;
-            this.pBEmail.Location = new System.Drawing.Point(3, 2);
-            this.pBEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pBEmail.Location = new System.Drawing.Point(2, 2);
+            this.pBEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pBEmail.Name = "pBEmail";
-            this.pBEmail.Size = new System.Drawing.Size(51, 34);
+            this.pBEmail.Size = new System.Drawing.Size(38, 28);
             this.pBEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBEmail.TabIndex = 9;
             this.pBEmail.TabStop = false;
@@ -442,21 +424,19 @@
             this.cTBEmail.Enabled = false;
             this.cTBEmail.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTBEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cTBEmail.Location = new System.Drawing.Point(60, 4);
-            this.cTBEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cTBEmail.Location = new System.Drawing.Point(45, 3);
             this.cTBEmail.MaxLength = 20;
             this.cTBEmail.Name = "cTBEmail";
-            this.cTBEmail.Size = new System.Drawing.Size(292, 27);
+            this.cTBEmail.Size = new System.Drawing.Size(219, 22);
             this.cTBEmail.TabIndex = 16;
             // 
             // pBCountryEditar
             // 
             this.pBCountryEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pBCountryEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBCountryEditar.Location = new System.Drawing.Point(615, 277);
-            this.pBCountryEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBCountryEditar.Location = new System.Drawing.Point(461, 225);
             this.pBCountryEditar.Name = "pBCountryEditar";
-            this.pBCountryEditar.Size = new System.Drawing.Size(39, 34);
+            this.pBCountryEditar.Size = new System.Drawing.Size(29, 28);
             this.pBCountryEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBCountryEditar.TabIndex = 63;
             this.pBCountryEditar.TabStop = false;
@@ -468,10 +448,9 @@
             this.pCountries.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pCountries.Controls.Add(this.panel8);
             this.pCountries.Controls.Add(this.cBCountries);
-            this.pCountries.Location = new System.Drawing.Point(251, 276);
-            this.pCountries.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pCountries.Location = new System.Drawing.Point(188, 224);
             this.pCountries.Name = "pCountries";
-            this.pCountries.Size = new System.Drawing.Size(403, 38);
+            this.pCountries.Size = new System.Drawing.Size(302, 31);
             this.pCountries.TabIndex = 62;
             // 
             // panel8
@@ -480,19 +459,18 @@
             this.panel8.Controls.Add(this.pBCountry);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(56, 38);
+            this.panel8.Size = new System.Drawing.Size(42, 31);
             this.panel8.TabIndex = 10;
             // 
             // pBCountry
             // 
             this.pBCountry.BackColor = System.Drawing.Color.Transparent;
             this.pBCountry.Image = global::ProjetoDamas.Properties.Resources.country_icon;
-            this.pBCountry.Location = new System.Drawing.Point(5, 0);
-            this.pBCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pBCountry.Location = new System.Drawing.Point(4, 0);
+            this.pBCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pBCountry.Name = "pBCountry";
-            this.pBCountry.Size = new System.Drawing.Size(45, 33);
+            this.pBCountry.Size = new System.Drawing.Size(34, 27);
             this.pBCountry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBCountry.TabIndex = 9;
             this.pBCountry.TabStop = false;
@@ -503,10 +481,9 @@
             this.pBGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBGuardar.BackColor = System.Drawing.Color.Transparent;
             this.pBGuardar.Image = global::ProjetoDamas.Properties.Resources.Save_icon;
-            this.pBGuardar.Location = new System.Drawing.Point(560, 14);
-            this.pBGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBGuardar.Location = new System.Drawing.Point(420, 11);
             this.pBGuardar.Name = "pBGuardar";
-            this.pBGuardar.Size = new System.Drawing.Size(41, 36);
+            this.pBGuardar.Size = new System.Drawing.Size(31, 29);
             this.pBGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBGuardar.TabIndex = 66;
             this.pBGuardar.TabStop = false;
@@ -523,10 +500,9 @@
             this.pBLogout.BackColor = System.Drawing.Color.Transparent;
             this.pBLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pBLogout.Image = global::ProjetoDamas.Properties.Resources.user_interface_login_icon__12_1_;
-            this.pBLogout.Location = new System.Drawing.Point(604, 12);
-            this.pBLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBLogout.Location = new System.Drawing.Point(453, 10);
             this.pBLogout.Name = "pBLogout";
-            this.pBLogout.Size = new System.Drawing.Size(49, 37);
+            this.pBLogout.Size = new System.Drawing.Size(37, 30);
             this.pBLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBLogout.TabIndex = 71;
             this.pBLogout.TabStop = false;
@@ -542,10 +518,9 @@
             this.pBCheckGuardado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBCheckGuardado.BackColor = System.Drawing.Color.Transparent;
             this.pBCheckGuardado.Image = global::ProjetoDamas.Properties.Resources.Check1;
-            this.pBCheckGuardado.Location = new System.Drawing.Point(463, 15);
-            this.pBCheckGuardado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBCheckGuardado.Location = new System.Drawing.Point(347, 12);
             this.pBCheckGuardado.Name = "pBCheckGuardado";
-            this.pBCheckGuardado.Size = new System.Drawing.Size(41, 36);
+            this.pBCheckGuardado.Size = new System.Drawing.Size(31, 29);
             this.pBCheckGuardado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBCheckGuardado.TabIndex = 67;
             this.pBCheckGuardado.TabStop = false;
@@ -556,10 +531,9 @@
             this.pBMoreInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pBMoreInfo.BackColor = System.Drawing.Color.Transparent;
             this.pBMoreInfo.Image = global::ProjetoDamas.Properties.Resources.More_info_icon;
-            this.pBMoreInfo.Location = new System.Drawing.Point(512, 15);
-            this.pBMoreInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBMoreInfo.Location = new System.Drawing.Point(384, 12);
             this.pBMoreInfo.Name = "pBMoreInfo";
-            this.pBMoreInfo.Size = new System.Drawing.Size(40, 36);
+            this.pBMoreInfo.Size = new System.Drawing.Size(30, 29);
             this.pBMoreInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBMoreInfo.TabIndex = 70;
             this.pBMoreInfo.TabStop = false;
@@ -584,10 +558,9 @@
             this.pMoreInfo.Controls.Add(this.lNumEmpates);
             this.pMoreInfo.Controls.Add(this.lNumVitorias);
             this.pMoreInfo.Controls.Add(this.labelPassword);
-            this.pMoreInfo.Location = new System.Drawing.Point(0, 372);
-            this.pMoreInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pMoreInfo.Location = new System.Drawing.Point(0, 302);
             this.pMoreInfo.Name = "pMoreInfo";
-            this.pMoreInfo.Size = new System.Drawing.Size(731, 137);
+            this.pMoreInfo.Size = new System.Drawing.Size(548, 111);
             this.pMoreInfo.TabIndex = 69;
             this.pMoreInfo.Visible = false;
             // 
@@ -598,9 +571,10 @@
             this.lDataDeCriacaoValor.BackColor = System.Drawing.Color.Transparent;
             this.lDataDeCriacaoValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lDataDeCriacaoValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lDataDeCriacaoValor.Location = new System.Drawing.Point(609, 97);
+            this.lDataDeCriacaoValor.Location = new System.Drawing.Point(457, 79);
+            this.lDataDeCriacaoValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lDataDeCriacaoValor.Name = "lDataDeCriacaoValor";
-            this.lDataDeCriacaoValor.Size = new System.Drawing.Size(92, 24);
+            this.lDataDeCriacaoValor.Size = new System.Drawing.Size(74, 19);
             this.lDataDeCriacaoValor.TabIndex = 28;
             this.lDataDeCriacaoValor.Text = "15/01/2019";
             // 
@@ -611,9 +585,10 @@
             this.lFormaValor.BackColor = System.Drawing.Color.Transparent;
             this.lFormaValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lFormaValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lFormaValor.Location = new System.Drawing.Point(609, 58);
+            this.lFormaValor.Location = new System.Drawing.Point(457, 47);
+            this.lFormaValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lFormaValor.Name = "lFormaValor";
-            this.lFormaValor.Size = new System.Drawing.Size(69, 24);
+            this.lFormaValor.Size = new System.Drawing.Size(59, 19);
             this.lFormaValor.TabIndex = 27;
             this.lFormaValor.Text = "wdwwa";
             // 
@@ -624,9 +599,10 @@
             this.lTotalDeJogosValor.BackColor = System.Drawing.Color.Transparent;
             this.lTotalDeJogosValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lTotalDeJogosValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lTotalDeJogosValor.Location = new System.Drawing.Point(609, 14);
+            this.lTotalDeJogosValor.Location = new System.Drawing.Point(457, 11);
+            this.lTotalDeJogosValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lTotalDeJogosValor.Name = "lTotalDeJogosValor";
-            this.lTotalDeJogosValor.Size = new System.Drawing.Size(26, 24);
+            this.lTotalDeJogosValor.Size = new System.Drawing.Size(21, 19);
             this.lTotalDeJogosValor.TabIndex = 26;
             this.lTotalDeJogosValor.Text = "11";
             // 
@@ -637,9 +613,10 @@
             this.lNumDerrotasValor.BackColor = System.Drawing.Color.Transparent;
             this.lNumDerrotasValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumDerrotasValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumDerrotasValor.Location = new System.Drawing.Point(203, 69);
+            this.lNumDerrotasValor.Location = new System.Drawing.Point(152, 56);
+            this.lNumDerrotasValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumDerrotasValor.Name = "lNumDerrotasValor";
-            this.lNumDerrotasValor.Size = new System.Drawing.Size(19, 24);
+            this.lNumDerrotasValor.Size = new System.Drawing.Size(16, 19);
             this.lNumDerrotasValor.TabIndex = 25;
             this.lNumDerrotasValor.Text = "2";
             // 
@@ -650,9 +627,10 @@
             this.lNumEmpatesValor.BackColor = System.Drawing.Color.Transparent;
             this.lNumEmpatesValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumEmpatesValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumEmpatesValor.Location = new System.Drawing.Point(203, 97);
+            this.lNumEmpatesValor.Location = new System.Drawing.Point(152, 79);
+            this.lNumEmpatesValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumEmpatesValor.Name = "lNumEmpatesValor";
-            this.lNumEmpatesValor.Size = new System.Drawing.Size(18, 24);
+            this.lNumEmpatesValor.Size = new System.Drawing.Size(15, 19);
             this.lNumEmpatesValor.TabIndex = 24;
             this.lNumEmpatesValor.Text = "1";
             // 
@@ -663,9 +641,10 @@
             this.lNumVitoriasValor.BackColor = System.Drawing.Color.Transparent;
             this.lNumVitoriasValor.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumVitoriasValor.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumVitoriasValor.Location = new System.Drawing.Point(203, 42);
+            this.lNumVitoriasValor.Location = new System.Drawing.Point(152, 34);
+            this.lNumVitoriasValor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumVitoriasValor.Name = "lNumVitoriasValor";
-            this.lNumVitoriasValor.Size = new System.Drawing.Size(19, 24);
+            this.lNumVitoriasValor.Size = new System.Drawing.Size(16, 19);
             this.lNumVitoriasValor.TabIndex = 23;
             this.lNumVitoriasValor.Text = "8";
             // 
@@ -676,9 +655,10 @@
             this.lForma.BackColor = System.Drawing.Color.Transparent;
             this.lForma.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
             this.lForma.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lForma.Location = new System.Drawing.Point(308, 58);
+            this.lForma.Location = new System.Drawing.Point(231, 47);
+            this.lForma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lForma.Name = "lForma";
-            this.lForma.Size = new System.Drawing.Size(93, 28);
+            this.lForma.Size = new System.Drawing.Size(77, 23);
             this.lForma.TabIndex = 22;
             this.lForma.Text = "Former:";
             // 
@@ -689,9 +669,10 @@
             this.lDataDeCriacao.BackColor = System.Drawing.Color.Transparent;
             this.lDataDeCriacao.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
             this.lDataDeCriacao.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lDataDeCriacao.Location = new System.Drawing.Point(308, 97);
+            this.lDataDeCriacao.Location = new System.Drawing.Point(231, 79);
+            this.lDataDeCriacao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lDataDeCriacao.Name = "lDataDeCriacao";
-            this.lDataDeCriacao.Size = new System.Drawing.Size(261, 28);
+            this.lDataDeCriacao.Size = new System.Drawing.Size(217, 23);
             this.lDataDeCriacao.TabIndex = 21;
             this.lDataDeCriacao.Text = "Account criation date:";
             // 
@@ -702,9 +683,10 @@
             this.lTotalJogos.BackColor = System.Drawing.Color.Transparent;
             this.lTotalJogos.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
             this.lTotalJogos.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lTotalJogos.Location = new System.Drawing.Point(308, 14);
+            this.lTotalJogos.Location = new System.Drawing.Point(231, 11);
+            this.lTotalJogos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lTotalJogos.Name = "lTotalJogos";
-            this.lTotalJogos.Size = new System.Drawing.Size(146, 28);
+            this.lTotalJogos.Size = new System.Drawing.Size(121, 23);
             this.lTotalJogos.TabIndex = 20;
             this.lTotalJogos.Text = "Total games:";
             // 
@@ -715,9 +697,10 @@
             this.lNumDerrotas.BackColor = System.Drawing.Color.Transparent;
             this.lNumDerrotas.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumDerrotas.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumDerrotas.Location = new System.Drawing.Point(63, 70);
+            this.lNumDerrotas.Location = new System.Drawing.Point(47, 57);
+            this.lNumDerrotas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumDerrotas.Name = "lNumDerrotas";
-            this.lNumDerrotas.Size = new System.Drawing.Size(109, 24);
+            this.lNumDerrotas.Size = new System.Drawing.Size(91, 19);
             this.lNumDerrotas.TabIndex = 19;
             this.lNumDerrotas.Text = "Defeats (d):";
             // 
@@ -728,9 +711,10 @@
             this.lNumEmpates.BackColor = System.Drawing.Color.Transparent;
             this.lNumEmpates.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumEmpates.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumEmpates.Location = new System.Drawing.Point(63, 97);
+            this.lNumEmpates.Location = new System.Drawing.Point(47, 79);
+            this.lNumEmpates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumEmpates.Name = "lNumEmpates";
-            this.lNumEmpates.Size = new System.Drawing.Size(97, 24);
+            this.lNumEmpates.Size = new System.Drawing.Size(81, 19);
             this.lNumEmpates.TabIndex = 18;
             this.lNumEmpates.Text = "Draws (a): ";
             // 
@@ -741,9 +725,10 @@
             this.lNumVitorias.BackColor = System.Drawing.Color.Transparent;
             this.lNumVitorias.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.lNumVitorias.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lNumVitorias.Location = new System.Drawing.Point(63, 42);
+            this.lNumVitorias.Location = new System.Drawing.Point(47, 34);
+            this.lNumVitorias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNumVitorias.Name = "lNumVitorias";
-            this.lNumVitorias.Size = new System.Drawing.Size(82, 24);
+            this.lNumVitorias.Size = new System.Drawing.Size(67, 19);
             this.lNumVitorias.TabIndex = 17;
             this.lNumVitorias.Text = "Wins (w):";
             // 
@@ -754,19 +739,19 @@
             this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("Kristen ITC", 12F, System.Drawing.FontStyle.Bold);
             this.labelPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelPassword.Location = new System.Drawing.Point(28, 14);
+            this.labelPassword.Location = new System.Drawing.Point(21, 11);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(97, 28);
+            this.labelPassword.Size = new System.Drawing.Size(80, 23);
             this.labelPassword.TabIndex = 16;
             this.labelPassword.Text = "Results:";
             // 
             // pBDateTimePickerEditar
             // 
             this.pBDateTimePickerEditar.Image = global::ProjetoDamas.Properties.Resources.Icon_editar;
-            this.pBDateTimePickerEditar.Location = new System.Drawing.Point(363, 2);
-            this.pBDateTimePickerEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pBDateTimePickerEditar.Location = new System.Drawing.Point(272, 2);
             this.pBDateTimePickerEditar.Name = "pBDateTimePickerEditar";
-            this.pBDateTimePickerEditar.Size = new System.Drawing.Size(36, 32);
+            this.pBDateTimePickerEditar.Size = new System.Drawing.Size(27, 26);
             this.pBDateTimePickerEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBDateTimePickerEditar.TabIndex = 75;
             this.pBDateTimePickerEditar.TabStop = false;
@@ -780,9 +765,10 @@
             this.lProfile.BackColor = System.Drawing.Color.Transparent;
             this.lProfile.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F);
             this.lProfile.ForeColor = System.Drawing.Color.DimGray;
-            this.lProfile.Location = new System.Drawing.Point(245, 11);
+            this.lProfile.Location = new System.Drawing.Point(184, 9);
+            this.lProfile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lProfile.Name = "lProfile";
-            this.lProfile.Size = new System.Drawing.Size(159, 56);
+            this.lProfile.Size = new System.Drawing.Size(129, 45);
             this.lProfile.TabIndex = 72;
             this.lProfile.Text = "Profile";
             // 
@@ -792,10 +778,9 @@
             this.pData.Controls.Add(this.pBDateTimePickerEditar);
             this.pData.Controls.Add(this.dTPDataNascimento);
             this.pData.Controls.Add(this.panel12);
-            this.pData.Location = new System.Drawing.Point(253, 324);
-            this.pData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pData.Location = new System.Drawing.Point(190, 263);
             this.pData.Name = "pData";
-            this.pData.Size = new System.Drawing.Size(400, 34);
+            this.pData.Size = new System.Drawing.Size(300, 28);
             this.pData.TabIndex = 74;
             // 
             // dTPDataNascimento
@@ -809,10 +794,9 @@
             this.dTPDataNascimento.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.dTPDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dTPDataNascimento.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dTPDataNascimento.Location = new System.Drawing.Point(55, 0);
-            this.dTPDataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dTPDataNascimento.Location = new System.Drawing.Point(41, 0);
             this.dTPDataNascimento.Name = "dTPDataNascimento";
-            this.dTPDataNascimento.Size = new System.Drawing.Size(308, 34);
+            this.dTPDataNascimento.Size = new System.Drawing.Size(232, 29);
             this.dTPDataNascimento.TabIndex = 76;
             // 
             // panel12
@@ -821,30 +805,29 @@
             this.panel12.Controls.Add(this.pictureBox1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(56, 34);
+            this.panel12.Size = new System.Drawing.Size(42, 28);
             this.panel12.TabIndex = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::ProjetoDamas.Properties.Resources.Nascimento_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(38, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // ViewProfileInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoDamas.Properties.Resources.back_image;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(729, 508);
+            this.ClientSize = new System.Drawing.Size(547, 413);
             this.Controls.Add(this.pData);
             this.Controls.Add(this.lProfile);
             this.Controls.Add(this.pBLogout);
@@ -866,7 +849,6 @@
             this.Controls.Add(this.pBUser);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewProfileInfo";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewProfileInfo_Load);

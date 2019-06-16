@@ -49,6 +49,15 @@ namespace ProjetoDamas
             Program.M_Tabuleiro.RespostaVerificarJogadaValida += M_Tabuleiro_RespostaVerificarJogadaValida;
             Program.M_Tabuleiro.RespostaVerificarJogadaInvalida += M_Tabuleiro_RespostaVerificarJogadaInvalida;
             Program.M_Tabuleiro.RespostaComerPeca += M_Tabuleiro_RespostaComerPeca;
+
+            Program.M_Gestor.RespostaPedidoLoginSucesso += M_Gestor_RespostaPedidoLoginSucesso; //Base de dados
+        }
+
+        private void M_Gestor_RespostaPedidoLoginSucesso(User u)
+        {
+            pBJogadoUm.Image = u.Imagem;
+            lNome1N.Text = u.Username;
+            lCountry1N.Text = u.Pais;
         }
 
         private void M_Tabuleiro_RespostaComerPeca(int x, int y)
