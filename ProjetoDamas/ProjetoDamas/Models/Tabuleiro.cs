@@ -7,34 +7,25 @@ using System.Threading.Tasks;
 namespace ProjetoDamas
 {
     public class Tabuleiro
-    {//Tabuleiro de jogo que tem toda a informação necessaria, desde coordenadas (iguais à da matriz). Posicao valida, invalida, ou com peça. Peça a que jogador pertence
+    {
         public Posicao[,] tabuleiro { get; private set; }
-
         public List<Coordenada> PossiveisJogadasL { get; private set; }
-        public List<Coordenada> JogadasObrigatoriasL { get; private set; }
-
-        public event MetodosComListaDeCoordenadas RespostaPossiveisJogadas; // Vai para a ViewJogo
-        public event MetodosSemParametros RespostaTabuleiroInicializado; // Vai para a ViewJogo
-        public event MetodosComDuasCoordenadasEUmTipoDePEca RespostaVerificarJogadaValida; // Vai para a ViewJogo
-        public event MetodosSemParametros RespostaVerificarJogadaInvalida;
-        public event MetodosComUmaPosicao RespostaComerPeca;
-
+        public List<Coordenada> JogadasObrigatoriasL { get; private set; }        
+        public Coordenada PecaComida { get; private set; }
+        public bool Comida { get; private set; }
 
         public Tabuleiro()
         {
-            //inicializar este tabuleiro
-            //INa View jogo, ir buscar as informaçõe necessarias inicializar as posições na View, de acordo com o tabuleiro;
             tabuleiro = new Posicao[8, 8];
             PossiveisJogadasL = new List<Coordenada>();
             JogadasObrigatoriasL = new List<Coordenada>();
             this.InicializarTabuleiro();
-
+            Comida = false;
         }
 
 
-        public void PossiveisJogadas(int x, int y)//coordenadas da matriz
+        public void/*List<Coordenada>*/ PossiveisJogadas(int x, int y)//coordenadas da matriz
         {
-            //PossiveisJogadasL.Clear();//limpar as possiveis jogadas para uma proxima jogada
             PossiveisJogadasL.Clear();
             JogadasObrigatoriasL.Clear();
 
@@ -303,32 +294,30 @@ namespace ProjetoDamas
 
             }
 
-            if (JogadasObrigatoriasL.Count != 0)//Caso não existam jogadas obrigatorias, mostra-se apenas as possiveis jogadas.
-            {
-                if (RespostaPossiveisJogadas != null)
-                {
-                    RespostaPossiveisJogadas(JogadasObrigatoriasL);
-                }
-            }
-            else
-            {
-                if (RespostaPossiveisJogadas != null)
-                {
-                    RespostaPossiveisJogadas(PossiveisJogadasL);
-                }
-            }
+            //if (JogadasObrigatoriasL.Count != 0)//Caso não existam jogadas obrigatorias, mostra-se apenas as possiveis jogadas.
+            //    return JogadasObrigatoriasL;
+            //else
+            //    return PossiveisJogadasL;
 
 
         }
 
 
-        public void VerificarJogada(Coordenada origem, Coordenada destino)
+
+
+        public bool VerificarJogada(Coordenada origem, Coordenada destino)
         {
-            //Quando o destino for válido e tiver no fundo contrário, traca-se para dama
+            List<Coordenada> jogadas = new List<Coordenada>();
+
+            //Esta duas listas foram compostas anteriormente ao chamar a função possiveis jogadas
+            if (JogadasObrigatoriasL.Count != 0)
+                jogadas = JogadasObrigatoriasL;
+            else
+                jogadas = PossiveisJogadasL;
 
             int contador = 0;
 
-            foreach (Coordenada coor in PossiveisJogadasL)
+            foreach (Coordenada coor in jogadas)
             {
                 if (coor.x == destino.x && coor.y == destino.y)
                 {
@@ -346,22 +335,13 @@ namespace ProjetoDamas
                         tabuleiro[destino.x, destino.y] = pos;
                     }
 
+                    Comida = false;
                     if (ComerPeca(origem, destino) == true)//envia evento
                     {
                         //Se a jogada for valida de acordo com os parâmetros anteriores, apaga todas as Pecas entre a coordenada de origem e destino
                     }
 
-                    if (RespostaVerificarJogadaValida != null)
-                    {
-                        RespostaVerificarJogadaValida(origem, destino, (Peca)tabuleiro[destino.x,destino.y]);
-
-                        break;
-
-                    }
-
-
-
-
+                    return true;
 
                 }
                 else
@@ -370,14 +350,8 @@ namespace ProjetoDamas
                 }
             }
 
-            if (contador == PossiveisJogadasL.Count)
-            {
-                if (RespostaVerificarJogadaInvalida != null)
-                {
-                    RespostaVerificarJogadaInvalida();
-                    
-                }
-            }
+            return false;
+
 
         }
 
@@ -407,7 +381,6 @@ namespace ProjetoDamas
             return false;
         }
 
-
         //Caso a peca destino esteja na lista "PosicoesComerL", remove-se da matriz a peca "PosicaoPecaComida". Depois no método onde esta é chama, enviamos dois eventos, um para trocar a peca destino pela origem e a outro evento para removar a peca comida da pictureBox
         public bool ComerPeca(Coordenada origem, Coordenada destino)
         {
@@ -421,21 +394,17 @@ namespace ProjetoDamas
                 {
                     tabuleiro[coord.x, coord.y] = new Vazia();
 
-                    if (RespostaComerPeca != null)
-                    {
-                        RespostaComerPeca(coord.x, coord.y);
-                    }
-
+                    PecaComida = new Coordenada(coord.x, coord.y);
+                    Comida = true;
                     return true;
                 }
             }
-
+            
             return false;
 
 
 
         }
-
 
         //Calcula as peças que estão numa diagonal entre dois pontos
         public List<Coordenada> CalculaDiagonal(Coordenada origem, Coordenada destino)
@@ -466,6 +435,63 @@ namespace ProjetoDamas
         }
 
 
+
+        public int FimDoJogo()
+        {
+            // 0 -> Pecas Brancam ganharam, 1 -> Pecas pretas ganharm, 2 -> Empate, 3 -> Não acabou  
+            //Para cada iteração verifica se é o fim do jogo
+            int numDamasBrancas = 0;
+            int numDamasPretas = 0;
+            int numPecasBrancas = 0;
+            int numPecasPretas = 0;
+
+            for (int i = 0; i < tabuleiro.GetLength(0); i++)
+               for (int j = 0; j < tabuleiro.GetLength(1); j++)
+               {
+                    if (tabuleiro[i,j] is Simples)
+                    {
+                        if (((Peca)tabuleiro[i, j]).CorPeca)
+                            numPecasPretas++;
+                        else
+                            numPecasBrancas++;
+                    }
+                    else if (tabuleiro[i, j] is Dama)
+                    {
+                        if (((Peca)tabuleiro[i, j]).CorPeca)
+                            numDamasPretas++;
+                        else
+                            numDamasBrancas++;
+                    }
+               }
+
+            if ((numPecasBrancas + numDamasBrancas) == 0)
+                return 1; //Pretas ganharam
+            else if ((numPecasPretas + numDamasPretas) == 0)
+                return 0; //Brancas ganharam
+            else if (numDamasBrancas == 2 && numDamasPretas == 2 && numPecasPretas == 0 && numPecasBrancas == 0) //Finais de 2 damas contra duas damas
+                return 2; //Empate
+            else if (numDamasBrancas == 2 && numDamasPretas == 1 && numPecasPretas == 0 && numPecasBrancas == 0) //Finais de 2 damas contra uma dama 
+                return 2; //Empate
+            else if (numDamasBrancas == 1 && numDamasPretas == 2 && numPecasPretas == 0 && numPecasBrancas == 0) //Finais de 2 damas contra uma dama 
+                return 2; //Empate
+            else if (numDamasBrancas == 2 && numDamasPretas == 1 && numPecasPretas == 1 && numPecasBrancas == 0) //Finais de 2 damas contra uma dama e uma peca 
+                return 2; //Empate
+            else if (numDamasBrancas == 1 && numDamasPretas == 2 && numPecasPretas == 0 && numPecasBrancas == 1) //Finais de 2 damas contra uma dama e uma peca 
+                return 2; //Empate
+            else if (numDamasBrancas == 1 && numDamasPretas == 1 && numPecasPretas == 0 && numPecasBrancas == 0) //Finais de uma dama contra uma dama 
+                return 2; //Empate
+            else if (numDamasBrancas == 1 && numDamasPretas == 1 && numPecasPretas == 1 && numPecasBrancas == 0) //Finais de uma dama contra uma dama e uma pedra
+                return 2; //Empate
+            else if (numDamasBrancas == 1 && numDamasPretas == 1 && numPecasPretas == 0 && numPecasBrancas == 1) //Finais de uma dama contra uma dama e uma pedra
+                return 2; //Empate
+
+            return 3; //Não acabou
+        }
+
+
+
+
+
         public void InicializarTabuleiro() 
         {   
             //Esta função é usada quando a visibilidade da ViewJogo muda
@@ -491,10 +517,6 @@ namespace ProjetoDamas
                 }
             }
 
-            if (RespostaTabuleiroInicializado != null)
-            {
-                RespostaTabuleiroInicializado();
-            }
 
         }
 

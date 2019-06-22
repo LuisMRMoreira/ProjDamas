@@ -17,5 +17,7 @@ namespace ProjetoDamas
             y = yVal;
         }
 
+        public Coordenada() { }
+
     }
 }

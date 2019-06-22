@@ -47,3 +47,17 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+
+
+
+
+
+
+Na tabela jogo, o int define quem ganhou ou se empatou (0 -> empate, 1-> jogador_um, 2-> jogador_dois) e pode estar a null porque o jogo pode não ter acabado. O jogador_dois pode ser null para o caso de ser o robot ou um guest. Esta tabela deve ser inicialzada quand se começa um jogo.
+
+
+
+
+Problemas que podem dar com o uso do date: A data na BD só podem estar no formato mdy (mês/dia/ano). Para converter um dateTime do dateTimePicker para o formato mdy usa-se date.Value.ToString("MM/dd/yyyy HH:mm:ss")
+
+Para obter a string sqlConnectio, vai-se à string connection nas propriedades da Base de dados no ServerExplorer

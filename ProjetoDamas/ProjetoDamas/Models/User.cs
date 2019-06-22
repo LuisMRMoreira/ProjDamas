@@ -14,13 +14,17 @@ namespace ProjetoDamas
         public string Nome { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public Image Imagem { get; set; } //diretoria da foto
+        public string Imagem { get; set; } //diretoria da foto
         public string Pais { get; set; }
         public DateTime DataNascimento { get; set; }
         public DateTime DataCriacaoConta { get; set; }
+        public int Vitorias { get; set; }
+        public int Empates { get; set; }
+        public int Derrotas { get; set; }
 
 
-        public User( int id, string nome, string password, string email, string pais, Image imagem, string username, string idade, DateTime dataNascimento, DateTime dataCriacaoConta)
+
+        public User( int id, string nome, string password, string email, string pais, string imagem, string username, string idade, DateTime dataNascimento, DateTime dataCriacaoConta, int vitorias, int empates, int derrotas)
         {
             Id = id;
             Nome = nome;
@@ -32,8 +36,48 @@ namespace ProjetoDamas
             DataNascimento = dataNascimento;
             Pais = pais;
             DataCriacaoConta = dataCriacaoConta;
+            Vitorias = vitorias;
+            Empates = empates;
+            Derrotas = derrotas;
         }
 
         public User() { }
+
+        public User(User u)
+        {
+            Id = u.Id;
+            Nome = u.Nome;
+            Password = u.Password;
+            Email = u.Email;
+            Pais = u.Pais;
+            Imagem = u.Imagem;
+            Username = u.Username;
+            DataNascimento = u.DataNascimento;
+            Pais = u.Pais;
+            DataCriacaoConta = u.DataCriacaoConta;
+            Vitorias = u.Vitorias;
+            Empates = u.Empates;
+            Derrotas = u.Derrotas;
+
+
+        }
+
+        public User(Pessoa u)
+        {
+            Id = u.Id;
+            Nome = u.Nome;
+            Password = u.Password;
+            Email = u.Email;
+            Pais = u.Pais;
+            Imagem = u.Imagem;
+            Username = u.Username;
+            DataNascimento = u.DataNascimento;
+            Pais = u.Pais;
+            DataCriacaoConta = u.DataCriacaoConta;
+            Vitorias = u.Vitorias;
+            Empates = u.Empates;
+            Derrotas = u.Derrotas;
+        }
+
     }
 }

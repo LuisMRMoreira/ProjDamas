@@ -8,5 +8,8 @@ namespace ProjetoDamas
 {
     public class Local : Jogo
     {//Representa um jogo local, ou seja sem ligação ao servidor e sem necessidade de autenticação
+
+        //public Local(User u1, User u2) : base(u1,u2) { }
+        public Local() { }
     }
 }

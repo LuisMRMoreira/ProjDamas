@@ -11,6 +11,8 @@ namespace ProjetoDamas
         private string nomeServidor;
         private bool autenticacao;
 
-        
+        //public Cliente(User u1, User u2) : base(u1, u2) { }
+
+        public Cliente() { }
     }
 }

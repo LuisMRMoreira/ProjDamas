@@ -9,7 +9,7 @@ namespace ProjetoDamas
     public class Peca : Posicao
     {//Classe que representa cada peca que está no tabuleiro. Recebe as coordenadas por herança de Posicao
         public bool CorPeca { get; private set; } //0-> branca ou 1 ->preta. 
-        public int JogadasSucessivas { get; private set; }
+        public List<Coordenada> Obrigatorias { get; private set; }
         public bool SentidoJogada { get; private set; } //0-> cima para baixo ou 1 -> baixo para cima.
 
 

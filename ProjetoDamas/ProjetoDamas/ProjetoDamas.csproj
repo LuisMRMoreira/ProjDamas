@@ -62,53 +62,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControllerGestor.cs" />
-    <Compile Include="ControllerJogador.cs" />
-    <Compile Include="ControllerJogo.cs" />
-    <Compile Include="ControllerPessoa.cs" />
-    <Compile Include="ControllerTabuleiro.cs" />
-    <Compile Include="ControllerUser.cs" />
+    <Compile Include="Controllers\ControllerJogo.cs" />
+    <Compile Include="Controllers\ControllerUser.cs" />
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Delegates.cs" />
+    <Compile Include="Models\Guest.cs" />
+    <Compile Include="ModelJogo.cs" />
+    <Compile Include="ModelUser.cs" />
     <Compile Include="PlayMusic.cs" />
     <Compile Include="ResetControls.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="ViewEnd.cs">
+    <Compile Include="Views\ViewEnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewEnd.Designer.cs">
+    <Compile Include="Views\ViewEnd.Designer.cs">
       <DependentUpon>ViewEnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewJogadoresNoServidor.cs">
+    <Compile Include="Views\ViewJogadoresNoServidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewJogadoresNoServidor.Designer.cs">
+    <Compile Include="Views\ViewJogadoresNoServidor.Designer.cs">
       <DependentUpon>ViewJogadoresNoServidor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewJogadorOponente.cs">
+    <Compile Include="Views\ViewJogadorOponente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewJogadorOponente.Designer.cs">
+    <Compile Include="Views\ViewJogadorOponente.Designer.cs">
       <DependentUpon>ViewJogadorOponente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewJogoRobot.cs">
+    <Compile Include="Views\ViewJogoRobot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewJogoRobot.Designer.cs">
+    <Compile Include="Views\ViewJogoRobot.Designer.cs">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewJogosInacabados.cs">
+    <Compile Include="Views\ViewJogosInacabados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewJogosInacabados.Designer.cs">
+    <Compile Include="Views\ViewJogosInacabados.Designer.cs">
       <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewMenu.cs">
+    <Compile Include="Views\ViewMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewMenu.Designer.cs">
+    <Compile Include="Views\ViewMenu.Designer.cs">
       <DependentUpon>ViewMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
@@ -131,94 +130,64 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewTabuleiro.cs">
+    <Compile Include="Views\ViewTabuleiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewTabuleiro.Designer.cs">
+    <Compile Include="Views\ViewTabuleiro.Designer.cs">
       <DependentUpon>ViewTabuleiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewLogin.cs">
+    <Compile Include="Views\ViewLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewLogin.Designer.cs">
+    <Compile Include="Views\ViewLogin.Designer.cs">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewModoJogo.cs">
+    <Compile Include="Views\ViewModoJogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewModoJogo.Designer.cs">
+    <Compile Include="Views\ViewModoJogo.Designer.cs">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewOponenteServidor.cs">
+    <Compile Include="Views\ViewOponenteServidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewOponenteServidor.Designer.cs">
+    <Compile Include="Views\ViewOponenteServidor.Designer.cs">
       <DependentUpon>ViewOponenteServidor.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRegister.cs">
+    <Compile Include="Views\ViewRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRegister.Designer.cs">
+    <Compile Include="Views\ViewRegister.Designer.cs">
       <DependentUpon>ViewRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewRegras.cs">
+    <Compile Include="Views\ViewRegras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewRegras.Designer.cs">
+    <Compile Include="Views\ViewRegras.Designer.cs">
       <DependentUpon>ViewRegras.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewProfileInfo.cs">
+    <Compile Include="Views\ViewProfileInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewProfileInfo.Designer.cs">
+    <Compile Include="Views\ViewProfileInfo.Designer.cs">
       <DependentUpon>ViewProfileInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewSettings.Designer.cs">
-      <DependentUpon>ViewSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewStatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewStatistics.Designer.cs">
-      <DependentUpon>ViewStatistics.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewTorneio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewTorneio.Designer.cs">
-      <DependentUpon>ViewTorneio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewTorneioJogos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewTorneioJogos.Designer.cs">
-      <DependentUpon>ViewTorneioJogos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewTorneiosInacabados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewTorneiosInacabados.Designer.cs">
-      <DependentUpon>ViewTorneiosInacabados.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ViewEnd.resx">
+    <EmbeddedResource Include="Views\ViewEnd.resx">
       <DependentUpon>ViewEnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewJogadoresNoServidor.resx">
+    <EmbeddedResource Include="Views\ViewJogadoresNoServidor.resx">
       <DependentUpon>ViewJogadoresNoServidor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewJogadorOponente.resx">
+    <EmbeddedResource Include="Views\ViewJogadorOponente.resx">
       <DependentUpon>ViewJogadorOponente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewJogoRobot.resx">
+    <EmbeddedResource Include="Views\ViewJogoRobot.resx">
       <DependentUpon>ViewJogoRobot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewJogosInacabados.resx">
+    <EmbeddedResource Include="Views\ViewJogosInacabados.resx">
       <DependentUpon>ViewJogosInacabados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewMenu.resx">
+    <EmbeddedResource Include="Views\ViewMenu.resx">
       <DependentUpon>ViewMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -231,41 +200,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ViewTabuleiro.resx">
+    <EmbeddedResource Include="Views\ViewTabuleiro.resx">
       <DependentUpon>ViewTabuleiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewLogin.resx">
+    <EmbeddedResource Include="Views\ViewLogin.resx">
       <DependentUpon>ViewLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewModoJogo.resx">
+    <EmbeddedResource Include="Views\ViewModoJogo.resx">
       <DependentUpon>ViewModoJogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewOponenteServidor.resx">
+    <EmbeddedResource Include="Views\ViewOponenteServidor.resx">
       <DependentUpon>ViewOponenteServidor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRegister.resx">
+    <EmbeddedResource Include="Views\ViewRegister.resx">
       <DependentUpon>ViewRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewRegras.resx">
+    <EmbeddedResource Include="Views\ViewRegras.resx">
       <DependentUpon>ViewRegras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewProfileInfo.resx">
+    <EmbeddedResource Include="Views\ViewProfileInfo.resx">
       <DependentUpon>ViewProfileInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewSettings.resx">
-      <DependentUpon>ViewSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewStatistics.resx">
-      <DependentUpon>ViewStatistics.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewTorneio.resx">
-      <DependentUpon>ViewTorneio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewTorneioJogos.resx">
-      <DependentUpon>ViewTorneioJogos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewTorneiosInacabados.resx">
-      <DependentUpon>ViewTorneiosInacabados.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -301,6 +255,7 @@
     <Content Include="Resources\confets.png" />
     <None Include="Resources\IP icon.png" />
     <None Include="Resources\Robot Image.png" />
+    <Content Include="Resources\GuestPlayer.png" />
     <Content Include="Resources\Minecraft-Theme Song.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
