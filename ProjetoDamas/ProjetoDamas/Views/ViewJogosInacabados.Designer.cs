@@ -305,6 +305,7 @@
             this.Name = "ViewJogosInacabados";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogosInacabados_Load);
+            this.VisibleChanged += new System.EventHandler(this.ViewJogosInacabados_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbReturn)).EndInit();
             this.pDataGridView.ResumeLayout(false);
             this.pDataGridView.PerformLayout();

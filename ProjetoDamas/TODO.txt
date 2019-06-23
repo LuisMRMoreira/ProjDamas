@@ -1,0 +1,4 @@
+XML
+Server
+Guardar resultado na Base de dados depois de um jogo
+Jogada obrigatoria de uma peça

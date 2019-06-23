@@ -31,4 +31,7 @@ namespace ProjetoDamas
     public delegate void MetodosComDoisJogadresEUmInteiro(Jogador j1, Jogador j2, int i);
     public delegate void MetodosComUmInteiro(int i);
     public delegate void MetodosComInfoJogador(string nome, string pass, string nick, string email, string pais, string imageLocation, DateTime dataDeNascimento);
+    public delegate void MetodosComUmaListaDeJogos(List<Jogo> lj);
+    public delegate void MetodosComUmJogo(Jogo j);
+
 }

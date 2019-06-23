@@ -19,6 +19,9 @@ namespace ProjetoDamas
             CorPecas = cor;
             Prioridade = prior;
         }
+        public Jogador()
+        {
+        }
 
     }
 

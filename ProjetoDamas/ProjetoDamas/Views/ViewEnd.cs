@@ -61,7 +61,7 @@ namespace ProjetoDamas
                     lNomeVencedorN.Text = "Robot";
                     lCountryVencedorN.Text = "--";
                     pbJogadorVencedor.ImageLocation = ((Robot)j2).Imagem;
-                }
+                } else
                 if (j2 is Guest)
                 {
                     lNomeVencedorN.Text = "Guest";
@@ -89,7 +89,7 @@ namespace ProjetoDamas
                     lNomePerdedorN.Text = "Robot";
                     lCountryPerdedorN.Text = "--";
                     pBJogadorPerdedor.ImageLocation = ((Robot)j2).Imagem;
-                }
+                } else
                 if (j2 is Guest)
                 {
                     lNomePerdedorN.Text = "Guest";

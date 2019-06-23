@@ -20,6 +20,12 @@ namespace ProjetoDamas
             Program.V_Register.PedidoRegistarJogador += V_Register_PedidoRegistarJogador;
             Program.V_Profile.PedidoGuardarDados += V_Profile_PedidoGuardarDados;
             Program.V_Profile.PedidoTerminarSessao += V_Profile_PedidoTerminarSessao;
+            Program.V_JogosInacabados.PedidoAdicionarUser += V_JogosInacabados_PedidoAdicionarUser;
+        }
+
+        private void V_JogosInacabados_PedidoAdicionarUser(User u)
+        {
+            Program.M_User.AdicionaUserJogoAcabado(u);
         }
 
         private void V_Profile_PedidoTerminarSessao()
@@ -279,7 +285,7 @@ namespace ProjetoDamas
                 server.Close();
 
 
-            } if (jP is Robot)
+            } else if (jP is Robot)
             {
                 string cmdText = string.Format("SELECT * FROM Jogador WHERE jogador_id = '{0}'", ((Pessoa)jV).Id);
                 SqlCommand command = new SqlCommand(cmdText, server);

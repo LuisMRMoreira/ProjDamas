@@ -67,6 +67,7 @@
     <Compile Include="CueTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Base de dados\DataBaseAccess.cs" />
     <Compile Include="Delegates.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="ModelJogo.cs" />
@@ -284,6 +285,7 @@
     <Folder Include="Base de dados\Fotos\" />
     <Folder Include="bin\Debug\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="XML\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">

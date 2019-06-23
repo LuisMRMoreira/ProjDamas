@@ -15,6 +15,8 @@ namespace ProjetoDamas
         public event MetodosComDuasCoordenadas PedidoJogadaPessoa;
         public event MetodosComUmaCoordenada PedidoMostarPossiveisJogadas;
         public event MetodosComDoisJogadresEUmInteiro PedidoFimDoJogo;
+        public event MetodosSemParametros PedidoGuardarJogo;
+        public event MetodosComUmInteiro PedidoRemoverJogoInacabado;
 
         PictureBox selected;
 
@@ -58,6 +60,9 @@ namespace ProjetoDamas
 
         private void M_Jogo_RespostaFimDoJogo(Jogador j1, Jogador j2, int i)
         {
+            if (PedidoRemoverJogoInacabado != null)
+                PedidoRemoverJogoInacabado(Program.M_Jogo.Jogo.Id);
+
             if (PedidoFimDoJogo != null)
                 PedidoFimDoJogo(j1, j2, i);
         }
@@ -409,13 +414,16 @@ namespace ProjetoDamas
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure that you want to leave?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to leave?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (MessageBox.Show("Do you want to save the game to play later?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to save the game?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     this.Hide();
                     Program.V_Menu.Show();
-                    //Guardar o jogo estado do jogo -----------------------------------------------------------------------------------------------------------------------------------
+                    if (PedidoGuardarJogo != null)
+                    {
+                        PedidoGuardarJogo();
+                    }
                 }
 
                 this.Hide();
@@ -446,7 +454,11 @@ namespace ProjetoDamas
         {
             if (MessageBox.Show("Are you sure you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (PedidoRemoverJogoInacabado != null)
+                    PedidoRemoverJogoInacabado(Program.M_Jogo.Jogo.Id);
+
                 this.Hide();
+
                 if (PedidoFimDoJogo != null)
                     PedidoFimDoJogo(Program.M_Jogo.Jogo.JogadorUm, Program.M_Jogo.Jogo.JogadorDois, 1);
             }
@@ -456,7 +468,11 @@ namespace ProjetoDamas
         {
             if (MessageBox.Show("Are you sure you want to quit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (PedidoRemoverJogoInacabado != null)
+                    PedidoRemoverJogoInacabado(Program.M_Jogo.Jogo.Id);
+
                 this.Hide();
+
                 if (PedidoFimDoJogo != null)
                     PedidoFimDoJogo(Program.M_Jogo.Jogo.JogadorUm, Program.M_Jogo.Jogo.JogadorDois, 0);
             }

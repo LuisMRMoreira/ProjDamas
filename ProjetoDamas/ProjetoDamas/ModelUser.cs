@@ -32,6 +32,11 @@ namespace ProjetoDamas
                 RespostaLogin(Users[0]);
         }
 
+        public void AdicionaUserJogoAcabado(User u)
+        {
+            Users.Add(u);
+        }
+
 
         public void FimDoJogo(Jogador j1, Jogador j2, int i)
         {

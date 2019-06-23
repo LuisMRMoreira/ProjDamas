@@ -23,6 +23,14 @@ namespace ProjetoDamas
             Comida = false;
         }
 
+        public Tabuleiro(Posicao[,] pos)
+        {
+            tabuleiro = pos;
+            PossiveisJogadasL = new List<Coordenada>();
+            JogadasObrigatoriasL = new List<Coordenada>();
+            Comida = false;
+        }
+
 
         public void/*List<Coordenada>*/ PossiveisJogadas(int x, int y)//coordenadas da matriz
         {
@@ -80,35 +88,35 @@ namespace ProjetoDamas
                     }
 
 
-                    //Direção contrária á jogada da peca, lado esquerdo do tabuleiro (Só verifica se tem uma peca para comer)
-                    if ((x - incrementoX >= 0 && x - incrementoX <= 7) && (y - 1 >= 0 && y - 1 <= 7))
-                    {
-                        if (tabuleiro[x - incrementoX, y - 1] is Peca)
-                        {
-                            if (((Peca)tabuleiro[x - incrementoX, y - 1]).CorPeca != ((Peca)tabuleiro[x, y]).CorPeca)// Se a posicao seguinte for ocupada por uma da mesma cor, já nao é necessario procurar a seguinte casa valida                            
-                                if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y - 2 >= 0 && y - 2 <= 7))
-                                    if (tabuleiro[x - 2 * incrementoX, y - 2] is Vazia)
-                                    {
-                                        JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));
-                                        PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));//Posicao Possivel
-                                    }
-                        }
-                    }
+                    ////Direção contrária á jogada da peca, lado esquerdo do tabuleiro (Só verifica se tem uma peca para comer)
+                    //if ((x - incrementoX >= 0 && x - incrementoX <= 7) && (y - 1 >= 0 && y - 1 <= 7))
+                    //{
+                    //    if (tabuleiro[x - incrementoX, y - 1] is Peca)
+                    //    {
+                    //        if (((Peca)tabuleiro[x - incrementoX, y - 1]).CorPeca != ((Peca)tabuleiro[x, y]).CorPeca)// Se a posicao seguinte for ocupada por uma da mesma cor, já nao é necessario procurar a seguinte casa valida                            
+                    //            if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y - 2 >= 0 && y - 2 <= 7))
+                    //                if (tabuleiro[x - 2 * incrementoX, y - 2] is Vazia)
+                    //                {
+                    //                    JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));
+                    //                    PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y - 2));//Posicao Possivel
+                    //                }
+                    //    }
+                    //}
 
-                    //Direção contrária á jogada da peca, lado direito do tabuleiro (Só verifica se tem uma peca para comer)
-                    if ((x - incrementoX >= 0 && x - incrementoX <= 7) && (y + 1 >= 0 && y + 1 <= 7))
-                    {
-                        if (tabuleiro[x - incrementoX, y + 1] is Peca)
-                        {
-                            if (((Peca)tabuleiro[x - incrementoX, y + 1]).CorPeca != ((Peca)tabuleiro[x, y]).CorPeca)// Se a posicao seguinte for ocupada por uma da mesma cor, já nao é necessario procurar a seguinte casa valida                            
-                                if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y + 2 >= 0 && y + 2 <= 7))
-                                    if (tabuleiro[x - 2 * incrementoX, y + 2] is Vazia)
-                                    {
-                                        JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));
-                                        PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));//Posicao Possivel
-                                    }
-                        }
-                    }
+                    ////Direção contrária á jogada da peca, lado direito do tabuleiro (Só verifica se tem uma peca para comer)
+                    //if ((x - incrementoX >= 0 && x - incrementoX <= 7) && (y + 1 >= 0 && y + 1 <= 7))
+                    //{
+                    //    if (tabuleiro[x - incrementoX, y + 1] is Peca)
+                    //    {
+                    //        if (((Peca)tabuleiro[x - incrementoX, y + 1]).CorPeca != ((Peca)tabuleiro[x, y]).CorPeca)// Se a posicao seguinte for ocupada por uma da mesma cor, já nao é necessario procurar a seguinte casa valida                            
+                    //            if ((x - 2 * incrementoX <= 7 && x - 2 * incrementoX >= 0) && (y + 2 >= 0 && y + 2 <= 7))
+                    //                if (tabuleiro[x - 2 * incrementoX, y + 2] is Vazia)
+                    //                {
+                    //                    JogadasObrigatoriasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));
+                    //                    PossiveisJogadasL.Add(new Coordenada(x - 2 * incrementoX, y + 2));//Posicao Possivel
+                    //                }
+                    //    }
+                    //}
 
 
                     // verificar o (x-1 e y-1), o (x+1 e y+1), o (x+1 e y-1), o (x-1, y+1)

@@ -64,7 +64,6 @@
             this.pB11 = new System.Windows.Forms.PictureBox();
             this.mSJogo = new System.Windows.Forms.MenuStrip();
             this.jogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -531,7 +530,6 @@
             // jogoToolStripMenuItem
             // 
             this.jogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.guardarToolStripMenuItem,
             this.regrasToolStripMenuItem,
             this.toolStripSeparator1,
             this.sairToolStripMenuItem});
@@ -539,29 +537,22 @@
             this.jogoToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.jogoToolStripMenuItem.Text = "&Game";
             // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.guardarToolStripMenuItem.Text = "&Save";
-            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
-            // 
             // regrasToolStripMenuItem
             // 
             this.regrasToolStripMenuItem.Name = "regrasToolStripMenuItem";
-            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.regrasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.regrasToolStripMenuItem.Text = "&Rules";
             this.regrasToolStripMenuItem.Click += new System.EventHandler(this.regrasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(101, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "&Leave";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -981,7 +972,6 @@
             this.Name = "ViewTabuleiro";
             this.Text = "Checkers";
             this.Load += new System.EventHandler(this.ViewJogo_Load);
-            //this.VisibleChanged += new System.EventHandler(this.ViewJogo_VisibleChanged);
             this.tLPTabuleiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pB60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pB40)).EndInit();
@@ -1065,7 +1055,6 @@
         private System.Windows.Forms.PictureBox pB40;
         private System.Windows.Forms.MenuStrip mSJogo;
         private System.Windows.Forms.ToolStripMenuItem jogoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcoesToolStripMenuItem;

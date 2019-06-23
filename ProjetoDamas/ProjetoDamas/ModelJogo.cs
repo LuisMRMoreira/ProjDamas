@@ -15,9 +15,17 @@ namespace ProjetoDamas
         public event MetodosComListaDeCoordenadas RespostaLimparTabuleiro; // Limpa as possiveis jogaas na View
         public event MetodosComListaDeCoordenadas RespostaJogadas; // Resposta com a lista de jogadas possiveis ou obrigatorias
         public event MetodosComDoisJogadresEUmInteiro RespostaFimDoJogo;
+        public event MetodosComUmaListaDeJogos RespostaLoadJogosInacabados;
 
 
         public Jogo Jogo { get; private set; }
+        
+        public List<Jogo> JogosInacabados { get; private set; }
+
+        public ModelJogo()
+        {
+            JogosInacabados = new List<Jogo>();
+        }
 
         public void ComecarJogo(User u1, Jogador j2)
         {
@@ -28,6 +36,32 @@ namespace ProjetoDamas
             }
             this.Jogada();
         }
+
+        public void ComecarJogo(Jogo j)
+        {
+            Jogo = j;
+            if (RespostaComecarJogo != null)
+            {
+                RespostaComecarJogo(Jogo.Tabuleiro.tabuleiro, Jogo.JogadorUm, Jogo.JogadorDois);
+            }
+            this.Jogada();
+        }
+
+
+        public void LoadJogosInacabados(List<Jogo> jogos)
+        {
+            if (JogosInacabados.Count == 0)
+            {
+                JogosInacabados = jogos;
+            }
+            
+            if (RespostaLoadJogosInacabados != null)
+            {
+                RespostaLoadJogosInacabados(JogosInacabados);
+            }
+        }
+
+
 
 
         public void Jogada()

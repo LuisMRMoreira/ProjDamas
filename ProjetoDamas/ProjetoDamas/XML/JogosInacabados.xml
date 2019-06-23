@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Lista de jogos inacabados-->
+<Jogos>
+  <Jogo Id="1">
+    <Jogadores>
+      <Pessoa Id="7">
+        <Prioridade>false</Prioridade>
+        <Cor>false</Cor>
+      </Pessoa>
+      <Pessoa Id="36">
+        <Prioridade>true</Prioridade>
+        <Cor>true</Cor>
+      </Pessoa>
+    </Jogadores>
+    <Tabuleiro>
+      <Peca Coordenada="0;0" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="0;1" />
+      <Peca Coordenada="0;2" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="0;3" />
+      <Peca Coordenada="0;4" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="0;5" />
+      <Peca Coordenada="0;6" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="0;7" />
+      <Invalida Coordenada="1;0" />
+      <Peca Coordenada="1;1" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="1;2" />
+      <Peca Coordenada="1;3" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="1;4" />
+      <Peca Coordenada="1;5" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="1;6" />
+      <Peca Coordenada="1;7" Cor="false" Sentido="false" Tipo="Simples" />
+      <Peca Coordenada="2;0" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="2;1" />
+      <Vazia Coordenada="2;2" />
+      <Invalida Coordenada="2;3" />
+      <Peca Coordenada="2;4" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="2;5" />
+      <Peca Coordenada="2;6" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="2;7" />
+      <Invalida Coordenada="3;0" />
+      <Vazia Coordenada="3;1" />
+      <Invalida Coordenada="3;2" />
+      <Vazia Coordenada="3;3" />
+      <Invalida Coordenada="3;4" />
+      <Vazia Coordenada="3;5" />
+      <Invalida Coordenada="3;6" />
+      <Vazia Coordenada="3;7" />
+      <Vazia Coordenada="4;0" />
+      <Invalida Coordenada="4;1" />
+      <Vazia Coordenada="4;2" />
+      <Invalida Coordenada="4;3" />
+      <Vazia Coordenada="4;4" />
+      <Invalida Coordenada="4;5" />
+      <Vazia Coordenada="4;6" />
+      <Invalida Coordenada="4;7" />
+      <Invalida Coordenada="5;0" />
+      <Peca Coordenada="5;1" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="5;2" />
+      <Peca Coordenada="5;3" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="5;4" />
+      <Peca Coordenada="5;5" Cor="false" Sentido="false" Tipo="Simples" />
+      <Invalida Coordenada="5;6" />
+      <Peca Coordenada="5;7" Cor="true" Sentido="true" Tipo="Simples" />
+      <Peca Coordenada="6;0" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="6;1" />
+      <Peca Coordenada="6;2" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="6;3" />
+      <Peca Coordenada="6;4" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="6;5" />
+      <Peca Coordenada="6;6" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="6;7" />
+      <Invalida Coordenada="7;0" />
+      <Peca Coordenada="7;1" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="7;2" />
+      <Peca Coordenada="7;3" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="7;4" />
+      <Peca Coordenada="7;5" Cor="true" Sentido="true" Tipo="Simples" />
+      <Invalida Coordenada="7;6" />
+      <Peca Coordenada="7;7" Cor="true" Sentido="true" Tipo="Simples" />
+    </Tabuleiro>
+  </Jogo>
+</Jogos>

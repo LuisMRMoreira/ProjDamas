@@ -9,7 +9,7 @@ namespace ProjetoDamas
     public class Jogo
     {//Classe que representa um jogo. Dois jogadores e um tabuleiro
         
-        //public int id; //Para quando quiseremos voltar a um jogo seja mais facil procurar através do id
+        public int Id; //Para quando quiseremos voltar a um jogo seja mais facil procurar através do id
         public Jogador JogadorUm { get; private set; }
         public Jogador JogadorDois { get; private set; }
         public Tabuleiro Tabuleiro { get; private set; }
@@ -17,6 +17,7 @@ namespace ProjetoDamas
 
         public Jogo(User u1, Jogador j2)
         {
+            Id = -1;
             Random randNum = new Random();
             bool corDaPeca = Convert.ToBoolean(randNum.Next(2));
 
@@ -38,6 +39,13 @@ namespace ProjetoDamas
 
         public Jogo()
         {
+        }
+
+        public Jogo(Jogador j1, Jogador j2, Tabuleiro t)
+        {
+            JogadorUm = j1;
+            JogadorDois = j2;
+            Tabuleiro = t;
         }
 
 

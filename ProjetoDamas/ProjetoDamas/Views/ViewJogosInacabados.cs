@@ -12,9 +12,32 @@ namespace ProjetoDamas
 {
     public partial class ViewJogosInacabados : Form
     {
+        public event MetodosComUmInteiro PedidoLoadJogosInacabados;
+        public event MetodosComUmJogo PedidoVoltarAJogo;
+        public event MetodosComUmUser PedidoAdicionarUser;
+
+
         public ViewJogosInacabados()
         {
             InitializeComponent();
+            Program.M_Jogo.RespostaLoadJogosInacabados += M_Jogo_RespostaLoadJogosInacabados;
+        }
+
+        private void M_Jogo_RespostaLoadJogosInacabados(List<Jogo> lj)
+        {
+
+            dGVJogosInacabados.Rows.Clear();
+            foreach (Jogo jogo in lj)
+            {
+                if (jogo.JogadorDois is Robot)
+                {
+                    dGVJogosInacabados.Rows.Add(((Pessoa)jogo.JogadorUm).Username, "--------", "Robot");
+                }
+                else
+                {
+                    dGVJogosInacabados.Rows.Add(((Pessoa)jogo.JogadorUm).Username, ((Pessoa)jogo.JogadorDois).Username , "Local");
+                }
+            }
         }
 
         private void pbReturn_Click(object sender, EventArgs e)
@@ -69,9 +92,8 @@ namespace ProjetoDamas
             ///
             /// Inicializar DataGridView
             ///
-            dGVJogosInacabados.Rows.Add("Luis", "Diogo", "Local", "15/04/2019");
-            dGVJogosInacabados.Rows.Add("Luis", "Carlos", "Online", "23/04/2019");
-            dGVJogosInacabados.Rows.Add("Carlos", "--------", "Robot", "22/04/2019");
+
+
 
 
         }
@@ -89,27 +111,45 @@ namespace ProjetoDamas
         {
             if (MessageBox.Show("Are you sure you want to go back to this game?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                int selectedRow = -1;
                 if (dGVJogosInacabados.CurrentRow != null)
                 {
-                    if (dGVJogosInacabados.CurrentRow.Cells[2].Value.ToString() == "Robot")
+                    selectedRow = dGVJogosInacabados.CurrentRow.Index;
+
+                    if (!(Program.M_Jogo.JogosInacabados[selectedRow].JogadorDois is Robot)) //Se não for robot, adicionamos aos users
                     {
-                        this.Hide();
-                        //Program.V_JogoRobot.ShowDialog();
-                        // Mudar o conteudo da view ---------------------------------------------------------------------------------------------------------
-                    }
-                    else 
-                    {
-                        //Local or online
-                        this.Hide();
-                        Program.V_Tabuleiro.ShowDialog();
-                        // Mudar o conteudo da view ---------------------------------------------------------------------------------------------------------
+                        User u = new User(((Pessoa)Program.M_Jogo.JogosInacabados[selectedRow].JogadorDois));
+                        if (PedidoAdicionarUser != null)
+                        {
+                            PedidoAdicionarUser(u);
+                        }
                     }
 
+                    if (PedidoVoltarAJogo != null)
+                    {
+                        PedidoVoltarAJogo(Program.M_Jogo.JogosInacabados[selectedRow]);
+                    }
+
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a game to proceed", "Invalid game", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             
         }
 
-
+        private void ViewJogosInacabados_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                if (PedidoLoadJogosInacabados != null)
+                {
+                    PedidoLoadJogosInacabados(Program.M_User.Users[0].Id);
+                }
+            }
+        }
     }
 }
